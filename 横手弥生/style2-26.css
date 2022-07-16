@@ -1,0 +1,524 @@
+body{
+    font-family: "游明朝体","Yu Mincho",YuMincho,"ヒラギノ明朝 Pro","Hiragino Mincho Pro","MS P明朝","MS PMincho",serif;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+header{
+    background-color: #8e1717;
+    width: 100%;
+    text-align: center;
+}
+
+.top-img img{
+    width: 100%;
+}
+
+.corona{
+    color: #be4125;
+    font-size: 14px;
+    margin: 40px;
+    border: 1px #be4125 solid;
+    padding: 25px;
+    text-align: center;
+}
+
+h2{
+    font-size: 14px;
+}
+
+ol{
+    list-style: none;
+}
+
+.present p{
+    margin: 15px;
+    text-align: center;
+}
+
+.present span{
+    color: #be4125;
+}
+
+.present-img{
+    background-color: #F4EBCD;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.kodawari-title{
+    text-align: center;
+    margin: 50px;
+}
+
+h3,h4{
+    font-size: 35px;
+}
+
+h3 span{
+    color: #be4125;
+}
+
+.kodawari-img{
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+}
+
+.kodawari-img img{
+    width: 90%;
+    height: auto;
+}
+
+.tokuchou{
+    background-image: url(http://img2.imepic.jp/image/20220701/551290.jpg?12abaf66ce6786eb54b4f0d9f9837ab3);
+    background-repeat: repeat;
+}
+
+.tokuchou-tytle{
+    text-align: center;
+    margin: 50px;
+}
+
+h4 span{
+    color: #be4125;
+}
+
+.tokuchou-contents span{
+    background-color:yellow;
+}
+
+.jyukucha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+    margin: 50px;
+}
+
+.jyukucha_img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.jyukucha_text{
+    grid-column: 2/4;
+    grid-row: 1/2
+}
+
+.jyukucha-tokuchou{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    text-align: left;
+    border: solid 1px saddlebrown;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.namacha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+    margin: 50px;
+}
+
+.namacha_img{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.namacha_text{
+    grid-column: 1/3;
+    grid-row: 1/2
+}
+
+.namacha-tokuchou{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    text-align: left;
+    border: solid 1px rgb(21, 122, 35);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.roucha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+    margin: 50px;
+}
+
+.roucha_img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.roucha_text{
+    grid-column: 2/4;
+    grid-row: 1/2
+}
+
+.roucha-tokuchou{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    text-align: left;
+    border: solid 1px rgb(61, 38, 7);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+.biyou{
+    margin: 15px;
+    text-align: center;
+    height: 500px;
+    padding: 50px;
+}
+
+.biyou_img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+}
+
+.bunka{
+    margin: 15px;
+    text-align: center;
+}
+
+.bunka span{
+    background-color: yellow;
+}
+
+.bunka-content1{
+    display: grid;
+    grid-template-columns: 1fr 333px 333px 333px 1fr;
+    grid-template-rows: 62px 450px;
+}
+
+.bunka1-title{
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+
+h5{
+    font-size: 20px;
+    color: #be4125;
+    border-bottom: 1px solid #be4125;
+    margin: 15px 0 10px;
+}
+
+.bunka1_text{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: rgba(253,223,176,0.8);
+    padding: 15px;
+}
+
+.bunka1_img{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-color: rgba(253,223,176,0.8);
+    padding: 5px;
+}
+
+.bunka1_img img{
+    height: 300px;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.bunka-content2{
+    display: grid;
+    grid-template-columns: 1fr 333px 333px 333px 1fr;
+    grid-template-rows: 62px 450px;
+    margin-top: 20px;
+}
+
+.bunka2-title{
+    grid-column: 2/5;
+    grid-row: 1/2;
+}
+
+.bunka2_text{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: rgba(253,223,176,0.8);
+    padding: 15px;
+}
+
+.bunka2_img{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-color: rgba(253,223,176,0.8);
+    padding: 5px;
+}
+
+.bunka2_img img{
+    height: 350px;
+    width: 300px;
+    margin-top: 30px;
+}
+
+.voice{
+    text-align: center;
+    padding: 50px 0;
+    background-image: url(https://www.tea-kinofune.com/img/voice_bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom;    
+}
+
+.voice-content{
+    display: grid;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 15px;
+}
+
+h6{
+    border-left: 3px solid #d0735f;
+    font-size: 18px;
+    padding-left: 10px;
+    line-height: 1.5;
+    margin: 15px 15px;
+}
+
+.v-1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border: solid 1px;
+}
+
+.v-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border: solid 1px;
+}
+
+.v-3{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    border: solid 1px;
+}
+
+.v-4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: solid 1px;
+}
+
+.v-5{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    border: solid 1px;
+}
+
+.v-6{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    border: solid 1px;
+}
+
+.siire{
+    background-image: url(https://www.tea-kinofune.com/img/kentou_bg.jpg);
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.siire-content{
+    display: flex;
+    justify-content: center;
+}
+
+.siire-text{
+    margin-left: 27px;
+    margin-top: 20px;
+    width: 473px;
+    color: white;
+}
+
+.toiawase{
+    text-align: center;
+}
+
+.toiawase_img{
+    display: flex;
+    justify-content: center;
+}
+
+.form-toiawase{
+    background-color: rgb(61, 38, 7);
+    border: solid 5px rgb(61, 38, 7);
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.form-toiawase img{
+    height: 50px;
+    width: auto;
+    margin-top: 30px;
+    margin-left: 5px;
+}
+
+.cam{
+    text-align: center;
+}
+
+.cam_img{
+    background-color: #8e1717;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.tokuten1 img{
+    display: block;
+    margin: 20px auto;
+}
+
+.tokuten1_img{
+    display: grid;
+    grid-template-columns: 1fr 350px 350px 1fr;
+    grid-template-rows: 350px 350px;
+    gap: 20px;
+}
+
+.t-1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border: solid 1px gray;
+}
+
+.t-2{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border: solid 1px gray;
+}
+
+.t-3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: solid 1px gray;
+    box-sizing: border-box;
+}
+
+.t-4{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    border: solid 1px gray;
+}
+
+.tokuten2 img{
+    display: block;
+    margin: 20px auto;    
+}
+
+.oubo{
+    text-align: center;
+}
+
+.oubo_img{
+    height: auto;
+    width: 200px;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.oubo_img img{
+    height: 60px;
+    width: auto;
+}
+
+.yajirushi img{
+    height: 25px;
+    width: 25px;
+    margin: 60px 3px;
+}
+
+.o-1{
+    border: solid 1px gray;
+}
+
+.o-2{
+    border: solid 1px gray;
+}
+
+.o-3{
+    border: solid 1px gray;
+}
+
+.o-4{
+    border: solid 1px gray;
+}
+
+.form{
+    border: solid 3px goldenrod;
+    text-align: center;
+    width: 1000px;
+    margin-left: 10%;
+    margin-top: 50px
+}
+
+.form img{
+    margin-top: 20px;
+}
+
+.form span{
+    color:#ca2121;
+    border: solid 1px #ca2121;
+}
+
+dl{
+   display: flex;
+   flex-wrap: wrap;
+   border-bottom: solid 1px rgb(199, 193, 193);
+}
+
+dt{
+    width: 40%;
+}
+
+dd{
+    width: 40%;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.komoji{
+    font-size: 10px;
+}
+
+summary{
+    background-color: #dab76c;
+    color: #ffffff;
+}
+
+.kakunin button{
+    background: #810a0a;
+    color: #fff;
+    text-align: center;
+    width: 500px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+}
