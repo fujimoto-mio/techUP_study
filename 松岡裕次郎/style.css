@@ -66,7 +66,7 @@ header p {
 
 .main_img {
     margin-top: 55px;
-    background-image: url("index1/image/main_bg.jpg");
+    background-image: url("image/main_bg.jpg");
     background-repeat: no-repeat;
     background-position: center
 }
@@ -160,19 +160,19 @@ header p {
 }
 
 .kodawari01 {
-    background-image: url("index1/image/koda01_bg.jpg")
+    background-image: url("image/koda01_bg.jpg")
 }
 
 .kodawari02 {
-    background-image: url("index1/image/koda02_bg.jpg")
+    background-image: url("image/koda02_bg.jpg")
 }
 
 .kodawari03 {
-    background-image: url("index1/image/koda03_bg.jpg")
+    background-image: url("image/koda03_bg.jpg")
 }
 
 .kodawari04 {
-    background-image: url("index1/image/koda04_bg.jpg")
+    background-image: url("image/koda04_bg.jpg")
 }
 
 .tyaba_content {
@@ -384,46 +384,46 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(1) {
-    background-image: url(index1/image/voice_bg01.png);
+    background-image: url(image/voice_bg01.png);
     width: 320px;
     height: 295px
 }
 
 .voice_content ul li:nth-of-type(2) {
-    background-image: url(index1/image/voice_bg02.png);
+    background-image: url(image/voice_bg02.png);
     width: 320px;
     height: 295px;
     padding: 20px 16px
 }
 
 .voice_content ul li:nth-of-type(3) {
-    background-image: url(index1/image/voice_bg03.png);
+    background-image: url(image/voice_bg03.png);
     width: 320px;
     height: 295px;
     margin-right: 0px
 }
 
 .voice_content ul li:nth-of-type(4) {
-    background-image: url(index1/image/voice_bg04.png);
+    background-image: url(image/voice_bg04.png);
     width: 320px;
     height: 315px
 }
 
 .voice_content ul li:nth-of-type(5) {
-    background-image: url(index1/image/voice_bg05.png);
+    background-image: url(image/voice_bg05.png);
     width: 320px;
     height: 315px
 }
 
 .voice_content ul li:nth-of-type(6) {
-    background-image: url(index1/image/voice_bg06.png);
+    background-image: url(image/voice_bg06.png);
     width: 320px;
     height: 315px;
     margin-right: 0px
 }
 
 .kentou_content {
-    background-image: url(index1/image/kentou_bg.jpg);
+    background-image: url(image/kentou_bg.jpg);
     background-repeat: repeat;
     overflow: hidden
 }
@@ -621,7 +621,7 @@ header p {
     border-right: 4px solid #c2af7c;
     width: 1000px;
     margin: 0 auto;
-    background: url(index1/image/an_top_bg.jpg) center top no-repeat, url(index1/image/an_bottom_bg.jpg) center bottom no-repeat;
+    background: url(image/an_top_bg.jpg) center top no-repeat, url(image/an_bottom_bg.jpg) center bottom no-repeat;
     overflow: hidden
 }
 
@@ -1103,7 +1103,7 @@ div.mfp_buttons button#mfp_button_cancel {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    background: url(index1/image/an_top_bg.jpg) center top no-repeat, url(index1/image/an_bottom_bg.jpg) center bottom no-repeat;
+    background: url(image/an_top_bg.jpg) center top no-repeat, url(image/an_bottom_bg.jpg) center bottom no-repeat;
     overflow: hidden
 }
 
