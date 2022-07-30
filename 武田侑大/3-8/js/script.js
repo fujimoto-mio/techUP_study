@@ -15,5 +15,5 @@ const check2 = function(number) {
 if (check2(5)) {
   console.log("値は１０未満です。");
 } else {
-  console.log("値は１０以上です");
+  console.log("値は１０以上です。");
 }
