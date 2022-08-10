@@ -18,7 +18,7 @@
     n = n + 5;
     console.log(n);
     n = n * 2;
-　　console.log(n,"最終結果！");
+    console.log(n,"最終結果！");
 
     let counter = 2;
     counter++;  // counter = counter + 1 と同じです インクリメント
