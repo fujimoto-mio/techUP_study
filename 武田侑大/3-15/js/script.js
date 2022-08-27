@@ -2,7 +2,7 @@ class Triple {
    static customName = 'Tripler';//<-④
    static description = 'I triple any number you provide';//<-①
 
-　　/* 3をかけるスタチック関数  */
+ /* 3をかけるスタティック関数  */
    static calculate(n = 1) {
      return n * 3;
    }
@@ -29,19 +29,33 @@ class Triple {
 
 
 
-//ここから1番
- const example1 = function Who(name) {
-     this.name = "tanaka";
-    };
-    let myExample = new example1();
-    console.log(myExample.name);
-//ここから２番
-  const Who = function (name) {
-        this.name ="tanaka";
-    }
 
-    Who.prototype.getName = function () {
-        return this.name;
-    }
-      let who1 = new Who();
-    console.log(who1.getName());
+const example1 = newFunction();
+ let myExample = new example1();
+ console.log(myExample.name);
+
+  const Who = newFunction_2()
+
+  function newFunction() {
+    return function Who(name) {
+      this.name = "tanaka";
+    };
+  }
+
+  newFunction_1();
+function newFunction_2() {
+  return function (name) {
+    this.name = "tanaka";
+  };
+}
+
+function newFunction_1() {
+  Who.prototype.getName = function () {
+    return this.name;
+  };
+  let who1 = new Who();
+  console.log(who1.getName());
+}
+
+
+
