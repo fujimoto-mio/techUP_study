@@ -1,0 +1,511 @@
+body {
+    display: block;
+    margin: 0 auto;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    width: 1400px;
+}
+
+.header {
+    position: relative;
+    height: 80px;
+}
+.header_img {
+    background-color: rgb(172, 5, 30);
+    width: 100%;
+    padding: 10px 0 3px 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.main {
+    position: relative;
+    height: 500px;
+}
+.main_bg {
+    position: absolute;
+    top: -25px;
+    left: -305px;
+    z-index: 10;
+}
+.main_image {
+    position: absolute;
+    top: -25px;
+    left: 155px;
+    z-index: 20;
+}
+
+/*コロナ対策ここから*/
+.corona {
+    border: solid 1px;
+    border-color: rgb(172, 5, 30);
+    margin: 3% 12%;
+    color: rgb(172, 5, 30);
+    font-size: 14px;
+    line-height: 25px;
+}
+.corona h1 {
+    font-size: 20px;
+}
+.detail {
+    text-align: left;
+    padding-left: 19%;
+}
+/*コロナ対策ここまで*/
+
+.red_strong {
+    color: red;
+    font-size: 20px;
+}
+.yellow {
+    background-color: yellow;
+}
+
+.cp_bnr2 {
+    padding: 40px 0 20px 0;
+    margin: 50px 0;
+    background-color: beige;
+}
+
+.adventure {
+    position: relative;
+    padding-bottom: 40px;
+}
+.adventure_text {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tealeaf {
+    position: relative;
+}
+.tealeaf_text {
+    position: absolute;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/*熟茶ここから*/
+.mature {
+    text-align: left;
+}
+.mature img{
+    float: left;
+    padding-left: 160px;
+    padding-right: 30px;
+}
+.mature_text {
+    float: left;
+    width: 610px;
+    padding-top: 30px;
+    line-height: 30px;
+}
+.mature_feature {
+    border: solid 1px brown;
+    border-radius: 10px;
+}
+.mature_feature p{
+    clear: left;
+    padding-left: 20px;
+    line-height: 28px;
+    color: brown;
+}
+.mature_feature img {
+    padding: 20px 0 10px 20px;
+}
+/*熟茶ここまで*/
+
+/*生茶ここから*/
+.fresh {
+    text-align: left;
+    padding: 400px 0 300px 0;
+}
+.fresh img{
+    float: right;
+    padding-right: 160px;
+    padding-left: 30px;
+
+}
+.fresh_text {
+    float: right;
+    width: 610px;
+    padding-top: 30px;
+    line-height: 30px;
+    padding-bottom: 50px;
+}
+.fresh_feature {
+    clear: right;
+    border: solid 1px green;
+    border-radius: 10px;
+}
+.fresh_feature p{
+    clear: right;
+    padding-left: 20px;
+    line-height: 28px;
+    color: green;
+}
+.fresh_feature img {
+    padding: 20px 450px 10px 20px;
+}
+/*生茶ここまで*/
+
+/*老茶ここから*/
+.old {
+    text-align: left;
+    padding-bottom: 600px;
+}
+.old img{
+    float: left;
+    padding-left: 160px;
+    padding-right: 30px;
+}
+.old_text {
+    float: left;
+    width: 610px;
+    padding-top: 30px;
+    line-height: 30px;
+}
+.old_feature {
+    border: solid 1px rgb(80, 46, 1);
+    border-radius: 10px;
+}
+.old_feature p{
+    clear: left;
+    padding-left: 20px;
+    line-height: 28px;
+    color: rgb(80, 46, 1);
+}
+.old_feature img {
+    padding: 20px 0 10px 20px;
+}
+/*老茶ここまで*/
+
+.middle_text {
+    padding-top: 100px;
+}
+
+.images1234 {
+    height: 300px;
+}
+.image1 {
+    float: left;
+    padding: 10px;
+    margin-left: 10%;
+}
+.image2 {
+    float: left;
+    padding: 10px;
+}
+.image3 {
+    float: left;
+    padding: 10px;
+}
+.image4 {
+    float: left;
+    padding: 10px;
+}
+
+.fixed-background {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.fixed-background > .background-2 {
+    background-position: left center;
+    background-size: contain;
+}
+.background-1 {
+    background-image: url(image/bunka_bg.jpg);
+    padding-top: 50px;
+    text-align: center;
+}
+.shadow_text{
+    color: white;
+    width: 900px;
+    padding-left: 210px;
+    text-shadow: 2px 2px 0 black;
+}
+.background-2 {
+    background-image: url(image/voice_bg.png);
+}
+.voice_box {
+    display: flex;
+    justify-content: center;
+}
+.voice {
+    width: 300px;
+    height: 300px;
+    border: solid 1px rgb(196, 196, 196);
+    margin: 10px 10px 40px 10px;
+    background-color: rgba(247, 247, 247, 0.8);
+    position: relative;
+    text-align: left;
+    padding-left: 20px;
+}
+.voice h3 {
+    text-align: left;
+    border-left: solid 3px red;
+    padding-left: 5px;
+}
+.voice_human {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.culture_box {
+    background-color:rgba(245, 193, 116, 0.6);
+    height: 500px;
+    margin: 0 160px 50px 160px;
+    display: flex;
+}
+.culture_box img {
+    padding: 20px;
+    width: 392px;
+    height: 435px;
+}
+.culture_text {
+    width: 500px;
+    text-align: left;
+    padding-left: 20px;
+}
+.culture_text h2 {
+    font-size: 20px;
+    color: brown;
+    border-bottom: solid 1px;
+}
+.culture_box2 {
+    background-color:rgba(245, 193, 116, 0.6);
+    height: 400px;
+    margin: 0 160px 20px 160px;
+    display: flex;
+}
+.culture_box2 img {
+    padding: 20px;
+    width: 392px;
+    height: 363px;
+}
+
+.kento {
+    display: flex;
+    padding: 0 150px;
+    background-color: goldenrod;
+}
+.kento_text {
+    width: 500px;
+    color: white;
+    padding: 50px 0 0 20px;
+    text-align: left;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.bg_round {
+    background-color: rgb(90, 66, 48);
+    border: 40px;
+    border-radius: 10px;
+    padding: 40px;
+    margin-left: 20px;
+}
+.bnr3 {
+    width: 100%;
+    background-color: rgb(172, 5, 30);
+    padding: 40px 0;
+}
+.triangle_box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid rgb(172, 5, 30);
+}
+
+.moyou_box {
+    position: relative;
+    height: 300px;
+}
+.moyou1 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+.moyou2 {
+    position: absolute;
+    top: 500px;
+    left: 0;
+}
+.moyou3 {
+    position: absolute;
+    top: 1000px;
+    right: 0;
+}
+.moyou_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.brown {
+    color: brown;
+}
+.gift_box {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.gift1 {
+    padding: 20px 5px;
+    border: solid 1px rgb(191, 190, 190);
+    width: 300px;
+    height: 320px;
+    margin: 0 20px;
+}
+.gift2 {
+    padding: 20px 5px;
+    border: solid 1px rgb(191, 190, 190);
+    width: 300px;
+    height: 320px;
+    margin: 0 20px;
+}
+
+.step_box {
+    display: flex;
+    justify-content: center;
+}
+.direction {
+    width: 22px;
+    height: 22px;
+    padding-top: 200px;
+}
+.step {
+    width: 200px;
+    height: 400px;
+    border: solid 1px rgb(198, 198, 198);
+    text-align: left;
+    padding: 5px;
+    margin: 20px 5px;
+}
+.step img {
+    width: 200px;
+}
+
+.necesary {
+    padding: 2px;
+    border: solid 1px rgb(172, 5, 30);
+    color: rgb(172, 5, 30);
+}
+
+dl {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    display: table;
+    border-bottom: solid 1px rgb(198, 198, 198);
+}
+dt {
+    width: 40%;
+    height: 40px;
+    padding: 20px;
+    text-align: left;
+    display: table-cell;
+}
+dd {
+    width: 30%;
+    height: 50px;
+    padding: 20px 20px 20px 200px;
+    display: table-cell;
+    text-align: left;
+}
+.small {
+    font-size: 13px;
+    color: darkred;
+}
+.small_1 {
+    font-size: 12px;
+}
+.small_2 {
+    font-size: 12px;
+    color: darkred;
+}
+.form {
+    width: 400px;
+    height: 30px;
+}
+.form_1 {
+    width: 150px;
+    height: 30px;
+}
+.sex {
+    transform: scale(1.0);
+    padding: 20px 20px 20px 0;
+}
+.address {
+    width: 400px;
+    height: 30px;
+    margin: 5px;
+}
+.time {
+    width: 300px;
+    padding: 0;
+}
+.textbox {
+    width: 400px;
+    height: 150px;
+}
+.dropdown {
+    text-align: left;
+    padding: 20px;
+    margin: 20px 200px;
+    font-family: Arial;
+    font-weight: lighter;
+}
+.dropdown h1{
+    font-size: large;
+    font-family: Arial;
+    font-weight: lighter;
+    color: darkred;
+}
+summary {
+    padding: 20px;
+    margin: 20px 200px;
+    background-color: rgb(193, 164, 5);
+    text-align: center;
+}
+.accept {
+    padding: 40px;
+}
+
+.check {
+    padding: 20px 200px;
+    margin: 20px;
+    background-color: darkred;
+    font-family: serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.pagetop {
+    position: fixed;
+    right: 0;
+    bottom: 15px;
+    padding: 10px 15px;
+    background-color: rgb(193, 164, 5);
+}
+
