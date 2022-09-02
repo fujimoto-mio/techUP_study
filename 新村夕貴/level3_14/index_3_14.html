@@ -1,0 +1,26 @@
+<html lang="ja"><head>
+  <meta charset="UTF-8">
+    <title>Level 3-14</title>
+  </head>
+  <body>
+    <p>JavaScriptBasic</p>
+    <p>GoogleChromeからConsoleを開いて確認してください。</p>
+    <script>
+     'use strict';
+
+     setInterval(function showClock(){
+
+      var dObj = new Date();
+
+      var hours = dObj.getHours();
+      var minutes = dObj.getMinutes();
+      var seconds = dObj.getSeconds();
+      var str = hours + ":" + minutes + ":" + seconds;
+      console.log(str);
+
+     },1000);
+
+    </script>
+  
+  </body>
+</html>
