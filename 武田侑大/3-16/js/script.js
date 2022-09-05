@@ -1,13 +1,11 @@
 const btn1 = document.getElementById("change");
-
-const item = document.getElementsByClassName('list-group-item');
-
+const output= document.getElementById("output")
 
    btn1.addEventListener("click",function(){
 
-    console.log(item);
-})
+    output.textContent = "100";
 
+});
 
 
 
