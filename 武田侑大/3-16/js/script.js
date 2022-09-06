@@ -1,11 +1,14 @@
 const btn1 = document.getElementById("change");
-const output= document.getElementById("output")
+const output = document.getElementById("output");
 
- console.log(output.textContent);
+const output2 = document.getElementsByClassName("list-group-item")
+
+
+ console.log(output.length);
 
    btn1.addEventListener("click",function(){
-   
-    output.textContent = "変えました"
+   let test = output.textContent
+    output.textContent = test * 2
 
 });
 
