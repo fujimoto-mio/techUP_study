@@ -16,24 +16,13 @@ console.log(output.textContent);
 let output2 = document.getElementsByClassName("list-group")
 let li = document.getElementsByClassName("list-group-item")
 
-console.log(li.textContent);
+console.log(li[0].textContent);
 
+for (let i = 0; i < li.length ; i++) {
    btn1.addEventListener("click",function(){
-   let test2 = li.text()
-    li.textContent = test2 * 2
+   let test2 = li[0].textContent
+    li.textContent = test2 * 10
 
 });
 
-
-
-
-//for (let i = 0; i < item.length ; i++) {
-  //  (function(n) {
-   //      btn1[n].addEventListener('click', () => {
-    //        item.innerText = n * 10
-     
-   // })
-
-//});
-
-//}
+}
