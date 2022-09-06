@@ -1,9 +1,11 @@
 const btn1 = document.getElementById("change");
 const output= document.getElementById("output")
 
-   btn1.addEventListener("click",function(){
+ console.log(output.textContent);
 
-    output.textContent = "100";
+   btn1.addEventListener("click",function(){
+   
+    output.textContent = "変えました"
 
 });
 
