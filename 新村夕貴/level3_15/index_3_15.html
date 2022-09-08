@@ -1,0 +1,35 @@
+<html lang="ja"><head>
+  <meta charset="UTF-8">
+    <title>Level 3-15</title>
+  </head>
+  <body>
+    <p>JavaScriptBasic</p>
+    <p id="RealtimeClockArea2"></p>
+    <script>
+    'use strict';
+
+    const Who = class {
+      constructor(name) {
+        this.name = name
+      }
+    }
+
+    const fool = new Who('tanaka');
+    console.log(fool);
+    
+    Who.prototype.getName = function() {
+      return this.name;
+    };
+
+    const tanaka = new Who('tanaka');
+    tanaka.getName();
+    console.log(tanaka);
+
+ 
+ 
+    </script>
+  
+  
+  <p>GoogleChromeからConsoleを開いて確認してください。</p>
+  </body>
+</html>
