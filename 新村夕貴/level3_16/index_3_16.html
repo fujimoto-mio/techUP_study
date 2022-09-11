@@ -31,11 +31,7 @@
   for (let i = 0; i < elements.length; i++) {
     document.getElementById('reset').addEventListener('click', () =>{
     
-      elements[0].textContent = 100;
-      elements[1].textContent = 110;
-      elements[2].textContent = 120;
-      elements[3].textContent = 130;
-      elements[4].textContent = 140;
+      elements[i].textContent = 100 + i*10
     });
   };
   
