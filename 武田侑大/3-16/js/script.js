@@ -17,11 +17,12 @@ let li = document.getElementsByClassName("list-group-item");
     btn2.addEventListener("click",function(){
      
       for (let i = 0; i < li.length ; i++) { 
-            
-           li[0].textContent = 100;
-           li[1].textContent = 110;
-           li[2].textContent = 120;
-           li[3].textContent = 130;
-           li[4].textContent = 140;
+           
+           v = 100;
+           li[0].textContent = v ;
+           li[1].textContent = v + 10;
+           li[2].textContent = v + 20;
+           li[3].textContent = v + 30;
+           li[4].textContent = v + 40;
             }
 });
