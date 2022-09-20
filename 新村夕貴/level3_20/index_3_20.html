@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Level3-20 Canvas API(1)</title>
+</head>
+<script type="text/javascript">
+
+  function test() {
+    //描画コンテキストの取得
+    var canvas = document.getElementById('sample');
+    if (canvas.getContext) {
+      const canvas = document.querySelector('canvas');
+      const ctx = canvas.getContext('2d');
+
+      ctx.beginPath();
+      ctx.arc(100, 75, 50, 0, 1.5 * Math.PI);
+      ctx.stroke();
+    }
+  }
+  //-->
+</script>
+
+<body onLoad="test()">
+<canvas id="sample">
+  
+</canvas>
+</body>
+</html>
