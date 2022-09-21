@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>canvasで図形を描く</title>
+</head>
+<body>
+  <h2>Canvasでアニメーションを描く</h2>
+  <canvas id="canvas">
+    <script type="text/javascript">
+
+      var img = new Image();
+      img.src = "https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png";
+    
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.width = 500;
+      canvas.height = 500;
+      document.body.appendChild(canvas);
+    
+      const centerX = 250;
+      const centerY = 250;
+      const distanceFromCenter = 150;
+      const circleSize = 30;
+
+      let x = centerX;
+      let y = centerY;
+      let angleRad = 0;
+
+      function loop(timestamp) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        angleRad += 1 * Math.PI / 180;
+        x = distanceFromCenter * Math.cos(angleRad) + centerX;
+        y = distanceFromCenter * Math.sin(angleRad) + centerY;
+      
+        context.beginPath();
+        context.drawImage(img, 0, 0, 2000, 2000, x, y, 250, 250);
+        context.fill();
+        
+        window.requestAnimationFrame(loop);
+      }
+      window.requestAnimationFrame(loop);
+
+
+    </script>
+  </canvas>
+</body>
+</html>
