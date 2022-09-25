@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>index_3_14</title>
+  </head>
+<body>
+  <script>
+    window.onload = function () {
+
+        function event() {
+          var rightNow = new Date();
+          var format_date = rightNow.toLocaleTimeString();
+
+            console.log( format_date );
+
+        }
+        timer = setInterval(event, 1000);
+    }
+</script>
+</body>
+</html>
