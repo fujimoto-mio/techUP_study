@@ -1,0 +1,45 @@
+<DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>index_3_15_1</title>
+</head>
+<body>
+<script>
+/*
+ *  Tripler
+ *  3をかける親クラス
+ */
+  class Triple {
+    static customName = 'Tripler';//<-④
+    static description = 'I triple any number you provide';//<-①
+
+　　/* 3をかけるスタチック関数  */
+    static calculate(n = 1) {
+      return n * 3;
+    }
+  }
+
+  /*
+  *  SquaredTriple
+  *  Tripleを継承して計算する子クラス
+  */
+  class SquaredTriple extends Triple {
+    static longDescription;
+    static description = 'I square the triple of any number you provide';
+    static calculate(n) {//<-③
+      return super.calculate(n) * super.calculate(n);//<-親の関数(calculate)を呼び出している
+    }
+  }
+
+  console.log(Triple.description);//①を表示
+  console.log(Triple.calculate(6));//②の関数を計算して表示
+
+  const tp = new Triple();//Triple宣言
+  console.log(SquaredTriple.calculate(3));//③の関数
+  console.log(SquaredTriple.customName);//④を読んでいる
+
+  console.log(tp.calculate());//'tp.calculate 関数でないので表示されない'
+</script>
+</body>
+</html>
