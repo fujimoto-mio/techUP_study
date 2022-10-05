@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScriptBasic</title>
+    </head>
+    <body>
+        <p>JavaScript　Basic</p>
+        <script>
+            'use strict'; /*エラーチェック用 */
+            
+            window.onload = function () {
+ 
+                function event() {
+                    var now = new Date();
+                    let hour = now.getHours();
+                    let min = now.getMinutes();
+                    let sec = now.getSeconds();
+                    console.log(hour + ":" + min + ":" + sec);
+                }
+
+                setInterval(event, 1000);
+            }
+        </script>
+    </body>
+</html>
