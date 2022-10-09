@@ -70,22 +70,25 @@ function showCountdown() {
      // 期限が過ぎた場合
      msg = msg1 + "は、" + msg2 + "前に過ぎました。";
   }
-  console.log( inputMonth);
-
-  if ( inputMonth >= 12 ){
-    msg = "エラーしました"; 
+  if( inputYear <= -1){
+    msg = "計算できません";
   }
-  if ( inputDate >= 32){
-    msg = "エラーしました"; 
+  
+  if ( inputMonth >= 12  || inputMonth <= -1){
+    msg = "計算できません"; 
   }
-  if ( inputHour >= 24){
-    msg = "エラーしました"; 
+  
+  if ( inputDate >= 32 || inputDate <= 0 ){
+    msg = "計算できません"; 
   }
-  if ( inputMin >= 60 ){
-    msg = "エラーしました"; 
+  if ( inputHour >= 24 || inputHour <= -1 ){
+    msg = "計算できません"; 
   }
-  if ( inputSec >=60 ){
-    msg = "エラーしました";
+  if ( inputMin >= 60 || inputMin <= -1 ){
+    msg = "計算できません"; 
+  }
+  if ( inputSec >=60 ||  inputSec <= -1){
+    msg = "計算できません";
   }
  
 
