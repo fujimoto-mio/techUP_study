@@ -1,15 +1,21 @@
 function set2fig(num) {
   // 数値が1桁だったら2桁の文字列にして返す
-  var ret;
-  if( num < 10 ) { ret = "0" + num; }
-  else { ret = num; }
+  let ret;
+  if( num < 10 ) { 
+    ret = "0" + num; 
+  }else { ret = num; }
+
   return ret;
 }
 function isNumOrZero(num) {
   // 数値でなかったら0にして返す
-  if( isNaN(num) ) { return 0; }
+  if( isNaN(num) ) { 
+    return 0; 
+
+    }
   return num;
-}
+  }
+
 function showCountdown() {
   // 現在日時を数値(1970-01-01 00:00:00からのミリ秒)に変換
   let nowDate = new Date();
@@ -33,7 +39,7 @@ function showCountdown() {
   let dlMin   = targetDate.getMinutes();
   let dlSec   = targetDate.getSeconds();
   let msg1 = dlYear + "/" + dlMonth + "/" + dlDate + " " + set2fig(dlHour) + ":" + set2fig(dlMin) + ":" + set2fig(dlSec);
-
+  
   // 引き算して日数(ミリ秒)の差を計算
   let diff2Dates = dnumTarget - dnumNow;
   if( dnumTarget < dnumNow ) {
@@ -64,6 +70,24 @@ function showCountdown() {
      // 期限が過ぎた場合
      msg = msg1 + "は、" + msg2 + "前に過ぎました。";
   }
+  console.log( inputMonth);
+
+  if ( inputMonth >= 12 ){
+    msg = "エラーしました"; 
+  }
+  if ( inputDate >= 32){
+    msg = "エラーしました"; 
+  }
+  if ( inputHour >= 24){
+    msg = "エラーしました"; 
+  }
+  if ( inputMin >= 60 ){
+    msg = "エラーしました"; 
+  }
+  if ( inputSec >=60 ){
+    msg = "エラーしました";
+  }
+ 
 
   // 作成した文字列を表示
   document.getElementById("CountdownArea").innerHTML = msg;
