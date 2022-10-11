@@ -70,25 +70,47 @@ function showCountdown() {
      // 期限が過ぎた場合
      msg = msg1 + "は、" + msg2 + "前に過ぎました。";
   }
-  if( inputYear <= -1){
-    msg = "計算できません";
+
+  /////日
+
+  if ( inputDate >= 32){
+    msg = "31日までの日を入力してください"; 
+  }else if(inputDate <= 0 ){
+    msg = "1日からの日を入力してください"
+  }
+
+  /////月
+  if ( inputMonth >= 12  ){
+    msg = "12月までの月を入力してください"; 
+  }else if(inputMonth <= -1){
+    msg = "1月からの月を入力してください"
+  }
+ 
+
+  /////年
+  if( inputYear < 1970){
+    msg = "1970年以上の年から入力してください";
   }
   
-  if ( inputMonth >= 12  || inputMonth <= -1){
-    msg = "計算できません"; 
+ /////時
+  if ( inputHour >= 24){
+    msg = "23時までの時間を入力してください"; 
+  }else if(inputHour <= -1){
+    msg = "0時からの時間を入力してください"
   }
-  
-  if ( inputDate >= 32 || inputDate <= 0 ){
-    msg = "計算できません"; 
+
+  /////分
+  if ( inputMin >= 60){
+    msg = "59分までの分数を入力してください"; 
+  }else if(inputMin <= -1){
+    msg = "0分からの分数を入力してください"
   }
-  if ( inputHour >= 24 || inputHour <= -1 ){
-    msg = "計算できません"; 
-  }
-  if ( inputMin >= 60 || inputMin <= -1 ){
-    msg = "計算できません"; 
-  }
-  if ( inputSec >=60 ||  inputSec <= -1){
-    msg = "計算できません";
+
+  /////秒
+  if ( inputSec >=60){
+    msg = "59秒までの秒数を入力してください";
+  }else if(inputSec <= -1){
+    msg = "0秒からの秒数を入力してください"
   }
  
 
