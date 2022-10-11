@@ -6,16 +6,19 @@
 </head>
 <body>
 <script>
-  var Who = function( name ){
-    this.name = name;
+  var Who = function() {};
+  var getName = function() {};
+
+  Who.prototype.name = function (){
+    return 'tanaka';
   }
-  Who.prototype.getName = function (){
-    return this.name;
-  }
 
+  getName.protptype = new Who();
 
+  var taro = new Who();
 
- }
+  console.log( taro.name() );
+
 </script>
 </body>
 </html>
