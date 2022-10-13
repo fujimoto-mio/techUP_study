@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>index_3_16</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container text-center w-25" style="margin-top:150px">
+
+    <h2><span class="badge badge-success">liデータ</span></h2>
+
+    <ul class="list-group">
+      <li class="list-group-item">100</li>
+      <li class="list-group-item">110</li>
+      <li class="list-group-item">120</li>
+      <li class="list-group-item">130</li>
+      <li class="list-group-item">140</li>
+    </ul>
+
+    <button onclick="hoge();" type="button" class="btn btn-raised btn-warning mt-1">
+      変更
+    </button>
+
+  </div>
+
+  <script>
+
+    function hoge() {
+
+      let htmlcollection = document.getElementsByClassName('list-group-item');
+
+      let len = htmlcollection.length;
+
+      for (let i = 100; i < len; i++) {
+        htmlcollection[i].textContent = i;
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
