@@ -23,17 +23,17 @@
       <li class="list-group-item">140</li>
     </ul>
   </form>
-
     <button onclick="hoge();" type="button" class="btn btn-raised btn-warning mt-1">
       変更
     </button>
 
+    <button onclick="reset();" type="button" class="btn btn-raised btn-warning mt-1">
+      リセット
+    </button>
   </div>
-
   <script>
-
     function hoge() {
-
+      //<li class>に10倍した値を表示させる処理をhogeでしている
       let htmlcollection = document.getElementsByClassName('list-group-item');
 
       let len = htmlcollection.length;
@@ -42,7 +42,19 @@
         htmlcollection[i].textContent = htmlcollection[i].textContent*10;
       }
     }
+
+    function reset() {
+
+      let htmlcollection = document.getElementsByClassName('list-group-item');
+
+      let len = htmlcollection.length;
+      //関数じゃなくて文字列的な感じで100、120を入れていいってこと（固定値で入力する）
+      var array = new Array(100,110,120,130,140);
+
+      for (let i = 0; i < len; i++) {
+        htmlcollection[i].textContent = array[i];
+      }
+    }
   </script>
 </body>
-
 </html>
