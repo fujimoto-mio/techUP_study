@@ -1,0 +1,24 @@
+<DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>index_3_15_1</title>
+</head>
+<body>
+<script>
+  var Who = function() {};
+  var getName = function() {};
+
+  Who.prototype.name = function (){
+    return 'tanaka';
+  }
+
+  getName.protptype = new Who();
+
+  var taro = new Who();
+
+  console.log( taro.name() );
+
+</script>
+</body>
+</html>
