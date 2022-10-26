@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScriptBasic</title>
+    </head>
+    <body>
+        <p>JavaScript　Basic</p>
+        <script>
+            'use strict'; /*エラーチェック用 */
+            
+            function who(name) {
+                    this.name = name;
+            }
+
+            var nametest1 = new who("tanaka");
+            console.log(nametest1.name);
+
+            who.prototype.getName = function() {
+                return this.name;
+            }
+
+            var nametest2 = new who("nakata");
+            console.log(nametest2.getName());
+            
+        </script>
+    </body>
+</html>
