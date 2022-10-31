@@ -1,0 +1,20 @@
+<ul class="list-group">
+  <li class="hoge">a</li>
+  <li class="hoge">b</li>
+  <li class="hoge">c</li>
+  <li class="hoge">d</li>
+  <li class="hoge">e</li>
+</ul>
+
+<script>
+
+let htmlcollection = document.getElementsByClassName('hoge');
+
+let l = htmlcollection.length;
+
+for (let i = 0; i < l; i++) {
+  // クラス名 hogeのテキストを「i」に変更
+  htmlcollection[i].textContent = i;
+}
+
+</script>
