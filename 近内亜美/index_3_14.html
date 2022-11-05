@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptBasic 3-14</title>
+</head>
+<body>
+    <script>
+    'use strict'
+  
+   function event()  {
+
+    var nowdate = new Date();
+    var hour = nowdate.getHours();        
+    var min  = nowdate.getMinutes();      
+    var sec  = nowdate.getSeconds();      
+
+    console.log(hour + ":" + min + ":" + sec );
+
+   }
+
+   setInterval(event,1000); 
+
+    </script>
+</body>
+</html>
