@@ -9,17 +9,17 @@
     'use strict'
 
     class who {
-     constructor(name) {
-      this.name = name ;
-      console.log( this.name );
+       constructor(name) {
+       this.name = name ;
+       console.log( this.name );
      }
     }
     var tanaka = new who("田中");
 
 
-    who.prototype.getName = function() {
+    who.prototype.getName = function(){
     return this.name;
-}
+    }
    console.log(this.name);
 
 
