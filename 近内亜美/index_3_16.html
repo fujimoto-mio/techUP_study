@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptBasic 3-16</title>
+</head>
+<body>
+ 
+<ul id="target">
+    <li class="list-group-item">100</li>
+    <li class="list-group-item">110</li>
+    <li class="list-group-item">120</li>
+    <li class="list-group-item">130</li>
+    <li class="list-group-item">140</li>
+  </ul>
+
+  <p id="output" class="output"></p>
+
+   <p><button type="button" onclick="getElements();">変更</button></p>
+   <p><button type="button"  onclick="Reset();">リセット</button></p>
+
+  <script>
+    'use strict'
+
+    function getElements() { 
+
+    let element = document.getElementById('target');
+    let elements = element.getElementsByClassName('list-group-item');
+    let len = elements.length;
+
+
+    for (let i = 0; i < len; i++){
+      console.log(elements.item(i).innerHTML*10); 
+      elements.item(i).innerHTML*=10;  
+    }
+}
+
+
+    function Reset() { 
+
+    let element = document.getElementById('target');
+    let elements = element.getElementsByClassName('list-group-item');
+    let len = elements.length;
+
+    for (let i = 0; i < len; i++){
+     console.log(elements.item(i).innerHTML/=10);
+     elements.item(i).innerHTML/10;  
+    }
+  }
+
+    </script>
+</body>
+</html>
