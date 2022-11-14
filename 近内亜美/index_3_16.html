@@ -28,12 +28,11 @@
     let elements = element.getElementsByClassName('list-group-item');
     let len = elements.length;
 
-
     for (let i = 0; i < len; i++){
-      console.log(elements.item(i).innerHTML*10); 
-      elements.item(i).innerHTML*=10;  
+      var list = elements.item(i).innerHTML*=10; 
+      console.log(list); 
     }
-}
+  }
 
 
     function Reset() { 
@@ -43,8 +42,8 @@
     let len = elements.length;
  
     for (let i = 0; i < len; i++){
-     console.log(elements.item(i).innerHTML= 100+10*i);
-     elements.item(i).innerHTML= 100+10*i;  
+       var reset = elements.item(i).innerHTML= 100+10*i;  
+       console.log(reset);
     } 
   }
 
