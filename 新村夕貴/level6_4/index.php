@@ -5,10 +5,8 @@
 
 <?php
 
-$val = $_POST['button'];
-
 try{
-  if ($val != null) {
+  if (isset($_POST['textBox'])) {
     $data = $_POST['textBox'];
     $timeout = time() + 10;
     $path = '/';
