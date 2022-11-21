@@ -5,19 +5,24 @@
 
 <?php
 
+$data = $_COOKIE['MyData001'];
+
 try{
   if (isset($_POST['textBox'])) {
-    $data = $_POST['textBox'];
+    $textbox = $_POST['textBox'];
     $timeout = time() + 10;
     $path = '/';
     $domain = '';
-    setcookie('MyData001', $data, $timeout, $path, $domain);
+    setcookie('MyData001', $textbox, $timeout, $path, $domain);
     header("Location: " . $_SERVER['PHP_SELF']);
   } else {
-    echo($_COOKIE['MyData001']);
+    echo $data;
   }
 } catch(Exception $e) {
   echo $e->getMessage(), "\n";
+}
+
+if(!empty($data)){
 }
 
 ?>
