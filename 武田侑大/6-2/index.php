@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>6-2</title>
+</head>
+<body>
+
 <?php
 //現在
 $now = new DateTime();
@@ -48,3 +56,6 @@ while($days > 0) {
 
 echo '<p>' . $date_counter . '</p>';
  ?>
+
+</body>
+</html>
