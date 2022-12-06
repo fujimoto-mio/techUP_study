@@ -14,75 +14,74 @@
  
   <h2>現在のTodoリスト</h2>
   <ul id="todo-list"></ul>
- 
 
 
-  <script>
-   'use strict' 
+<script>
+  'use strict' 
+
+  function todo() {
+    const inputBox = document.getElementById('input-todo-box');
+    const addButton = document.getElementById('add-button');
+    const todolist = document.getElementById('todo-list');
+    const todos = [];
 
 
-   
-  function todo() { 
-
-    let box = document.getElementById('input-todo-box');
-    let botan = document.getElementById('add-button');
-    let list = document.getElementById('todo-list');
-
-
-      botan.addEventListener('click', (event) => {
-
-      const text = document.getElementById('input-todo-box');
-      const List = document.getElementById('todo-list');
-      List.innerText = text.value;
-    
-      showTodos();
-      todo.push('List'); 
-
-      });
-
-
-    function showTodos() {
-
-      const List = document.getElementById('todo-list');
-      const removeButton = document.createElement('button');
-      removeButton.innerHTML = '削除';
-      List.appendChild(removeButton);
-
-      const todos = Array.from(document.querySelectorAll('todo-list'))
-
- 
-      todos.forEach((todo, index) => {
-       const List = document.getElementById('todo-list');
-       const li = document.createElement('li');
-       List.appendChild(li); 
-       
+      addButton.addEventListener('click', (event) => {
+        const li = document.createElement('li');
+        const add = todolist.appendChild(li);
+        
+        add.textContent = inputBox.value;
 
         const removeButton = document.createElement('button');
         removeButton.innerHTML = '削除';
-        li.appendChild(removeButton); 
-
-
-          removeButton.addEventListener('click', () => {
-          List.splice(index, 1);  
-          showTodos();
+        add.appendChild(removeButton);
       
-            }); 
+     });/* addButton.addEventListener */
 
-      });
+      todos.push(todo);
+      inputBox.value = '';   
+      showTodos();
 
-    }
+ 
+   function showTodos() {
+      const todo = []; 
+      const li = document.createElement('li');
+ 
+      todos.forEach((todo, index) => {
+  
+        const li = document.createElement('li');
+ 
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = '削除'; 
 
-       function deleteTodo(index) {
-       
-        removeButton.addEventListener('click', () => {
-          const removeButton = document.createElement('button');
-           todo.splice(index, 1);
-           showTodos();
+
+         removeButton.addEventListener('click', () => {
+           const li = document.createElement('li');
+           const add = todolist.appendChild(li); 
+      
+          todos.splice(index, 1);
+           showTodos(); 
+
           });
-        }
-  } 
-   todo();
 
-    </script>
+          return removeButton;
+     });/* todos.forEach */
+    }/* function showTodos */
+ 
+
+    function deleteTodo(index) {
+
+       todos.splice(index, 1);
+       showTodos();
+  
+    } /*function deleteTodo */
+ 
+  }/* todo() */
+ 
+
+todo();
+
+
+</script>
 </body>
 </html>
