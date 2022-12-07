@@ -24,8 +24,7 @@ try{
   echo $e->getMessage(), "\n";
 }
 
-if(!empty($data)){
-}
+
 ?>
 
 
