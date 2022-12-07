@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  <p>JavaScript Basic</p>
+  <script>
+const name = ["山田さん","佐藤さん","内田さん"];
+
+console.log("最初に配列の値を表示します。")
+for (let i =0; i <3; i++){
+    console.log(name[i])
+}
+
+  console.log("配列の値を１つ消します。");
+  console.log(name[0] + "を消しました。");
+  const shiftExamle  = name.shift(); 
+  for (let i =0; i <2; i++){
+    console.log(name[i])
+}
+
+  console.log("配列の値を１つ消します。");
+  console.log(name[0] + "を消しました。");
+  name.shift(); 
+  for (let i =0; i <1; i++){
+    console.log(name[i])
+}
+
+console.log("配列の値を１つ消します。");
+  console.log(name[0] + "を消しました。");
+  name.shift(); 
+    console.log("データがなくなりました")
+  </script>
+
+</body>
+</html>
