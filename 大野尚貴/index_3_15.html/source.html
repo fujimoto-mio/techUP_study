@@ -8,14 +8,13 @@
  <script>
   'use strict';
  class Who {
-    constructor(name) { 
+    constructor() { 
       this.name = name
     }
-    static getName=name
+    static getName='tanaka';
     }
-    Who.prototype.name=function(){
-      return this.name;
-    }
-    console.log('tanaka');
+    Who.prototype.getname='tanaka'
+    let String = new Who();
+    console.log(String.getname);
  </script>
 </body>
