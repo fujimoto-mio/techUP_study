@@ -6,15 +6,16 @@
 </head>
 <body>
  <script>
+  'use strict';
  class Who {
     constructor(name) { 
       this.name = name
     }
-    static getName='tanaka'
+    static getName=name
     }
-    Who.prototype.getname=function(){
+    Who.prototype.name=function(){
       return this.name;
     }
-    console.log(Who.getname);
+    console.log('tanaka');
  </script>
 </body>
