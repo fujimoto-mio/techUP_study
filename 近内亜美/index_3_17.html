@@ -38,47 +38,40 @@
       
      });/* addButton.addEventListener */
 
-      todos.push(todo);
+      /* todos.push(todo); */
+      todos.push();
       inputBox.value = '';   
       showTodos();
 
- 
+
    function showTodos() {
-      const todo = []; 
+
       const li = document.createElement('li');
- 
-      todos.forEach((todo, index) => {
+
+     
+      todos.forEach((todo,index) => {
   
-        const li = document.createElement('li');
- 
-        const removeButton = document.createElement('button');
-        removeButton.innerHTML = '削除'; 
-
-
-         removeButton.addEventListener('click', () => {
-           const li = document.createElement('li');
-           const add = todolist.appendChild(li); 
+        const li = document.createElement('li'); 
       
-          todos.splice(index, 1);
-           showTodos(); 
+  
+        const removeButton =  document.createElement("button");
+         removeButton.innerHTML = "削除";   
 
+        removeButton.addEventListener('click', (event) => {
+    
+             todos.splice(index, 1); 
+             showTodos();
+            
           });
 
-          return removeButton;
+         /*  return removeButton; */
      });/* todos.forEach */
     }/* function showTodos */
+    
  
-
-    function deleteTodo(index) {
-
-       todos.splice(index, 1);
-       showTodos();
-  
-    } /*function deleteTodo */
  
   }/* todo() */
  
-
 todo();
 
 
