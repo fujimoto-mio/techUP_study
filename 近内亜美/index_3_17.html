@@ -35,41 +35,15 @@
         const removeButton = document.createElement('button');
         removeButton.innerHTML = '削除';
         add.appendChild(removeButton);
+        inputBox.value = '';  
       
+
+        removeButton.addEventListener("click", (event) => {
+          add.remove();
+       });
+
      });/* addButton.addEventListener */
-
-      /* todos.push(todo); */
-      todos.push();
-      inputBox.value = '';   
-      showTodos();
-
-
-   function showTodos() {
-
-      const li = document.createElement('li');
-
      
-      todos.forEach((todo,index) => {
-  
-        const li = document.createElement('li'); 
-      
-  
-        const removeButton =  document.createElement("button");
-         removeButton.innerHTML = "削除";   
-
-        removeButton.addEventListener('click', (event) => {
-    
-             todos.splice(index, 1); 
-             showTodos();
-            
-          });
-
-         /*  return removeButton; */
-     });/* todos.forEach */
-    }/* function showTodos */
-    
- 
- 
   }/* todo() */
  
 todo();
