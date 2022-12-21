@@ -14,6 +14,9 @@
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('2d');
 
+const img =  document.createElement("img");
+img.src ="https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png";
+
 canvas.width = 500;
 canvas.height = 500;
 document.body.appendChild(canvas);
@@ -39,7 +42,7 @@ function loop(timestamp) {
   y = distanceFromCenter * Math.sin(angleRad) + centerY;
 
   context.beginPath();
-  context.arc(x, y, circleSize, 0, Math.PI * 2);  
+  context.drawImage(img,x,y,50,50); 
   context.fillStyle = "#0f0091";
   context.fill();
 
