@@ -2,11 +2,20 @@
 
 namespace App\Console;
 
+use App\Console\Commands\BirthdayMail;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+    /**
+     * アプリケーションで提供するArtisanコマンド
+     *
+     * @var array
+     */
+    protected $commands = [
+        BirthdayMail::class
+    ];
     /**
      * Define the application's command schedule.
      *
@@ -16,6 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        // テストように毎分に実行します
+        $schedule->command('send:birthday-mail')->cron('* * * * *');
     }
 
     /**
