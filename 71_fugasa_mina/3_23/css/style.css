@@ -1,0 +1,37 @@
+
+body {
+    text-align: center;
+}
+
+p.atdays {
+    display: inline-block;
+    margin: 0 auto 10px;
+    background: #f0db3f;
+    color: #313131;
+    padding: 3px 20px;
+    position: relative;
+    border-radius: 2px;
+    font-size: 0.9rem;
+}
+p.atdays:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border: 10px solid transparent;
+    border-top: 10px solid #f0db3f;
+    z-index: 2;
+}
+p#countTimer {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+    text-align: center;
+}
+p#countTimer span {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 10px;
+}
