@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>カウントアップ・ダウン</title>
+    </head>
+    <body>
+        <input type="text" value="0" id="total" />
+        <input type="button" onclick="func1()" value="ボタン" id="one_up" /> <br />
+
+    
+<script>
+	window.onload = function(){
+		var total = document.getElementById("total");
+		var now_num = document.getElementById("now_num");
+		//増加
+			var one_up_btn = document.getElementById("one_up");
+		//減少
+			var one_down_btn = document.getElementById("one_down");
+		//定義
+			var count_num = 0;
+
+		//カウントアップ処理
+			one_up.onclick = function(){
+			count_num += 1;
+			total.value = count_num;
+			now_num.innerHTML = count_num;
+			}
+		//カウントダウン処理
+			one_down.onclick = function(){
+				count_num += -1;
+				total.value = count_num;
+				now_num.innerHTML = count_num;
+			}
+	}
+		function func1() {
+			var input_num = document.getElementById("total").value;
+			document.getElementById("now_num").innerHTML = input_num;
+			one_up.onclick = function(){
+				input_num += 1;
+				total.value = input_num;
+				now_num.innerHTML = input_num;
+			}
+			one_down.onclick = function(){
+				input_num += -1;
+				total.value = input_num;
+				now_num.innerHTML = input_num
+			}
+		}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  <p>JavaScriptBasic</p>
+  <script>
+    // 記号について確認しておこう！
+    console.log('こん\tにちは'); /* ① タブ文字の意味　 */
+    console.log('おげんき\nですか'); /*② 改行の意味　*/
+    console.log('おげんき'+'ですか');/*③　+　をつけると連結します */
+
+
+    // 数値計算（二項演算子）
+   let a = 1+10;
+   let b = 1-10;
+   let c = 10.5 * 20; 
+   let d = 10 / 20;
+   let e = 10 % 20;  /* 余り表示 */
+   let f = 3**4;     /* べき乗(3*3*3*3) */
+
+
+    
+   console.log(a);
+   console.log(b);
+   console.log(c);
+   console.log(d);
+   console.log(e);
+   console.log(f);
+
+
+  //  単項演算子 (++,- –）
+let x = 0;
+x++; /*単項演算子 ← x = x + 1  と同じ意味*/
+console.log(x);
+ 
+let y = 1;
+y += y; /*単項演算子 ← y = y + y  と同じ意味*/
+console.log(y);
+
+// いろいろな計算方法、暗黙の数値変換
+
+
+console.log( '1' + 2 ); // "12"
+    console.log( '1' + '2' ); // "12"
+    console.log( "1" + "2" ); // "12"
+    console.log( 2 + '1' ); // "21"
+    console.log( 2 + 2 + '1' ); // "41" 
+    console.log( 6 - '2' ); // 4, 両方のオペランドを数値に変換します
+    console.log( 1 + 2 ); // 3
+    console.log( 6 - "2" ); // 4 
+    
+
+    a = b = c = 2 + 2;
+    console.log( a ); // 4
+    console.log( b ); // 4
+    console.log( c ); // 4
+	
+    let n = 2;
+    n = n + 5;
+    console.log(n);
+    n = n * 2;
+    console.log(n,"最終結果！");
+    
+    n = 2; //もしくは n = 2;
+    n += 5; // n = 7 (n = n + 5 と同じ)
+    console.log(n);
+    n *= 2; // n = 14 (n = n * 2 と同じ)
+    console.log(n, "結果はあっていますか？");
+
+
+/*インクリメント/デクリメント*/
+/* これらの違いを確認しよう。*/    
+/* なぜそうなるかを考えてみましょう。*/    
+let counter = 2;
+counter++;  // counter = counter + 1 と同じです インクリメント
+console.log( counter ); // 3
+ 
+let counter2 = 2;
+++counter2;  // counter2 = counter2 + 1 と同じです インクリメント
+console.log( counter2 ); // 3
+ 
+let counter3 = 2;
+counter3--;   // counter3 = counter3 - 1 と同じで　デクリメント
+console.log( counter3 ); // 1
+let counter4 = 2;
+--counter4;   // counter4 = counter4 - 1 と同じで　デクリメント
+console.log( counter4 ); // 1
+
+  let name= 'Mike';
+ 
+  console.log(name);
+  name = 30; // 書き換える
+  console.log(name);
+ 
+
+  </script>
+
+</body>
+</html>

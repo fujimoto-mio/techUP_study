@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+    //   課題①コンストラクタ(constructor)のWhoの初期化時に’tanaka'(String)を渡しインスタンスプロパティnameに代入してください。
+    function Human( name ) {
+        this.name = name;
+}
+
+var taro = new Human( 'tanaka' );
+
+console.log( taro );
+
+    // 課題②インスタンスメソッドgetNameの返り値がWho.prototype.name値「classのようなもの」を作成してください。
+
+    var User = function(name) {
+    this.name = name;
+   
+}
+User.prototype.getName = function() {
+    return this.name;
+}
+    </script>
+</body>
+</html>

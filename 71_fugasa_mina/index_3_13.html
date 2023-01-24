@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイコロ</title>
+</head>
+<body>
+    <script>
+
+        function Saikoro() {
+        
+            let saikoro = Math.floor( Math.random() * 6) +1;
+            document.getElementById("sai").innerHTML = saikoro;
+                
+        
+        }
+        
+        </script>
+        </head>
+        <!-- 見える部分↓-->
+        <body>
+    
+        <p><button onclick="Saikoro();">サイコロを振る</button></p>
+        <p id="sai"></p>
+     
+        
+</body>
+</html>

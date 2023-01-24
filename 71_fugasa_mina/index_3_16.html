@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <ul class="list-group">
+            <li class="list-group-item">100</li>
+            <li class="list-group-item">110</li>
+            <li class="list-group-item">120</li>
+            <li class="list-group-item">130</li>
+            <li class="list-group-item">140</li>
+        </ul>
+        <button class="btn1">変更</button>
+        <button class="btn2">リセット</button>
+    
+        <script>
+            const box = document.querySelectorAll('.list-group-item');
+            const btn1 = document.querySelector('.btn1');
+            const btn2 = document.querySelector('.btn2');
+    
+            btn1.addEventListener('click', () => {
+
+               box.forEach((element) => {  
+                element.innerHTML = element.innerHTML * 10;         
+                });
+                
+            });
+
+            btn2.addEventListener('click', () => {
+                location.reload();          
+            });
+        </script>
+     </body>
+</html>
+
+
