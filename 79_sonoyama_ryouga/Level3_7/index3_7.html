@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function eto(year) {
+
+            var eto = new Array("申", "酉", "戌", "亥", "子", "丑", "寅", "卯", "辰", "巳", "午", "未");
+            if (year != "" && year != null) {
+                alert("今年は"+eto[year % 12]+"です。");
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form onSubmit="eto(year.value);return false">
+        <input type="text" name="year" id="year" value="2022">年
+        <input type="button" value="干支表示" onClick="eto(year.value)">
+    </form>
+
+</body>
+
+</html>
