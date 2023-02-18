@@ -5,7 +5,7 @@ $d=date("Y-m-d H:i:s");
 printf("現在、%s\n",$d);
  
 //明日,昨日,1週間後
-$=date("Y年m月d日");
+$today=date("Y年m月d日");
 $tomorrow=date("Y年m月d日",strtotime("1 day"));
 $yesterday=date("Y年m月d日",strtotime("-1 day"));
 $week=date("Y年m月d日",strtotime("1 week"));
