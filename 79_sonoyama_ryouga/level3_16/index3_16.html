@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul Id="list-group">
+        <li class="list-group-item">100</li>
+        <li class="list-group-item">110</li>
+        <li class="list-group-item">120</li>
+        <li class="list-group-item">130</li>
+        <li class="list-group-item">140</li>
+    </ul>
+
+    <p id="output" class="output">計算結果</br></p>
+
+    <button id="change" class="button">変更</button>
+    <button id="reset" class="button">リセット</button>
+
+    <script>
+
+        document.getElementById("change").addEventListener("click", function () {
+            var ulElement = document.getElementById("list-group");
+
+            var liElement = ulElement.childElementCount;
+
+
+            for (var i = 0; i < liElement; i++) {
+
+                var log = Number(ulElement.children[i].textContent)*10;
+
+                document.querySelector(".output").innerHTML += '<li class="list-group-item">' + log + '</li>';
+            }
+            
+
+        });
+
+        document.getElementById("reset").addEventListener("click", function () {
+            var ulElement = document.getElementById("list-group");
+
+            var liElement = ulElement.childElementCount;
+
+
+            for (var i = 0; i < liElement; i++) {
+
+                var log = ulElement.children[i].textContent;
+
+                document.querySelector(".output").innerHTML += '<li class="list-group-item">' + log + '</li>';
+            }
+            
+
+        });
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>
