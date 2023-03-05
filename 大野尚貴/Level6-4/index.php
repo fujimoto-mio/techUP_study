@@ -12,7 +12,7 @@
 
 <?php
   setcookie("user", "name", time()-60);
-  $var($COOKIE["name"]);
+  $var=$_COOKIE["user"];
 
   try{
     if(isset($POST["name"])){
@@ -28,7 +28,7 @@
             
             session_set_cookie_params(10);
           session_start();
-          if (!isset($SESSION['count'])) {
+          if (!isset($_SESSION['count'])) {
               $_SESSION['count'] = 1;
           } else {
               $_SESSION['count']++;
