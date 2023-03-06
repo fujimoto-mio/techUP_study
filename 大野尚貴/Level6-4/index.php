@@ -6,13 +6,23 @@
 </head>
 <body>
 <form method="post" action="index.php">
-名前<input type="text" name="name">
-<input type="button" name="btn1" valte="送信">
+名前：<input type="text" name="name">
+<input type="submit" value="送信">
 </form>
 
 <?php
+  if( isset($_COOKIE["user"]) ){
+    $var=$_COOKIE["user"];
+    echo "クッキーの値「" . $var . "\n";
   setcookie("user", "name", time()-60);
-  $var=$_COOKIE["user"];
+  echo "」のクッキーを削除しました。\n";
+} else {
+  if( setcookie("user", "name", time()+60*60) ) {// １時間で切れるクッキー 
+    echo "クッキーをセットしました。";
+  } else {
+    echo "クッキーのセットに失敗しました。ブラウザの設定を確認してください。";
+  }
+}
 
   try{
     if(isset($POST["name"])){
