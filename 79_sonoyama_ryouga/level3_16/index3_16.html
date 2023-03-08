@@ -26,32 +26,24 @@
     <script>
 
         document.getElementById("change").addEventListener("click", function () {
-            var ulElement = document.getElementById("list-group");
-
-            var liElement = ulElement.childElementCount;
+            var ulElement = document.getElementsByClassName("list-group-item");
 
 
-            for (var i = 0; i < liElement; i++) {
-
-                var log = Number(ulElement.children[i].textContent)*10;
-
-                document.querySelector(".output").innerHTML += '<li class="list-group-item">' + log + '</li>';
+            for (var i = 0; i < ulElement.length; i ++) {
+                var text = ulElement[i].textContent*10;
+                ulElement[i].innerHTML = text;
             }
             
 
         });
 
         document.getElementById("reset").addEventListener("click", function () {
-            var ulElement = document.getElementById("list-group");
-
-            var liElement = ulElement.childElementCount;
+            var ulElement = document.getElementsByClassName("list-group-item");
 
 
-            for (var i = 0; i < liElement; i++) {
-
-                var log = ulElement.children[i].textContent;
-
-                document.querySelector(".output").innerHTML += '<li class="list-group-item">' + log + '</li>';
+            for (var i = 0; i < ulElement.length; i ++) {
+                var text = ulElement[i].textContent*0.1;
+                ulElement[i].innerHTML = text;
             }
             
 
