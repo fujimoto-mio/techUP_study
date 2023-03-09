@@ -10,7 +10,7 @@
 
 <body>
 
-    <ul Id="list-group">
+    <ul class="list-group">
         <li class="list-group-item">100</li>
         <li class="list-group-item">110</li>
         <li class="list-group-item">120</li>
@@ -18,10 +18,12 @@
         <li class="list-group-item">140</li>
     </ul>
 
-    <p id="output" class="output">計算結果</br></p>
-
     <button id="change" class="button">変更</button>
     <button id="reset" class="button">リセット</button>
+
+
+
+
 
     <script>
 
@@ -29,32 +31,41 @@
             var ulElement = document.getElementsByClassName("list-group-item");
 
 
-            for (var i = 0; i < ulElement.length; i ++) {
-                var text = ulElement[i].textContent*10;
+            for (var i = 0; i < ulElement.length; i++) {
+                var text = ulElement[i].textContent * 10;
                 ulElement[i].innerHTML = text;
             }
-            
+
 
         });
 
         document.getElementById("reset").addEventListener("click", function () {
-            var ulElement = document.getElementsByClassName("list-group-item");
+
+            var text = '<li class="list-group-item">100</li><li class="list-group-item">110</li><li class="list-group-item">120</li><li class="list-group-item">130</li><li class="list-group-item">140</li>';
+            document.querySelector("ul").innerHTML = text;
 
 
-            for (var i = 0; i < ulElement.length; i ++) {
-                var text = ulElement[i].textContent*0.1;
-                ulElement[i].innerHTML = text;
-            }
-            
 
         });
 
+        var DefaultHTML;
+        function DefaultSave() {
+            DefaultHTML = document.body.innerHTML;
+        }
+
+        function HTMLRestore() {
+            document.body.innerHTML = DefaultHTML;
+        }
+
 
     </script>
+    <input type="button" value="元に戻す" onclick="HTMLRestore()">
+
+    <body onload="DefaultSave()">
 
 
 
-</body>
+    </body>
 
 
 </html>
