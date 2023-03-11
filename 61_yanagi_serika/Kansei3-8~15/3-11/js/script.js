@@ -1,9 +1,12 @@
+var input = ['a','b','c'];
+ 
+console.log("input:[" + '"' + input + ']' );
 
 
-const mapObject = new Map([
-    ['input',["a","b","c"]]
-]);
+var result = ['a','b','c'].map(function( value ) {
 
-console.log(`input: "${mapObject.get('input')}"`);
-console.log(`output: "${mapObject.get('input')}"_set`);
+    return value + '_set';
 
+});
+
+console.log( "output:["+ result +"]");
