@@ -10,7 +10,7 @@ require_once 'Patient.php';
 	</head>
 	<body>
 <?php
-//インスタンス(インスタンスは、クラスで定義したプロパティを受け継いでいるもの)を生成する
+//インスタンス(インスタンスは、クラスで定義したプロパティを受け継いでいるもの)を生成
 $patient = new Patient('長尾勇希', 30, 'm', 1.72, 70.5);
  
 print($patient -> selfIntroduction());

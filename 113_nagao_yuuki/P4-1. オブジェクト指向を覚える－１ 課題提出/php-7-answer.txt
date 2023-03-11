@@ -5,7 +5,7 @@ class Patient extends Person{}
 private $height = 0;       
 private $weight = 0;
     →プロパティの値を設定 
-    ※$name, $age, $genderはPersonクラスで設定済み
+    ※$name, $age, $genderはPersonクラスで設定済
 
 
 public function __construct($name, $age, $gender, $height, $weight){}
