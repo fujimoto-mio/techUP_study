@@ -40,32 +40,21 @@
         });
 
         document.getElementById("reset").addEventListener("click", function () {
+            var ulElement = document.getElementsByClassName("list-group-item");
 
-            var text = '<li class="list-group-item">100</li><li class="list-group-item">110</li><li class="list-group-item">120</li><li class="list-group-item">130</li><li class="list-group-item">140</li>';
-            document.querySelector("ul").innerHTML = text;
-
+            for (var i = 0; i < ulElement.length; i++) {
+                var text = ulElement[i].textContent =100+10*i;
+                ulElement[i].innerHTML = text;
+            }
 
 
         });
 
-        var DefaultHTML;
-        function DefaultSave() {
-            DefaultHTML = document.body.innerHTML;
-        }
-
-        function HTMLRestore() {
-            document.body.innerHTML = DefaultHTML;
-        }
-
 
     </script>
-    <input type="button" value="元に戻す" onclick="HTMLRestore()">
-
-    <body onload="DefaultSave()">
 
 
-
-    </body>
+</body>
 
 
 </html>
