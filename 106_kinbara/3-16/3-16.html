@@ -1,0 +1,65 @@
+  
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>DOM </title>
+</head>
+ 
+  <body>
+    <ul class="list-group">
+        <li class="list-group-item">100</li>
+        <li class="list-group-item">110</li>
+        <li class="list-group-item">120</li>
+        <li class="list-group-item">130</li>
+        <li class="list-group-item">140</li>
+      </ul>
+    
+ 
+    <p id="output" class="output"></p>
+ 
+    <p><button id="get" class="button">変更</button></p>
+    <p><button id="set" class="button">リセット</button></p>
+  </body>
+ 
+  <script>
+
+    // 変更
+    document.getElementByClassName( "get" ).addEventListener( "click", function() {
+          // 要素を取得
+          var aElement = document.getElementByClassName( "target" ) ;
+ 
+          // a要素のtitle属性を変更
+          aElement.list-group = "n*10";
+ 
+          // 取得した結果を出力
+          document.getElementByClassName( "output" );
+ 
+          // コンソールで内容を出力
+          console.log( aElement ) ;
+
+
+
+      // リセット
+      document.getElementByClassName( "set" ).addEventListener( "click", function() {
+          // 要素を取得
+          var aElement = document.getElementByClassName( "target" ) ;
+ 
+          // a要素のtitle属性を取得
+          aElement.list-group = "0";
+ 
+          // 取得した結果を出力
+          document.getElementByClassName( "output" );
+ 
+          // コンソールで内容を出力
+          console.log( aElement ) ;
+ 
+      });
+ 
+      
+ 
+      }) ;
+ 
+  </script>
+ 
+</html>
