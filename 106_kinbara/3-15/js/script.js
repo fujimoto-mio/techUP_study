@@ -1,5 +1,5 @@
 //課題１
-class Who {
+class User {
     constructor(tanaka) {
       this.tanaka = tanaka;
       
@@ -12,7 +12,7 @@ class Who {
   }
   
   // インスタンス化
-  const instance = new Who('tanaka');
+  const instance = new User('tanaka');
   
   // インスタンスメソッドを実行
   instance.method('String');
