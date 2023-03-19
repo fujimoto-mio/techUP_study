@@ -1,20 +1,13 @@
-console.log(Math.random());
- 
-//ランダムな整数値を５個ならべます。
-for (let i = 0 ; i < 6 ; i++){
-  let num = Math.floor(Math.random() * 6+1);
-  console.log(num);
+//要素取得
+const saikoro = document.getElementById("saikoro");
+
+//サイの目
+function sainome(){
+const nmb = Math.floor(Math.random()*6 + 1);
+saikoro.innerHTML = nmb; 
 }
 
-"use strict";
-2
-3
-4  const one = Math.floor(Math.random() * 6) + 1;
+//クリックイベント
 
 
-document.getElementById("saikoro").addEventListener("click", () => {
-    2  ver dic = Math.floor(Math.random() * 6) + 1;
-    3  document.getElementById("sainome").textContent = one;
-    4});
-
-
+document.addEventListener('click', sainome, false);
