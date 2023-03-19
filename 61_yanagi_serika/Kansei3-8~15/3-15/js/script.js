@@ -1,14 +1,19 @@
-var User = function() {};
-var Member = function() {};
- 
-User.prototype.hello = function() {
-    return 'こんにちは！';
-}
 
-Member.prototype = new User();
-
-var tanaka = new User();
-var hanako = new Member();
  
-console.log( tanaka.hello() );
-console.log( hanako.hello() );
+ 
+ 
+ class Who {
+    constructor(name){
+        this.name = name
+        console.log(this.name);
+    }
+ }
+
+ Who.prototype = {
+    getName: function() {
+        return this.name;
+    }
+ }
+
+ var tanaka =  new Who("田中");
+ console.log(this.name);
