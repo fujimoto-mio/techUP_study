@@ -19,46 +19,58 @@
     <p id="output" class="output"></p>
  
     <p><button id="get" class="button">変更</button></p>
-    <p><button id="set" class="button">リセット</button></p>
+    <p><button id="set" class="button2">リセット</button></p>
   </body>
  
   <script>
 
-    // 変更
-    document.getElementByClassName( "get" ).addEventListener( "click", function() {
+   
+// 変更
+document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
-          var aElement = document.getElementByClassName( "target" ) ;
+          var aElement = document.getElementByClassName( "list-group" ) ;
  
-          // a要素のtitle属性を変更
-          aElement.list-group = "n*10";
+          // a要素に10をかける
+          
+          var mult = function("get, 10){
+          return list-group * 10;
+          }
+ 
+          data.mult = function(){
+          return this.reduce(mult, 1);
+          }
+  
+          bElement.list-group =  data.mult();
  
           // 取得した結果を出力
           document.getElementByClassName( "output" );
  
           // コンソールで内容を出力
-          console.log( aElement ) ;
+          console.log( aElement ) ; });
 
 
-
-      // リセット
-      document.getElementByClassName( "set" ).addEventListener( "click", function() {
+// リセット
+document.getElementById( "set" ).addEventListener( "click", function() {
           // 要素を取得
-          var aElement = document.getElementByClassName( "target" ) ;
+          var aElement = document.getElementByClassName( "list-group" ) ;
  
-          // a要素のtitle属性を取得
-          aElement.list-group = "0";
+          // a要素の内容をリセットする
+          aElement.list-groupreset();
  
           // 取得した結果を出力
           document.getElementByClassName( "output" );
  
           // コンソールで内容を出力
-          console.log( aElement ) ;
+          console.log( aElement ) ; });
+
+
+     
  
-      });
+     
  
       
  
-      }) ;
+    
  
   </script>
  
