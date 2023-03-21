@@ -1,77 +1,44 @@
-  
 <!DOCTYPE HTML>
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
 <title>DOM </title>
 </head>
- 
+
   <body>
     <ul class="list-group">
-        <li class="list-group-item">100</li>
-        <li class="list-group-item">110</li>
-        <li class="list-group-item">120</li>
-        <li class="list-group-item">130</li>
-        <li class="list-group-item">140</li>
+        <li class="list-group-item" ID="1">100</li>
+        <li class="list-group-item" ID="2">110</li>
+        <li class="list-group-item" ID="3">120</li>
+        <li class="list-group-item" ID="4">130</li>
+        <li class="list-group-item" ID="5">140</li>
       </ul>
-    
- 
+
+
     <p id="output" class="output"></p>
- 
+
     <p><button id="get" class="button">変更</button></p>
     <p><button id="set" class="button2">リセット</button></p>
   </body>
- 
+
   <script>
 
-   
+
 // 変更
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
-          var aElement = document.getElementByClassName( "list-group" ) ;
- 
+          var aElement = document.getElementByClassName( "list-group-item" ) ;
+
           // a要素に10をかける
-          
-          var mult = function("get, 10){
-          return list-group * 10;
-          }
+
+          const list-group-item = [100,110,120,130,140];
  
-          data.mult = function(){
-          return this.reduce(mult, 1);
+          for(let i = 0; i < 4; i++){
+          console.log( list-group-item[i]*10)
           }
-  
-          bElement.list-group =  data.mult();
- 
+
           // 取得した結果を出力
           document.getElementByClassName( "output" );
- 
+
           // コンソールで内容を出力
           console.log( aElement ) ; });
-
-
-// リセット
-document.getElementById( "set" ).addEventListener( "click", function() {
-          // 要素を取得
-          var aElement = document.getElementByClassName( "list-group" ) ;
- 
-          // a要素の内容をリセットする
-          aElement.list-groupreset();
- 
-          // 取得した結果を出力
-          document.getElementByClassName( "output" );
- 
-          // コンソールで内容を出力
-          console.log( aElement ) ; });
-
-
-     
- 
-     
- 
-      
- 
-    
- 
-  </script>
- 
-</html>
