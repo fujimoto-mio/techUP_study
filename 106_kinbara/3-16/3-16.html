@@ -15,8 +15,6 @@
       </ul>
 
 
-    <p id="output" class="output"></p>
-
     <p><button id="get" class="button">変更</button></p>
     <p><button id="set" class="button2">リセット</button></p>
   </body>
@@ -27,18 +25,17 @@
 // 変更
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
-          var aElement = document.getElementByClassName( "list-group-item" ) ;
+          var aElement = document.getElementsByID( "1" ) ;
+          
+          
 
           // a要素に10をかける
 
-          const list-group-item = [100,110,120,130,140];
+          
  
-          for(let i = 0; i < 4; i++){
-          console.log( list-group-item[i]*10)
-          }
+         
 
-          // 取得した結果を出力
-          document.getElementByClassName( "output" );
+         
 
           // コンソールで内容を出力
           console.log( aElement ) ; });
