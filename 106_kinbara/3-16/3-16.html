@@ -26,16 +26,41 @@
 
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
-          var aElement = document.getElementById( "1" ) ;
+          var ulElement = document.getElementsByClassName( "list-group" ) ;
+          var arr = [100,110,120,130,140]
+          
  
-          // a要素のtitle属性を変更
-          aElement.title = document.getElementById( "1" ) ;
- 
+          console.log(ulElement[0]) ;
+          
           // 取得した結果を出力
-          document.getElementById( "1" ).textContent = 100*10;
- 
-          // コンソールで内容を出力
-          console.log( aElement ) ;
+          document.getElementById(1).textContent = arr[0]*10;
+          document.getElementById(2).textContent = arr[1]*10;
+          document.getElementById(3).textContent = arr[2]*10;
+          document.getElementById(4).textContent = arr[3]*10;
+          document.getElementById(5).textContent = arr[4]*10;
+          
+          
+          
+
+        }) ;
+
+document.getElementById( "set" ).addEventListener( "click", function() {
+          // 要素を取得
+          var ulElement = document.getElementsByClassName( "list-group" ) ;
+          var arr = [100,110,120,130,140]
+          
+
+          console.log(ulElement[0]) ;
+          
+          // 取得した結果を出力
+          document.getElementById(1).textContent = arr[0];
+          document.getElementById(2).textContent = arr[1];
+          document.getElementById(3).textContent = arr[2];
+          document.getElementById(4).textContent = arr[3];
+          document.getElementById(5).textContent = arr[4];
+          
+          
+          
 
         }) ;
  
