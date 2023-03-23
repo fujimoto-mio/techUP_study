@@ -71,7 +71,7 @@ class TaskController extends Controller
         //モデル->カラム名 = 値 で、データを割り当てる
         $task_name = $request->input('task_name');
         // dd の関数で確認します。　※関数内容はこちらにあります。→vendor/symfony/var-dumper/Resources/functions/dump.php
-        dd($task_name);//　受け取れたことを確認します。
+        //dd($task_name);//　受け取れたことを確認します。
         //var_dump($task); //バーダンプして表示を確認してみよう。
         //exit;  //ここでストップさせる
  
