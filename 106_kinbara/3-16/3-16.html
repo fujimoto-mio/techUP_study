@@ -37,10 +37,17 @@ document.getElementById( "get" ).addEventListener( "click", function() {
 
           
           // 取得した結果を出力
-         
 
-          for (let x = 0; x < 5; x++){
-          document.getElementById( x ).textContent = arr[ x ]*10;
+         count.getElementById( "get" ).addEventListener( "click", function() {
+          var thisCount = Number(thisCount);
+          thisCount = 10**thisCount ;
+
+          for (let x = 0;  x < 5; x++){
+          document.getElementById( x ).textContent = arr[x]*thisCount;
+
+
+
+
 
 }
 
@@ -65,7 +72,9 @@ document.getElementById( "set" ).addEventListener( "click", function() {
           }
 
         }) ;
- 
+
+
+
 
   </script>
 </html>
