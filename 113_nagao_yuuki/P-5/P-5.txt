@@ -1,0 +1,35 @@
+MariaDB [test_db]> desc user_list;
++-----------------------+-------------+------+-----+---------+-------+
+| Field                 | Type        | Null | Key | Default | Extra |
++-----------------------+-------------+------+-----+---------+-------+
+| Host                  | varchar(30) | YES  |     | NULL    |       |
+| User                  | varchar(30) | YES  |     | NULL    |       |
+| Password              | varchar(30) | YES  |     | NULL    |       |
+| authentication_stirng | varchar(30) | YES  |     | NULL    |       |
+| authentication_string | varchar(30) | YES  |     | NULL    |       |
++-----------------------+-------------+------+-----+---------+-------+
+5 rows in set (0.055 sec)
+
+MariaDB [test_db]> select *from user_list;
++-----------+----------+----------+-----------------------+-----------------------+
+| Host      | User     | Password | authentication_stirng | authentication_string |
++-----------+----------+----------+-----------------------+-----------------------+
+| localhost | NULL     | NULL     | NULL                  | NULL                  |
+| NULL      | testuser | NULL     | NULL                  | NULL                  |
+| NULL      | NULL     | testtest | NULL                  | NULL                  |
+| NULL      | NULL     | NULL     | NULL                  | testtest2             |
++-----------+----------+----------+-----------------------+-----------------------+
+4 rows in set (0.001 sec)
+
+MariaDB [test_db]> select Host,User,Password,authentication_string from user_list;
++-----------+----------+----------+-----------------------+
+| Host      | User     | Password | authentication_string |
++-----------+----------+----------+-----------------------+
+| localhost | NULL     | NULL     | NULL                  |
+| NULL      | testuser | NULL     | NULL                  |
+| NULL      | NULL     | testtest | NULL                  |
+| NULL      | NULL     | NULL     | testtest2             |
++-----------+----------+----------+-----------------------+
+4 rows in set (0.001 sec)
+
+MariaDB [test_db]>
