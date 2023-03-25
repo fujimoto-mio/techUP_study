@@ -24,5 +24,4 @@ Route::get('/',[TaskController::class,'index']);//一覧表示
 Route::post('/create',[TaskController::class,'create']);//タスク追加
 Route::post('/edit',[TaskController::class,'edit']);//タスク更新
 Route::post('/delete',[TaskController::class,'delete']);//タスク削除
- 
-Route::resource('tasks', TaskController::class);
+Route::resource('tasks', TaskController::class);//タスクのコントローラ
