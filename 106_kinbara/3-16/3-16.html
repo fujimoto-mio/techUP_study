@@ -7,11 +7,11 @@
 
   <body>
     <ul class="list-group">
-        <li class="list-group-item" ID="0">100</li>
-        <li class="list-group-item" ID="1">110</li>
-        <li class="list-group-item" ID="2">120</li>
-        <li class="list-group-item" ID="3">130</li>
-        <li class="list-group-item" ID="4">140</li>
+        <li class="list-group-item" ID="1">100</li>
+        <li class="list-group-item" ID="2">110</li>
+        <li class="list-group-item" ID="3">120</li>
+        <li class="list-group-item" ID="4">130</li>
+        <li class="list-group-item" ID="5">140</li>
       </ul>
 
 
@@ -30,27 +30,14 @@ document.getElementById( "get" ).addEventListener( "click", function() {
           var arr = [100,110,120,130,140]
           
  
-          console.log(ulElement.length);
-
-          console.log(ulElement[0].textContent);
-          
-
+          console.log(ulElement[0]) ;
           
           // 取得した結果を出力
-
-         count.getElementById( "get" ).addEventListener( "click", function() {
-          var thisCount = Number(thisCount);
-          thisCount = 10**thisCount ;
-
-          for (let x = 0;  x < 5; x++){
-          document.getElementById( x ).textContent = arr[x]*thisCount;
-
-
-
-
-
-}
-
+          document.getElementById(1).textContent = arr[0]*10;
+          document.getElementById(2).textContent = arr[1]*10;
+          document.getElementById(3).textContent = arr[2]*10;
+          document.getElementById(4).textContent = arr[3]*10;
+          document.getElementById(5).textContent = arr[4]*10;
           
           
           
@@ -63,18 +50,20 @@ document.getElementById( "set" ).addEventListener( "click", function() {
           var arr = [100,110,120,130,140]
           
 
-          console.log(ulElement[0].textContent) ;
+          console.log(ulElement[0]) ;
           
           // 取得した結果を出力
-          for (let x = 0; x < 5; x++){
-          document.getElementById( x ).textContent = arr[ x ];
+          document.getElementById(1).textContent = arr[0];
+          document.getElementById(2).textContent = arr[1];
+          document.getElementById(3).textContent = arr[2];
+          document.getElementById(4).textContent = arr[3];
+          document.getElementById(5).textContent = arr[4];
           
-          }
+          
+          
 
         }) ;
-
-
-
+ 
 
   </script>
 </html>
