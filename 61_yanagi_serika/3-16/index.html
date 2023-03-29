@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>DOM </title>
+</head>
+ 
+  <body>
+
+    <ul class="list-group">
+      <li class="list-group-item">100</li>
+      <li class="list-group-item">110</li>
+      <li class="list-group-item">120</li>
+      <li class="list-group-item">130</li>
+      <li class="list-group-item">140</li>
+    </ul>
+ 
+    <p><button id="get" class="button">変更</button></p>
+    <p><button id="set" class="button">リセット</button></p>
+  
+  </body>
+ 
+  <script>
+    document.getElementById( "get" ).addEventListener( "click", function() {
+        const aElement = document.getElementsByClassName( "list-group-item" ) ;
+        aElement,array = [100, 110, 120, 130, 140];
+        this.get=aElement
+        console.log(this.aElement);
+        this.innerHTML = aElement+10; 
+
+        console.log(aElement[0].textContent);
+        console.log(aElement[1].textContent);
+        console.log(aElement[2].textContent);
+        console.log(aElement[3].textContent);
+        console.log(aElement[4].textContent);
+
+
+    });
+
+
+    document.getElementById( "set" ).addEventListener( "click", function() {
+          var aElement = document.getElementsByClassName( "list-group" );
+          return array = [100, 110, 120, 130, 140]
+ 
+      }) ;
+   
+  </script>
+ 
+</html>
+
