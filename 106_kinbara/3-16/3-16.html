@@ -12,7 +12,7 @@
         <li class="list-group-item" ID="3">120</li>
         <li class="list-group-item" ID="4">130</li>
         <li class="list-group-item" ID="5">140</li>
-      </ul>
+    </ul>
 
 
     <p><button id="get" class="button">変更</button></p>
@@ -27,25 +27,18 @@
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
           var ulElement = document.getElementsByClassName( "list-group" ) ;
-          var arr = [100,110,120,130,140]
-          var thisCount = Number(thisCount);
-          thisCount = 10**thisCount ;
 
+         
           
  
-          console.log(ulElement[0]) ;
+          console.log(ulElement) ;
           
           // 取得した結果を出力
-          document.getElementById(1).textContent = arr[0]*10;
-          document.getElementById(2).textContent = arr[1]*10;
-          document.getElementById(3).textContent = arr[2]*10;
-          document.getElementById(4).textContent = arr[3]*10;
-          document.getElementById(5).textContent = arr[4]*10;
           
           
           
-
-        }) ;
+ }) ;
+        
 
 document.getElementById( "set" ).addEventListener( "click", function() {
           // 要素を取得
