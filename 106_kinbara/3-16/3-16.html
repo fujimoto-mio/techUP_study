@@ -21,17 +21,27 @@
 
   <script>
 
-
+         var ulElement = document.getElementsByClassName( "list-group" ) ;
 // 変更
 
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
-          var ulElement = document.getElementsByClassName( "list-group" ) ;
-          var aElement= ulElement[0].textContent*10
-         
           
- 
-          console.log(aElement) ;
+          var aElement=Number(document.getElementById(1).textContent)*10 ;
+          document.getElementById( "1" ).textContent = aElement ;
+
+          var aElement=Number(document.getElementById(2).textContent)*10 ;
+          document.getElementById( "2" ).textContent = aElement ;
+
+          var aElement=Number(document.getElementById(3).textContent)*10 ;
+          document.getElementById( "3" ).textContent = aElement ;
+
+          var aElement=Number(document.getElementById(4).textContent)*10 ;
+          document.getElementById( "4" ).textContent = aElement ;
+
+          var aElement=Number(document.getElementById(5).textContent)*10 ;
+          document.getElementById( "5" ).textContent = aElement ;
+          
           
           // 取得した結果を出力
           
@@ -42,18 +52,9 @@ document.getElementById( "get" ).addEventListener( "click", function() {
 
 document.getElementById( "set" ).addEventListener( "click", function() {
           // 要素を取得
-          var ulElement = document.getElementsByClassName( "list-group" ) ;
-          var arr = [100,110,120,130,140]
           
 
-          console.log(ulElement[0]) ;
-          
-          // 取得した結果を出力
-          document.getElementById(1).textContent = arr[0];
-          document.getElementById(2).textContent = arr[1];
-          document.getElementById(3).textContent = arr[2];
-          document.getElementById(4).textContent = arr[3];
-          document.getElementById(5).textContent = arr[4];
+          aElement.reset();
           
           
           
