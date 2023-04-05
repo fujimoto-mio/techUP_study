@@ -22,39 +22,36 @@
   <script>
 
          var ulElement = document.getElementsByClassName( "list-group" ) ;
+
+         for (let i = 0; i < ulElement.length; i++) {
+          console.log(document.getElementsByClassName[i].textContent);
+         
 // 変更
 
 document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
           
-          var aElement=Number(document.getElementById(1).textContent)*10 ;
-          document.getElementById( "1" ).textContent = aElement ;
 
-          var aElement=Number(document.getElementById(2).textContent)*10 ;
-          document.getElementById( "2" ).textContent = aElement ;
+          var aElement=Number(document.getElementsByClassName[i].textContent)*10 ;
+          document.getElementById("1").textContent = aElement ;
 
-          var aElement=Number(document.getElementById(3).textContent)*10 ;
-          document.getElementById( "3" ).textContent = aElement ;
-
-          var aElement=Number(document.getElementById(4).textContent)*10 ;
-          document.getElementById( "4" ).textContent = aElement ;
-
-          var aElement=Number(document.getElementById(5).textContent)*10 ;
-          document.getElementById( "5" ).textContent = aElement ;
-          
-          
-          // 取得した結果を出力
+ 
           
           
           
  }) ;
-        
+ 
+};
 
 document.getElementById( "set" ).addEventListener( "click", function() {
           // 要素を取得
           
-
-          aElement.reset();
+            document.getElementById("1").textContent = 100
+            document.getElementById("2").textContent = 110
+            document.getElementById("3").textContent = 120
+            document.getElementById("4").textContent = 130
+            document.getElementById("5").textContent = 140
+          
           
           
           
