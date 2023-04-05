@@ -24,7 +24,7 @@
          var ulElement = document.getElementsByClassName( "list-group" ) ;
 
          for (let i = 0; i < ulElement.length; i++) {
-          console.log(document.getElementsByClassName[i].textContent);
+          console.log(document.getElementsByClassName("list-group-item"[i]).textContent);
          
 // 変更
 
@@ -32,7 +32,7 @@ document.getElementById( "get" ).addEventListener( "click", function() {
           // 要素を取得
           
 
-          var aElement=Number(document.getElementsByClassName[i].textContent)*10 ;
+          var aElement=Number(document.getElementsByClassName("list-group-item"[i]).textContent)*10 ;
           document.getElementById("1").textContent = aElement ;
 
  
@@ -41,7 +41,7 @@ document.getElementById( "get" ).addEventListener( "click", function() {
           
  }) ;
  
-};
+}
 
 document.getElementById( "set" ).addEventListener( "click", function() {
           // 要素を取得
