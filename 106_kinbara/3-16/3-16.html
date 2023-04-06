@@ -21,10 +21,10 @@
 
   <script>
 
-  var ulElement = document.getElementsByClassName( "list-group" ) ;
+  var ulElement = document.getElementsByClassName( "list-group-item" ) ;
 
   for (let i = 0; i < ulElement.length; i++) {
-   console.log(document.getElementsByClassName("list-group-item"[i]))
+   console.log(document.getElementsByClassName("list-group-item"[i]).textContent)
 
    var aElement=Number(document.getElementsByClassName("list-group-item"[i]).textContent);
 // 変更
