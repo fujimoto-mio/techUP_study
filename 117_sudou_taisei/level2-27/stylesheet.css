@@ -1,0 +1,165 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "MS Mincho","Yu Mincho","游ゴシック", Arial;
+}
+img {
+  width: 100%;
+  padding: 0;
+}
+header {
+  position: relative;
+}
+h4 {
+  font-size: 15px;
+}
+
+@media(min-width: 768px) {
+	.sp {
+		display: none;
+	}
+	.pc {
+		padding: 5px 0 5px 0;
+		background-color: black;
+	}
+	.pc ul {
+		display: flex;
+		margin: 0px 0px 0px 70%;
+		color: white;
+		
+	}
+	.pc li {
+		margin-left: 40px;
+	}
+		.pc a {
+		text-decoration: none;
+		color: white;
+	}
+}
+.collapse li {
+	color: #fff;
+	list-style: none;
+}
+.header-text-vertical {
+  position: absolute;
+  writing-mode: vertical-lr;
+  top: 50px;
+  right: 20px;
+}
+@media(max-width: 768px) {
+	.pc {
+		display: none;
+	}
+	.header-text-vertical {
+		top: 70px;
+	}
+}
+
+.header-text {
+  position: absolute;
+  height: 30px;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media(max-width: 768px) {
+	.header-text {
+		font-size: 23px;
+	}
+.header-foot {
+  text-align: center;
+  background: #b1f3b7;
+  padding: 20px 0;
+  border-top: solid 3px #01fc1e;
+}
+.first-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: "游ゴシック";
+}
+.first-content {
+  display: flex;
+}
+.sample1 {
+  width: 25%;
+}
+.first-content-block {
+  margin: 0 10px;
+}
+.first-info {
+  border-top: solid 1px;
+  font-size: 13px;
+}
+.item-price {
+  display: flex;
+  width: 20%;
+  align-items: center;
+}
+.point-img {
+  width: 500px;
+}
+.first-subcontent {
+  display: flex;
+  justify-content: center;
+}
+.first-subcontent p {
+  font-size: 14px;
+}
+.annotation {
+  margin-left: 8px;
+}
+.jumptoform-btn {
+  background: #0cb826;
+  margin: auto;
+  margin-top: 30px;
+  padding: 8px 0 23px 0;
+  width: 330px;
+  height: 75px;
+  font: 30px "MS Mincho","Yu Mincho","游ゴシック", Arial;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.jumptoform-btn:hover {
+  opacity: 0.5;
+}
+.jumptoform-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.second-container {
+  display: block;
+  margin-top: 30px;
+  background-image: url(image/haikei2.jpg);
+  text-align: center;
+  position: relative;
+}
+.second-container .top {
+  font-size: 50px;
+  color: #245d6a
+}
+.second-container .bottom {
+  font-size: 50px;
+  color: #000;
+}
+.second-container .fact-woman {
+  position: absolute;
+  top: 0;
+  left: -230px;
+  width: 800px;
+}
+.second-container .fact-img {
+  width: 250px;
+  padding: 30px 0 30px 0;
+}
+.second-container .fact-a {
+  position: absolute;
+  top: 210px;
+  right: 50px;
+  width: 400px;
+}
+.second-container .three-points , .fact-b {
+  width: 600px;
+} 
