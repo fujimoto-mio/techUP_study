@@ -1,53 +1,48 @@
 <!DOCTYPE HTML>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8" />
-<title>DOM </title>
+    <meta charset="UTF-8" />
+    <title>DOM </title>
 </head>
 
-  <body>
+<body>
+    <!--1.classnameを付与してあるため、IDを付与する必要ない-->
     <ul class="list-group">
-        <li class="list-group-item" ID="1">100</li>
-        <li class="list-group-item" ID="2">110</li>
-        <li class="list-group-item" ID="3">120</li>
-        <li class="list-group-item" ID="4">130</li>
-        <li class="list-group-item" ID="5">140</li>
+        <li class="list-group-item" >100</li>
+        <li class="list-group-item" >110</li>
+        <li class="list-group-item" >120</li>
+        <li class="list-group-item" >130</li>
+        <li class="list-group-item" >140</li>
     </ul>
+    <!--2.classnameを付与してあるため、IDを付与する必要ない。下記buttonタグにonclick属性を追加する-->
+    <p><button class="button" onClick="getElement();">変更</button></p>
+    <p><button class="button2" onClick="reset;">リセット</button></p>
+</body>
 
+<script>
+    //3.変更ボタンを押すたびに10倍にするfunctionの定義
+    //①onclick属性を使用してfunctionを呼び出す
+    function getElement() {
+    //②class名がlist-group-itemの要素を取得
+    var aElement = document.getElementsByClassName( "list-group-item" )
+    //③②で取得した要素の個数（今回で言うと5個）を取得：参考サイト　https://pgmemo.tokyo/data/archives/1785.html
+    for (var i = 0; i < aElement.length; i++) {
+        //④for文を使って、要素のテキストを10倍した値をテキストに再設定
+     var bElement = Number( aElement )*10;
 
-    <p><button id="get" class="button">変更</button></p>
-    <p><button id="set" class="button2">リセット</button></p>
-  </body>
+     console.log( bElement );
 
-  <script>
+    };
 
-  var ulElement = document.getElementsByClassName( "list-group-item" ) ;
+    };
+    //4.リセットボタンを押した際に固定の数字に戻ってくるようにするfunctionの定義
+    //①onclick属性を使用してfunctionを呼び出す
+    //②class名がlist-group-itemの要素を取得
+    //③②で取得した要素の個数（今回で言うと5個）を取得
+    //④new arrayで固定の数字（100,110,120,130,140）を要素に持った配列を作成
+    //⑤for文を使って、要素のテキストに固定値を設定
 
-  for (let i = 0; i < ulElement.length; i++) {
-   console.log(document.getElementsByClassName("list-group-item"[i]).textContent)
+</script>
 
-   var aElement=Number(document.getElementsByClassName("list-group-item"[i]).textContent);
-// 変更
-
-   document.getElementById( "get" ).addEventListener( "click", function() {
-          // 要素を取得
-
-          bElement = aElement *10 ;
-          document.getElementById("1").textContent = bElement ;
-        
-    }) ;
- 
-
-
-  document.getElementById( "set" ).addEventListener( "click", function() {
-          // 要素を取得
-          
-          document.getElementsByClassName("list-group-item"[i]).textContent = aElement
-  
-
-  }) ;
- 
-  }
-
-  </script>
 </html>
