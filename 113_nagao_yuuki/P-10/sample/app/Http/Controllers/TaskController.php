@@ -47,6 +47,7 @@ class TaskController extends Controller
         Validator::make($request->all(), $rules, $messages)->validate();
         $task = new Task;
         $task->name = $request->input('task_name');
+        /**dd($task_name);**/
         $task->save();
         return redirect('/tasks');
         
