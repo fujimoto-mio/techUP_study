@@ -28,8 +28,10 @@
 
         /*繰り返す。iが０だとして、iより5大きい。iが一つずつ足される）*/
         for (let i = 0; i < 5; i++) { 
-          /*10代入*/
-          console.log(aElement[ i ].textContent*10); 
+          /*繰り返し乗算されるようにする*/
+
+          /*aElement[ i ].textContentをconsole.logの代わりに画面に表示させるようにしましょう。*/
+          aElement[i].textContent=aElement[i].textContent*10; 
         }
          /*aElementに10を掛けてHTMLに表示させる →innerHTMLを表示させるところなし*/
     });
@@ -42,9 +44,8 @@
     document.getElementById( "set" ).addEventListener( "click", function() {
          /*aElementをlist-group-itemとして再宣言する*/
           var aElement = document.getElementsByClassName( "list-group-item" );
-          /*並びを[100, 110, 120, 130, 140]に戻す。*/
-          return array = [100, 110, 120, 130, 140]
- 
+          /*並びを[100, 110, 120, 130, 140]に。*/
+          document.aElement[i].textContent= null;
       }) ;
 
     /*aElement内はlist-group-itemの[100, 110, 120, 130, 140]*/
