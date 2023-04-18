@@ -35,17 +35,19 @@
         }
          /*aElementに10を掛けてHTMLに表示させる →innerHTMLを表示させるところなし*/
     });
-
-    /*console確認。*/
-    console.log(get);
-
+    
 
     /*リセットId(set)をクリックしたら*/
     document.getElementById( "set" ).addEventListener( "click", function() {
          /*aElementをlist-group-itemとして再宣言する*/
           var aElement = document.getElementsByClassName( "list-group-item" );
-          /*並びを[100, 110, 120, 130, 140]に。*/
-          document.aElement[i].textContent= null;
+          /*初期値の固定値を入力する。*/
+         aElement=[100, 110, 120, 130, 140];
+         /*console.logでaElementがどこを示しているか確認。*/
+         console.log(aElement);
+         /*aElementを表示*/
+         aElement[i].textContent=aElement[i];
+
       }) ;
 
     /*aElement内はlist-group-itemの[100, 110, 120, 130, 140]*/
