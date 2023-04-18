@@ -21,30 +21,34 @@
   </body>
  
   <script>
+    /*変更Id(get)をクリックしたら*/
     document.getElementById( "get" ).addEventListener( "click", function() {
+        /*aElementをlist-group-itemとして*/
         const aElement = document.getElementsByClassName( "list-group-item" ) ;
-        aElement,array = [100, 110, 120, 130, 140];
+        /*このgetはaElement*/
         this.get=aElement
-        console.log(this.aElement);
-        this.innerHTML = aElement+10; 
-
-        console.log(aElement[0].textContent);
-        console.log(aElement[1].textContent);
-        console.log(aElement[2].textContent);
-        console.log(aElement[3].textContent);
-        console.log(aElement[4].textContent);
-
-       
-
-
+        /*繰り返す。iが０だとして、iより5大きい。iが一つずつ足される）*/
+        for (let i = 0; i < 5; i++) { 
+          console.log(aElement[ i ].textContent); 
+        }
+         /*aElementに10を足してHTMLに表示させる*/
+        innerHTML = aElement+10;  
     });
 
+    /*console確認。*/
+    console.log(get);
 
+    aElement,array = [100, 110, 120, 130, 140];
+
+    /*リセットId(set)をクリックしたら*/
     document.getElementById( "set" ).addEventListener( "click", function() {
+         /*aElementをlist-group-itemとして再宣言する*/
           var aElement = document.getElementsByClassName( "list-group" );
+          /*並びを[100, 110, 120, 130, 140]に戻す。*/
           return array = [100, 110, 120, 130, 140]
  
       }) ;
+
    
   </script>
  
