@@ -25,32 +25,29 @@
     document.getElementById( "get" ).addEventListener( "click", function() {
         /*aElementをlist-group-itemとして*/
         const aElement = document.getElementsByClassName( "list-group-item" ) ;
-        /*このgetはaElement*/
-        this.get=aElement
+
         /*繰り返す。iが０だとして、iより5大きい。iが一つずつ足される）*/
         for (let i = 0; i < 5; i++) { 
-          console.log(aElement[ i ].textContent); 
+          /*10代入*/
+          console.log(aElement[ i ].textContent*10); 
         }
-         /*aElementに10を足してHTMLに表示させる*/
-        innerHTML = aElement+10;  
+         /*aElementに10を掛けてHTMLに表示させる →innerHTMLを表示させるところなし*/
     });
 
     /*console確認。*/
     console.log(get);
 
-    aElement,array = [100, 110, 120, 130, 140];
 
     /*リセットId(set)をクリックしたら*/
     document.getElementById( "set" ).addEventListener( "click", function() {
          /*aElementをlist-group-itemとして再宣言する*/
-          var aElement = document.getElementsByClassName( "list-group" );
+          var aElement = document.getElementsByClassName( "list-group-item" );
           /*並びを[100, 110, 120, 130, 140]に戻す。*/
           return array = [100, 110, 120, 130, 140]
  
       }) ;
 
-   
+    /*aElement内はlist-group-itemの[100, 110, 120, 130, 140]*/
   </script>
  
 </html>
-
