@@ -42,11 +42,15 @@
          /*aElementをlist-group-itemとして再宣言する*/
           var aElement = document.getElementsByClassName( "list-group-item" );
           /*初期値の固定値を入力する。*/
-         aElement=[100, 110, 120, 130, 140];
-         /*console.logでaElementがどこを示しているか確認。*/
-         console.log(aElement);
-         /*aElementを表示*/
-         aElement[i].textContent=aElement[i];
+
+          for (let i = 0; i < 5; i++) { 
+          /*初期値*/
+          array=[100, 110, 120, 130, 140];
+
+          /*aElement[ i ].textContentをconsole.logの代わりに画面に表示させるようにしましょう。*/
+          aElement[i].textContent=array[i]; 
+        }
+         
 
       }) ;
 
