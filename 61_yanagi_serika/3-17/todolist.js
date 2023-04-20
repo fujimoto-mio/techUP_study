@@ -51,8 +51,7 @@ function showTodos() {
   todos.forEach((todo, index) => {
 
     //appendChildを使ってノードを追加する
-    //addTaskTargetとtableId紐付け   ←48と同じ？
-    document.body.appendChild(tableId);
+    document.body.appendChild(deleteTodo);
     //リストのli要素内に削除ボタン（deleteTodo）をつける（document.createElement('button');）
     var deleteTodo = document.createElement('button');
     deleteTodo.textContent = '削除';
@@ -68,9 +67,9 @@ function deleteTodo(index) {
   //   1- todosから対応するtodo情報を削除する
   return deleteButton;
   //   2- 引数はindexを受け取る(インデックス番号) level3-10参考に、ここでは、splice()を使います。
-  const todo = ['加藤', '佐藤', '鈴木', '田中', '伊藤'];
-  console.log('出力結果: ' + names);
-  names.splice(1,0,'sato');
+  const todo = [inputBox];
+  console.log('出力結果: ' + todo);
+  names.splice(1,0,);
   //   3- 削除後はshowTodosを実行して、Todoリストを再表示させる
   deleteButton.innerHTML = 'Delete';
 
