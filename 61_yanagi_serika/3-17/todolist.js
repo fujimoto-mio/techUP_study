@@ -31,7 +31,7 @@ function todo() {
       //↑todoリスト一覧の配列 {comment: inputBox.value,}はtodoで紐付けているから紐付けた[todo]のarray
 
       //showTodos()関数で再表示
-      showTodos();
+      showTodos();   //← これでリスト内に表示される？
    
     });
 
@@ -41,12 +41,13 @@ function todo() {
 
 //-------------------------
 
+//上記34のshowTodos()の説明
 /* 「todos」の中身を一覧表示する */
 function showTodos() {
   //    - ul要素にli要素(createElement)を追加して、li要素内にtodoタスクの内容を表示する
      //addTaskTargetの中のli
   const tableId = document.createElement('addTaskTarget');
-  tableId.innerText = todos;
+  tableId.body = todos;
   //TodoリストをforEach繰り返しにして作成する
   todos.forEach((todo, index) => {
 
@@ -56,7 +57,9 @@ function showTodos() {
     var deleteTodo = document.createElement('button');
     deleteTodo.textContent = '削除';
     //削除（deleteTodo）をクリックされた時、showTodos()関数で削除する
-    showTodos();
+    document.getElementById("button").onclick = function() {
+      showTodos();
+    };
   });
 }
 
