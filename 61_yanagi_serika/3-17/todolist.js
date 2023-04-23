@@ -47,14 +47,16 @@ function showTodos() {
   //    - ul要素にli要素(createElement)を追加して、li要素内にtodoタスクの内容を表示する
      //addTaskTargetの中のli
   const tableId = document.createElement('addTaskTarget');
-  tableId.body = todos;
+  tableId.id = todos;
+  tableId.innerHTML=todos;
   //TodoリストをforEach繰り返しにして作成する
   todos.forEach((todo, index) => {
 
     //appendChildを使ってノードを追加する
-    document.body.appendChild(deleteTodo);
+    todos.appendChild(tableId);
     //リストのli要素内に削除ボタン（deleteTodo）をつける（document.createElement('button');）
     var deleteTodo = document.createElement('button');
+    deleteTodo.lastElementChild.remove();
     deleteTodo.textContent = '削除';
     //削除（deleteTodo）をクリックされた時、showTodos()関数で削除する
     document.getElementById("button").onclick = function() {
@@ -69,6 +71,7 @@ function showTodos() {
 function deleteTodo(index) {
   //   1- todosから対応するtodo情報を削除する
   return deleteButton;
+
   //   2- 引数はindexを受け取る(インデックス番号) level3-10参考に、ここでは、splice()を使います。
   const todo = [inputBox];
   console.log('出力結果: ' + todo);
