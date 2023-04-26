@@ -20,14 +20,17 @@ function todo() {
     //addButtonが[add-buton]追加
     addButton.addEventListener('click', (event) => {
       //   テキストボックス(input-todo-box)[inputBox]に入力された(テキストの値を取り出して、Todoリスト一覧に追加する)
-      const todo = { comment: inputBox.value,  };
+      const todos = { comment: inputBox.value,  };
       //   取り出したらテキストボックスの中を空にする
       inputBox.focus();
    
-      //level3-10 [配列の要素を変更しよう]push()要素を参考に配列でテキストの値を追加する。
-      var todo_array = [todo];
-      console.log(todo);
-      todo_array.push('');
+      //level3-10 [配列の要素を変更しよう]push()要素を参考に配列でテキストの値を追加する。????????????????
+      //同じ？
+      var todo_array = [todos,todos,todos];
+      console.log(todos);   //これで入力した文字がconsole内表示される
+      todo_array.push();
+      console.log(todo_array+'deletTodo');
+ 
       //↑todoリスト一覧の配列 {comment: inputBox.value,}はtodoで紐付けているから紐付けた[todo]のarray
 
       //showTodos()関数で再表示
@@ -35,27 +38,25 @@ function todo() {
    
     });
 
-    //console.log確認
-    //todo-list
-    console.log(addTaskTarget);
-
-//-------------------------
-
+    
 //上記34のshowTodos()の説明
 /* 「todos」の中身を一覧表示する */
 function showTodos() {
   //    - ul要素にli要素(createElement)を追加して、li要素内にtodoタスクの内容を表示する
      //addTaskTargetの中のli
-  const tableId = document.createElement('addTaskTarget');
+  const tableId = document.createElement('addTaskTarget');//（）内に''を入れないとエラーになる、、、、
+  console.log(tableId);//addTaskTarget<><>表示される
   tableId.id = todos;
   tableId.innerHTML=todos;
+
+  console.log(todos);
   //TodoリストをforEach繰り返しにして作成する
   todos.forEach((todo, index) => {
 
     //appendChildを使ってノードを追加する
     todos.appendChild(tableId);
     //リストのli要素内に削除ボタン（deleteTodo）をつける（document.createElement('button');）
-    var deleteTodo = document.createElement('button');
+    var deleteTodo = document.createElement('button');  
     deleteTodo.lastElementChild.remove();
     deleteTodo.textContent = '削除';
     //削除（deleteTodo）をクリックされた時、showTodos()関数で削除する
