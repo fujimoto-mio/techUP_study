@@ -1,12 +1,19 @@
 <?php
-setcookie('name',$_POST['name'],time()+10);
+if(isset($_POST['name'])){
+	setcookie('name',$_POST['name'],time()+10);
+}
 
     if(isset($_COOKIE['name'])){
         $memoryName = $_COOKIE['name'];
     }else{
         $memoryName = "";
     }
-$count = mb_strlen($_POST['name']);
+
+if(isset($_POST['name'])){
+    $count = mb_strlen($_POST['name']);
+}else{
+    $count = 0;
+}
 
 try{
     if($count === 0){
