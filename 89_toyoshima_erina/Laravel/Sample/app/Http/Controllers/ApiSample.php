@@ -15,4 +15,12 @@ class ApiSample extends Controller
                 "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
-} }
+
+
+} 
+    public function nameSet(Request $request) {
+        
+    }
+
+}
+
