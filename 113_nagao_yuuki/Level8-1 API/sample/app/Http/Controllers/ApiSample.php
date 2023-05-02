@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-//use Illuminate\Http\JsonResponse;
 
 class ApiSample extends Controller
 {
@@ -22,11 +21,10 @@ class ApiSample extends Controller
     }
 
     //課題
- 
- //try {
- 
-    // データベースに接続
-    $pdo = new PDO('mysql:host=localhost;dbname=test_db;charset=UTF8', 'root', 'testtest');
+    public function nameSet(Request $request){
+
+        // データベースに接続
+    $pdo = new PDO('mysql:host=localhost; dbname=test_db; charset=UTF8', 'root', 'testtest');
 
     // SQL文をセット　※$stmt = $pdo->prepare
     $sql = ('INSERT INTO tasks (id,name,status,updated_at,created_at) VALUES (:id,:name,:status,:updated_at,:created_at)');
@@ -43,10 +41,19 @@ class ApiSample extends Controller
 
     // 接続を終了
     $pdo = null;
-}
+
     // Jsonで値を返す 
     return response()->json($member);
 
+    }
+ 
+   
+ 
+    
+}
+    
+ 
+ 
 
 
 
