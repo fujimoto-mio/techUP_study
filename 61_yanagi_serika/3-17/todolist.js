@@ -5,84 +5,68 @@ function todo() {
    
     /* HTMLのID値を使ってDOM要素を取得する */
     //  1 テキストボックス(input[type="text"])を要素を取得する。ここでは、[input-todo-box]
-        //inputBoxが[input-todo-box]
+      const inputBox = document.getElementById('input-todo-box');//入力文字
     //  2 追加ボタン(button要素)を要素を取得する。   ここでは、[add-button]は addButtonと紐付けする！
-        //addButtonが[add-button]
+      const addButton = document.getElementById('add-button');//追加
     //  3 Todoリストを一覧表示するul要素を取得する。ここでは、[todo-list]
-        //addTaskTargetが[todo-list]
+      const addTaskTarget = document.getElementById('todo-list');//表示
   
-    const inputBox = document.getElementById('input-todo-box');//入力文字
-    const addButton = document.getElementById('add-button');//追加
-    const addTaskTarget = document.getElementById('todo-list');//表示
-
-
     /*「追加」ボタンがクリックされたときの処理 */
-    //addButtonが[add-buton]追加
     addButton.addEventListener('click', (event) => {
+      // 一つ追加todo //todoは入力した文字とつながりあり、、
       let count = event.detail;
-      console.log('Click count is ' + count);
+      console.log('Click count is ' + count+'1');
 
-      //   テキストボックス(input-todo-box)[inputBox]に入力された(テキストの値を取り出して、Todoリスト一覧に追加する)
       const todos = { comment: inputBox.value,  };
-      //todosは入力した文字とつながりあり、、
-      //   取り出したらテキストボックスの中を空にする
+      //inputBoxは空にする
       inputBox.focus();
-      //level3-10 [配列の要素を変更しよう]push()要素を参考に配列でテキストの値を追加する。
+      inputBox.value = '';
+     //push()要素を参考に配列でテキストの値を追加する。
       //これで入力した文字がconsole内表示される
       todo_array.push(todos);
       console.log(todo_array);
       //showTodos()関数で再表示
-      showTodos();   //← これでリスト内に表示される？
+      showTodos();   
    
     });
 
 /* 「todos」の中身を一覧表示する */
 function showTodos() {
   //    - ul要素にli要素(createElement)エリアを追加して、li要素内にtodoタスクの内容を表示する
-  //addTaskTargetの中のli
-  const tableId = document.createElement('addTaskTarget');
+  //addTaskTargetの中のli空
+  addTaskTarget.textContent= '';
 
- todo_array.forEach((todo, index) => {
-  //--------------
-    var inputBox = document.getElementById('input-todo-box');
-    var todos = { comment: inputBox.value,  };
-
-    //-----------------
-    //todo[index]の大きい数を取得したい！「大きい=length」
-    var todo_length = todo_array.length;
-    //一つずつ大きい数でその中のテキスト
-    for (var i = 0; i < todo_length; i++) {
-      todo_array[i].textContent=todo_array[i].textContent
-
-     };
-    
-    var text = document.createTextNode(todo_length);//生成するテキストノードに含めるテキストを指定する。
-    //表示させる内容
-    tableId.appendChild(text);//tableId内は文字が入る
+//console.log(tableId);
+ todo_array.forEach((todos, index) => {
+    //tableIdはli  ●
+    const tableId = document.createElement('li');
     addTaskTarget.appendChild(tableId);//tableIdはaddTaskTarget内にあり
 
-    var deleteTodo = document.createElement('button');  
-    deleteTodo.textContent = '削除';
+    //テキスト表示内容
+    var todo_length = todos.comment;
+    tableId.textContent =todo_length;
+    
+
+    var deleteTodo_buttun = document.createElement('button');  
+    deleteTodo_buttun.textContent = '削除';
+    //tableIdのところに削除ボタンの追加
+    tableId.appendChiled(deleteTodo_buttun);
     //削除（deleteTodo）をクリックされた時、showTodos()関数で削除する
     deleteTodo.addEventListener('click', () => {
-      todos.remove();
+      deleteTodo(index);
     });
   });
 }
 
-console.log(deleteTodo);
 /* todoの内容を削除する */
 // Todo情報を表すli要素(showTodo関数で作成される要素)の中にある削除ボタン[deleteTodo]をクリックしたら実行される。
 function deleteTodo(index) {
   //   1- todosから対応するtodo情報を削除する
-  return deleteButton;
-
   //   2- 引数はindexを受け取る(インデックス番号) level3-10参考に、ここでは、splice()を使います。
   const todo = [inputBox];
-  console.log('出力結果: ' + todo);
-  names.splice(1,0,);
+  todo.splice(index,1);
   //   3- 削除後はshowTodosを実行して、Todoリストを再表示させる
-  deleteButton.innerHTML = 'Delete';
+  showTodos()
 
 }
 
