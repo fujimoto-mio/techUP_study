@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>DOM </title>
+</head>
+ 
+  <body>
+
+    <ul class="list-group">
+      <li class="list-group-item">100</li>
+      <li class="list-group-item">110</li>
+      <li class="list-group-item">120</li>
+      <li class="list-group-item">130</li>
+      <li class="list-group-item">140</li>
+    </ul>
+ 
+    <p><button id="get" class="button">変更</button></p>
+    <p><button id="set" class="button">リセット</button></p>
+  
+  </body>
+ 
+  <script>
+    /*変更Id(get)をクリックしたら*/
+    document.getElementById( "get" ).addEventListener( "click", function() {
+        /*aElementをlist-group-itemとして*/
+        const aElement = document.getElementsByClassName( "list-group-item" ) ;
+
+        /*繰り返す。iが０だとして、iより5大きい。iが一つずつ足される）*/
+        for (let i = 0; i < 5; i++) { 
+          /*繰り返し乗算されるようにする*/
+
+          /*aElement[ i ].textContentをconsole.logの代わりに画面に表示させるようにしましょう。*/
+          aElement[i].textContent=aElement[i].textContent*10; 
+        }
+         /*aElementに10を掛けてHTMLに表示させる →innerHTMLを表示させるところなし*/
+    });
+    
+
+    /*リセットId(set)をクリックしたら*/
+    document.getElementById( "set" ).addEventListener( "click", function() {
+         /*aElementをlist-group-itemとして再宣言する*/
+          var aElement = document.getElementsByClassName( "list-group-item" );
+          /*初期値の固定値を入力する。*/
+
+          for (let i = 0; i < 5; i++) { 
+          /*初期値*/
+          array=[100, 110, 120, 130, 140];
+
+          /*aElement[ i ].textContentをconsole.logの代わりに画面に表示させるようにしましょう。*/
+          aElement[i].textContent=array[i]; 
+        }
+         
+
+      }) ;
+
+    /*aElement内はlist-group-itemの[100, 110, 120, 130, 140]*/
+  </script>
+ 
+</html>
