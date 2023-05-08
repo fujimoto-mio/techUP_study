@@ -15,4 +15,7 @@ class ApiSample extends Controller
                 "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
-} }
+}
+
+}
+
