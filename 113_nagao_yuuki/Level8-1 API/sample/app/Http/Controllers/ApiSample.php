@@ -31,10 +31,12 @@ class ApiSample extends Controller
     $stmt = $pdo->prepare($sql);
 
     // 値をバインド
-    $stmt->bindParam( ':id',, PDO::PARAM_INT);
-    $stmt->bindParam( ':name', $name, PDO::PARAM_STR);
-    $stmt->bindParam( ':updated_at',, PDO::PARAM_INT);
-    $stmt->bindParam( ':created_at',, PDO::PARAM_INT);
+    $stmt->bindParam( ':id', PDO::PARAM_INT);
+    $stmt->bindParam( ':name',$name, PDO::PARAM_STR);
+    $stmt->bindParam( ':updated_at', PDO::PARAM_INT);
+    $stmt->bindParam( ':created_at', PDO::PARAM_INT);
+    var_dump($stmt);
+
 
     // 実行
     $stmt->execute();
