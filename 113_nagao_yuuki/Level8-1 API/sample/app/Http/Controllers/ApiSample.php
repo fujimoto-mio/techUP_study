@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class ApiSample extends Controller
 {
@@ -20,32 +21,32 @@ class ApiSample extends Controller
         //return 'Hello API';
     }
 
+    
+    
+
     //課題
     public function nameSet(Request $request){
+        //クライアントから受け取った内容が$requestにある。
+  
+        //モデルをインスタンス化　初期呼び出し
+        $member = new Task;
+        
+ 
+        //その中にinput　された'task_name'　を取得する。
+        //モデル->カラム名 = 値 で、データを割り当てる
+        $member->name = $request->input('name');
+        $member->status=1;
 
-        // データベースに接続
-    $pdo = new PDO('mysql:host=localhost; dbname=test_db; charset=UTF8', 'root', 'testtest');
+    
+        
+ 
+        //データベースに保存
+        $member->save();
+ 
+        //responseへ値を返す
+        return response()->json($member);
+        
 
-    // SQL文をセット　※$stmt = $pdo->prepare
-    $sql = ('INSERT INTO tasks (id,name,status,updated_at,created_at) VALUES (:id,:name,:status,:updated_at,:created_at)');
-    $stmt = $pdo->prepare($sql);
-
-    // 値をバインド
-    $stmt->bindParam( ':id', PDO::PARAM_INT);
-    $stmt->bindParam( ':name',$name, PDO::PARAM_STR);
-    $stmt->bindParam( ':updated_at', PDO::PARAM_INT);
-    $stmt->bindParam( ':created_at', PDO::PARAM_INT);
-    var_dump($stmt);
-
-
-    // 実行
-    $stmt->execute();
-
-    // 接続を終了
-    $pdo = null;
-
-    // Jsonで値を返す 
-    return response()->json($member);
 
     }
  
@@ -53,7 +54,10 @@ class ApiSample extends Controller
  
     
 }
-    
+
+
+
+
  
  
 
