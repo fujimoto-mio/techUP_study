@@ -1,0 +1,14 @@
+.content_wrap {
+    position:  relative center;   
+    background-color: pink;
+    width: 95%;
+    height: 70px;
+    text-align: center;
+
+}
+.charset {
+    position:  relative; 
+    padding: 16px;
+    text-align: center;
+    background-color: rgb(236, 59, 127);
+}
