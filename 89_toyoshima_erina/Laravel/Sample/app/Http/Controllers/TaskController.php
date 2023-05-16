@@ -42,9 +42,8 @@ class TaskController extends Controller
           ];
         $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
         Validator::make($request->all(), $rules, $messages)->validate();
-
         $task = new Task;
-        $task->name = $request->input('task_name');
+        $task_name = $request->input('task_name');
         $task->save();
         return redirect('/tasks');
     }
@@ -70,7 +69,6 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
         return view('tasks.edit', ['task'=> $task]);
-
     }
 
     /**
@@ -83,7 +81,7 @@ class TaskController extends Controller
     public function update(Request $request, $id)
     {
         if ($request->status === null) {
-        
+
         $rules = [
             'task_name' => 'required|max:100',
         ];
@@ -91,23 +89,16 @@ class TaskController extends Controller
         $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
  
         Validator::make($request->all(), $rules, $messages)->validate();
- 
- 
-        //該当のタスクを検索　取得する
         $task = Task::find($id);
- 
-        //モデル->カラム名 = 値 で、データnamwを割り当てる（更新する）
         $task->name = $request->input('task_name');
- 
-        //データベースに保存
-        $task->save();
-        }else {
+        $task->save(); }
+        else {
             $task = Task::find($id);
             $task->status = true;
-            $task->save();
-        }
-
+            $task->save(); }
         return redirect('/tasks');
+
+
     }
 
     /**

@@ -7,13 +7,8 @@ use Illuminate\Support\Facades\DB;
 
 class TodoListSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
-    {   //追記
+    {   
         DB::table('todo_lists')->insert(
             [
                 [

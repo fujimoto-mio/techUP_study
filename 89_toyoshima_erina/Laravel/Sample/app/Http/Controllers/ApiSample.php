@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Task;
 
 class ApiSample extends Controller
 {
@@ -17,7 +18,11 @@ class ApiSample extends Controller
         );
 } 
     public function nameSet(Request $request) {
-        
+        $member = new Task;
+        $member->name = $request->name;
+        $member->status = $request->status;
+        $member->save();
+        return response()->json($member);
     }
 
 }
