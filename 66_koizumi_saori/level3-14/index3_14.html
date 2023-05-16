@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <title>3-14課題</title>
+</head>
+
+<body>
+<script>
+    function Digitalclock() {
+     var nowTime = Date();
+     var nowHour = nowTime.getHours();
+     var nowMin  = nowTime.getMinutes();
+     var nowSec  = nowTime.getSeconds();
+     var msg = nowHour + ":" + nowMin + ":" + nowSec;
+
+    }
+    setInterval('Digitalclock()',1000);
+    
+</script>
+</body>
+</html>
