@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+html,
+body {
+    font-family: serif;
+    font-size: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.timer {
+    font-size: 30px;
+    color: rgb(255, 90, 90);
+}
+
+/*フェードイン*/
+.fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*ウェーブ*/
+.box {
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    margin: o auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.wave {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    margin: -250px 0 0 -400px;
+    background: rgb(135, 247, 255);
+    border-radius: 45%;
+    opacity: 0.4;
+    animation: drift 5s infinite linear;
+}
+
+.wave.two {
+    background: rgb(135, 201, 255);
+    opacity: 0.1;
+    animation: drift 10s infinite linear;
+}
+.wave.three {
+    animation: dirft 7s infinite linear;
+}
+.mein {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1em;
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
