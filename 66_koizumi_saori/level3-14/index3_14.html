@@ -7,16 +7,21 @@
 
 <body>
 <script>
-    function Digitalclock() {
-     var nowTime = Date();
-     var nowHour = nowTime.getHours();
-     var nowMin  = nowTime.getMinutes();
-     var nowSec  = nowTime.getSeconds();
-     var msg = nowHour + ":" + nowMin + ":" + nowSec;
-
-    }
-    setInterval('Digitalclock()',1000);
     
+    var timer= null;
+    var cnt= 0;
+
+    function event(){
+      cnt++;
+      var date= new Date();
+      var hours= date.getHours();
+      var minutes= date.getMinutes();
+      var seconds= date.getSeconds();
+      console.log(hours+":"+minutes+":"+seconds);
+    }
+    timer= setInterval(event,1000);
+
+  
 </script>
 </body>
 </html>
