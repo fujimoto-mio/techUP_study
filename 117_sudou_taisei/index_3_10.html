@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  <p>JavaScript Basic</p>
+  <script>
+	  const name_array = ['山田さん','佐藤さん','内田さん'];
+	  console.log('名簿:　' + name_array);
+	  
+	  const firstDead = name_array.shift(); //一番目の値を削除する処理
+	  
+	  console.log('一日目：' + firstDead + 'が人狼に噛まれました。');
+	  console.log('生存者: ' + name_array);
+	  
+	  const secondDead = name_array.shift();
+
+	  console.log('二日目：' + secondDead + 'が人狼に噛まれました。');
+	  console.log('生存者: ' + name_array);
+	  
+	  const thirdDead = name_array.shift();
+	  
+	  console.log('三日目：　' + thirdDead + 'が謎の死を遂げました。');
+	  console.log('残りの市民: ' + 0);
+	  
+	  console.log('平和な街は三日にしてゴーストタウンと化してしまいました。');
+	  
+	  
+	  
+	  
+	  
+  </script>
+
+</body>
+<p>GoogleChromeからConsoleを開いて確認してください。</p>
+</html>
