@@ -15,7 +15,6 @@ class ApiSample extends Controller
                 "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
-
 } 
     public function nameSet(Request $request) {
         $member = new Task;
@@ -25,5 +24,4 @@ class ApiSample extends Controller
         return response()->json($member);
     }
 
-
-} }
+}
