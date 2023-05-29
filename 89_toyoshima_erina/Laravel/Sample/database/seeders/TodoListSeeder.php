@@ -13,7 +13,7 @@ class TodoListSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   //追記
+    {
         DB::table('todo_lists')->insert(
             [
                 [

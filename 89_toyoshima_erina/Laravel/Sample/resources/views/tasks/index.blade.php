@@ -38,15 +38,12 @@
                         <input
                             class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                             placeholder="何かをする..." type="text" name="task_name" /><!-- 送られるデータです -->
-                           
                             @error('task_name')
-                                <div class="mt-3">
-                                    <p class="text-red-500">
-                                        {{ $message }}
-                                    </p>
-                                </div>
-                                @enderror
-
+  <div class="mt-3">
+      <p class="text-red-500">
+          {{ $message }}
+      </p>
+  </div> @enderror
                     </label>
 
                     <button type="submit" class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
@@ -55,8 +52,8 @@
                 </div>
 
             </form>
- {{-- 追記 --}}
- @if ($tasks->isNotEmpty())
+            {{-- 追記 --}}
+  @if ($tasks->isNotEmpty())
       <div class="max-w-7xl mx-auto mt-20">
           <div class="inline-block min-w-full py-2 align-middle">
               <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -88,9 +85,10 @@
                                                   role="menuitem" tabindex="-1">
                                                   @csrf
                                                   @method('PUT')
-                                                  {{-- 完了ボタンの追記します。 --}}
-                                                  <input type="hidden" name="status" value="{{$item->status}}">
-                                                  {{-- 完了ボタンの追記します。 --}}
+
+{{-- 完了ボタンの追記します。 --}}
+<input type="hidden" name="status" value="{{$item->status}}">
+{{-- 完了ボタンの追記します。 --}}
                                                   <button type="submit"
                                                       class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
                                               </form>
@@ -100,7 +98,7 @@
                                                   class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
                                           </div>
                                           <div>
-  <form onsubmit="return deleteTask();"
+                                          <form onsubmit="return deleteTask();"
       action="/tasks/{{ $item->id }}" method="post"
       class="inline-block text-gray-500 font-medium"
       role="menuitem" tabindex="-1">
@@ -109,7 +107,7 @@
       <button type="submit"
           class="py-4 w-20 md:hover:bg-slate-200 transition-colors">削除</button>
   </form>
-</div>
+                                          </div>
                                       </div>
                                   </td>
                               </tr>
@@ -132,7 +130,6 @@
         </div>
     </div>
 </footer>
-
 <script>
     function deleteTask() {
         if (confirm('本当に削除しますか？')) {
