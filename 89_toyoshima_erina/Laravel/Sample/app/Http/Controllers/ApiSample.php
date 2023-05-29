@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class ApiSample extends Controller
 {
-    public function apiHello(){
-        return response()->json(
+    public function apiHello()
+    {
+        return response()->json
+        (
             [
                 'name' => '田中',
                 'nick_name' => 'tanaka',
@@ -15,8 +17,10 @@ class ApiSample extends Controller
                 "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
-} 
-    public function nameSet(Request $request) {
+    }
+
+    public function nameSet(Request $request) 
+    {
         $member = new Task;
         $member->name = $request->name;
         $member->status = 1;
