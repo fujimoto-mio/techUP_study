@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+
+
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,7 +16,9 @@ class TodoListSeeder extends Seeder
      * @return void
      */
     public function run()
+
     {
+
         DB::table('todo_lists')->insert(
             [
                 [
@@ -32,6 +37,8 @@ class TodoListSeeder extends Seeder
                     'updated_at' => now(),
                 ],
             ]
-        );
+
+            );
+
     }
 }
