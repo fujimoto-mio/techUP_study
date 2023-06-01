@@ -31,4 +31,8 @@ class CreateTasksTable extends Migration
     {
         Schema::dropIfExists('tasks');
     }
+<<<<<<<< HEAD:89_toyoshima_erina/Laravel/Sample/database/migrations/2023_05_29_102056_create_tasks_table.php
 };
+========
+};
+>>>>>>>> 6224827902c91a3137a142f9c975857b4c640a35:大野尚貴/Level7-4/sample/database/migrations/2023_03_22_202634_create_tasks_table.php
