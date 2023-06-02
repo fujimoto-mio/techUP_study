@@ -37,7 +37,17 @@ class sendmail implements ShouldQueue
     {
         //追記
         $users = User::where('birthday', '>=', 20200201)->get();
-        var_dump($users);
+        //echo $users;
+        foreach($users as $user){
+            $name = $user->name;
+            var_dump($name);
+            //echo $name;
+            $birthday = $user->birthday;
+            var_dump($birthday);
+            //echo $birthday;
+        }
+        
+        
         var_dump("メールが送信されます。！！");
     }
 }
