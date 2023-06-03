@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
+//追加課題
+use App\Models\User;
+
 class ApiSample extends Controller
 {
     //追記
@@ -29,13 +32,21 @@ class ApiSample extends Controller
         //クライアントから受け取った内容が$requestにある。
   
         //モデルをインスタンス化　初期呼び出し
-        $member = new Task;
+        //$member = new Task;
+        //追加課題
+        $member = new User;
         
  
         //その中にinput　された'task_name'　を取得する。
         //モデル->カラム名 = 値 で、データを割り当てる
         $member->name = $request->input('name');
-        $member->status=1;
+        //$member->status=1;
+        //追加課題
+        $member->email= "test".mt_rand(1, 200)."@gamli.com"; //ランダム値のユニークにしてメール挿入
+        $member->email_verified_at=null;//固定null
+        $member->password=1111;//固定
+        $member->remember_token = null;//固定null
+        $member->birthday = "2011-01-01";//固定
 
     
         
