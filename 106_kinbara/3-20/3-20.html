@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>canvas　Demo3く</title>
+<script type="text/javascript">
+  <!--
+  function test() {
+    //描画コンテキストの取得
+    var canvas = document.getElementById('sample');
+    if (canvas.getContext) {
+      var context = canvas.getContext('2d');
+      //線の幅10を指定する
+      context.lineWidth = 3;
+      //線スタイルに黒を指定する
+      context.strokeStyle = "rgb(0, 0, 0)";
+
+      //現在のパスをリセットする
+      context.beginPath();
+      //x=100,y=75,半径=50,円弧の始まりの角度=0(度)* Math.PI /180,円弧の終わりの角度=270* Math.PI
+      context.arc(100, 75, 50, 0* Math.PI /180, 270* Math.PI/180);
+       //現在のパスを輪郭表示する
+      context.stroke();
+      
+    }
+  }
+  //-->
+</script>
+</head>
+<body onLoad="test()">
+<h2>Canvasで図形を描く</h2>
+<canvas id="sample">
+図形を表示するには、canvasタグをサポートしたブラウザが必要です。
+</canvas>
+バージョンによりFirefoxのブラウザでは見れない場合があります。
+</body>
+</html>
