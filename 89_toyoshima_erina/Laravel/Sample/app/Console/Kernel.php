@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('send:birthday-mail')->cron('* * * * *');
     }
 
     /**
@@ -30,10 +30,5 @@ class Kernel extends ConsoleKernel
         BirthdayMail::class
     ];
 
-    protected function schedule(Schedule $schedule)
-    {
-        // $schedule->command('inspire')->hourly();
-        // テストように毎分に実行します
-        $schedule->command('send:birthday-mail')->cron('* * * * *');
-    }
+    
 }
