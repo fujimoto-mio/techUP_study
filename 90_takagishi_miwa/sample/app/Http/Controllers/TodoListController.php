@@ -17,5 +17,5 @@ class TodoListController extends Controller
         // viewメソッドすなわち、表示するデータをここで送っています。
         //$todo_listsのデータを'todo_lists'に渡して、todo_list.indexのページに送ります。
         return view('todo_list.index', ['todo_lists'=> $todo_lists]);
-    } //
+    } 
 }
