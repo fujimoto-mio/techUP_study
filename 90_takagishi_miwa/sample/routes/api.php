@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/apisample', [ApiSample::class, 'apiHello']); 
+
+Route::post('/nameset', [ApiSample::class, 'nameSet']);
