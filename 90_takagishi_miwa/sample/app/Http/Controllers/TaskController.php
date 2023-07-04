@@ -104,7 +104,10 @@ class TaskController extends Controller
             Validator::make($request->all(), $rules, $messages)->validate();
  
  
-            //該当のタスクを検索　取得する
+
+            //該当のタスクを検索取得する
+=======
+            //該当のタスクを検
             $task = Task::find($id);
  
             //モデル->カラム名 = 値 で、データnamwを割り当てる（更新する）
@@ -117,8 +120,9 @@ class TaskController extends Controller
  
             //該当のタスクを検索
             $task = Task::find($id);
- 
-            // statusを　trueにして完了に変えます。
+            // statusをtrueにして完了に変えます。
+=======
+            // statusを　trueにして完了に変えます
             //モデル->カラム名 = 値 で、データを割り当てる
             $task->status = true; //true:完了、false:未完了
  
