@@ -9,7 +9,7 @@ class ApiTestController extends Controller
 {
     public function dataInsert(Request $request)
     {
-    
+        
     }
 
 }
