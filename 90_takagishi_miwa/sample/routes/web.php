@@ -28,12 +28,17 @@ Route::post('/delete',[TaskController::class,'delete']);  //タスク削除用
 //Route::get( アドレス , [コントローラーの名前::class , メソッド名] );
 
 Route::resource('tasks', TaskController::class); 
+
+
+Route::get('dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
+=======
 =======
 =======
  
 //Route::get( アドレス , [コントローラーの名前::class , メソッド名] );
 
     
+
 
     
 
