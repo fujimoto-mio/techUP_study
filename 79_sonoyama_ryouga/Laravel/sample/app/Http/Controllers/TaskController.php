@@ -44,33 +44,25 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //クライアントから受け取った内容が　$requestにあります。
-
         //バリデーションのリールを記載
         $rules = [
             'task_name' => 'required|max:100',
         ];
         //エラー時のメッセージ
         $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
-
-        //バリデーションのエラーならここで処理をします。
+        //バリデーションのエラーならここで処理
         Validator::make($request->all(), $rules, $messages)->validate();
 
-
-        //モデルをインスタンス化　初期呼び出し
+        //モデルをインスタンス化
         $task = new Task;
 
-        //その中にinput　された'task_name'　を取得します。
         //モデル->カラム名 = 値 で、データを割り当てる
         $task->name = $request->input('task_name');
-
-        //var_dump($task); //バーダンプして表示を確認してみよう。
-        //exit;  //ここでストップさせる
 
         //データベースに保存
         $task->save();
 
-        //リダイレクトして　tasksにもどる
+        //リダイレクト
         return redirect('/tasks');
     }
 
@@ -109,6 +101,8 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
         //「編集する」と完了ボタンをおしたとき ifで分けることにします。
         if ($request->status === null) {
 
@@ -156,8 +150,10 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        $task = Task::destroy($id);// 消去
+        $todo = Task::find($id);
 
-        return redirect()->route('tasks.index');// 一覧にリダイレクト
+        $todo->delete();
+
+        return redirect()->route('todos.index');
     }
 }
