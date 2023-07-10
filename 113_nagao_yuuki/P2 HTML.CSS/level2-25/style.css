@@ -97,6 +97,7 @@ header{
 
 .trouble-point{
     display:flex;
+    margin-left: 20%;
 }
 
 .trouble-point ul li{
@@ -151,7 +152,9 @@ header{
     transform: translateX(-50%); /* 線の中央寄せ */
     width: 30px; /* 線の長さ */
 }
-
+.solution-point{
+    margin-left:25%;
+}
 .solution-point ul{
     color:white;
     
@@ -496,6 +499,7 @@ header{
 }
 .about{
     color:white;
+    margin-top:100px;
 }
 .about h2{
     background-color: rgba(4, 104, 255, 0.53);
