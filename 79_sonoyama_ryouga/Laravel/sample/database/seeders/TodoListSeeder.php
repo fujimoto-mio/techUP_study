@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; //追記
- 
+use Illuminate\Support\Facades\DB;
+
 class TodoListSeeder extends Seeder
 {
     /**
@@ -13,7 +13,7 @@ class TodoListSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   //追記
+    {
         DB::table('todo_lists')->insert(
             [
                 [

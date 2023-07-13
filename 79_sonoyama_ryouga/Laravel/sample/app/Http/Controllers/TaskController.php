@@ -50,8 +50,10 @@ class TaskController extends Controller
         ];
         //エラー時のメッセージ
         $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
-        //バリデーションのエラーならここで処理
+
+        //バリデーションのエラーならここで処理をします。
         Validator::make($request->all(), $rules, $messages)->validate();
+        //クライアントから受け取った内容が　$requestにあります。
 
         //モデルをインスタンス化
         $task = new Task;
@@ -101,8 +103,6 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
         //「編集する」と完了ボタンをおしたとき ifで分けることにします。
         if ($request->status === null) {
 
@@ -150,10 +150,8 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        $todo = Task::find($id);
+        $task = Task::destroy($id); // 消去
 
-        $todo->delete();
-
-        return redirect()->route('todos.index');
+        return redirect()->route('tasks.index'); // 一覧にリダイレクト
     }
 }
