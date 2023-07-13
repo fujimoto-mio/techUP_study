@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Task;
 
 class ApiSample extends Controller
@@ -19,9 +18,9 @@ class ApiSample extends Controller
                 "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
+
         //return 'Hello API!!';
     }
-
     public function nameSet(Request $request)
     {
         //※ここに、データベースtest_dbのtasksテーブルに保存するプログラミングを記述してください。

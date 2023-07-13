@@ -35,13 +35,14 @@
                     @csrf
                     <div class="flex flex-col items-center">
                         <label class="w-full max-w-3xl mx-auto">
-                            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="何かをする..." type="text" name="task_name" /><!-- 送られるデータです -->
+                            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="何かをする..." type="text" name="task_name" />
                             @error('task_name')
                             <div class="mt-3">
                                 <p class="text-red-500">
                                     {{ $message }}
                                 </p>
                             </div>
+                            @enderror<!-- 送られるデータです -->
                         </label>
 
                         <button type="submit" class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
@@ -81,8 +82,10 @@
                                                         @method('PUT')
 
                                                         {{-- 完了ボタンの追記します。 --}}
+
                                                         <input type="hidden" name="status" value="{{$item->status}}">
                                                         {{-- 完了ボタンの追記します。 --}}
+
                                                         <button type="submit" class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
                                                     </form>
                                                 </div>
@@ -97,19 +100,18 @@
                                                     </form>
                                                 </div>
                                             </div>
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
-                        </td>
-                        </tr>
-                        @endforeach
-                        </tbody>
-                        </table>
                     </div>
                 </div>
-            </div>
-            @endif
-            {{-- 追記ここまで --}}
+                @endif
+                {{-- 追記ここまで --}}
 
-        </div>
+            </div>
         </div>
     </main>
     <footer class="bg-slate-800">

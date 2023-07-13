@@ -1,9 +1,9 @@
 <?php
- 
+
 namespace Database\Seeders;
- 
+
 use Illuminate\Database\Seeder;
- 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TodoListSeeder::class
         ]);
+        // \App\Models\User::factory(10)->create();
     }
 }
