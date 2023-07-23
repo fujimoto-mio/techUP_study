@@ -25,3 +25,5 @@ Route::post('/create',[TaskController::class,'create']);  //タスク追加用�
 Route::post('/edit',[TaskController::class,'edit']);  //タスク更新用
 Route::post('/delete',[TaskController::class,'delete']);  //タスク削除用
 Route::resource('tasks', TaskController::class);  //タクスコントローラ
+
+Route::get('dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
