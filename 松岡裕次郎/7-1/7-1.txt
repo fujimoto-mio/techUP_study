@@ -1,0 +1,9 @@
+ Host      | User     | Password                                  | authentication_string                     |
++-----------+----------+-------------------------------------------+-------------------------------------------+
+| localhost | root     |                                           |                                           |
+| localhost | mastuoka | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| 127.0.0.1 | root     |                                           |                                           |
+| ::1       | root     |                                           |                                           |
+| localhost | pma      |                                           |                                           |
+| localhost | testuser | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| localhost | matsuoka | *B56070D83B2451F3ABA1A09A6D8F21F8CE1C741C | *B56070D83B2451F3ABA1A09A6D8F21F8CE1C741C
