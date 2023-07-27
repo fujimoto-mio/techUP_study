@@ -27,36 +27,50 @@
                 <h3>骨組みとなるタグを書く</h3>
                 <P>＜html lang="ja"＞…文字コードを指定。日本語で記述していることを示す</p>
             
-            <table border="1">
+            <table border="1" width="30%"> 
                 <caption><span class="A">ータグの種類と意味ー</span></td></caption>
                 <colgroup span="3"></colgroup>
                 <thead>
                     <tr>
-                        <th rowspan="3">タグ</th>
+                        <th colspan="1">タグ</th>
+                        <th colspan="1">意味</th>
                     </tr>
+
                     <tr>
-                        <th>＜h1＞</th>
-                        <th>＜p＞</th>
-                        <th>＜h2＞</th>
-                        <th>＜header＞</th>
-                        <th>＜footer＞</th>
-                        <th>＜section＞</th>
-                        <th>＜article＞</th>
-                        <th>＜nav＞</th>
-                    </tr>
-                    <tbody>
-                    <tr>
-                        <th>意味</th>
+                        <td>＜h1＞</td>
                         <td>大見出し</td>
+                    </tr>    
+                    <tr> 
+                        <td>＜p＞</td>
                         <td>段落</td>
-                        <td>小見出し</td>
-                        <td>ヘッダを示す</td>
-                        <td>フッタを示す</td>
-                        <td>一つのセクションで<br>あることを示す</td>
-                        <td>記事であることを示す</td>
-                        <td>ナビゲーションで<br>あることを示す</td>
                     </tr>
-                    </tbody>
+                    <tr>     
+                        <td>＜h2＞</td>
+                        <td>小見出し</td>
+                    </tr> 
+                    <tr>  
+                        <td>＜header＞</td>
+                        <td>ヘッダを示す</td>
+                    </tr>
+                    <tr>   
+                        <td>＜footer＞</td>
+                        <td>フッタを示す</td>
+                    </tr> 
+                    <tr>    
+                        <td>＜section＞</td>
+                        <td>一つのセクションで<br>あることを示す</td>
+                    </tr>    
+                    <tr>
+                        <td>＜article＞</td>
+                        <td>記事であることを示す</td>
+                    </tr>
+                    <tr>
+                        <td>＜nav＞</td>
+                        <td>ナビゲーションで<br>あることを示す</td>
+                    </tr>  
+                        
+            
+                    
                 </thead>
             </table> 
             </fieldset>
@@ -91,6 +105,20 @@
             <article>https://techup.tokyo/level2-3/</article>
     
         <footer> 2 文章構造をマークアップする</footer>
+
+    <form>
+        氏名<input type="text" name="title" size="20" maxlength="28" value="miwa" />
+        パスワード<input type="password" name="passwd" size="20" maxlength="18" value="12345" />
+        性別<input type="radio" name="test" value="test1" checked="checked" />男
+        <input type="radio" name="test" value="test2" />女
+        <select name="test">
+        県<option value="test1" selected="selected">東京</option>
+        <option value="test2">千葉</option>
+        <option value="test3">埼玉</option>
+        </select>
+        紹介<textarea name="txt" rows="5" cols="20">紹介</textarea>
+        ボタン<input type="submit" value="送信する" />
+    </form>    
     
     </body>
     </html>
