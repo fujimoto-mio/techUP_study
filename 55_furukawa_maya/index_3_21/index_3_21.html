@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>L3-21課題</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+
+  <script>
+    // 画像のURL
+    const imageUrl = 'https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png';
+
+    // アニメーションの開始
+    const img = new Image();
+    img.src = imageUrl;
+    img.onload = init;
+
+
+    function init() {
+      const canvas = document.getElementById('myCanvas');
+      const ctx = canvas.getContext('2d');
+
+      // 画面のサイズ
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      // 画像の中心位置と半径
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const radius = Math.min(centerX, centerY) - 50;
+
+      // 画像の大きさ
+      const scale = 0.3;
+
+      // 回転角度の初期値
+      let angle = 0;
+
+      
+      function animate() {
+        
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+        const width = img.width * scale;
+        const height = img.height * scale;
+        ctx.drawImage(img, x - width / 2, y - height / 2, width, height);
+
+        angle += 0.01;
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+  </script>
+</body>
+</html>
