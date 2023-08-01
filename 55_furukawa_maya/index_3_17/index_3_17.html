@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="Ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM総合課題【Todoリスト】</title>
+</head>
+
+<body>
+    <h1>Todoアプリ</h1>
+    <div>
+        <label for="input-todo-box">Todoタスクの入力 : </label>
+        <input id="input-todo-box" type="text">
+        <button id="add-button">追加</button>
+    </div>
+
+    <h2>現在のTodoリスト</h2>
+    <ul id="todo-list"></ul>
+
+    <script src="todolist.js"></script>
+</body>
+<script>
+    // グローバルの空間に変数や関数をセットしている。（即時関数にしてもよい）
+    function todo() {
+        // 入力したTodoタスクの一覧を保持する配列を定義する
+        var todos = [];
+
+        /* HTMLのID値を使ってDOM要素を取得する */
+        //  1 テキストボックス(input[type="text"])を要素を取得する。　ここでは、[input-todo-box]
+        var inputBox = document.getElementById("input-todo-box");
+        //  2 追加ボタン(button要素)を要素を取得する。   　ここでは、[add-button]
+        var addButton = document.getElementById("add-button");
+        //  3 Todoリストを一覧表示するul要素を取得する。　ここでは、[todo-list]
+        var todoList = document.getElementById("todo-list");
+
+
+        /*「追加」ボタンがクリックされたときの処理 */
+        addButton.addEventListener('click', (event) => {
+            //   テキストボックスに入力されたテキストの値を取り出して、Todoリスト一覧に追加する
+            var todoText = inputBox.value;
+
+            if (todoText === "") {
+                return;
+            }
+            //   取り出したらテキストボックスの中を空にする
+            inputBox.value = "";
+
+            //level3-10 [配列の要素を変更しよう]　push()要素を参考に配列でテキストの値を追加する。
+            todos.push(todoText);
+            //showTodos()関数で再表示
+            showTodos();
+
+        });
+
+        /* 「todos」の中身を一覧表示する */
+        function showTodos() {
+            //    - ul要素にli要素(createElement)を追加して、li要素内にtodoタスクの内容を表示する
+            todoList.innerHTML = "";
+            //TodoリストをforEach繰り返しにして作成する
+            todos.forEach((todo, index) => {
+                 //appendChildを使ってノードを追加する
+                var listItem = document.createElement("li"); 
+                var todoText = document.createElement("span");
+
+                todoText.innerText = `${index + 1}. ${todo}`; 
+                listItem.appendChild(todoText);
+
+                //　リストのli要素内に削除ボタンをつける（document.createElement('button');）
+                var deleteButton = document.createElement("button");
+                //削除をクリックされた時、showTodos()関数で削除する
+                deleteButton.innerText = "削除";
+                deleteButton.addEventListener("click", function () {
+
+                    deleteTodo(index); 
+                   
+                    });
+                     listItem.appendChild(deleteButton);
+                     todoList.appendChild(listItem);
+                })
+            }
+
+        /* todoの内容を削除する */
+        // Todo情報を表すli要素(showTodo関数で作成される要素)の中にある削除ボタンをクリックしたら実行される。
+        function deleteTodo(index) {
+                        //   1- todosから対応するtodo情報を削除する
+                        //   2- 引数はindexを受け取る(インデックス番号) level3-10参考に、ここでは、splice()を使います。
+                        todos.splice(index, 1);
+                        //   3- 削除後はshowTodosを実行して、Todoリストを再表示させる
+                        showTodos();
+
+                    }
+                    showTodos();
+
+            }
+
+    /*　実行される関数 */
+    todo();
+
+</script>
+
+</html>
