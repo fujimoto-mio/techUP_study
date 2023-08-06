@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+<body>
+  <script>
+    // TODO-1：オブジェクト（＝変数）のWhoを用いて、式としてクラスを定義
+    // TODO-1ヒント：カリキュラムの「クラス式」参照
+    const Who = class {
+      // ----- 以下はクラス定義内で記述 -----
+      // TODO-2：staticフィールドnameを定義
+      static name = '';
+
+      // TODO-3：以下の条件でコンストラクタを定義  
+      // 仮引数1：name
+      // コンストラクタ内の処理：フィールドnameに仮引数nameを代入
+      // TODO-3ヒント：カリキュラム「クラスを呼び出す」参照
+      constructor(name) {
+        this.name = name;
+      }
+      // ----- クラス定義内での記述はここまで -----
+    }
+
+
+    // TODO-4：prototypeを使ってWhoにメソッドを定義
+    // メソッド名：getName
+    // 引数：なし
+    // 処理：戻り値としてフィールドnameを返す
+    // TODO-4ヒント：課題の「ヒント：サイト」→「オブジェクト名.prototype.メソッド名= function() { } 」
+    Who.prototype.getName = function () {
+      return console.log(this.name)
+    }
+
+    // TODO-5：変数myObjを定義し、Whoインスタンスを代入
+    // TODO-5-1：コンストラクタの引数：'tanaka'
+    // TODO-5ヒント：new演算子参考サイト → https://www.sejuku.net/blog/24383
+    var myOb = new Who('tanaka');
+
+    // TODO-6：変数nameを定義し、myObjのgetName()メソッドの戻り値を代入
+    // TODO-6ヒント：カリキュラム「メソッドの呼び出し」参照
+
+    myOb.getName();
+
+
+
+    // TODO-6：console.log()で変数nameを出力
+
+
+  </script>
+</body>
+</head>
+
+</html>
