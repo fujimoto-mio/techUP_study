@@ -1,0 +1,1336 @@
+@charset "UTF-8";
+html,
+body{
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    color: #444;
+    font-family:'Hiragino Kaku Gothic ProN', 'ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN W3', Meiryo, ãƒ¡ã‚¤ãƒªã‚ª, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    line-height: 1.8em;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
+     background: #FFF;
+    }
+
+article,aside,details,figcaption,figure,footer,header,hgroup,
+menu,nav,section {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+p,td,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4 {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+img {
+    border: 0px;
+    font-size: 0; 
+    line-height: 0;
+    vertical-align:bottom; 
+    max-width: 100%;
+    transition: 0.5s;
+    height: inherit;
+    }
+
+a{
+    color: #134890;
+}
+a:hover{
+    color: #18b36d;
+}
+a,img {
+    transition: 0.5s;text-decoration: none;
+}
+a:hover img {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";
+}
+.wmain{
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto; 
+    
+}
+.left{
+    float: left}
+
+.right{
+    float: right;
+}
+.pc{
+    display: inline-block;
+}
+.sp{
+    display: none;
+}
+.center{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.4em;
+    color: #000b31;
+    font-weight: 900;
+}
+h2.after{
+    position: relative;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+h2.after:after{
+    position: relative;
+    content: "";
+    height: 4px;
+    width: 62px;
+    bottom: -15px;
+    display: block;
+    text-align: center;
+    background: #18b36d;
+    margin: 0 auto;
+}
+h2 span{
+    color: #18b36d;
+    position: relative;
+}
+h2 small{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    margin: 0 0 5px;
+}
+.red{
+    color: #de0317;
+}
+.yellow{
+    color:#fff000;
+}
+
+.fvbg{
+    background: url(../img/fv-bg.jpg) center bottom no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/*header
+*********************/
+#header{
+    overflow: hidden;
+    width: 100%;
+    z-index: 9;
+    transition: .5s;
+    display: block;
+    position: fixed;
+    top:0;
+}
+#header.transform{
+    background: rgba(50,119,174,1);
+    transition: .5s;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);}
+#header.transform .wmain{
+    padding: 5px 0;
+    transition: .5s
+}
+#header .wmain{
+    padding: 20px 0 10px;
+    transition: .5s
+}
+#header .logo{
+    margin:0;
+}
+#header .head-cta{
+    overflow: hidden; 
+    position: relative;margin: 10px 0 0;
+}
+#header ul{
+    text-align: right; 
+    overflow: hidden;
+}
+
+#header .head-cta ul li{
+    display: inline-block;
+    *zoom: 1;*display: inline; 
+    vertical-align: top; 
+    margin: 0 5px;
+    font-size: 15px;
+}
+#header .head-cta ul li a{
+    color: #fff;
+}
+#header .head-cta ul li a:hover{
+    color: #fff000;
+}
+.menu-trigger{
+    display: none;
+}
+
+/*fv
+*********************/
+#fv {
+    overflow: hidden;
+    color: #fff;
+}
+#fv .wmain{
+    position: relative;
+    padding:150px 0 250px;
+}
+#fv h1{
+    font-size: 16px;
+    margin-left: 78px;
+    margin-bottom: 20px;
+    line-height: 1.4em;
+    font-weight: normal;
+}
+#fv h2{
+    text-align: left;
+}
+#fv .fv-cta{
+    position: absolute;
+    right: 75px;bottom: 65px;
+}
+#fv .fv-cta .inr{
+    position: relative;
+    overflow: hidden;
+}
+
+/*trouble
+*********************/
+#trouble{
+    overflow: hidden;
+    padding: 60px 0;
+}
+#trouble h2 span.dot:before{
+    position: absolute;
+    content: url(../img/dot-green.png);
+    top: -40px;left: 15px;display: block;
+}
+#trouble h2 span.dot:after{
+    position: absolute;
+    content: url(../img/dot-green.png);
+    top: -40px;
+    left: 55px;
+    display: block;
+}
+#trouble .ctn{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%;}
+
+#trouble .img{
+    float: left;
+    width: 35%;
+}
+#trouble .txt{
+    float: right;
+    width: 65%;
+}
+
+#trouble .txt li{
+    background: url(../img/trouble-point.png) 0 no-repeat;
+    padding: 8px 0 8px 45px;
+}
+#trouble .txt li p{
+    font-size: 24px;
+    line-height: 1.4em;
+    letter-spacing: 0;
+}
+#trouble .txt li p span{border-bottom: 2px solid #ff4330;}
+
+/*solution
+*********************/
+#solution{
+    overflow: hidden;
+    background: url(../img/solution-bg.jpg) center no-repeat;
+    background-size: cover; 
+    color: #fff;
+    background-attachment: fixed;
+}
+#solution .wmain{
+    background:url(../img/solution-ar.png) center 0 no-repeat;
+    padding: 60px 0;color: #fff;}
+#solution h2{
+    color: #fff;
+}
+#solution h2 span.dot:before{
+    position: absolute;
+    content: url(../img/dot-yellow.png);
+    top: -40px;
+    left: 15px;
+    display: block;
+}
+#solution h2 span.dot:after{
+    position: absolute;
+    content: url(../img/dot-yellow.png);
+    top: -40px;
+    left: 55px;
+    display: block;
+}
+#solution ul{
+    margin: 40px auto 0;
+    width: 80%;
+}
+#solution li{
+    background: url(../img/solution-point.png) 0 8px no-repeat;
+    padding: 8px 0 8px 50px;
+}
+#solution li p{
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+#solution li p span{
+    color: #fff000;
+    border-bottom: 2px solid #fff000;
+}
+#solution .cta{
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 8px solid #2f79d1;
+    width: 85%;
+    margin: 40px auto 0;
+    border-radius: 8px;
+}
+#solution .cta p{
+    color: #444;
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: bold;
+}
+#solution .cta .btn{
+    margin: 15px 0 0;
+}
+#solution .cta .btn .inr{
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+/*skill
+*********************/
+#skill{
+    text-align: center;
+    overflow: hidden;
+    padding: 60px 0;
+}
+#skill .subtx{
+    margin: 40px 0;
+    font-size: 20px;
+    line-height: 1.8em;
+}
+#skill ul{
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    width: 74%;
+}
+#skill ul li{
+    display: inline-block;
+    *zoom: 1;
+    *display: inline; 
+    vertical-align: top;
+     margin: 0 5px 20px;
+     width: 18%;}
+#skill ul li p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6em;
+    color:#2063a1;
+}
+
+/*strong-point
+*********************/
+#strong-point{
+    text-align: center;
+    overflow: hidden;
+    padding: 60px 0;
+    background: url(../img/strong-point-bg.jpg) center 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#strong-point .subtx{
+    margin: 40px 0;
+    font-size: 20px;
+    line-height: 1.8em;
+}
+#strong-point ul{
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 78%;
+}
+#strong-point ul li{
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+    vertical-align: top; 
+    margin: 0 10px;
+    width: 29%;
+    background: #fff;
+}
+#strong-point ul li .txt{
+    padding: 15px;
+}
+#strong-point ul li .ti{
+    font-size: 36px;
+    line-height: 1.4em;
+    font-weight: 700;
+    color: #42ba81;
+    margin: 15px 0;
+    text-align: center;
+    padding: 0 0 15px;
+    border-bottom: 5px solid #eef2f5;
+}
+#strong-point ul li .ti small{
+    font-size: 50%;
+    display: block;
+    line-height: 1.4em;
+}
+#strong-point ul li p{
+    text-align: left;
+    letter-spacing: 0;
+}
+
+/*works
+*********************/
+#works{
+    text-align: center;
+    overflow: hidden;
+    padding: 60px 0;
+}
+#works .subtx{
+    margin: 40px 0;
+    font-size: 20px;
+    line-height: 1.8em;
+}
+
+
+/*voice
+*********************/
+#voice{
+    text-align: center;
+    overflow: hidden;
+    padding: 60px 0;background: url(../img/voice-bg.jpg) center 0 no-repeat;background-size: cover;}
+
+/*about
+*********************/
+#about{
+    overflow: hidden;
+    background: url(../img/about-bg.png) center 0 repeat-y;
+    background-size: contain;color: #fff;
+}
+#about h2{
+    color: #fff;
+    background: url(../img/about-ti-bg.png) center 0 repeat-y;
+    padding: 30px 0 50px;
+    background-size: contain;
+    font-weight: 500;}
+#about h2.after{
+    margin: 0;
+}
+#about h2.after:after{
+    background: #fff;
+    height: 1px;
+}
+#about .wmain{
+    padding: 60px 0;
+    width: 74%;
+}
+#about .ctn{
+    margin: 0 auto;
+    width: 85%;
+    overflow: hidden;
+}
+#about .img{
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+#about .txt{
+    float: left;
+    width: 70%;
+}
+#about .txt p{
+    margin: 0 0 20px;
+}
+
+/*faq
+*********************/
+#faq{
+    overflow: hidden;
+    padding: 60px 0;
+}
+#faq .toggle{
+    margin: 60px auto 0;
+    width: 74%;
+}
+#faq .toggle dt{
+    cursor:pointer;
+    padding: 10px 30px 10px 10px;
+    background: #f5f5f5;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 5px
+}
+#faq .toggle dt:before{
+    content: "Q";
+    margin: 0 10px 0 0;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: "Pro W3", "Hiragino Kaku Gothic Pro";}
+#faq .toggle dt:after{
+    content: "▲";
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+}
+#faq .toggle dt:hover{
+    background:#eee;
+}
+#faq .toggle dd{
+    display: none;
+    overflow: hidden;
+    margin: 0 0 15px;
+    padding: 10px;}
+#faq .toggle dd:before{
+    content: "A";
+    margin: 0 10px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f97e1b;
+    font-family:  "Pro W3", "Hiragino Kaku Gothic Pro";}
+
+#faq .toggle dt.active{
+    color: #2484d3;
+}
+#faq .toggle dt.active:after{
+    content: "▼";
+}
+#faq .toggle dd.open{
+    display: block;
+}
+
+/*contact
+*********************/
+#contact{
+    text-align: center;
+    overflow: hidden
+    ;padding: 60px 0;
+    background: #f9f9f9;}
+#contact .subtx{
+    margin: 40px 0;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ff6600;
+}
+#contact .mailform {
+    padding: 30px; 
+    color: #222; 
+    width: 70%; 
+    margin: 20px auto;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.08);
+    background: #fff;
+}
+#contact table {
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 20px
+}
+#contact table th, #contact table td {
+    padding: 15px 0; 
+    vertical-align: middle;
+}
+#contact table th {
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+    width: 35%;
+    position: relative;
+}
+#contact table td {
+    width: 75%; 
+    padding: 10px 0 10px 20px;
+}
+#contact .form-text, #contact .form-textarea {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #D6D6D6; 
+    background: #fff;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#contact .form-textarea {
+    height: 120px;
+}
+input[type="submit"], input[type="button"] {
+    cursor: pointer;
+}
+#contact table th:before {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 33px;
+    height: 22px; 
+    background-size: cover;
+}
+#contact table th.hissu:before {
+    background: url(../img/contact-hissu.png) no-repeat;
+}
+#contact table th.nini:before {
+    background: url(../img/contact-nini.png) no-repeat;
+}
+
+#contact input[type=radio]{
+    display: none;
+    margin: 0;
+}
+#contact input[type=radio] + label{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 0 0 24px;
+}
+#contact input[type=radio] + label::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    background: #FFF;
+    border: 1px solid #999;
+    border-radius: 30px;
+}
+#contact input[type=radio]:checked + label{
+    color:#ff2900;
+    font-weight: bold;
+}
+#contact input[type=radio]:checked + label::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    left: 5px;width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background: #ff2900;
+    border-radius: 8px;
+}
+#contact input[type=radio]:checked  + label::before {
+    border: 1px solid #ff2900;
+}
+
+#contact input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+#contact input[type=checkbox] + label{
+    cursor: pointer;
+}
+#contact input[type=checkbox]:checked + label{
+    color:#ff2900; font-weight: bold;}
+
+#contact select{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #D6D6D6;
+    background: #fff;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#contact label.error{
+    color: red;
+    font-size: 13px;
+}
+#contact input.error,#contact select.error,#contact textarea.error{background: #ffe8e8;}
+
+#confirm{
+    padding: 150px 0 200px;
+}
+#confirm table {
+    width: 70%;
+    margin: 50px auto;
+}
+#confirm table th,#confirm table td {
+    border-bottom: 1px dotted #CCC;
+    font-weight: normal;
+    text-align: left;
+    padding: 5px 0;}
+#confirm table th{width: 40%;color: #999;}
+#confirm table td{
+    width: 60%;
+}
+#confirm .center h4{
+    margin: 0 0 40px;
+}
+#confirm .error_messe{
+    color: red;
+    margin: 0 0 5px;
+}
+#confirm .btn{
+    margin: 30px 0 0;
+}
+
+#thanks{
+    padding: 150px 0 200px;
+    text-align: center;
+}
+#thanks .center{
+    margin: 40px 0 0;
+}
+#thanks .center a{
+    background: #999;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 4px;
+    display: inline-block;
+}
+#thanks .center a:hover{
+    background: #666;
+}
+
+.form-btn-conf {
+    background: url(../img/contact-confirm.png) center no-repeat;
+     background-size: contain;}
+.form-btn-back {
+    background: url(../img/contact-back.png) center no-repeat; 
+    background-size: contain;}
+.form-btn-send {
+    background: url(../img/contact-send.png) center no-repeat;
+    background-size: contain;
+    }
+.form-btn {
+    width: 366px;
+    height: 77px;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    border-radius: 5px;
+
+text-indent: -999px;}
+.form-btn:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";
+    transition: 0.5s;
+}
+.mail-btn{
+    text-align: center;
+}
+.mail-btn li {
+    display: inline-block; 
+    *display: inline; 
+    *zoom: 1; 
+    vertical-align: top;
+}
+
+/*term
+*********************/
+.term {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 0 20px;
+}
+.term .btn{
+    background: #eee;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+.term .termtx{
+    background: #f1f5f8;
+    padding: 25px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #666;
+}
+.term .termtx .ti{
+    font-weight: bold;
+    padding: 0 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px dotted #ccc;
+}
+.term .btn:after {
+    content: "+";position: absolute;
+    top: 11px;
+    right: 13px;
+    background: #fff;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+}
+.term .btn:hover:after{
+    background: #333;
+    color: #fff;
+}
+.term .btn.active:after {
+    content: "-";
+    background: #333;
+    color: #fff;
+}
+.term .btn.active{
+    background:#d5d5d5;
+}
+.term .agree{
+    margin: 25px 0 0;
+}
+
+/*footer
+*********************/
+table , td, th {
+    border-collapse: collapse;
+}
+#footer{
+    padding: 30px 0;
+    overflow: hidden;
+    background: url(../img/about-bg.png) center 0 repeat-y; 
+    background-size: contain;
+    color: #fff;}
+#footer a{
+    color: #fff;
+    text-decoration: underline;
+}
+#footer table{
+    width: 68%;
+    margin: 0 auto;
+}
+#footer table th,#footer table td{
+    text-align: left;
+    vertical-align: middle;padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.8em;
+}
+#footer table th{
+    width: 20%;
+}
+#footer table td{
+    width: 80%;
+}
+.copyright {
+    padding: 14px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background: url(../img/about-ti-bg.png) center 0 repeat-y;
+    background-size: contain;
+}
+.gotop{
+    position: fixed; bottom: 30%; 
+    right: 0; z-index:10;
+    cursor: pointer;
+}
+
+.reflection {
+    height      :100%;
+    width       :30px;
+    position    :absolute;
+    top         :-180px;
+    left        :0;
+    background-color: #fff;
+    opacity     :0;
+    transform: rotate(45deg);
+    animation: reflection 3s ease-in-out infinite;
+    -webkit-transform: rotate(45deg);
+    -webkit-animation: reflection 3s ease-in-out infinite;
+    -moz-transform: rotate(45deg);
+    -moz-animation: reflection 3s ease-in-out infinite;
+    -ms-transform: rotate(45deg);
+    -ms-animation: reflection 3s ease-in-out infinite;
+    -o-transform: rotate(45deg);
+    -o-animation: reflection 3s ease-in-out infinite;
+}
+ 
+/*****************************************************************
+max-width 1500
+******************************************************************/
+@media screen and (max-width: 1500px) {
+    .wmain{
+        width: 100%;
+    }
+    #header .wmain{
+        padding:20px 74px 10px;
+    }
+    #fv .wmain{
+        overflow: hidden;
+        padding: 150px 0 75px;
+        background: url(../img/fv-bg.jpg); 
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+    }
+    #fv .fv-cta{
+        position: relative;
+        margin: 20px 0 0;
+        bottom: inherit;
+        right: inherit;
+    }
+   
+    #fv .pc {
+        margin-left: 74px;
+    }
+    #fv .contact_btn {
+        margin-left: 50%;
+
+    }
+    #trouble .txt li p {
+        font-size: 24px;
+    }
+    #solution ul{
+        width: 59%;
+    }
+    .cta p .sp{
+        display: block;
+    }
+    .cta p .pc{
+        display: none;
+    }
+    #solution .cta p{
+        font-size: 22px;
+    }
+    
+    #strong-point ul li{
+        margin: 0 5px;
+        width: 31%;
+    }
+
+    #strong-point .tx2 {
+        margin-bottom :28px;
+    }
+    #about .ctn{
+        width: 95%;
+    }
+    #contact .mailform{
+        width: 62%;
+    }
+    #trouble .txt li p{
+        font-size: 22px;
+    }
+    #confirm table {
+        width: 85%;
+    }
+    #trouble .txt li {
+        font-size: 32px;
+    }
+    
+}
+    /*****************************************************************
+    max-width 888 * 880pxまでの幅の場合に適応される *
+    ******************************************************************/
+
+    @media screen and (max-width: 888px) {
+    h2{
+        font-size:30px;
+    }
+    #header{
+        background: rgba(50,119,174,0.5);
+    }
+    #header .head-cta ul li{
+        font-size: 10px;
+    }
+    #header .logo img{
+        width:90px;
+    }
+    #mv .wmain {
+        padding: 95px 0 35px;
+        
+    }
+    #mv h2 img{
+        width: 70%;
+    }
+    #mv h1{
+        font-size: 11px;
+    }
+    #mv .fv-cta img{
+        width: 60%;
+    }
+    #trouble h2 span.dot:before{
+        left: 10px;top: -30px;
+    }
+    #trouble h2 span.dot:after{
+        left: 40px;top: -30px;
+    }
+    #trouble .txt ul{
+        padding: 0 0 0 20px;
+    }
+    #solution h2 span.dot:before{
+        left: 10px;top: -30px;
+    }
+    #solution h2 span.dot:after{
+        left: 40px;top: -30px;
+    }
+    #solution ul {
+        width: 90%;
+    }
+    #solution li{
+        background-size: 33px;
+        padding:8px 0 8px 40px;
+    }
+    #solution li p{
+        font-size: 16px;
+    }
+    #solution .cta{
+        width: 90%;
+    }
+    #solution .cta p {
+        font-size: 18px;
+    }
+    #skill .subtx .pc,#works .subtx .pc{
+        display: none;
+    }
+    #skill .subtx .sp,#works .subtx .sp{
+        display: block;
+    }
+    #skill ul li p{
+        font-size: 14px;letter-spacing: 0;
+    }
+    #strong-point .subtx .sp{
+        display: block;}
+    #strong-point ul li .ti{
+        font-size: 26px;
+    }
+    #strong-point ul li{
+        margin: 0 2px;
+    }
+    #works .slick-slide{
+        margin: 0 5px;
+    }
+    .wkpopup {
+        max-width:95%;
+    }
+    .wkpopup .inr .tx{
+        padding: 30px 10px;
+    }
+    #faq .toggle{
+        width: 95%;
+    }
+    #footer table{
+        width: 90%;
+    }
+    .copyright .pc{
+        display: none;
+    }
+    .copyright .sp{
+        display: block;
+    }
+    }
+    /*****************************************************************
+    max-width 590　/* 590pxまでの幅の場合に適応される *
+    ******************************************************************/
+    @media screen and (max-width: 590px) {
+    body{
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+    h2{
+        line-height: 1.6em;
+        font-size: 28px;
+    }
+    h2 small{
+        font-size: 14px;
+    }
+    
+    #header{
+        text-align: center;
+        background: rgba(4,61,137,1);
+    }
+    #header .wmain{
+        padding: 10px 0;
+    }
+    #header.transform .wmain {
+        padding: 10px 0;
+    }
+    #header .head-cta{
+        float: none;
+        width: 100%;
+        margin: 0;
+        display: none;
+    }
+    #header .head-cta ul li{
+        display: block;
+        width: 100%;
+        padding: 3px 0 8px;
+        text-align: center;
+        margin: 3px 0 5px;
+        font-size: 14px;
+        border-bottom: 1px dotted #0f4c9e;
+    }
+    #header .head-cta ul li:last-child{
+        border: none;
+    }
+    .menu-trigger{
+        display: block;
+        position: absolute;
+        width: 35px;
+        height: 26px; right: 7px;top: 10px;}
+    .menu-trigger,.menu-trigger span {
+        display: inline-block;transition: all .4s;box-sizing: border-box;
+    }
+    .menu-trigger span {
+        position: absolute;
+        left: 0;width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    .menu-trigger span:nth-of-type(1) {
+        top: 0;
+    }
+    .menu-trigger span:nth-of-type(2) {
+        top: 11px;
+    }
+    .menu-trigger span:nth-of-type(3) {
+        bottom: 0;
+    }
+    .menu-trigger.active span:nth-of-type(1) {
+        -webkit-transform: translateY(12px) rotate(-45deg);
+        transform: translateY(12px) rotate(-45deg);
+    }
+    .menu-trigger.active span:nth-of-type(2) {
+        opacity: 0;}
+    .menu-trigger.active span:nth-of-type(3) {
+        -webkit-transform: translateY(-10px) rotate(45deg);
+        transform: translateY(-10px) rotate(45deg);
+    }
+    .sp{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+    .fvbg{
+        background: none;
+    }
+    #fv{
+        margin: 44px 0 0;
+    }
+    #fv h2 img{
+        width: 100%;
+    }
+    #fv h1{
+        display: none;
+    }
+    #fv .wmain{
+        width: 100%;padding: 0;
+    }
+    #fv .fv-cta img{
+        width: 100%;
+    }
+    #fv .contact_btn {
+        margin-left: 0;
+
+    }
+    #fv .fv-cta{
+        position: fixed;
+        bottom: 0;left: 0;
+        z-index: 9;
+    }
+    #fv .fv-cta .inr{
+        padding: 2px 25px;
+        background: rgba(50,119,174,0.5);
+    }
+    #trouble{
+        padding: 20px 0 60px;
+    }
+    #trouble .ctn{
+        width: 97%;
+        margin: 20px auto 0;
+    }
+    #trouble .ctn .img{
+        float: none;
+        width: 65%;
+        margin: 0 auto;
+        display: none;
+    }
+    #trouble .ctn .txt{
+        float: none;width: 100%;}
+    #trouble .ctn ul{
+        padding: 0;
+        margin: 15px 0 0;
+    }
+    #trouble .txt li{
+        background-size: 28px;
+        padding: 8px 0 8px 33px;
+    }
+    #trouble .txt li p {
+        font-size: 15px;
+    }
+    #solution li{
+        margin: 0 0 5px;
+    }
+    #solution .cta p {
+        font-size: 14px;
+    }
+    #solution .cta{
+        padding: 10px;
+    }
+    #skill .subtx{
+        font-size: 14px;
+    }
+    #skill ul li{
+        margin: 0 5px 10px;
+        width: 45%;
+    }
+    #strong-point .subtx{
+        font-size: 15px;
+    }
+    #strong-point ul li{
+        overflow: hidden;
+        margin: 0 0 15px;
+        width: 90%;
+        padding: 10px;
+    }
+    #strong-point ul li .img{
+        float: left;
+        width: 30%;
+    }
+    #strong-point ul li .txt{
+        float: right;
+        width: 65%;
+        padding: 0;
+    }
+    #strong-point .tx{
+        height: inherit!important;
+    }
+    #strong-point ul li .ti {
+        font-size: 24px;
+        text-align: left;
+        margin: 0 0 5px;
+        padding: 0 0 5px;
+    }
+    #works .subtx{
+        font-size: 14px;
+    }
+    .wkbx.img,.wkbx.txt{
+        width: 100%;
+        float:none;
+    }
+    #about .img{
+        float: left;
+        margin: 0 15px 0 0;
+        width: 45%;}
+    #about .txt{
+        float: none;width: 100%;
+    }
+    #faq .toggle dt:after{
+        top: 50%;
+        margin: -3% 0 0 0;
+    }
+    #contact .mailform{
+        padding: 25px 10px;
+        width: 90%;
+    }
+    #contact table th,#contact table td{
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+    }
+    #contact table th:before{
+        right: 1px;
+    }
+    #contact table th{
+        margin: 0 0 5px;}
+    #contact table td{
+        padding: 0 0 15px;
+        margin: 0 0 15px;
+        border-bottom: 1px dotted #ddd;
+    }
+    .term .termtx{
+        padding: 25px 10px;
+    }
+    .term .btn:after{
+        line-height: 1.5em;
+        top: 7px;
+    }
+    #footer table th,#footer table td{
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    #footer th a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #footer table th, #footer table td{
+        border: none;padding: 1px 0;
+    }
+    #footer table tr{
+        border-bottom: 1px dotted #fff;margin: 5px 0;padding: 5px 0;display: block;width: 100%;overflow: hidden;
+    }
+    #footer table {
+        width: 95%;
+    }
+    .copyright{
+        margin: 0 0 62px;
+    }
+    .gotop{
+        bottom: 20%;
+    }
+    .gotop img{
+        width: 38px;
+    }
+    #confirm {
+        padding: 90px 0 50px;
+    }
+    #confirm table{
+        width: 98%;margin: 25px auto 15px;
+    }
+    #confirm table th,
+    #confirm table td{
+        display: block;overflow: hidden;width: 100%;}
+    #confirm table th{
+        border:none;padding: 0;
+    }
+    #confirm table td{
+        padding: 0 0 10px;margin: 0 0 10px;
+    }
+    .mail-btn li{
+        width: 90%;margin: 0 0 3px;
+    }
+    .form-btn{
+        width: 100%;
+    }
+    }
+    
+    @media screen and (max-width: 375px) {
+    
+    }
+    
+
+
+
+

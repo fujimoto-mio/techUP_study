@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptBasic 3-18 </title>
+</head>
+<body>
+  <form>
+    <input id="hoge" name="hoge" type="number" value="10">
+    <input id="btn" type="button" value="ボタン" /> 
+  </form>
+ 
+
+
+  <script>
+   'use strict'
+
+  document.getElementById('btn').onclick = function () {
+
+  const elm = document.getElementById('hoge')
+
+  elm.stepUp(1);
+
+}
+
+
+    </script>
+</body>
+</html>
