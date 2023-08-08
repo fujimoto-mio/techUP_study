@@ -67,8 +67,9 @@ return [
     |
     */
 
- feature/kimura_p9
+
     'timezone' => 'Asia/Tokyo',
+
 
 
     /*
@@ -83,7 +84,9 @@ return [
     */
 
 
+
     'locale' => 'ja',
+
 
 
     /*
@@ -112,7 +115,9 @@ return [
     */
 
 
+
     'faker_locale' => 'ja_JP',
+
 
 
     /*
