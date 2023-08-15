@@ -27,9 +27,8 @@ Route::get('/',[TaskController::class,'index']);  //一覧表示用のURLとコ�
 Route::post('/create',[TaskController::class,'create']);  //タスク追加用のURLとコントローラ場所
 Route::post('/edit',[TaskController::class,'edit']);  //タスク更新用
 Route::post('/delete',[TaskController::class,'delete']);  //タスク削除用
-feature/hayakawa3_1
+=======
 Route::resource('tasks', TaskController::class);  //タクスコントローラ
 
-Route::resource('tasks', TaskController::class);
-
-master
+Route::get('dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
+>>>>>>> main
