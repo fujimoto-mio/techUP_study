@@ -1,0 +1,36 @@
+@charset "UTF-8";
+h1{
+    font-size: 1.25rem;
+}
+
+div{
+    font-family: 'Orbitron','Meiryo UI', sans-serif;
+    font-size: 1.875rem;
+    color: #000;
+}
+
+.timer_back{
+    background-color: #111;
+    width: 450px;
+    height: 175px;
+    border: 5px #A4A8A7 solid;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.timer{
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #767968;
+    box-shadow: inset -2px -2px 5px rgba(56,58,42,.8);;
+    width: 350px;
+    height: 125px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    line-height: 125px;
+}
