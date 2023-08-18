@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .tab {
+        display: flex;
+        background-color: #999;
+        color: #ddd;
+    }
+
+    .radioButton {
+        display: none;
+    }
+
+    .tab-menu {
+        flex: 1;
+        width: 150px;
+        margin: 0 5px;
+        display: inline-block;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .tab-content {
+        display: none;
+        padding: 10px;
+    }
+
+ 
+    #content1Toggle:checked ~ #content1, 
+    #content2Toggle:checked ~ #content2, 
+    #content3Toggle:checked ~ #content3 {
+        display: block;
+    }  
+    
+    #content1Toggle:checked ~ .tab-menu#tab-menu1,
+    #content2Toggle:checked ~ .tab-menu#tab-menu2,
+    #content3Toggle:checked ~ .tab-menu#tab-menu3 {
+        background-color: #fff;
+        color: #000;
+    }
+
+</style>
+
+<body>
+    <div class="tab-toggle">
+        <div class="tab">
+            <input type="radio" id="content1Toggle" class="radioButton" value="タブ1" name="contentToggle" checked>
+            <input type="radio" id="content2Toggle" class="radioButton" value="タブ2" name="contentToggle">
+            <input type="radio" id="content3Toggle" class="radioButton" value="タブ3" name="contentToggle">
+
+            <label for="content1Toggle" class="tab-menu" id="tab-menu1">タブ1</label>
+            <label for="content2Toggle" class="tab-menu" id="tab-menu2">タブ2</label>
+            <label for="content3Toggle" class="tab-menu" id="tab-menu3">タブ3</label>
+        </div>
+
+        <div class="tab-content" id="content1">
+            <p>タブパネル-1</p>
+        </div>
+
+        <div class="tab-content" id="content2">
+            <p>タブパネル-2</p>
+        </div>
+
+        <div class="tab-content" id="content3">
+            <p>タブパネル-3</p>
+        </div>
+    </div>
+</body>
+
+</html>
