@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>L3-20課題</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+    <script>
+        // Canvas要素の取得
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        //Draw shapes
+        let x = 100;
+        let y = 100;
+        let radius = 100;
+        let startAngle = 0;
+        let endAngle = (3 / 2) * Math.PI;
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, startAngle, endAngle);
+        ctx.stroke(); 
+
+    </script>
+</body>
+</html>
