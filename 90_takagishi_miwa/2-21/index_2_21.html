@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .tab-toggle {
+        width: 600px;
+        margin: 0 auto ;
+    }
+
+    .radioButton {
+        display: none;
+    }
+
+    .tab-list {
+        display: flex;
+        width: 100%;
+        margin: 0 ;
+        padding: 0;
+        color: #999;
+        background: #ddd;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 13px;
+        cursor: pointer;
+        transition: ease 1s opacity;
+    }
+
+
+    .tab-list label {
+        width: 150px;
+        padding: 12px 0;
+        flex-grow: 1;
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        border: 10px solid #fff;
+    }
+   
+    
+    .tab-content {
+        flex: 1;
+        display: none;
+    }
+    
+    #tab1:checked ~ .tab-list .tab-menu1,
+    #tab2:checked ~ .tab-list .tab-menu2,
+    #tab3:checked ~ .tab-list .tab-menu3 {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .content_wrap {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px 10px;
+        display: none;
+
+    }
+
+
+    #tab1:checked ~ .content_wrap .tab-content1, 
+    #tab2:checked ~ .content_wrap .tab-content2, 
+    #tab3:checked ~ .content_wrap .tab-content3 {
+        display: block;
+    }  
+    
+</style>
+
+<body>
+    <div class="tab-toggle">
+            <input type="radio" id="tab1" class="radioButton" value="タブ1" name="contentToggle" checked>
+            <input type="radio" id="tab2" class="radioButton" value="タブ2" name="contentToggle">
+            <input type="radio" id="tab3" class="radioButton" value="タブ3" name="contentToggle">
+
+        <div class="tab-list">
+            <label for="tab1" class="tab-menu1" >タブ1</label>
+            <label for="tab2" class="tab-menu2" >タブ2</label>
+            <label for="tab3" class="tab-menu3" >タブ3</label>
+        </div>
+
+        <div class="content_wrap">
+            <div class="content tab-content1" >
+                <p>タブパネル-1</p>
+            </div>
+
+            <div class="content tab-content2" >
+                <p>タブパネル-2</p>
+            </div>
+
+            <div class="content tab-content3" >
+                <p>タブパネル-3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
