@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <style>
+    :root {
+        --my-cool-background:#0000ff;
+    }
     .wrapper_1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -11,19 +14,19 @@
         grid-row-end: 2;
         grid-column-start: 1;
         grid-column-end: 3;
-        background: #0000ff;
+        background:var(--my-cool-background);
     }
 
     .box2 {
         grid-row-start: 2;
         grid-column-start: 1;
-        background: #00ff00;
+        background:var(--my-cool-background);
     }
 
     .box3 {
         grid-column-start: 2;
         grid-column-end: 3;
-        background: #ff0000;
+        background:var(--my-cool-background);
     }
 
     .content3 {
@@ -37,15 +40,15 @@
     }
 
     .box4 {
-        background: #00ffff;
+        background:var(--my-cool-background);
     }
 
     .box5 {
-        background: #fff;
+        background: var(--my-cool-background);
     }
 
     .box6 {
-        background: #ffff00;
+        background: var(--my-cool-background);
     }
 
     .box7 {
@@ -53,12 +56,12 @@
         grid-row-end: 5;
         grid-column-start: 1;
         grid-column-end: 2;
-        background: #5f0068;
+        background: var(--my-cool-background);
     }
 
     .box8 {
         grid-column-start: 2;
-        background: #ff0fff;
+        background: var(--my-cool-background);
     }
 
     .box9 {
@@ -66,7 +69,7 @@
         grid-row-end: 6;
         grid-column-start: 1;
         grid-column-end: 3;
-        background: #88642c;
+        background:var(--my-cool-background);
     }
 </style>
 
