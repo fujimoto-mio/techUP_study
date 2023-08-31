@@ -1,0 +1,39 @@
+
+<?php
+//クラスファイルを読み込む
+require_once 'Person.php';//personクラスを継承するため、personクラスのファイルを読み込む。
+ 
+class Patient extends Person//patientクラスを定義する。
+{
+        //プロパティ==========//プロパティとして、身長と体重に値する変数を作成。
+	private $height = 0;		//身長(m)
+	private $weight = 0;		//体重(kg)
+ 
+	//コンストラクタ==========//コンストラクタを作成。
+	public function __construct($name, $age, $gender, $height, $weight){
+		
+		parent::__construct($name, $age, $gender);//personクラスで作られたコンストラクタを呼び出す。
+ 
+		//プロパティの初期化
+		$this -> height = $height;//プロパティを初期化。
+		$this -> weight = $weight;
+	}
+ 
+	//メソッド==========
+	//標準体重を返すメソッドを作成。
+	public function calculateStandardWeight(){
+		return $this -> height * $this -> height * 22;
+	}
+ 
+	//身長を返すメソッドを作成
+	public function getHeight(){
+		return $this -> height;
+	}
+ 
+	//体重を返すメソッドを作成
+	public function getWeight(){
+		return $this -> weight;
+	}
+
+
+}
