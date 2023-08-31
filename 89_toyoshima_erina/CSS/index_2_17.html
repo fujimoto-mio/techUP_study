@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>CSS</title>
+  <style>
+    .box {
+        background-color: #ffebe9;
+        border-top: solid 5px #ff7d6e;
+        color: #ff7d6e;
+        box-shadow: 7px 10px 5px 5px #cccccc;
+        width: 600px;
+    }
+
+    .box > p {
+        margin: 10px;
+        padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>このような影（box-shadow）をつけて少し浮いたように見せた枠を作成してください。<br>
+        背景は白<br>
+        ミント風の配色は、#ffebe9<br>
+        トップのボーダ色は、#ff7d6e<br>
+        文字色は、#ff7d6e<br>
+        子孫セレクターをつかって<br>
+        marginを10px<br>
+        paddingを20px<br>
+        で設定してください。</p>
+    </div>
+</body>
+
+</html>
