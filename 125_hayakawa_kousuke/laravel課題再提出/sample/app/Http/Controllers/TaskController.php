@@ -56,7 +56,8 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        //
+        $task=Task::find($id);
+        return view('tasks.edit',['task'=>$task]);
     }
 
     /**
@@ -68,7 +69,8 @@ class TaskController extends Controller
     public function edit($id)
     {
         $task=Task::find($id);
-        return view('tasks.edit',['task'=>$task]);
+            $task->status=true;
+            $task->save();
     }
 
     /**
