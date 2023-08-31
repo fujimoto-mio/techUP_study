@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    @vite('resources/css/app.css')
 </head>
  
 <body class="flex flex-col min-h-[100vh]">
@@ -79,7 +78,7 @@
                                                   @method('PUT')
  
 　　　　　　　　　　　　　　　　　　　　　　　　　{{-- 完了ボタンの追記します。 --}}
- 
+                                                <input type="hidden" name="status" value="{{$item->status}}">
 　　　　　　　　　　　　　　　　　　　　　　　　　{{-- 完了ボタンの追記します。 --}}
                                                   <button type="submit"
                                                       class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
