@@ -51,7 +51,7 @@ header p {
 
 .main_img {
     margin-top: 55px;
-    background-image: url("../img/main_bg.jpg");
+    background-image: url("../main_bg.jpg");
     background-repeat: no-repeat;
     background-position: center
 }
@@ -124,7 +124,7 @@ header p {
 .kodawari_title {
     width: 960px;
     height: 310px;
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/OIP (1).jpg");
+    background-image: url("../OIP (1).jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;
@@ -166,29 +166,29 @@ header p {
 }
 
 .kodawari01 {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/moyou_right2.png");
+    background-image: url("../moyou_right2.png");
     background-position: top right;
 }
 
 
 .kodawari02 {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/moyou_left2.png");
+    background-image: url("../moyou_left2.png");
     background-position: top left;
 }
 
 .kodawari03 {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/moyou_right2.png");
+    background-image: url("../moyou_right2.png");
     background-position: top right;
 }
 
 .kodawari04 {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/moyou_left2.png");
+    background-image: url("../moyou_left2.png");
     background-position: top left;
     
 }
 
 .tyaba_content {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/450-20170514165956320158.jpg");
+    background-image: url("../450-20170514165956320158.jpg");
     background-repeat: repeat;
     padding: 40px 0;
     overflow: hidden;
@@ -199,7 +199,7 @@ header p {
     text-align: center;
     width: 1000px;
     height: 339px;
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/cb9f92c996f89ac82ea5a107836b5ce9_t.jpeg");
+    background-image: url("../cb9f92c996f89ac82ea5a107836b5ce9_t.jpeg");
     background-repeat: no-repeat;
     background-position: top center;
     margin: auto;
@@ -322,7 +322,7 @@ header p {
 
 .bunka_content {
     padding: 50px 0;
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/OIP.jpg");
+    background-image: url("../OIP.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -384,7 +384,7 @@ header p {
 
 .voice_content {
     padding: 50px 0;
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/voice 2bg.jpg");
+    background-image: url("../voice 2bg.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -435,7 +435,7 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(1) {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
     background-size:100%;
@@ -443,7 +443,7 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(2) {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
     background-size:100%;
@@ -452,7 +452,7 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(3) {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
     background-size:100%;
@@ -461,7 +461,7 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(4) {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
     background-size:100%;
@@ -469,7 +469,7 @@ header p {
 }
 
 .voice_content ul li:nth-of-type(5) {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
     background-size:100%;
@@ -478,7 +478,7 @@ header p {
 
 .voice_content ul li:nth-of-type(6) {
     background:rgba(0, 0, 0, 1);
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/31KH60.jpg");
+    background-image: url("../31KH60.jpg");
     background-size:100%;
     width: 320px;
     background: rgba(242, 242, 242, 0.9);
@@ -487,7 +487,7 @@ header p {
 }
 
 .kentou_content {
-    background-image: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/kentou back.png");
+    background-image: url("../kentou back.png");
     background-repeat: repeat;
     overflow: hidden;
     
@@ -683,12 +683,12 @@ header p {
 
 .inquiry_content {
     padding: 50px;
-    border-left: 6px solid #bfaa4f;
-    border-right: 6px solid #c8ad41;
+    border-left: 6px solid #c4af26;
+    border-right: 6px solid #c4af26;
     width: 1000px;
     height:auto;
     margin: 74px auto;
-    background: url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/3a7 top.png") center top no-repeat,url("C:/xampp/htdocs/techUP_study/90_takagishi_miwa/2-25/img/3a7 bottom.png") center bottom no-repeat;
+    background: url("../3a7 top.png") center top no-repeat,url("../3a7 bottom.png") center bottom no-repeat;
     overflow: hidden;
     background-size: 101%;
 }
