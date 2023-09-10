@@ -124,7 +124,7 @@ header p {
 .kodawari_title {
     width: 960px;
     height: 310px;
-    background-image: url("../images/OIP (1).jpg");
+    background-image: url("../images/OIP 1.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;
@@ -690,7 +690,7 @@ header p {
     margin: 74px auto;
     background: url("../images/3a7 top.png") center top no-repeat,url("../images/3a7 bottom.png") center bottom no-repeat;
     overflow: hidden;
-    background-size: 101%;
+    background-size: 101.5%;
 }
 
 .inquiry_content::before {
