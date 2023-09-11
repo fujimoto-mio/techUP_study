@@ -48,7 +48,7 @@
   todos.forEach((text, index) => {
   const listItem = document.createElement('li');
   /*appendChildを使ってノードを追加する*/
-  
+  listItem.textContent = '${text}';
   todoList.appendChild(listItem);
 
   /*リストのli要素内に削除ボタンをつける(document.createElement('button');)*/
@@ -62,7 +62,7 @@
   });
   }
  }
- 
+
  function deleteTodo(index) {
   todos.splice(index, 1);
   showtodos();
