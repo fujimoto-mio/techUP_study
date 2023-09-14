@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>マークアップの記載例</title>
+    </head>
+
+    <body>
+        <div class="A">
+            <h1>HTMLの基本</h1>
+                <img src="https://1.bp.blogspot.com/-tH1-cexVocE/YBMrJoWgDmI/AAAAAAACUsQ/9w2JnpD4XXENki1tvMvXDJmIJtH0QVJKQCLcBGAsYHQ/w1200-h630-p-k-no-nu/4119074_s.jpg" alt="サンプル画像">
+        
+                <section>
+                    <h2>マークアップを理解する</h2>
+               
+                    <h3>マークアップとは？</h3>
+                    <p>画面に表示されるテキストがどんな構造になっているのかを明確にするための作業のこと</p></div>
+                </section>
+        </div>
+
+            <section>
+                <blockquote>
+                    <div class="B">
+                            <h2>タグと要素</h2>
+                                <img src="https://web-creators-tips.com/images/img/html00.png" alt="サンプル画像">
+            
+                                <h3>骨組みとなるタグを書く</h3>
+                                    <P>＜html lang="ja"＞…文字コードを指定。日本語で記述していることを示す</p>
+            
+                        <table border="1" width="30%"> 
+                            <caption><span class="A">ータグの種類と意味ー</span></caption>
+                                <colgroup span="3">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="1">タグ</th>
+                                            <th colspan="1">意味</th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>＜h1＞</td>
+                                            <td>大見出し</td>
+                                        </tr>    
+                                        <tr> 
+                                            <td>＜p＞</td>
+                                            <td>段落</td>
+                                        </tr>
+                                        <tr>     
+                                            <td>＜h2＞</td>
+                                            <td>小見出し</td>
+                                        </tr> 
+                                        <tr>  
+                                            <td>＜header＞</td>
+                                            <td>ヘッダを示す</td>
+                                        </tr>
+                                        <tr>   
+                                            <td>＜footer＞</td>
+                                            <td>フッタを示す</td>
+                                        </tr> 
+                                        <tr>    
+                                            <td>＜section＞</td>
+                                            <td>一つのセクションで<br>あることを示す</td>
+                                        </tr>    
+                                        <tr>
+                                            <td>＜article＞</td>
+                                            <td>記事であることを示す</td>
+                                        </tr>
+                                        <tr>
+                                            <td>＜nav＞</td>
+                                            <td>  ナビゲーションで<br>あることを示す</td>
+                                        </tr>  
+                                    </thead>
+                                </colgroup>                   
+                        </table> 
+            
+            
+                            <figure>
+                                <img src="https://techup.tokyo/wp-content/uploads/2021/12/01-1.jpg" alt="サンプル画像">
+                                <figcaption>文章構造図</figcaption>
+                            </figure>
+                                    <p>headとheaderの違い<br>headは上に記載する、目に見えない内部情報。headerはbodyタグ内に記載する、目に見える情報</p>
+                    </div>                
+                </blockquote>
+            </section>
+                        
+
+            <section>
+                    <h3>セクショニングルート</h3>
+                <fieldset>
+                    <span class="B">
+                        <p> body要素 , blockquote要素 , details要素 , fieldset要素 , figure要素 , td要素 </p>
+                    </span>
+                </fieldset>
+            </section>
+ 
+            <section>
+                        <aside>
+                                <h2>もっと知りたい</h2>
+                        </aside>
+                    <details>
+                        <p>リンクは<a href="https://techup.tokyo">こちら</a>です</p>
+                    </details>
+
+                <article>https://techup.tokyo/level2-3/</article>
+            </section>
+    
+        <footer> 2 文章構造をマークアップする</footer>
+
+        <form>
+                  氏名<input type="text" name="title" size="20" maxlength="28" />
+            パスワード<input type="password" name="passwd" size="20" maxlength="18"  />
+                  性別<input type="radio" name="test" value="test1" checked="checked" />男
+                <input type="radio" name="test" value="test2" />女
+            <select name="test">
+                県<option value="test1" selected="selected">東京</option>
+                  <option value="test2">千葉</option>
+                  <option value="test3">埼玉</option>
+            </select>
+            紹介<textarea name="txt" rows="5" cols="20">紹介</textarea>
+            ボタン<input type="submit" value="送信する" />
+        </form>
+    
+        <section>
+            <h2>チェックボックス表示例</h2>
+    
+                <input type="checkbox" name="test" value="test1" checked="checked" />テスト1
+                <input type="checkbox" name="test" value="test2" />テスト2
+                <input type="checkbox" name="test" value="test3" checked="checked" />テスト3</p>
+    
+        </section>
+
+
+        <form method="post" action="/result.html" enctype="multipart/form-data">
+            <p><label>メール:  <input type="text" name="message"></label></p>
+            <p><label>送信ファイル:<br>
+            <input type="file" name="send_file"></label></p> 
+            <p><input type="submit" value="送信"></p>
+            
+        </form>
+
+
+    
+    </body>
+</html>

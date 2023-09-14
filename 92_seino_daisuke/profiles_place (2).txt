@@ -1,0 +1,5 @@
+MariaDB [test_db]> SELECT * FROM m_profiles JOIN m_place ON m_profiles.id = m_place.place_no;
+Empty set (0.000 sec)
+
+MariaDB [test_db]> SELECT * FROM m_profiles JOIN m_place ON m_profiles.place = m_place.place_no;
+Empty set (0.000 sec)
