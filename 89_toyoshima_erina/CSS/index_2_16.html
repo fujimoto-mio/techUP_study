@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>CSS</title>
+  <style>
+    .img1 {
+        position: relative;
+        background-color: #E0BBE4;
+        height: 300px;
+        width: 600px;
+    }
+
+    .img2 {
+        position: absolute;
+        z-index: 5;
+        background-color: #957DAD;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 70%;
+        width: 70%;
+        
+    }
+
+    .img3 {
+        position: absolute;
+        z-index: 10;
+        background-color: #D291BC;
+        font-size: 40px;
+        color: #FEC8D8;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="img1">背景表示
+    <div class="img2"></div>
+        <p class="img3">ロゴ表示</p>       
+    </div>
+</body>
+</html>

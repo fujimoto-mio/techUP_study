@@ -3,7 +3,6 @@
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
-require_once 'Matcha.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -22,8 +21,6 @@ require_once 'Matcha.php';
     //紅茶オブジェクトを生成する
     $tea = new Tea();
 
-    $matcha = new Matcha();
-
 
     //ドリッパーにミルクを注ぐようにセットする
     print('ミルクを注ぐ機能：ON');
@@ -39,10 +36,6 @@ require_once 'Matcha.php';
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
 
-    print('抹茶をセットして注ぎます。<br>');
-    print($dripper->dripDrink($matcha) . '<br>');
-    print('<br>');  
-
     //ドリッパーにミルクを注がないようにセットする
     print('ミルクを注ぐ機能：OFF');
     $dripper->setMilkStatus(false);
@@ -56,10 +49,6 @@ require_once 'Matcha.php';
     print('紅茶をセットして注ぎます。<br>');
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
-
-    print('抹茶をセットして注ぎます。<br>');
-    print($dripper->dripDrink($matcha) . '<br>');
-    print('<br>');  
 
 ?>
     </body>
