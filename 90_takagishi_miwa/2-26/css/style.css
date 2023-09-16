@@ -2,9 +2,9 @@ html {
     font-size: 62.5%;
 }
 
-body #top_page  {
+body  {
     font-family: "游明朝体","Yu Mincho",YuMincho,"ヒラギノ明朝 Pro","Hiragino Mincho Pro","MS P明朝","MS PMincho",serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.8;
     margin: 0 auto;
     padding: 0;
@@ -16,21 +16,22 @@ body #top_page  {
     padding: 0;
     margin: 0;
     vertical-align: top;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 a:link,a:visited,a:hover,a:active {
     color: #0000ff;
-    text-decoration: none
+    text-decoration: none;
 }
 
 a img {
     opacity: 1;
-    transition: .3s
+    transition:0 .3s;
 }
 
+
 a img:hover {
-    opacity: 0.7
+    opacity: 0.7;
 }
 
 header {
@@ -39,19 +40,61 @@ header {
     z-index: 999;
     min-width: 1040px;
     position: fixed;
-    overflow: hidden;
     top: 0;
-    background-color: #8e1717
+    background-color: #8e1717;
+}
+
+header a img {
+    height: 50px;
 }
 
 header p {
     text-align: center;
-    margin: 10px 0
+    margin: 10px 0;
+    
+}
+
+.navbar-nav .nav-link {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.navbar-toggler .navbar-toggler-icon img {
+    height: 50px;
+    
+}
+
+.dropdown-menu {
+    font-size: 17px;
+    height: auto;
+    z-index: 1000;
+    width: 170px;
+    border-radius: 5px;
+    margin: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
+.dropdown-menu .dropdown-item {
+    color: #000;
+    display: flex;
+    justify-content: left;
+}
+
+.d-flex .form-control {
+    margin: 2px;
+    padding: 9px;
+    font-size: 17px;
+}
+
+.btn-outline-success {
+    width: 100px;
+    font-size: 17px;
+}
+
 .main_img {
-    margin-top: 55px;
+    margin-top: 144px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -143,7 +186,7 @@ header p {
     text-align: center;
     margin-top: 50px;
     position: absolute;
-    margin: 50px 0 0 68px;
+    margin: 60px 0 0 155px;
 }
 
 .kodawari_content h1 span {
@@ -152,6 +195,9 @@ header p {
 
 .kodawari_content .kodawari_title p {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 .koda {
@@ -207,11 +253,11 @@ header p {
 
 
 
-.tyaba_content .tyaba_title h2 span {
+.tyaba_content .tyaba_title h1 span {
     color: #ad0c0c;
 }
 
-.tyaba_content .tyaba_title h2 {
+.tyaba_content .tyaba_title h1 {
     position:absolute;
     text-align: center;
     margin:auto;
@@ -219,7 +265,7 @@ header p {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 65px;
+    padding-top: 75px;
 }
     
 
@@ -406,9 +452,10 @@ header p {
 }
 
 .voice_content ul {
-    width: 1000px;
+    width: 1025px;
     margin: 0 auto;
-    overflow: hidden
+    overflow: hidden;
+    
 }
 
 .voice_content ul li {
@@ -1234,7 +1281,7 @@ select.mfp_element_all {
 }
 
 .biyou ul li {
-    width: 230px;
+    width: 225px;
     list-style: none;
     float: left;
     margin-right: 20px;
@@ -1250,7 +1297,7 @@ select.mfp_element_all {
     font-size: 12px;
     font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,Arial,"メイリオ",Meiryo,sans-serif;
     font-weight: 400;
-    margin-top: 80px
+    margin-top: 80px;
 }
 
 .footer_link_small a {
