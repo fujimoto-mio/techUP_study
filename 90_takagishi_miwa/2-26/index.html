@@ -10,44 +10,49 @@
         <link rel="stylesheet" href="css/style.css" >
     </head>
 
-    <body id="top_page">
-        <header >
+    <body >
+        <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container-fluid text-center" style="height: 65px;">
+                    <a class="navbar-brand" href="#"><img src="images/f_logo.jpg"  alt="icon"></a>
+                  <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-6 ms-5 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" aria-current="page" href="#">トップ</a>
                       </li>
                       <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
+                        <a class="nav-link dropdown-toggle mb-2 ms-5"  href="#introArea" id="navbarDropdown" data-bs-toggle="dropdown" >
+                          商品について
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu ms-5" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item mb-2 " href="#introArea">商品紹介</a></li>
+                          <li><a class="dropdown-item " href="#kodawari">こだわり</a></li>
+                          <li><a class="dropdown-item " href="#tyaba">熟茶と老茶</a></li>
+                          <li><a class="dropdown-item"  href="#bunka">文化</a></li>
+                          <li><a class="dropdown-item" href="#voice">お客様の声</a></li>
+                        
                         </ul>
+                       
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link ms-5" href="#campaign">応募</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link ms-5" href="#" tabindex="-1" aria-disabled="true">お問い合わせ</a>
                       </li>
                     </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex justify-content-center">
+                      <input class="form-control m-1 "  type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success m-1" type="submit">Search</button>
                     </form>
                   </div>
                 </div>
               </nav>
+            
             <a href="#">
             <p><img src="images/header_link.png" alt="「お茶のある生活を豊かにするギフト」キャンペーン応募者全員にプレゼント!"></p>
             </a>
@@ -69,12 +74,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 
-        <div class="main_img">
+        <div id="top" class="main_img">
             <h1>
                 <img src="images/main.jpg" >
             </h1>
 
-            <div class="introArea main">
+            <div  class="introArea main">
                 <div class="Notice">
                     <span>弊社における新型コロナウイルスへの対応について</span>
                     <p>平素より格別の引き立てを賜り、厚く御礼申し上げます。<br>
@@ -84,18 +89,18 @@
                     </p>
                     <div class="Correspondence">
                         記
-                        <div class="indent">
+                        <div class="indent" id="introArea">
                             <p>1. マスクの配布と着用の義務化。アルコール除菌剤の設置・増設を行い、<br>事務所内の除菌清掃を強化しております。</p>
                             <p>2. 従業員に手洗いうがい、アルコール消毒液での手指消毒を徹底させ、<br>出勤前の検温で37.5度以上の発熱、および異常が見られる場合には、出勤を禁じております。</p>
                             <p>3. 試飲の際には、全スタッフがマスクを着用しております。</p>
                         </div>
                     </div>
-                    <p class="last">
+                    <p class="last" >
                         弊社では、お客様と社員の安全を最優先に考え、今後も感染拡大の抑止に努めてまいりますので、<br>
                         ご理解賜りますよう宜しくお願い申し上げます。
                     </p>
                 </div>
-            
+            <div >
                 <p>
                     プーアル茶の本場、中国雲南省で摂れる樹齢200年以上の茶葉は<br>
                     <span>‟飲める骨董品”</span><br>
@@ -108,10 +113,12 @@
                     また、”お茶のある生活”を愉しんでいただくため、プレゼントをご用意いたしました。
                 </p>
             </div>
-            <div class="cam_bnr">
+            </div>
+            <div class="cam_bnr" >
                 <p class="main"><a href="#"><img src="images/cam_bnr2.png" alt="キャンペーン応募者全員にプレゼント!豪華特典はこちら"></a></p>
             </div>
-            <div class="kodawari_content">
+            <div  id="kodawari" ></div>
+            <div class="kodawari_content" >
                 <div class="kodawari_title">
                     <h1>厳選された<span>"本物の"プーアル茶</span>のみを取り扱っております</h1>
                     <p>私たちは、日本国内はもちろん、台湾、韓国へも赴き、より良いプーアル茶を探してきました。<br>
@@ -120,6 +127,7 @@
                         高級茶葉の中でも、より厳選した茶葉のみを提供します。
                     </p>
                 </div>
+
                 <div class="koda kodawari01">
                     <h2><img src="images/koda01.jpg" alt="一、産地へのこだわり"></h2>
                 </div>
@@ -137,9 +145,9 @@
     
             </div><!--kodawari_content-->
 
-            <div class="tyaba_content">
+            <div class="tyaba_content" id="tyaba">
                 <div class="tyaba_title line-between-paragraphs">
-                    <h2>一般的に販売されている<span>「熟茶」</span>と、<br>飲める”骨董品”と呼ばれる「老茶」について</h2>
+                    <h1>一般的に販売されている<span>「熟茶」</span>と、<br>飲める”骨董品”と呼ばれる「老茶」について</h1>
                     <p>プーアル茶には、加工方法により「熟茶」と「生茶」に分けられます。<br>
                         【木の舟】では、一般的に出回っている熟茶ではなく、<br>
                     希少価値の高い生茶と、生茶を10年以上熟成させた「老茶」のみを取り扱っています。</p>
@@ -217,7 +225,7 @@
             <div class="cam_bnr">
             <p class="main"><a href="#"><img src="images/cam_bnr2.png" alt="キャンペーン応募者全員にプレゼント!豪華特典はこちら"></a></p>
             </div>
-            <div class="bunka_content">
+            <div id="bunka" class="bunka_content">
             <div class="bunka_title">
                 <h3><img src="images/bunka_title.png" alt="プーアル茶の味わい、香り、そして文化を体感してみてください"></h3>
                 <p>【木の舟】は、プーアル茶の茶葉や茶器を専門に取り扱っていますが、基本的にネット通販は行っておりません。<br>
@@ -262,7 +270,7 @@
                 </div>
             </div><!--bunka_content-->
             
-            <div class="voice_content">
+            <div id="voice" class="voice_content">
                 <div class="voive_title">
                     <h3><img src="images/voice_tit.png" alt="お客様の声"></h3>
                     <p>これまで、多くのお客様へ”本物のプーアル茶”をお届けしてきました。
