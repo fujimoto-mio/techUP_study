@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/list', [\App\Http\Controllers\TodoListController::class, 'index']);
 Route::get('/',[TaskController::class,'index']);
 Route::post('/create',[TaskController::class,'create']);
-Route::post('/edit',[TaskController::class,'edit']);
+Route::get('/tasks/{task}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
 Route::post('/delete',[TaskController::class,'delete']);
 
 Route::resource('tasks',TaskController::class);

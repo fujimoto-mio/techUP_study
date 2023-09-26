@@ -15,10 +15,11 @@ class TaskController extends Controller
      */
     public function index()
     {
+        $tasks = Task::all(); 
         $tasks=Task::where('status',false)->get();
-        return view('tasks.index',['tasks'=>$tasks]);
+        return view('tasks.index', compact('tasks'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -47,19 +48,17 @@ class TaskController extends Controller
         $task->save();
         return redirect('/tasks');
     }
-
+    public function show($id)
+    {
+        $task=Task::find($id);
+        
+    }
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $task=Task::find($id);
-        return view('tasks.edit',['task'=>$task]);
-    }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -69,8 +68,9 @@ class TaskController extends Controller
     public function edit($id)
     {
         $task=Task::find($id);
-            $task->status=true;
-            $task->save();
+        
+        $task->save();
+        return view('tasks.edit', compact('task'));
     }
 
     /**
