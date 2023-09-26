@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Todo</title>
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
       <script src="https://cdn.tailwindcss.com"></script>
       <!-- @vite('resources/css/app.css') -->
  
@@ -28,14 +29,6 @@
     class="inline-block text-gray-500 font-medium"
     role="menuitem" tabindex="-1">
     @csrf
-    @method('PUT')
- 
-    {{-- 完了ボタンの追記します。 --}}
-    <input type="hidden" name="status" value="{{$task->status}}">
-    {{-- 完了ボタンの追記します。 --}}
- 
-    <button type="submit"
-        class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
 </form>
                   <form action="/tasks/{{ $task->id }}" method="post" class="mt-10">
                       @csrf
