@@ -69,20 +69,18 @@
   delateButton.textContent = '削除';
   /*削除をクリックされた時、showTodos()関数で削除する]]*/
   delateButton.addEventListener('click', (event) => {
-    todos.splice(0, 1);
-  listItem.remove();
+    deletetodo(index);
   });
   
   listItem.appendChild(delateButton);
  });
  }
- }
-
  function deletetodo(index) {
-  todos.splice(0, 1);
+  todos.splice(index, 1);
   showtodos();
   }
-
+ }
+ 
  /*実行される関数 */
  todo();
 
