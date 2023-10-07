@@ -26,7 +26,7 @@ CREATE TABLE `m_profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
   `name` varchar(100) NOT NULL COMMENT '???O',
   `kana` varchar(100) NOT NULL COMMENT '?J?i',
-  `age` int(11) NOT NULL CHECK (`age` >= 0 and `age` <= 150),
+  `age` int(3) NOT NULL CHECK (`age` >= 0 and `age` <= 150),
   `profile` text NOT NULL COMMENT '?v???t?B?[??',
   `place` int(5) NOT NULL COMMENT '?o?g?s???{???n?ԍ?',
   `sex` int(2) NOT NULL COMMENT '????',
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-05 14:17:02
+-- Dump completed on 2023-10-07 23:44:46
