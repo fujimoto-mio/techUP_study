@@ -1,0 +1,13 @@
+MariaDB [test_db]> SELECT m_users.id,m_users.user_name,m_users.mail_address,m_users.password,
+    -> m_profiles.name,m_profiles.kana,m_profiles.age,m_profiles.profile,m_profiles.place,m_profiles.sex,
+    -> m_profiles.created,m_profiles.modified
+    -> FROM m_users LEFT JOIN m_profiles
+    -> ON m_users.id = m_profiles.id;
++----+---------------+------------------------+----------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+| id | user_name     | mail_address           | password | name       | kana           | age  | profile        | place | sex  | created             | modified            |
++----+---------------+------------------------+----------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+|  1 | Yamada Tarou  | Yamada_Tarou@gmail.com | 123123   | 山田　太郎       | ヤマダタロウ           |   21 | プロフィール１          |    20 |    1 | 2023-09-15 22:02:33 | 2023-09-15 22:02:33 |
+|  2 | Suzuki Hanako | suzuki@gmail.com       | 123123   | 鈴木　一朗        | スズキイチロウ         |   33 | プロフィール２          |    30 |    1 | 2023-09-15 22:02:33 | 2023-09-15 22:02:33 |
+|  3 | Sato   Jiro   | sato@gmail.com         | 123123   | 佐藤　治郎         | サトウジロウ          |   23 | プロフィール３          |    35 |    1 | 2023-09-15 22:02:33 | 2023-09-15 22:02:33 |
++----+---------------+------------------------+----------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+3 rows in set (0.000 sec)
