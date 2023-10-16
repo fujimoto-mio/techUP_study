@@ -1,0 +1,677 @@
+/* -------------------------ナビゲーションバー--------------------------------------- */
+/* ナビゲーションバー全体のスタイル */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    /* 背景色を白に設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ナビゲーションリンク、ボタン、モーダルボタンのスタイル */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.logout-link,
+.navbar-brand,
+.btn,
+.btn-info,
+.modal-button {
+    margin: 0 10px;
+}
+
+/* ナビゲーションリンクのスタイル */
+.navbar-nav .nav-link {
+    color: #333;
+    margin-right: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ナビゲーションリンクホバー時のスタイル */
+.navbar-nav .nav-link:hover {
+    background-color: #e0f7fa;
+    border-color: #5bc0de;
+}
+
+/* ログアウトリンクのスタイル */
+.navbar-nav .nav-link.logout-link {
+    color: #d9534f;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ログアウトリンクホバー時のスタイル */
+.navbar-nav .nav-link.logout-link:hover {
+    background-color: #e0f7fa;
+    border-color: #d9534f;
+}
+
+/* タイトル（ロゴ）のスタイル */
+.navbar-brand {
+    margin-right: auto;
+    font-size: 25px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* タイトルホバー時のスタイル */
+.navbar-brand:hover {
+    background-color: #e0f7fa;
+    border-color: #000;
+}
+
+/* ボタンのスタイル */
+.btn {
+    color: #333;
+    margin-right: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* プライマリボタンのスタイル */
+.btn-primary {
+    background-color: #96e6ff;
+}
+
+/* インフォボタンのスタイル */
+.btn-info {
+    color: #333;
+    margin-right: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* インフォボタンホバー時のスタイル */
+.btn-info:hover {
+    background-color: #e0f7fa;
+    border-color: #5bc0de;
+}
+
+/* リンクボタンのスタイル */
+.btn-link {
+    color: #333;
+    margin-right: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* リンクボタンホバー時のスタイル */
+.btn-link:hover {
+    background-color: #e0f7fa;
+    border-color: #5bc0de;
+}
+
+
+/* ---------------------------------------------footer----------------------------------------------------- */
+/* フッターのスタイル */
+.footer {
+    position: fixed;
+    /* フッターを固定位置に配置 */
+    bottom: 0;
+    /* 画面下部に配置 */
+    left: 0;
+    width: 100%;
+    height: 8%;
+    /* 幅を100%に設定 */
+    text-align: center;
+    /* テキストを中央に配置 */
+    background-color: #666;
+    /* 背景色を灰色に設定 */
+    padding: 20px 0;
+    /* 上下の余白を追加 */
+}
+
+/* フッターボタンのスタイル */
+.modal-footer .btn-danger {
+    background-color: #d9534f;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* フッターボタンホバー時のスタイル */
+.modal-footer .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #000;
+    transform: translateY(-2px);
+}
+
+/* フッター内のリンクのスタイル */
+.footer a {
+    color: #ffffff;
+    /* リンクのテキストカラーを設定 */
+    text-decoration: none;
+    /* リンクの下線を削除 */
+    transition: color 0.3s ease;
+    /* リンクの色が変わる際のアニメーション */
+}
+
+/* フッター内リンクホバー時のスタイル */
+.footer a:hover {
+    color: #5bc0de;
+    /* マウスオーバー時のリンクの色を変更 */
+}
+
+/* フッター内のテキストスタイル */
+.footer p {
+    padding: 5px;
+}
+
+/* -------------------------------------------------body------------------------------------------------ */
+
+/* 全体のフォントとスタイル */
+html,
+body {
+    font-family: 'DotGothic16', sans-serif;
+    /* DotGothic16 フォント */
+    font-family: 'Kosugi Maru', sans-serif;
+    /* Kosugi Maru フォント */
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /* M PLUS Rounded 1c フォント */
+    height: 100%;
+    /* 高さを100%に設定 */
+    width: 100%;
+    /* 幅を100%に設定 */
+    margin: 0;
+    /* マージンを0に設定 */
+    padding: 0;
+    /* パディングを0に設定 */
+}
+
+/* bodyのスタイル */
+body {
+    display: flex;
+    /* フレックスボックスを使用して要素を配置 */
+    flex-direction: column;
+    /* 列方向に配置 */
+    background: #fff;
+    /* 背景色を白に設定 */
+}
+
+/* 見出し1のスタイル */
+h1 {
+    font-size: 2rem;
+    /* フォントサイズを2remに設定 */
+}
+
+/* 見出し3のスタイル */
+h3 {
+    font-size: 1.5rem;
+    /* フォントサイズを1.5remに設定 */
+    padding: 0 5px;
+    /* パディングを追加 */
+}
+
+/* 段落のスタイル */
+p {
+    padding: 10px;
+    /* パディングを追加 */
+    font-size: .75rem;
+    /* フォントサイズを0.75remに設定 */
+}
+
+/* 箇条書きリストのスタイル */
+ul {
+    padding-top: 10px;
+    /* 上部のパディングを追加 */
+}
+
+/* main要素のスタイル */
+main {
+    height: 100%;
+    /* 高さを100%に設定 */
+}
+
+/* コンテナの最大幅 */
+.container {
+    max-width: 4000px;
+    /* 最大幅を4000pxに設定 */
+}
+
+/* 列のスタイル */
+.col-md-2 {
+    padding: 10px 5px;
+    /* パディングを追加 */
+}
+
+.col-md-8 {
+    flex: 0 0 80%;
+    /* 幅を80%に固定 */
+}
+
+/* カードのスタイル */
+.card {
+    margin: 2em 0;
+    /* マージンを追加 */
+    position: relative;
+    /* 相対位置に配置 */
+    padding: 0 .65rem;
+    /* パディングを追加 */
+    border-top: solid 1px black;
+    /* 上部のボーダーを追加 */
+    border-bottom: solid 1px black;
+    /* 下部のボーダーを追加 */
+    border-left: 0;
+    /* 左側のボーダーを削除 */
+    border-right: 0;
+    /* 右側のボーダーを削除 */
+    border-radius: 0;
+    /* ボーダーの角を丸めない */
+}
+
+/* カードの疑似要素のスタイル */
+.card:before,
+.card:after {
+    content: '';
+    /* コンテンツを追加 */
+    position: absolute;
+    /* 絶対位置に配置 */
+    top: -10px;
+    /* 上部からの位置 */
+    width: 1px;
+    /* 幅を1pxに設定 */
+    height: -webkit-calc(100% + 20px);
+    /* 高さを計算 */
+    height: calc(100% + 20px);
+    /* 高さを計算 */
+    background-color: black;
+    /* 背景色を黒に設定 */
+}
+
+/* カードの疑似要素 - 左側 */
+.card:before {
+    left: 10px;
+    /* 左からの位置 */
+}
+
+/* カードの疑似要素 - 右側 */
+.card:after {
+    right: 10px;
+    /* 右からの位置 */
+}
+
+/* カード内の段落のスタイル */
+.card p {
+    margin: 0;
+    /* マージンを0に設定 */
+    padding: 0;
+    /* パディングを0に設定 */
+}
+
+/* カードヘッダーのスタイル */
+.card-header {
+    background: #c2f1ff;
+    /* 背景色を設定 */
+    font-size: 1.5rem;
+    /* フォントサイズを1.5remに設定 */
+    padding: .7rem .5rem;
+    /* パディングを追加 */
+}
+
+/* カードボディのスタイル */
+.card-body {
+    padding: .75rem .5rem;
+    /* パディングを追加 */
+}
+
+/* カードボディ内のリストのスタイル */
+.container .card-body ul {
+    display: flex;
+    /* フレックスボックスを使用して要素を配置 */
+    flex-wrap: wrap;
+    /* ラップすることで横に並び切れない要素を次の行に移動 */
+    justify-content: center;
+    /* 中央寄せ */
+    margin: -10px;
+    /* マージンを負の値で設定して、パディングの影響を相殺 */
+    /* マイナスマージンでli要素のpaddingの影響を打ち消す */
+}
+
+/* カードボディ内のリストアイテムのスタイル */
+.container .card-body ul li {
+    flex: 0 0 19%;
+    /* 幅を19%に固定 */
+    max-width: 19%;
+    /* 最大幅を19%に設定 */
+    padding: 10px;
+    /* パディングを追加 */
+    box-sizing: border-box;
+    /* ボックスサイズをボーダーボックスに設定 */
+}
+
+/* カードボディ内のリンクのスタイル */
+.container .card-body ul li a {
+    display: block;
+    /* ブロック要素として表示 */
+    overflow: hidden;
+    /* 溢れたコンテンツを非表示に */
+    position: relative;
+    /* 相対位置に配置 */
+    border-radius: 10px;
+    /* 角丸 */
+    padding-top: 100%;
+    /* 1:1のアスペクト比を保つための高さを幅に対して百分比で設定 */
+}
+
+/* カードボディ内のリンク内の画像のスタイル */
+.container .card-body ul li a img {
+    width: 100%;
+    /* 幅を100%に設定 */
+    height: 100%;
+    /* 高さを100%に設定 */
+    object-fit: cover;
+    /* 画像を切り抜いて表示 */
+    position: absolute;
+    /* 相対位置に配置 */
+    top: 0;
+    /* 上端に配置 */
+    left: 0;
+    /* 左端に配置 */
+    border-radius: 10px;
+    /* 角丸 */
+    background-size: cover;
+    /* 背景サイズをカバーに設定 */
+    transition: transform 0.3s ease-in-out;
+    /* 変形のアニメーション効果 */
+}
+
+/* ホバー時の画像のスタイル */
+.container .card-body ul li a:hover img {
+    transform: scale(1.05);
+    /* ホバー時の拡大効果 */
+}
+
+/* カードボディ内のリンク内のテキスト部分のスタイル */
+.container .card-body ul li a div {
+    position: absolute;
+    /* 相対位置に配置 */
+    bottom: 0;
+    /* 下部に配置 */
+    left: 0;
+    /* 左端に配置 */
+    width: 100%;
+    /* 幅を100%に設定 */
+    background: rgba(0, 0, 0, 0.5);
+    /* 背景色を設定 */
+    padding: 10px;
+    /* パディングを追加 */
+    color: #fff;
+    /* テキストカラーを設定 */
+    font-weight: bold;
+    /* フォントの太字設定 */
+    border-bottom-left-radius: 10px;
+    /* 左下の角を丸める */
+    border-bottom-right-radius: 10px;
+    /* 右下の角を丸める */
+}
+
+/* フォントアイコンのスタイル */
+.container .card-body ul li a div::before {
+    content: "\f164";
+    /* コンテンツを追加 */
+    font-family: 'Font Awesome 5 Free';
+    /* Font Awesome 5 Free アイコンのフォント */
+    margin-right: 5px;
+    /* 右側のマージンを追加 */
+}
+
+/* 行をクリアするためのスタイル（clearfix） */
+.container .card-body ul::after {
+    content: "";
+    /* コンテンツを追加 */
+    clear: both;
+    /* 両方をクリア */
+    display: table;
+    /* テーブルとして表示 */
+}
+
+/* カードボディ内の見出しのスタイル */
+.container .card-body h5 {
+    font-weight: bold;
+    /* フォントの太字設定 */
+    font-size: 1.5rem;
+    /* フォントサイズを設定 */
+    padding-bottom: 5%;
+    /* 下部のパディングを追加 */
+}
+
+/* カードボディ内の画像のスタイル */
+.container .card-body img {
+    display: block;
+    /* ブロック要素として表示 */
+    margin: 0 auto;
+    /* 左右のマージンを自動で設定 */
+    max-width: 500px;
+    /* 最大幅を500pxに設定 */
+    max-height: 500px;
+    /* 最大高さを500pxに設定 */
+    height: auto;
+    /* 高さを自動調整 */
+}
+
+/* カードボディ内の作者コメントの段落のスタイル */
+.container .card-body .author-comment p {
+    text-align: left;
+    /* 左寄せ */
+    font-size: .75rem;
+    /* フォントサイズを設定 */
+    justify-content: left;
+    /* 左寄せ */
+    margin-left: 5%;
+    /* 左側のマージンを設定 */
+    margin-right: 5%;
+    /* 右側のマージンを設定 */
+    margin-bottom: 2%;
+    /* 下部のマージンを設定 */
+    padding: 2%;
+    /* パディングを追加 */
+    border: 1px solid #5bc0de;
+    /* ボーダーを設定 */
+    border-radius: 10px;
+    /* 角丸 */
+}
+
+/* カードボディ内の作者コメントセクションのスタイル */
+.container .card-body .author-comment {
+    justify-content: left;
+    /* 左寄せ */
+    margin: 2%;
+    /* マージンを追加 */
+}
+
+/* カードボディ内の作者コメントリストアイテムのスタイル */
+.container .card-body .author-comment li {
+    max-width: 1000px;
+    /* 最大幅を1000pxに設定 */
+    flex: 0 0 100%;
+    /* 幅を固定 */
+    border: 1px solid #5bc0de;
+    /* ボーダーを設定 */
+    border-radius: 10px;
+    /* 角丸 */
+    margin-right: 5%;
+    /* 右側のマージンを設定 */
+    margin-bottom: 2%;
+    /* 下部のマージンを設定 */
+    padding: 2%;
+    /* パディングを追加 */
+}
+
+/* カードボディ内のマイページボタンのスタイル */
+.container .card-body .mypage-btn {
+    padding-top: 2%;
+    /* 上部のパディングを追加 */
+}
+
+/* ユーザー編集ページのスタイル */
+#user-edit-page {
+    margin-top: 20px;
+    /* 上部のマージンを追加 */
+}
+
+#user-edit-form .form-group {
+    margin-bottom: 15px;
+    /* 下部のマージンを追加 */
+}
+
+#user-edit-form label {
+    font-weight: bold;
+    /* フォントの太字設定 */
+}
+
+#user-edit-form input[type="text"],
+#user-edit-form input[type="email"],
+#user-edit-form input[type="password"] {
+    width: 100%;
+    /* 幅を100%に設定 */
+    padding: 10px;
+    /* パディングを追加 */
+}
+
+#user-edit-form .form-check-input {
+    margin: 0;
+    /* マージンを設定 */
+}
+
+#user-edit-form button {
+    margin-top: 20px;
+    /* 上部のマージンを追加 */
+}
+
+
+
+/* ------------------------------------------アニメーション関連のスタイル----------------------------------- */
+
+/* フェードインのアニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* 不透明度を0から開始 */
+    }
+
+    to {
+        opacity: 1;
+        /* 不透明度を1まで変化させる */
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    /* 1秒かけてフェードインするアニメーションを適用 */
+}
+
+/* フェードアウトのアニメーション */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        /* 不透明度を1から開始 */
+    }
+
+    to {
+        opacity: 0;
+        /* 不透明度を0まで変化させる */
+    }
+}
+
+.fade-out {
+    animation: fadeOut 2s ease-in-out;
+    /* 2秒かけてフェードアウトするアニメーションを適用 */
+}
+
+#canvas {
+    width: 100%;
+    /* 幅を100%に設定 */
+    height: 100%;
+    /* 高さを100%に設定 */
+    background: #04BBD3;
+    /* 背景色を設定 */
+}
+
+
+/* ---------------------------------------レスポンシブ対応-------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* ナビゲーションリンクのスタイルを変更 */
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        /* マージンをリセット */
+        padding: 10px;
+        /* パディングを設定 */
+    }
+
+    /* ログアウトリンクのスタイルを変更 */
+    .navbar-nav .nav-link.logout-link {
+        padding: 10px;
+        /* パディングを設定 */
+    }
+
+    /* タイトルのスタイルを変更 */
+    .navbar-brand {
+        padding: 10px;
+        /* パディングを設定 */
+    }
+
+    /* ボタンのスタイルを変更 */
+    .btn {
+        margin-right: 0;
+        /* マージンをリセット */
+        margin-bottom: 10px;
+        /* マージンを設定 */
+    }
+
+    /* お知らせボタンのスタイルを変更 */
+    .modal-button {
+        margin-right: 0;
+        /* マージンをリセット */
+    }
+
+    /* モーダルボタンのスタイルを変更 */
+    .modal-button {
+        margin-right: 0;
+        /* マージンをリセット */
+    }
+
+    /* お知らせのテキストのスタイルを変更 */
+    .modal-body {
+        padding: 10px;
+        /* パディングを設定 */
+    }
+
+    .container .card-body img {
+        max-width: 100%;
+        /* 最大幅を100%に設定 */
+        max-height: 100%;
+        /* 最大高さを100%に設定 */
+    }
+
+    .post-list .col-md-2 {
+        flex: 0 0 100%;
+        /* レイアウトを100%に設定 */
+        max-width: 100%;
+        /* 最大幅を100%に設定 */
+        padding: 10px;
+        /* パディングを設定 */
+        box-sizing: border-box;
+        /* ボックスサイズを設定 */
+    }
+
+    .container .card-body ul li {
+        flex: 0 0 calc(50% - 20px);
+        /* レイアウトを50%に設定 */
+        max-width: calc(50% - 20px);
+        /* 最大幅を計算して設定 */
+    }
+}

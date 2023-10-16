@@ -1,0 +1,7 @@
+@import 'node_modules/normalize.css/normalize.css';
+
+// カスタムスタイルを追加
+body {
+    font-family: 'Arial', sans-serif;
+    ::-webkit-validation-bubble-message { display: none; }
+}

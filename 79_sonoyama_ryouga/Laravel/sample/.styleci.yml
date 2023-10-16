@@ -12,3 +12,14 @@ js:
     not-name:
       - webpack.mix.js
 css: true
+// webpack.mix.js
+
+const mix = require('laravel-mix');
+
+mix
+  .setPublicPath('public') // ビルドファイルの出力先ディレクトリ
+  .js('resources/js/app.js', 'public/js') // JavaScriptファイルのビルド設定
+  .sass('resources/sass/app.scss', 'public/css') // SASS/SCSSファイルのビルド設定
+  // CSSリセットファイルを追加
+  .styles(['node_modules/normalize.css/normalize.css'], 'public/css/normalize.css')
+  .version(); // キャッシュバスティングを有効にする（オプション）

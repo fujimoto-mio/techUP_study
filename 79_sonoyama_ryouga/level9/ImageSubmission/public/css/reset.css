@@ -1,0 +1,72 @@
+/* Reset CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr,
+menu,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set defaults for links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Remove underline for links */
+a:hover {
+    text-decoration: none;
+}
+
+/* Remove border on linked images */
+a img {
+    border: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* HTML5標準のバリデーションメッセージの削除 */
+input:invalid,
+textarea:invalid {
+    box-shadow: none;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+    outline: none;
+}
