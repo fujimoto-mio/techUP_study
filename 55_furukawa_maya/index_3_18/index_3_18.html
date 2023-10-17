@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>L3-18課題</title>
+</head>
+<body>
+  <form id="myForm">
+    
+    <input type="number" id="numberInput" >
+    <button type="button" onclick="incrementValue()">ボタン</button>
+  </form>
+
+  <script>
+    function incrementValue() {
+      var inputElement = document.getElementById('numberInput');
+      var currentValue = parseInt(inputElement.value);
+      var newValue = currentValue + 1;
+
+      inputElement.value = newValue;
+    }
+  </script>
+</body>
+</html>

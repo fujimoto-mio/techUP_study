@@ -1,0 +1,709 @@
+header{
+    
+   
+}
+.main-visual{
+    
+
+}
+.logo{
+    position:absolute;
+    top:20px;
+    left:30px;
+    
+}
+.content{
+    position:absolute;
+    top:20px;
+    right:50px;
+    
+    
+}
+
+.content li{
+    list-style: none;
+    float:right;
+    font-size:15px;
+    color:white;
+    margin-left:20px;
+    cursor:pointer;
+}
+
+
+
+.main-visual1 img{
+    position: relative;
+   width:100%;
+  /*重ねる為のposition:absolute;を設定すると、その要素の幅や高さの影響を、他の要素は受けなくなるので、全て（main-visual2 imgとcontact-btn1 imgとこの要素）をposition:absolute;を指定すると後の要素TROUBLEの要素と重なって表示されるのでmain-visual1 imgのみはposition:absolute;を指定せず、高さを残す必要がある*/
+   z-index: -100;
+   padding-bottom:100px;
+   
+}
+
+.main-visual2 img{
+    z-index: 30;
+    width:60%;
+    position:absolute;
+    top:110px;
+    left:30px;
+    
+}
+
+.contact-btn1 img{
+    z-index: 20;
+    position:absolute;
+    width:40%;
+    bottom:100px;
+    right:150px;
+    cursor:pointer;
+
+}
+
+.trouble h2{
+    text-align:center;
+    margin-bottom:0px;
+}
+
+.trouble p{
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    margin-top:0px;
+    position: relative;
+    
+
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color:green;
+    text-emphasis: filled;
+}
+
+.trouble p::before {
+  background-color: green; /* 線の色 */
+  border-radius: 5px; /* 線の両端を丸く */
+  bottom: -10px; /* 線の位置 */
+  content: "";
+  height: 3px; /* 線の高さ */
+  left: 50%; /* 線の中央寄せ */
+  position: absolute;
+  transform: translateX(-50%); /* 線の中央寄せ */
+  width: 30px; /* 線の長さ */
+}
+
+.trouble-point{
+    display:flex;
+    margin-left: 20%;
+}
+
+.trouble-point ul li{
+    text-decoration:underline;/*下線を引く*/
+    text-decoration-color:#FF0000;/*下線を赤色*/ 
+}
+
+.solution{     /*高さを残す*/
+    position:relative;
+    margin-top:50px;
+    margin-bottom:150px;  /*WEBSITE TOTAL SUPPORTSと被らないよう間隔を空けるよう下に移動させる*/
+}
+.img1 img{
+    position:absolute;/*白△の高さは残す為、青背景をposition:absolute;で高さの影響を受けなくする*/
+    z-index:-10 ;/* z-indexはpositionプロパティで relative、absolute、fixed を指定している場合に有効*/
+    width:100%;
+    height:110%;   /*高さを固定*/
+    
+}
+.img2 img{
+    margin-left:41%;
+    
+
+}
+.solution h2{
+    text-align:center;
+    color:white;
+    margin-bottom:0;
+    margin-top: 5px;
+}
+.solution p{
+    color:white;
+    text-align:center;
+    font-size:40px;
+    font-weight: bold;
+    margin:0;
+    position: relative;/*下線部をつける為*/
+    
+}
+.yellow{
+    color:yellow;
+    text-emphasis: filled;
+}
+.solution p::before {
+    background-color: green; /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 30px; /* 線の長さ */
+}
+.solution-point{
+    margin-left:25%;
+}
+.solution-point ul{
+    color:white;
+    
+     
+    
+}
+.yellow2{
+    color:yellow;
+}
+.contact{
+    background-color:white;
+    margin:10px 60px 10px 60px;
+    
+}
+.guidance{
+    text-align:center;
+    font-weight: bold;
+    font-size:20px;
+    border:solid;
+    /*border-radius:3px 3px 3px 3px;*/
+    border-color:rgb(2, 7, 146);
+    border-width:7px;
+    
+    
+}
+.btn {  /* .btn imgだと中央寄せできない */
+    text-align:center;
+    cursor:pointer;
+}
+.supports h2{
+    text-align: center;
+    font-size:20px;
+}
+.supports-title p{
+    text-align: center;
+    font-size:40px;
+    font-weight: bold;
+    position: relative;
+}
+.green2{
+    color:rgb(61, 198, 36);
+}
+.supports-title p::before {
+    background-color: rgb(61, 198, 36); /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 30px; /* 線の長さ */
+}
+.kinds-point{
+    text-align: center;
+    font-size:20px;
+    margin:30px 10%;
+}
+.kinds-imgs1,.kinds-imgs2{
+    display: flex;
+    justify-content: space-around;
+}
+.kinds-img{
+    text-align:center;
+    font-size: 20px;
+    color:rgba(3, 3, 151, 0.762);
+
+}
+.ability{
+    position: relative;
+    height:1150px; /*これがないと後ろのworksとability-main imgが被る*/
+}
+.ability-main img{
+    position:absolute;
+    z-index: -10;  /*後ろに配置*/
+    width:100%;
+    height:1150px;
+    
+
+    
+}
+.ability h3{
+    padding-top:50px;
+    text-align: center;
+}
+.ability-point{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+.logo2{
+    text-align: center;
+}
+.logo2 p{
+    margin:50px 12%;
+    font-size: 20px;
+
+}
+.ability-point::before {
+    background-color: rgb(61, 198, 36); /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 30px; /* 線の長さ */
+}
+.ability-contents{
+    display:flex;
+    justify-content: space-around;
+}
+.LowPrice{
+    background-color: white;
+    width:28.4%;
+    margin-left:5%;
+    
+}
+.LowPrice h3{
+    padding-top: 0px;
+    color:rgb(4, 206, 138);
+}
+.HighQuality{
+    background-color: white;
+    width:28.4%;
+     
+}
+.HighQuality h3{
+    padding-top: 0px;
+    color:rgb(4, 206, 138);
+}
+.Speedy{
+    background-color: white;
+    width:28.4%; 
+    margin-right:5%;
+}
+.Speedy h3{
+    padding-top: 0px;
+    color:rgb(4, 206, 138);
+}
+.japanese{
+    font-size:35px;
+}
+.ability-contents img{
+    width:100%;  /*親クラスでwidth:28.4%;が効いている為、ここでwidth:28.4%;するとwidthが28.4%の28.4%（重複）になる*/
+}
+.ability-contents h3{
+    position: relative;
+}
+.ability-contents h3::before {
+    background-color: rgb(208, 208, 208); /* 線の色 */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 300px; /* 線の長さ */
+}
+.ability-contents p{
+    margin:30px 15px;
+    font-family: メイリオ;
+}
+.works{
+    display: inline-block;  /*高さを画像に合わせる　※画像（<img>）を別のタグで囲い、「display: inline-block;」を指定した上で高さだけを指定する*/
+    width:100%;
+}
+.works h2{
+   text-align: center;
+   position: relative;
+   margin-top: 100px;
+}
+.japanese2{
+    font-size:45px;
+}
+.works h2::before {
+    background-color: rgb(78, 248, 78); /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 60px; /* 線の長さ */
+}
+.works p{
+    text-align: center;
+    font-size:20px;
+    margin-top:60px;
+    margin-bottom:40px;
+}
+.works-links{
+    display:flex;
+    float:left;
+    width:100%;
+    
+}
+.link-img{
+    
+    display:flex;
+    float:left;
+    height:500px;
+
+}
+.link-img img{
+    width:100%;
+    
+    
+}
+.link-img p{
+    margin-top:5px;
+    text-align: center;
+    color:rgb(0, 16, 185);
+}
+.left-move{
+    margin-top:130px;
+    margin-right:10px;
+}
+.right-move{
+    margin-top:130px;
+    margin-left:10px;
+}
+.voice{
+    position: relative;
+    display:inline-block;
+    margin-bottom:5%; /*aboutが被らないように*/
+    
+}
+
+.voice-img{
+    position:absolute; /*高さを消す*/
+    z-index: -10;
+    width:100%;
+    
+}
+.voice-img img{
+    width:100%;
+    height:110%;
+}
+.voice h2{
+    text-align: center;
+    padding-top:80px;
+    position: relative;
+}
+.japanese3{
+    font-size: 40px;
+}
+.voice h2::before {
+    background-color: rgb(61, 198, 36); /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 80px; /* 線の長さ */
+}
+.voice-contents{
+    display:flex;
+    margin:0 30px;
+    align-items:stretch; /*「align-items:stretch」を指定すると要素を縦方向に最大まで広げます。これにより横並びの高さを揃えることができます。*/
+}
+.voice-points{
+    display:flex;
+    width:100%;
+    margin:0 30px;
+}
+.voice1{
+    background-color: white;
+    margin:0 1%;
+    width:25%;
+    padding:30px 15px;
+    position:relative;
+}
+.voice2{
+    background-color: white;
+    margin:0 1%;
+    width:25%;
+    padding:30px 15px;
+    position:relative;
+}
+.voice3{
+    background-color: white;
+    margin:0 1%;
+    width:25%;
+    padding:30px 15px;
+    position:relative;
+}
+.voice4{
+    background-color: white;
+    margin:0 1%;
+    width:25%;
+    padding:30px 15px;
+    position:relative;
+}
+.continuation{
+    background-color: rgb(1, 255, 1);
+    color:white;
+    width:80%;
+    height:15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*margin-left:5%;*/
+    position:absolute;
+    top:90%;
+    left:auto;
+    right:auto;
+    
+
+
+}
+.left-move2{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.right-move2{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.voice1,.voice2,.voice3,.voice4{
+    text-align:center;
+
+}
+.name{
+    margin:10px 0 ;
+    color:green;
+}
+.comment{
+    margin-bottom:10%;
+}
+.about h2{
+
+}
+.about-contents{
+    display:flex;
+}
+.about{
+    color:white;
+    margin-top:100px;
+}
+.about h2{
+    background-color: rgba(4, 104, 255, 0.53);
+    margin:0;
+    padding:3% 0;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+.about-contents{
+    background-color: rgba(4, 121, 255, 0.822);
+    padding:4% 10%;
+
+}
+.about-contents img{
+    width:20%;
+    height:20%;
+    margin-left:3%;
+}
+.about h2::before {
+    background-color: white; /* 線の色 */
+    bottom: 25px; /* 線の位置 */
+    content: "";
+    height: 1px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 100px; /* 線の長さ */
+}
+.question-title{
+    text-align: center;
+    position: relative;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.question-title::before {
+    background-color: rgb(61, 198, 36); /* 線の色 */
+    border-radius: 5px; /* 線の両端を丸く */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 80px; /* 線の長さ */
+}
+.Q{
+    font-weight:bold;
+    font-size:25px;
+    margin-right:1%;
+    
+    
+
+}
+.question p{
+    margin-left:12%;
+    margin-right:12%;
+    background-color: rgba(157, 157, 157, 0.332);
+    padding:0.6%;
+}
+.triangle{
+    float:right;
+    margin-top:1%;
+    margin-right:1%;
+}
+.question{
+    margin-bottom:60px;
+}
+.contact-form{
+    padding:0 14%;
+    padding-top:50px;
+    background-color: rgba(0, 0, 0, 0.089);
+    padding-bottom:80px; /*グレーの余白*/
+}
+.contact-form h2{
+    text-align: center;
+    position:relative;
+}
+.contact-form h2::before {
+    background-color: rgb(61, 198, 36); /* 線の色 */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 80px; /* 線の長さ */
+}
+.contact-form p{
+    margin:55px 0 35px 0;
+    text-align: center;
+    color:rgba(255, 111, 0, 0.784);
+    font-size: 17px;
+}
+.form{
+    background-color: white;
+    
+}
+.required{
+    color:white;
+    background-color: #FF0000;
+    border-radius:5px;
+    margin-left:300px;
+    position:absolute;
+    margin-top:-25px;
+    right:520px;
+    
+}
+.inquiry-content{
+    margin-top:50px;
+} 
+.space{ /*2目のクラス*/
+    padding-top:30px;
+    margin-left:30px;
+    position:relative;
+}  
+.common-form{
+    float:right;
+    margin-top:-9px;
+    margin-right:30px;
+}
+.common-form2{
+    float:right;
+    margin-right: 390px;
+}
+.found-out{
+    margin-top:45px;
+}
+.any{
+    color:white;
+    background-color: #0f0f0f58;
+    border-radius:5px;
+    margin-left:300px;
+    position:absolute;
+    margin-top:-25px;
+    right:520px;
+    
+}
+.personal-information{
+    margin:30px 30px;
+    background-color: gainsboro;
+    height:32px;
+    text-align: center;
+    padding-top:15px;
+}
+.plus{
+    float:right;
+    margin-right:40px;
+    background-color: white;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    margin-top:-6px;
+    font-size: 20px;
+
+}
+.consent{
+    text-align: center;
+    margin-top:-30px;
+}
+.confirmation-btn{
+    text-align: center;
+    cursor:pointer;
+    
+}
+.company-information{
+    background-color: rgba(0, 0, 255, 0.526);
+}
+.information{
+    margin:0 20%;
+    padding-top:50px;
+    font-size: 13px;
+    padding-bottom:50px;   /*外枠を伸ばす*/ 
+}
+.company-information img{
+
+}
+.right-contents{
+    /*float:right;*/
+    margin-top:-20px;
+    margin-left:150px;
+
+}
+.space2{
+    margin:20px 0;
+    position: relative;
+}
+.space2::before {
+    background-color: rgb(255, 255, 255); /* 線の色 */
+    bottom: -10px; /* 線の位置 */
+    content: "";
+    height: 3px; /* 線の高さ */
+    left: 50%; /* 線の中央寄せ */
+    position: absolute;
+    transform: translateX(-50%); /* 線の中央寄せ */
+    width: 100%; /* 線の長さ */
+}
+footer{
+    text-align: center;
+    background-color: rgba(0, 157, 255, 0.379);
+    color:white;
+    font-size: 10px;
+    padding:15px 0;
+}
+.operation{
+    color:rgb(56, 56, 137)
+}

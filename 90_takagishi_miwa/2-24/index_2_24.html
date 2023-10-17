@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+    :root {
+        --my-cool-background:#0000ff;
+    }
+    .wrapper_1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background:var(--my-cool-background);
+    }
+
+    .box2 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        background:var(--my-cool-background);
+    }
+
+    .box3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background:var(--my-cool-background);
+    }
+
+    .content3 {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .box4 {
+        background:var(--my-cool-background);
+    }
+
+    .box5 {
+        background: var(--my-cool-background);
+    }
+
+    .box6 {
+        background: var(--my-cool-background);
+    }
+
+    .box7 {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background: var(--my-cool-background);
+    }
+
+    .box8 {
+        grid-column-start: 2;
+        background: var(--my-cool-background);
+    }
+
+    .box9 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background:var(--my-cool-background);
+    }
+</style>
+
+<body>
+    <div class="wrapper_1">
+        <div class="box1">herder</div>
+        <div class="box2">content-1</div>
+        <div class="box3">content-2</div>
+        <div class="content3">
+            <div class="box4">content-3-1</div>
+            <div class="box5">content-3-2</div>
+            <div class="box6">content-3-3</div>
+        </div>
+        <div class="box7">content-4-1</div>
+        <div class="box8">content-4-2</div>
+        <div class="box9">fooder</div>
+    </div>
+</body>
+</html>

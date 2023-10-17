@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="Ja">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Demo</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+<p>canvas created!</p>
+<canvas id="canvas" width="150" height="200"></canvas>
+<!-- <canvas>の要素を取得するために記載します。--> 
+<canvas >canvas not suported!(canvasが使えるかを示した記載)</canvas>
+     
+<script>
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, 1.5 * Math.PI);
+ctx.stroke();
+
+</script>
+</body>
+</html>
