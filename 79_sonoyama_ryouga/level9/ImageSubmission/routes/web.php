@@ -35,7 +35,6 @@ Route::get('/profile', function () {
 
 
 Route::get('/upload', [ImageUploadController::class, 'showUploadForm'])->name('upload.form'); // 投稿フォーム
-Route::get('/upload', [App\Http\Controllers\ImageUploadController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [ImageUploadController::class, 'upload'])->name('upload');
 
 Route::get('/upload-form', [ImageUploadController::class, 'showUploadForm'])->name('upload.form.link'); // 投稿フォームへのリンク
@@ -71,8 +70,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/post/{id}', [PostController::class, 'show'])->name('post.show'); // 詳細ページ
-Route::post('/post/{post}/add-review', [PostController::class, 'addReview'])->name('post.addReview'); // レビュー
-Route::post('/post/{post}/addReview', [PostController::class, 'addReview'])->name('post.addReview');
+Route::post('/post/{post}/addReview', [PostController::class, 'addReview'])->name('post.addReview');// レビュー
 Route::post('/post/{post}/like', [PostController::class, 'like'])->name('post.like'); // いいね機能
 
 
@@ -96,8 +94,3 @@ Route::middleware(['admin'])->group(function () { // 管理画面関係
 Route::get('scss', function () {
     return view('for-scss');
 });
-
-Route::get('/change-password', 'App\Http\Controllers\Auth\ChangePasswordController@showChangePasswordForm')->name('password.change');
-Route::post('/change-password', 'App\Http\Controllers\Auth\ChangePasswordController@changePassword')->name('password.update');
-Route::get('/change-password', [ChangePasswordController::class, 'showChangePasswordForm'])->name('password.change');
-Route::post('/change-password', [ChangePasswordController::class, 'changePassword'])->name('password.update');
