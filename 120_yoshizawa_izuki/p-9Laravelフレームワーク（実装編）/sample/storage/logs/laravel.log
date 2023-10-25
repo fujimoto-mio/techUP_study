@@ -1,0 +1,73 @@
+[2023-10-11 12:40:34] local.ERROR: Command "magrate" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"magrate\" is not defined.
+
+Did you mean one of these?
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php:720)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('magrate')
+#1 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\sample\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\sample\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\sample\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2023-10-15 20:28:38] local.ERROR: The "-;" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-;\" option does not exist. at C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Input\\ArgvInput.php:122)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Input\\ArgvInput.php(104): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('mc;')
+#1 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Input\\ArgvInput.php(84): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-mc;')
+#2 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Input\\ArgvInput.php(71): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('-mc;', true)
+#3 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Command\\Command.php(257): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 C:\\xampp\\htdocs\\sample\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ModelMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\xampp\\htdocs\\sample\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\xampp\\htdocs\\sample\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\xampp\\htdocs\\sample\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 C:\\xampp\\htdocs\\sample\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2023-10-15 20:59:45] local.DEBUG: []  
+[2023-10-15 20:59:49] local.DEBUG: []  
+[2023-10-15 20:59:51] local.DEBUG: []  
+[2023-10-15 21:01:13] local.DEBUG: []  
+[2023-10-15 21:01:14] local.DEBUG: []  
+[2023-10-15 21:01:15] local.DEBUG: []  
+[2023-10-15 21:01:16] local.DEBUG: []  
+[2023-10-15 21:07:10] local.DEBUG: []  
+[2023-10-15 21:07:10] local.DEBUG: []  
+[2023-10-15 21:07:11] local.DEBUG: []  
+[2023-10-15 21:07:11] local.DEBUG: []  
+[2023-10-15 21:07:12] local.DEBUG: []  
+[2023-10-15 21:07:12] local.DEBUG: []  
+[2023-10-15 21:10:24] local.DEBUG: []  
+[2023-10-15 21:12:40] local.DEBUG: []  
+[2023-10-15 21:12:40] local.DEBUG: []  
+[2023-10-15 21:12:41] local.DEBUG: []  
+[2023-10-15 21:12:41] local.DEBUG: []  
+[2023-10-15 21:12:42] local.DEBUG: []  
+[2023-10-15 21:12:45] local.DEBUG: []  
+[2023-10-15 21:12:46] local.DEBUG: []  
+[2023-10-15 21:12:46] local.DEBUG: []  
+[2023-10-16 13:49:58] local.DEBUG: []  
+[2023-10-16 13:50:02] local.DEBUG: []  
+[2023-10-16 13:50:10] local.DEBUG: []  
+[2023-10-16 14:04:23] local.DEBUG: []  
+[2023-10-16 14:04:54] local.DEBUG: []  
+[2023-10-16 14:05:08] local.DEBUG: []  
+[2023-10-16 14:05:09] local.DEBUG: []  
+[2023-10-16 14:11:47] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2023-10-16T05:11:34.000000Z","updated_at":"2023-10-16T05:11:34.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2023-10-16T05:11:34.000000Z","updated_at":"2023-10-16T05:11:34.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2023-10-16T05:11:34.000000Z","updated_at":"2023-10-16T05:11:34.000000Z"}]  
