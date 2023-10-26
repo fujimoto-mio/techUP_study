@@ -11,13 +11,15 @@
     class who {
     constructor(name) {
     this.name = name ;
+    console.log( this.name );
   }
  }
+ var tanaka = new who("tanaka");
 
    who.prototype.getName = function(){
    return this.name;
  }
- var tanaka = new who("tanaka");
+
    console.log(tanaka.getName());
   </script>
 </body>
