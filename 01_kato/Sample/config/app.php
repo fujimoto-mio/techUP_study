@@ -67,7 +67,14 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tokyo',#デフォルトはUCT？
+
+    'locale' => 'ja',#追加
+
+    'fallback_locale' => 'ja',#追加
+
+    'faker_locale' => 'ja_JP',#追加
+
 
     /*
     |--------------------------------------------------------------------------
