@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>自己紹介</title>
+</head>
+<body>
+    <form action="/index_2_8.html" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td>名前（全角）</td>
+            <td><input type="text" name="name" size="20" pattern="[^\x20-\x7E]*" title="全角で入力してください"></td>
+        </tr>
+
+        <tr>
+            <td>カナ（半角）</td>
+            <td><input type="text" name="kana" size="20" pattern="[\uFF66-\uFF9F]*" title="半角で入力してください"></td>
+        </tr>
+
+        <tr>
+            <td>年齢</td>
+            <td><input type="number" name="age" size="20" min="1" max="100"></td>
+        </tr>
+
+        <tr>
+            <td>自己紹介</td>
+            <td><textarea name="self" cols="100" rows="10" pattern="[^\x20-\x7E]*"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>出身地</td>
+            <td><select name="place">
+                <option value="" selected>---</option>
+                <option value="1">北海道</option>
+                <option value="2">青森県</option>
+                <option value="3">岩手県</option>
+                <option value="4">宮城県</option>
+                <option value="5">秋田県</option>
+                <option value="6">山形県</option>
+                <option value="7">福島県</option>
+                <option value="8">茨城県</option>
+                <option value="9">栃木県</option>
+                <option value="10">群馬県</option>
+                <option value="11">埼玉県</option>
+                <option value="12">千葉県</option>
+                <option value="13">東京都</option>
+                <option value="14">神奈川県</option>
+                <option value="15">新潟県</option>
+                <option value="16">富山県</option>
+                <option value="17">石川県</option>
+                <option value="18">福井県</option>
+                <option value="19">山梨県</option>
+                <option value="20">長野県</option>
+                <option value="21">岐阜県</option>
+                <option value="22">静岡県</option>
+                <option value="23">愛知県</option>
+                <option value="24">三重県</option>
+                <option value="25">滋賀県</option>
+                <option value="26">京都府</option>
+                <option value="27">大阪府</option>
+                <option value="28">兵庫県</option>
+                <option value="29">奈良県</option>
+                <option value="30">和歌山県</option>
+                <option value="31">鳥取県</option>
+                <option value="32">島根県</option>
+                <option value="33">岡山県</option>
+                <option value="34">広島県</option>
+                <option value="35">山口県</option>
+                <option value="36">徳島県</option>
+                <option value="37">香川県</option>
+                <option value="38">愛媛県</option>
+                <option value="39">高知県</option>
+                <option value="40">福岡県</option>
+                <option value="41">佐賀県</option>
+                <option value="42">長崎県</option>
+                <option value="43">熊本県</option>
+                <option value="44">大分県</option>
+                <option value="45">宮崎県</option>
+                <option value="46">鹿児島県</option>
+                <option value="47">沖縄県</option>
+              </select>
+              </td>
+        </tr>
+
+        <tr>
+            <td>性別</td>
+            <td><input type="radio" name="gender" value="man" checked="checked" />男<br>
+                <input type="radio" name="gender" value="women" />女</td>
+        </tr>
+
+        <tr>
+            <td>趣味</td>
+            <td><input type="checkbox" name="hobby" value="1"/>映画
+                <input type="checkbox" name="hobby" value="2"/>釣り
+                <input type="checkbox" name="hobby" value="3"/>読書
+                <input type="checkbox" name="hobby" value="4"/>カラオケ
+                <input type="checkbox" name="hobby" value="5"/>ボーリング
+            </td>
+        </tr>
+
+        <tr>
+            <td>生年月日</td>
+            <td><input type="date" name="birth" min="1980-01-01" max="2021-01-01"></td>
+        </tr>
+
+        <tr>
+            <td>パスワード</td>
+            <td><input type="password" name="pass" size="20" maxlength="5"></td>
+        </tr>
+
+    </table>
+    <input type="submit" value="確定" onclick="alert('確定')">
+    </form>
+</body>
+</html>

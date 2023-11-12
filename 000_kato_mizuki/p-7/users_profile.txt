@@ -1,0 +1,40 @@
+mysql> select * from m_users left join m_profiles on m_users.id = m_profiles.id;
++----+---------------+------------------------+----------+---------------------+---------------------+------+-----------------+--------------------+------+-----------------------+-------+------+---------------------+---------------------+
+| id | user_name     | mail_address           | password | created             | modified            | id   | name            | kana               | age  | profile               | price | sex  | created             | modified            |
++----+---------------+------------------------+----------+---------------------+---------------------+------+-----------------+--------------------+------+-----------------------+-------+------+---------------------+---------------------+
+|  1 | YamadaHOGE    | Yamada_Tarou@gmail.com | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |    1 | 山田　太郎      | ヤマダタロウ       |   21 | プロフィール１        |    20 |    1 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
+|  2 | Suzuki Hanako | suzuki@gmail.com       | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |    2 | 鈴木　花子      | スズキハナコ       |   33 | プロフィール２        |    30 |    2 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
+|  3 | Sato   Jiro   | sato@gmail.com         | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |    3 | 佐藤　治郎      | サトウジロウ       |   23 | プロフィール３        |    35 |    1 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
+|  4 | kato Taro     | kato@gmail.com         | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+|  5 | kakuta Taro   | kakuta@gmail.com       | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+|  6 | iiduka Taro   | iiduka@gmail.com       | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+|  7 | toyomoto Taro | toyomoto@gmail.com     | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+|  8 | sasaki Taro   | sasaki@gmail.com       | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+|  9 | konno Taro    | konno@gmail.com        | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 10 | okano Taro    | okano@gmail.com        | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 11 | hara Taro     | hara@gmail.com         | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 12 | momose Taro   | momose@gmail.com       | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 13 | akahane Taro  | akahane@gmail.com      | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 14 | horasawa Taro | horasawa@gmail.com     | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 15 | torii Taro    | torii@gmail.com        | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 16 | sorai Taro    | sorai@gmail.com        | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 17 | todoroki Taro | todoroki@gmail.com     | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 18 | natsume Taro  | natsume@gmail.com      | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 19 | saku Taro     | saku@gmail.com         | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
+| 20 | tatu Taro     | tatu@gmail.com         | 123123   | 2023-10-15 16:35:20 | 2023-10-15 16:35:20 | NULL | NULL            | NULL               | NULL | NULL                  |  NULL | NULL | NULL                | NULL                |
++----+---------------+------------------------+----------+---------------------+---------------------+------+-----------------+--------------------+------+-----------------------+-------+------+---------------------+---------------------+
+20 rows in set (0.01 sec)
+
+
+上：左外部結合
+下：右外部結合
+
+mysql> select * from m_users right join m_profiles on m_users.id = m_profiles.id;
++------+---------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+-----------------------+-------+-----+---------------------+---------------------+
+| id   | user_name     | mail_address           | password | created             | modified            | id | name            | kana               | age | profile               | price | sex | created             | modified            |
++------+---------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+-----------------------+-------+-----+---------------------+---------------------+
+|    1 | YamadaHOGE    | Yamada_Tarou@gmail.com | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |  1 | 山田　太郎      | ヤマダタロウ       |  21 | プロフィール１        |    20 |   1 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
+|    2 | Suzuki Hanako | suzuki@gmail.com       | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |  2 | 鈴木　花子      | スズキハナコ       |  33 | プロフィール２        |    30 |   2 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
+|    3 | Sato   Jiro   | sato@gmail.com         | 123123   | 2023-10-04 10:07:39 | 2023-10-04 10:07:39 |  3 | 佐藤　治郎      | サトウジロウ       |  23 | プロフィール３        |    35 |   1 | 2023-10-04 10:18:19 | 2023-10-04 10:18:19 |
++------+---------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+-----------------------+-------+-----+---------------------+---------------------+
+3 rows in set (0.00 sec)

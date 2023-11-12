@@ -1,0 +1,3 @@
+takagisi@LAPTOP-CC6FE2C2 MINGW64 /c/xampp/htdocs/techUP_study/90_takagishi_miwa/sample (feature/takagishi_8_2)
+$ php artisan send:birthday-mail
+string(63) "プレゼント付与する処理がここで行われます。"
