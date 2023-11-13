@@ -1,0 +1,4 @@
+患者クラスは患者の「身長」「体重」「標準体型」を返すメソッドです。
+身長はgetHeight
+体重はgetWeight
+標準体型はcalculateStandardWeight
