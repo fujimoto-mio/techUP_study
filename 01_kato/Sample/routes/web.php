@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get( アドレス , [コントローラーの名前::class , メソッド名] );
+Route::get('/list', [\App\Http\Controllers\TodoListController::class, 'index']);
