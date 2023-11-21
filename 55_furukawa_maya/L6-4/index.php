@@ -15,12 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 名前をCookieに保存（有効期限は10秒）
         setcookie("user", $name, time() + 10);
 
-        // セッションの訪問回数を算出
-        if (!isset($_SESSION['count'])) {
-            $_SESSION['count'] = 1;
-        } else {
-            $_SESSION['count']++;
-        }
     } catch (Exception $e) {
         echo $e->getMessage();
     }
@@ -42,6 +36,5 @@ $nameCookie = isset($_COOKIE["user"]) ? $_COOKIE["user"] : "";
         <input type="text" id="name" name="name" value="<?= $nameCookie ?>">
         <input type="submit" value="保存">
     </form>
-    <p><?= $_SESSION['count'] ?>回目の訪問です。</p>
 </body>
 </html>
