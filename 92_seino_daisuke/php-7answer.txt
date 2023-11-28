@@ -1,0 +1,68 @@
+<?php
+//クラスファイルを読み込む
+require_once 'Person.php';　
+
+class Patient extends Person　//personクラスを継承したpatientクラスの作成
+{
+	//プロパティ==========　//定義したクラスからのみアクセスできる
+	private $height = 0;		//身長(m)　
+	private $weight = 0;		//体重(kg)
+
+	//コンストラクタ==========
+	public function __construct($name, $age, $gender, $height, $weight){
+		//Personクラスのコンストラクタを呼び出す
+		parent::__construct($name, $age, $gender);
+
+		//プロパティの初期化
+		$this -> height = $height;
+		$this -> weight = $weight;
+	}
+
+	//メソッド==========
+	//標準体重を返すメソッド
+	public function calculateStandardWeight(){
+		return $this -> height * $this -> height * 22;
+	}
+
+	//身長を返すメソッド
+	public function getHeight(){
+		return $this -> height;
+	}
+
+	//体重を返すメソッド
+	public function getWeight(){
+		return $this -> weight;
+	}
+}
+
+<?php
+class Person{
+	//プロパティ========== //定義したクラスからのみアクセスできる
+	private $name = '';
+	private $age = 0;
+	private $gender = '';
+
+	//コンストラクタ==========
+	public function __construct($name, $age, $gender){
+		$this -> name = $name;
+		$this -> age = $age;
+		$this -> gender = $gender;
+	}
+
+	//メソッド==========  //名前、性別、年齢の取得表示、
+	public function selfIntroduction(){
+		if($this -> gender == 'm'){
+			$gendata = '男性';
+		}else if($this -> gender == 'f'){
+			$gendata = '女性';
+		}else{
+			$gendata = '[性別は不明]';
+		}
+		return 'わたしは' . $this -> name . '、' . $this -> age . '才、' . $gendata . 'です。';
+	}
+
+
+	public function addAge(){
+		$this -> age++;
+	}
+}
