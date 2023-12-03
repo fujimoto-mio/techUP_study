@@ -1,0 +1,10 @@
++-----------+------------------+------------------------------------------------------------------------+
+| Host      | User             | authentication_string                                                  |
++-----------+------------------+------------------------------------------------------------------------+
+| localhost | mysql.infoschema | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED |
+| localhost | mysql.session    | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED |
+| localhost | mysql.sys        | $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED |
+| localhost | root             | $A$005$Y%BU?y	%XpM~q1:uwxvlYrQtd.WNcBFf01vKqxmsIY6hMhY8Dh4CBDO.W. |
+| localhost | testuser         | *D3DA80A53B330CAD58C3B4562C0129BEA3B282F8                              |
++-----------+------------------+------------------------------------------------------------------------+
+5 rows in set (0.00 sec)
