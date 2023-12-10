@@ -1,23 +1,60 @@
 <?php
-require_once 'Patient.php';
+
+//クラスファイルを読み込む
+require_once 'Coffee.php';
+require_once 'Tea.php';
+require_once 'Dripper.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
-    <meta charset="utf-8">
-    <head>
-        <title>techUP オブジェクト指向　課題</title>
-    </head>
+<meta charset="utf-8">
+<head>
+    <title>喫茶マシーン</title>
+</head>
     <body>
 <?php
-$patient = new Patient('若原百花',23,'f',1.55,50);
+    //ドリッパーオブジェクトを生成する
+    $dripper = new Dripper();
 
-print($patient -> selfIntroduction());
-print('<br>身長：' . $patient -> getHeight() . 'm');
-print('<br>体重：' . $patient -> getWeight() . 'kg');
-print('<br><br>');
-print('標準体重は' . $patient -> calculateStandardWeight() . 'kgです。');
+    //コーヒーオブジェクトを生成する
+    $coffee = new Coffee();
+
+    //紅茶オブジェクトを生成する
+    $tea = new Tea();
+
+
+    //ドリッパーにミルクを注ぐようにセットする
+    print('ミルクを注ぐ機能：ON');
+    $dripper->setMilkStatus(true);
+
+    //コーヒーを注いでみる
+    print('コーヒーをセットして注ぎます。<br>');
+    print($dripper->dripDrink($coffee) . '<br>');
+    print('<br>');
+
+    //ドリッパーにミルクを注ぐようにセットする
+    print('ミルクを注ぐ機能：ON');
+    $dripper->setMilkStatus(true);
+
+    //紅茶を注いでみる
+    print('紅茶をセットして注ぎます。<br>');
+    print($dripper->dripDrink($tea) . '<br>');
+    print('<br>');
+
+    //ドリッパーにミルクを注がないようにセットする
+    print('ミルクを注ぐ機能：OFF');
+    $dripper->setMilkStatus(false);
+
+    //コーヒーを注いでみる
+    print('コーヒーをセットして注ぎます。<br>');
+    print($dripper->dripDrink($coffee) . '<br>');
+    print('<br>');
+
+    //紅茶を注いでみる
+    print('紅茶をセットして注ぎます。<br>');
+    print($dripper->dripDrink($tea) . '<br>');
+    print('<br>');
 ?>
     </body>
 </html>
-
 
