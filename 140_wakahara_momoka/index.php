@@ -1,9 +1,11 @@
 <?php
+
 //クラスファイルを読み込む
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
 require_once 'Matcha.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -52,7 +54,6 @@ require_once 'Matcha.php';
     print($dripper->dripDrink($matcha) . '<br>');
     print('<br>');
 
-
     //ドリッパーにミルクを注がないようにセットする
     print('ミルクを注ぐ機能：OFF');
     $dripper->setMilkStatus(false);
@@ -74,3 +75,4 @@ require_once 'Matcha.php';
 ?>
     </body>
 </html>
+
