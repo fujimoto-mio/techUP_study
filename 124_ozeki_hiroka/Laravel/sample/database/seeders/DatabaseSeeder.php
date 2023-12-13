@@ -13,10 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+ feature/ozeki_hiroka_p9
         $this->call([
             TodoListSeeder::class
 
         ]);
+
         // \App\Models\User::factory(10)->create();
     }
 }

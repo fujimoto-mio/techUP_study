@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavascriptBasic</title>
+</head>
+<body>
+    <p>JavascriptBasic</p>
+  <script>
+
+    class who {
+    constructor(name) {
+    this.name = name ;
+    console.log( this.name );
+  }
+ }
+ var tanaka = new who("tanaka");
+
+   who.prototype.getName = function(){
+   return this.name;
+ }
+
+   console.log(tanaka.getName());
+  </script>
+</body>
+</html>
