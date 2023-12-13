@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScriptBasic 3-17 DOM総合課題【Todoリスト】</title>
+</head>
+<body>
+  <h1>Todoアプリ</h1>
+  <div>
+    <label for="input-todo-box">Todoタスクの入力 : </label>
+    <input id="input-todo-box" type="text">
+    <button id="add-button">追加</button>
+  </div>
+ 
+  <h2>現在のTodoリスト</h2>
+  <ul id="todo-list"></ul>
+
+<script>
+  'use strict' 
+
+  function todo() {
+    const inputBox = document.getElementById('input-todo-box');
+    const addButton = document.getElementById('add-button');
+    const todolist = document.getElementById('todo-list');
+    const todos = [];
+
+
+      addButton.addEventListener('click', (event) => {
+
+        const li = document.createElement('li');
+        const add = todolist.appendChild(li);
+        
+        add.textContent = inputBox.value;
+
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = '削除';
+        add.appendChild(removeButton);
+        inputBox.value = '';  
+      
+
+        removeButton.addEventListener("click", (event) => {
+          add.remove();
+       });
+
+     });
+  
+  }
+ 
+todo();
+
+
+</script>
+</body>
+</html>

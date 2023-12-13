@@ -67,7 +67,9 @@ return [
     |
     */
 
+ feature/ozeki_hiroka_p9
     'timezone' => 'Asia/Tokyo',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -80,6 +82,7 @@ return [
     |
     */
 
+feature/ozeki_hiroka_p9
     'locale' => 'ja',
 
     /*
@@ -93,7 +96,9 @@ return [
     |
     */
 
+ feature/ozeki_hiroka_p9
     'fallback_locale' => 'ja',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +111,9 @@ return [
     |
     */
 
+feature/ozeki_hiroka_p9
     'faker_locale' => 'ja_JP',
+
 
     /*
     |--------------------------------------------------------------------------
