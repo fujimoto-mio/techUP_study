@@ -1,0 +1,29 @@
+p4-1 課題1
+
+【Person.php】
+Personクラスでプライベートな変数である名前、年齢、性別を定義。
+名前、年齢、性別のコンストラクタを作成し、プロパティを初期化。
+selfIntroduction関数を定義し、関数内でif文を使い、性別ごとに表示させるワードを分岐させ、返されたワードを変数$gendataに代入。
+よってselfIntroduction関数は性別を返す。
+addAge関数は変数$ageに1を足す関数。
+
+【Patient.php】
+person.phpを読み込む。
+Personクラスを継承したPatientクラスを作成。
+Personクラスの変数に加え、プライベートな変数である身長と体重を定義。
+これら2つの変数もコンストラクタを作成し、プロパティを初期化する。
+calculateStandardWeight関数を定義し、標準体重(身長×身長×22で求められる)を返す。
+身長と体重はプライベートな変数なので、身長と体重のゲッターを作成し、値を取得できるようにしておく。
+
+【index.php】
+Patient.phpを読み込む。
+Patientのインスタンスを作成。
+インスタンスの中身は(名前、年齢、性別、身長、体重)。
+selfIntroduction関数は性別を返す関数なので、
+print($patient -> selfIntroduction())で性別を表示。
+getHeightは身長の値を取得するゲッターなので、
+print('<br>身長：' . $patient -> getHeight() . 'm');で身長を表示。
+getWeightは体重の値を取得するゲッターなので、
+print('<br>体重：' . $patient -> getWeight() . 'kg');で体重を表示。
+calculateStandardWeight関数は標準体重を求める式が組み込まれているので、
+print('標準体重は' . $patient -> calculateStandardWeight() . 'kgです。');で標準体重を表示。
