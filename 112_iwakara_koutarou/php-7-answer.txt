@@ -1,0 +1,28 @@
+p4-1.オブジェクト指向を覚える。
+「課題１」
+
+ソースコードの流れとしては、index.phpが読み込まれると、patient.php・person.phpが読み込まれる。そうして$patientが作成され、患者の情報が指定される。指定されることで、患者の自己紹介文、身長、体重、標準体重が表示される。
+
+index.phpではHTML部分でブラウザの表示と、ページタイトルの設定。PHP部分でクラスファイルを読み込みPatientクラスを使用できるようにする。
+$patient = new Patient('山田太郎', 30, 'm', 1.65, 63.5);ではクラスのインスタンスを作成し、患者の情報を指定。
+$patient->selfIntroduction();は、PatientクラスのselfIntroductionを呼び出して、患者の自己紹介文を表示。
+$patient->getHeight();および$patient->getWeight();は、患者の身長と体重を取得するために呼び出す。
+$patient->calculateStandardWeight();は、患者の身長に基づいて標準体重を計算。
+
+PatientクラスではPersonクラスを読み込んでいる。
+属性として $heightと$weightを持っている。
+__constructは、患者の情報を受け取り、親クラスを呼び出して名前、年齢、性別を設定する。
+calculateStandardWeightは、身長に基づいて標準体重を計算する。
+getHeightとgetWeightは、それぞれ身長と体重を返す
+
+Personクラスは、人物の基本情報を保存、設定する。
+属性として$name、$age、$genderを持っている。
+__constructは、名前、年齢、性別を受け取り、これらの情報を設定する。
+selfIntroductionは、自己紹介文を生成して返す。
+addAgeは年齢を1つ増やす方式ですが、このコードでは使用されとぃない。
+
+
+
+
+
+
