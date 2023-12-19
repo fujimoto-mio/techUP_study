@@ -59,6 +59,7 @@ return [
 
 
 
+
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
