@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>analog Clock</title>
+</head>
+
+  <script type="text/javascript">
+    // 定数
+    const CEN_X = 200;//中心値
+    const CEN_Y = 200;//中心値
+    const SEMICIRCLE = 180;//サイクル
+
+    // 針表示関数
+    function needle(fig) {
+      // 現在時刻を取得
+      var now = new Date();
+
+      // 各針の角度を計算
+      var angle_s = Math.round(90 -  6 * now.getSeconds()); // 秒針
+
+      // 秒針 円周側の座標を取得
+      var pos_sx = Math.cos(angle_s*(Math.PI/SEMICIRCLE))*150;
+      var pos_sy = Math.sin(angle_s*(Math.PI/SEMICIRCLE))*150;
+
+      line(fig,pos_sx,pos_sy, 3,"blue");
+    }
+
+    // 針の直線を表示する関数
+    function line(fig,pos_x,pos_y,thick,color) {
+      fig.beginPath();                      // 新しいパスを作成
+      fig.moveTo(CEN_X,CEN_Y);              // 線の開始座標
+      //fig.lineTo(CEN_X+pos_x,CEN_Y-pos_y);  // 線の終了座標
+      var img = new Image();
+      img.src = "IMG_3851.JPG";
+      img.onload = function() {
+         fig.drawImage(img, 0, 0,1000,1000,CEN_X+pos_x,CEN_Y-pos_y,100,100);
+         }
+    }
+
+    // 円表示関数
+    function circle(fig,mode,color,thick) {
+      fig.beginPath();                      // 新しいパスを作成
+      fig.arc(CEN_X,CEN_Y,180,0,Math.PI*2); // 円を描画
+      fig.closePath();                      // パスの終了
+    }
+
+    // 描画開始関数
+    function strDraw() {
+      // ドキュメントオブジェクト作成
+      var id1 = document.getElementById('pos');
+
+      // 2Dオブジェクト作成
+      var fig = id1.getContext('2d');
+
+      // 画面初期化
+      fig.clearRect(0,0,400,400);
+
+      // 円の輪郭描画
+      circle(fig, "stroke", "black", 10);
+
+      // 針描画
+      needle(fig);
+    }
+
+    // 開始関数
+    function strClock() {
+      setInterval("strDraw();",10);
+    }
+
+  </script>
+  <body onload="strClock();">
+    <canvas id="pos" width="400" height="400"></canvas>
+  </body>
+</html>
