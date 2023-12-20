@@ -1,7 +1,0 @@
-1:Person.phpで名前,年齢,性別を取得するプログラムを作成
-2:Patient.phpのPatientにPersonを継承させ取得する情報を一つのクラスにまとめる
-3:index.phpでインスタンスを作成
-4:$patient -> selfIntroduction()で性別を判別するメソッドの呼び出し
-5:$patient -> getHeight() で身長を取得するメソッドの呼び出し
-6:$patient -> getWeight()で体重を取得するメソッドの呼び出し
-7:$patient -> calculateStandardWeight()で標準体重を取得するメソッドの呼び出し

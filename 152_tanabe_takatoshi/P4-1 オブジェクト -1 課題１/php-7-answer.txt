@@ -1,0 +1,30 @@
+ソースの流れ
+・Person.php で基本的な人物情報を表す。
+・patient.phpでPerson.phpを読み込み、体重・身長・標準体重の計算結果の情報を追加する。
+・index.php でpatient.phpとPerson.phpの情報を読み込み、HTMLで患者の情報を表示させる。
+
+Person.php
+  Personクラスに名前・年齢・性別のプロパティを記載。
+  function __construct でインスタンス化する際に呼び出されるメソッドでクラスを初期化する。
+  function selfIntroduction() のif文 で性別判定を行い、return で名前・年齢・性別の順で入力された文字（数字）を一緒に返す。
+  function addAge で年齢を１増やす。
+
+patient.php
+  class Patient extends PersonでPersonのクラスを継承する。
+  Patientクラスで身長・体重のプロパティを追加する。
+  parent::__construct($name, $age, $gender) で Personのコンストラクタを呼び出す。
+  function calculateStandardWeight()で標準体重の計算をする。
+  function getHeight()で身長を返す。
+  function getWeight()で体重を返す。
+
+
+index.php
+  index.php でpatient.phpとPerson.phpの情報を読み込み
+  $patient = new Patient('山田太郎', 30, 'm', 1.65, 63.5) で患者の情報入力。
+  $patient -> selfIntroduction()で性別判定の結果とreturn内容をPerson.phpから呼び出す。
+  $patient -> getHeight()で身長をpatient.phpから呼び出す。
+  $patient -> getWeight()で体重をpatient.phpから呼び出す。
+  $patient -> calculateStandardWeight() でpatient.phpで計算された標準体重の計算結果を呼び出す。
+
+
+
