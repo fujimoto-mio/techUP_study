@@ -2,10 +2,10 @@
 //インターフェイスファイルを読み込む
 require_once 'IDrip.php';
 
-class Coffee implements IDrip
+class Matcha implements IDrip
 {
 	//プロパティ
-	private $name = 'コーヒー';
+	private $name = '抹茶';
 
 	//注ぐメソッドをオーバーライド
 	public function drip(){
@@ -14,6 +14,6 @@ class Coffee implements IDrip
 
 	//ミルクと一緒にそそぐメソッドをオーバーライド
 	public function dripWithMilk(){
-		return 'ミルク' . $this->name . '(微糖)';
+		return $this->name . 'ミルク';
 	}
 }

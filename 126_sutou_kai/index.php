@@ -52,6 +52,11 @@ require_once 'Dripper.php';
     //※追加
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
+
+    require 'Matcha.php';
+    $matcha = new Matcha('Matcha.php');
+    print('抹茶をセットして注ぎます。<br>');
+    print($dripper->dripDrink($matcha));
     
 ?>
     </body>
