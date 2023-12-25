@@ -29,7 +29,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="py-[100px]">
             <p class="text-2xl font-bold text-center">今日は何する？</p>
-            <!-- ここのフォームで　tasksのデータpostで、Controllerに送ってます。 -->
+            <!-- ここのフォームでtasksのデータpostで、Controllerに送ってます。 -->
             <form action="/tasks" method="post" class="mt-10">
                 @csrf
                 <div class="flex flex-col items-center">
@@ -141,7 +141,7 @@
             return true;
         } else {
             return false;
-        }
+        }end;
     }
 </script>
 
