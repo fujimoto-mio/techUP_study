@@ -141,7 +141,7 @@
             return true;
         } else {
             return false;
-        }end;
+        }
     }
 </script>
 
