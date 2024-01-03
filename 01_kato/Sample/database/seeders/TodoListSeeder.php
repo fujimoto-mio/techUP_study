@@ -18,17 +18,17 @@ class TodoListSeeder extends Seeder
         DB::table('todo_lists')->insert(
             [
                 [
-                    'name' => 'テスト1',
+                    'name' => 'test1',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
                 [
-                    'name' => 'テスト2',
+                    'name' => 'test2',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
                 [
-                    'name' => 'テスト3',
+                    'name' => 'test3',
                     'created_at' => now(),
                     'updated_at' => now(),
                 ],
