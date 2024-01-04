@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+
+<body>
+<script>
+
+var valGlobal1 = "global1";//実行順①
+var valGlobal2 = "global2";//実行順②
+window.onload = function () {//実行順③
+    // グローバルスコープ
+    function globalValue1() {//実行順⑤
+        console.log("valGlobal1 = " + valGlobal1);//実行順⑥
+        console.log("valGlobal2 = " + valGlobal2);//実行順⑦
+ 
+        // グローバルスコープ変数を変更
+        valGlobal2 = "global3";//実行順⑧
+        console.log("valGlobal2 modified = " + valGlobal2);//実行順⑨
+    }
+    globalValue1();//実行順④
+}
+
+</script>
+</body>
+</html>
