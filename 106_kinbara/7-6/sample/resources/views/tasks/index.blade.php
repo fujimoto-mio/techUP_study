@@ -35,17 +35,13 @@
                 <div class="flex flex-col items-center">
                     <label class="w-full max-w-3xl mx-auto">
                         <input
-
-                        @error('task_name')
-                           <div class="mt-3">
-                           <p class="text-red-500">
-                           {{ $message }}
-                           </p>
-                           </div>
-                           
                             class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-4 pl-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
                             placeholder="何かをする..." type="text" name="task_name" /><!-- 送られるデータです -->
-
+                        @error('task_name')
+                            <div class="mt-3">
+                                <p class="text-red-500">{{ $message }}</p>
+                            </div>
+                        @enderror    
                     </label>
 
                  
@@ -57,7 +53,8 @@
  
             </form>
  {{-- 追記 --}}
- @if ($tasks->isNotEmpty())
+ 
+    @if ($tasks->isNotEmpty())
       <div class="max-w-7xl mx-auto mt-20">
           <div class="inline-block min-w-full py-2 align-middle">
               <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -122,6 +119,7 @@
           </div>
       </div>
   @endif
+
   {{-- 追記ここまで --}}
  
         </div>
@@ -135,6 +133,7 @@
     </div>
     </footer>
 
+
     <script>
     function deleteTask() {
         if (confirm('本当に削除しますか？')) {
@@ -144,6 +143,7 @@
         }
     }
 </script>
+
 
 </body>
  
