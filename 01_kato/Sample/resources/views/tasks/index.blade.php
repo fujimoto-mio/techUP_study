@@ -107,14 +107,6 @@
                                                     <button type="submit"
                                                     class="py-4 w-20 md:hover:bg-slate-200 transition-colors">削除</button>
                                                 </form>
-                                                <footer class="bg-slate-800">
-                                                <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                                                    <div class="py-4 text-center">
-                                                    <p class="text-white text-sm">Todoアプリ</p>
-                                                </div>
-                                            </div>
-                                                </footer>
-
                                                 <script>
                                                     function deleteTask() {
                                                     if (confirm('本当に削除しますか？')) {
