@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="utf-8">
@@ -6,17 +6,17 @@
 
     <body>
         <script>
-            const number = [1,2,3,4,5,6,7,8,9,10];
+        function add() {
+            var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            return number;
+        }
 
-            function add(){  
-                console.log(number);
-            }
+        for (var i = 0; i < 10; i++) {
+            var array10 = add();
+            console.log(array10[i]);
+        }
 
-            for (var i = 0; i < 10; i++){
-                add();
-                }
-
-        </script>
+</script>
 
     </body>
 </html>
