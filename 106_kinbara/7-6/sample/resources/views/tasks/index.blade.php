@@ -88,7 +88,7 @@
                                                   @method('PUT')
  
                                               {{-- 完了ボタンの追記します。 --}}
- 
+                                              <input type="hidden" name="status" value="{{$item->status}}">
                                               {{-- 完了ボタンの追記します。 --}}
                                                   <button type="submit"
                                                       class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
@@ -99,6 +99,7 @@
                                                   class="inline-block text-center py-4 w-20 underline underline-offset-2 text-sky-600 md:hover:bg-sky-100 transition-colors">編集</a>
                                           </div>
                                           <div>
+                                              
                                               <form onsubmit="return deleteTask();"
                                                   action="/tasks/{{ $item->id }}" method="post"
                                                   class="inline-block text-gray-500 font-medium"

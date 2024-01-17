@@ -25,3 +25,8 @@ Route::post('/edit',[TaskController::class,'edit']);
 Route::post('/delete',[TaskController::class,'delete']);
 
 Route::resource('tasks', TaskController::class);
+
+
+/*get PC→一覧表示（受け取る)post→タスク送る（送る） 
+clat 処理
+*/
