@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+
+<body>
+<script>
+    var year = prompt('今年は何年ですか？');
+
+    var eto_number = year % 12;
+
+    switch (eto_number) {
+        case 0:
+            eto_result = "申";
+            break
+        case 1:
+            eto_result = "酉";
+            break
+        case 2:
+            eto_result = "戌";
+            break
+        case 3:
+            eto_result = "亥";
+            break
+        case 4:
+            eto_result = "子";
+            break
+        case 5:
+            eto_result = "丑";
+            break
+        case 6:
+            eto_result = "寅";
+            break
+        case 7:
+            eto_result = "卯";
+            break
+        case 8:
+            eto_result = "辰";
+            break
+        case 9:
+            eto_result = "巳";
+            break
+        case 10:
+            eto_result = "午"
+            break
+        case 11:
+            eto_result = "未"
+    }
+    console.log(eto_result);
+    
+</script>
+</body>
+</html>
