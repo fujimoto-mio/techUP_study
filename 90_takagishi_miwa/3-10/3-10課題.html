@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+        <script>
+            var names = ['山田さん', '佐藤さん', '内田さん'];
+        
+            console.log('最初に配列の値を表示します。');
+            console.log(names[0]);  
+            console.log(names[1]); 
+            console.log(names[2]);  
+            function output() { 
+                for (var i = 0; i < names.length; i++) {
+                    console.log(names[i]);
+                }
+            }
+        
+            console.log('配列の値を1つ消します。');
+            const shiftExample = names.shift();
+            console.log('山田さんを消しました。');
+        
+            console.log('残りを表示します。');
+            output();
+        </script>
+        
+    </body>
+</html>
