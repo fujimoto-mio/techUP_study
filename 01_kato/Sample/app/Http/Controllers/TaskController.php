@@ -119,7 +119,7 @@ class TaskController extends Controller
         //該当のタスクを検索　取得する
         $task = Task::find($id);
 
-        //モデル->カラム名 = 値 で、データnamwを割り当てる（更新する）
+        //モデル->カラム名 = 値 で、データnameを割り当てる（更新する）
         $task->name = $request->input('task_name');
 
         //データベースに保存
