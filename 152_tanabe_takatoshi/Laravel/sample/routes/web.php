@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/list', [\App\Http\Controllers\TodoListController::class, 'index']);
+//Route::get('/list', [\App\Http\Controllers\TodoListController::class, 'index']);
