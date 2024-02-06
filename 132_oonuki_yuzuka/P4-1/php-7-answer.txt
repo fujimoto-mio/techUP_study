@@ -1,0 +1,110 @@
+◻︎index.php
+<?php
+//クラスファイルを読み込む
+require_once 'Patient.php';
+?>
+<!DOCTYPE html>
+<html lang="ja">
+	<meta charset="utf-8">
+	<head>
+		<title>techUP オブジェクト 指向課題</title>
+	</head>
+	<body>
+<?php
+//インスタンスを生成する
+$patient = new Patient('山田太郎', 30, 'm', 1.65, 63.5);
+
+print($patient -> selfIntroduction());
+print('<br>身長：' . $patient -> getHeight() . 'm');
+print('<br>体重：' . $patient -> getWeight() . 'kg');
+print('<br><br>');
+print('標準体重は' . $patient -> calculateStandardWeight() . 'kgです。');
+?>
+	</body>
+</html>
+
+◻︎patient.php
+<?php
+//クラスファイルを読み込む
+require_once 'Person.php';
+
+class Patient extends Person
+{
+	//プロパティ==========
+	private $height = 0;		//身長(m)
+	private $weight = 0;		//体重(kg)
+
+	//コンストラクタ==========
+	public function __construct($name, $age, $gender, $height, $weight){
+		//Personクラスのコンストラクタを呼び出す
+		parent::__construct($name, $age, $gender);
+
+		//プロパティの初期化
+		$this -> height = $height;
+		$this -> weight = $weight;
+	}
+
+	//メソッド==========
+	//標準体重を返すメソッド
+	public function calculateStandardWeight(){
+		return $this -> height * $this -> height * 22;
+	}
+
+	//身長を返すメソッド
+	public function getHeight(){
+		return $this -> height;
+	}
+
+	//体重を返すメソッド
+	public function getWeight(){
+		return $this -> weight;
+	}
+}
+
+◻︎person.php
+<?php
+class Person{
+	//プロパティ==========
+	private $name = '';
+	private $age = 0;
+	private $gender = '';
+
+	//コンストラクタ==========
+	public function __construct($name, $age, $gender){
+		$this -> name = $name;
+		$this -> age = $age;
+		$this -> gender = $gender;
+	}
+
+	//メソッド==========
+	public function selfIntroduction(){
+		if($this -> gender == 'm'){
+			$gendata = '男性';
+		}else if($this -> gender == 'f'){
+			$gendata = '女性';
+		}else{
+			$gendata = '[性別は不明]';
+		}
+		return 'わたしは' . $this -> name . '、' . $this -> age . '才、' . $gendatar . 'です。';
+	}
+
+
+	public function addAge(){
+		$this -> age++;
+	}
+}
+
+
+ドクタイプ宣言
+文字コードUTF-8 
+ページタイトルとしてtechUP オブジェクト指向　課題　提示
+Person.phpで名前、年齢、性別のプロパティ定義
+インスタンス生成時の呼び出す関数としてコンストラクタ定義
+＄patientがmだった場合は男性と出力、fだった場合は女性と出力、それ以外は[性別は不明]と出力する。
+＄patientのインスタン生成を行った時にreturn 'わたしは' . $this -> name . '、' . $this -> age . '才、' . $gendatar . 'です。';を返す。
+年齢は１歳ずつ歳を重ねるよう宣言。
+Pesonクラスにpatientクラスを承継し、身長、体重のプロパティ定義。
+Personクラスのコンストラクタをそのまま定義するためparent::__construct表記。
+＄patientの標準体重、身長、体重の出力宣言をしたときにメソッドを呼び出す。
+
+
