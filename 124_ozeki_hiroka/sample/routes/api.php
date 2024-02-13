@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiSample;
 
@@ -15,6 +16,7 @@ use App\Http\Controllers\ApiSample;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 
 Route::get('/apisample', [ApiSample::class, 'apiHello']);
 

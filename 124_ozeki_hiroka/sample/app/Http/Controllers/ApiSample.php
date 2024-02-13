@@ -24,19 +24,17 @@ class ApiSample extends Controller
     public function nameSet(Request $request)
     {
 
-        $name = $request->input('name');
-        
-        $task = new Task;
+        $member = new Task;
+ 
+        $member->name = $request->input('name');
 
-        $task->name = $request->input('name');
+        //var_dump($member->name);
 
-        $task->status = $request->input(1);
-
-        $task->save();
+        $member->status = 1;
+  
+        $member->save();
 
         return response()->json($member);
-
-
 
     }
 }
