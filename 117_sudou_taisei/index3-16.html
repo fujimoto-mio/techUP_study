@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Level3-16</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div>
+    <ul class="list-group"><!-- 親要素 -->
+      <li class="list-group-item">100</li><!-- 子要素 -->
+      <li class="list-group-item">110</li>
+      <li class="list-group-item">120</li>
+      <li class="list-group-item">130</li>
+      <li class="list-group-item">140</li>
+    </ul>
+  </div>
+  <!-- onclick属性：クリックされたときに特定の処理（関数）を実行する -->
+  <button type="button" onclick="change()">変更</button>
+  <!-- リセットボタンが押された時にreset()が実行されるように記述してください -->
+  <button type="button" onclick="reset()">リセット</button>
+</body>
+<script>
+
+  // 〇〇の場合に以下の処理をする
+  // 要復習「関数」
+  function change() {
+    // 課題1 変更ボタンが押された時の処理：リストのテキスト部分を10倍する
+    // ul要素を取得する
+    let ul = document.getElementsByClassName('list-group');
+
+    // ul要素からli要素取得する ヒント：js 親要素から子要素を取得
+    let li = ul[0].children;
+
+    // テキスト部分を10倍する -> 繰り返し構文（for文、while文）
+    for (let i = 0; i < 5; i++) {
+      // li要素のテキスト部分を取得する
+      // ヒント：変数liの中身は配列のようなデータ
+      // ヒント：js 配列 for文
+      // テキスト部分にデータを設定する
+      // ヒント：js textcontent データの設定
+      li[i].textContent = li[i].textContent * 10;
+    }
+  }
+
+  function reset() {
+    // 初期値
+    let default_values = [100, 110, 120, 130, 140];
+
+    // ul要素を取得してください
+    let ul = document.getElementsByClassName('list-group');
+
+    // ul要素からli要素を取得してください
+    let li = ul[0].children;
+
+    // テキスト部分に初期値のデータを入れてください
+    // ヒント：for文を使います
+    // ヒント：default_valuesのそれぞれのデータを設定します
+    for (let i = 0; i < 5; i++) {
+      li[i].textContent = default_values[i];
+    }
+
+  }
+</script>
+
+</html>
