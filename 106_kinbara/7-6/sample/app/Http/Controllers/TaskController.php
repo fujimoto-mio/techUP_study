@@ -15,7 +15,7 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index()//一覧を取得（処理終わった後）
     {
         
 
@@ -33,7 +33,7 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create()//作ろうとする（からの箱）
     {
        
         //
@@ -76,7 +76,7 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id)//データベースのIDから拾う→移す
     {
         
         //
@@ -169,3 +169,5 @@ class TaskController extends Controller
     }
 
 }
+
+
