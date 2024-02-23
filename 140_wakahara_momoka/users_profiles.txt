@@ -1,17 +1,36 @@
-MariaDB [test_db]> SELECT * FROM m_users JOIN m_profiles ON m_users.id = m_profiles.id;
-+----+-----------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+----------------+-------+-----+---------------------+---------------------+
-| id | user_name       | mail_address           | password | created             | modified            | id | name            | kana               | age | profile        | place | sex | created             | modified
-|
-+----+-----------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+----------------+-------+-----+---------------------+---------------------+
-|  1 | Yamada Tarou    | Yamada_Tarou@gmail.com | 123123   | 2024-02-16 19:00:06 | 2024-02-16 19:00:06 |  1 | ?R?c?@???Y      | ???}?_?^???E       |  21 | ?v???t?B?[??1  |    20 |   1 | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
-|  2 | Suzuki Hanako   | suzuki@gmail.com       | 123123   | 2024-02-16 19:00:06 | 2024-02-16 19:00:06 |  2 | 鈴木　花子      | スズキハナコ       |  33 | ?v???t?B?[??2  |    30 |   2 | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
-|  3 | Sato Jiro       | sato@gmail.com         | 123123   | 2024-02-16 19:00:06 | 2024-02-16 19:00:06 |  3 | ?????@???Y      | ?T?g?E?W???E       |  23 | ?v???t?B?[??3  |    35 |   1 | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
-|  4 | Ohmori Motoki   | ohmori@gmail.com       | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  4 | ???X?@???M      | ?I?I???????g?L     |  27 | ?v???t?B?[??4  |    13 |   1 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-|  5 | Wakai Hiroto    | wakai@gmail.com        | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  5 | ???c?@???z      | ?E?G?_?^?C???E     |  27 | ?v???t?B?[??5  |    13 |   1 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-|  6 | Fujisawa Ryouka | fujisawa@gmail.com     | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  6 | ?????@???j      | ?A?T?m?q???V       |  27 | ?v???t?B?[??6  |    13 |   1 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-|  7 | Takano Kiyokazu | takano@gmail.com       | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  7 | ???c?@?q?q      | ?^?_?g???R         |  27 | ?v???t?B?[??7  |    13 |   1 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-|  8 | Yamanaka Ayaka  | yamanaka@gmail.com     | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  8 | ?k?@???I        | ?L?^?~?L           |  31 | ?v???t?B?[??8  |    13 |   2 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-|  9 | Wakahara Momoka | wakahara@gmail.com     | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 |  9 | ?c???@????      | ?^?????~?J         |  29 | ?v???t?B?[??9  |    13 |   2 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-| 10 | Kuromiya Rei    | kuromiya@gmail.com     | 123123   | 2024-02-19 20:38:57 | 2024-02-19 20:38:57 | 10 | ?????@?^?I      | ?J???T?L?}?L       |  22 | ?v???t?B?[??10 |    13 |   2 | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
-+----+-----------------+------------------------+----------+---------------------+---------------------+----+-----------------+--------------------+-----+----------------+-------+-----+---------------------+---------------------+
-10 rows in set (0.002 sec)
+MariaDB [test_db]> SELECT m_profiles.id,m_profiles.name,m_profiles.kana,m_users.user_name,m_profiles.age,m_profiles.profile,m_profiles.place,m_profiles.sex,m_users.mail_address,m_users.password,m_profiles.created,m_profiles.modified FROM m_users LEFT OUTER JOIN m_profiles ON m_users.id = m_profiles.id;
++------+-----------------+--------------------+-----------------+------+----------------+-------+------+------------------------+----------+---------------------+---------------------+
+| id   | name            | kana               | user_name       | age  | profile        | place | sex  | mail_address           | password | created
+    | modified            |
++------+-----------------+--------------------+-----------------+------+----------------+-------+------+------------------------+----------+---------------------+---------------------+
+|    1 | ?R?c?@???Y      | ???}?_?^???E       | Yamada Tarou    |   21 | ?v???t?B?[??1  |    20 |    1 | Yamada_Tarou@gmail.com | 123123   | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
+|    2 | 驤ｴ譛ｨ縲闃ｱ蟄・     | 繧ｹ繧ｺ繧ｭ繝上リ繧ｳ       | Suzuki Hanako   |   33 | ?v???t?B?[??2  |    30 |    2 | suzuki@gmail.com       | 123123   | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
+|    3 | ?????@???Y      | ?T?g?E?W???E       | Sato Jiro       |   23 | ?v???t?B?[??3  |    35 |    1 | sato@gmail.com         | 123123   | 2024-02-16 19:14:26 | 2024-02-16 19:14:26 |
+|    4 | ???X?@???M      | ?I?I???????g?L     | Ohmori Motoki   |   27 | ?v???t?B?[??4  |    13 |    1 | ohmori@gmail.com       | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|    5 | ???c?@???z      | ?E?G?_?^?C???E     | Wakai Hiroto    |   27 | ?v???t?B?[??5  |    13 |    1 | wakai@gmail.com        | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|    6 | ?????@???j      | ?A?T?m?q???V       | Fujisawa Ryouka |   27 | ?v???t?B?[??6  |    13 |    1 | fujisawa@gmail.com     | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|    7 | ???c?@?q?q      | ?^?_?g???R         | Takano Kiyokazu |   27 | ?v???t?B?[??7  |    13 |    1 | takano@gmail.com       | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|    8 | ?k?@???I        | ?L?^?~?L           | Yamanaka Ayaka  |   31 | ?v???t?B?[??8  |    13 |    2 | yamanaka@gmail.com     | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|    9 | ?c???@????      | ?^?????~?J         | Wakahara Momoka |   29 | ?v???t?B?[??9  |    13 |    2 | wakahara@gmail.com     | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+|   10 | ?????@?^?I      | ?J???T?L?}?L       | Kuromiya Rei    |   22 | ?v???t?B?[??10 |    13 |    2 | kuromiya@gmail.com     | 123123   | 2024-02-19 21:09:37 | 2024-02-19 21:09:37 |
+| NULL | NULL            | NULL               | Kaneko Rie      | NULL | NULL           |  NULL | NULL | kaneko@gmail.com       | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Komatsu Nana    | NULL | NULL           |  NULL | NULL | komatsu@gmail.com      | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Hirose Suzu     | NULL | NULL           |  NULL | NULL | hirose@gmail.com       | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Imada Mio       | NULL | NULL           |  NULL | NULL | imada@gmail.com        | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Hasimoto Kanna  | NULL | NULL           |  NULL | NULL | hasimoto@gmail.com     | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Yoshioka Riho   | NULL | NULL           |  NULL | NULL | yoshioka@gmail.com     | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Kawaguti Haruna | NULL | NULL           |  NULL | NULL | kawaguti@gmail.com     | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Ayase Haruka    | NULL | NULL           |  NULL | NULL | ayase@gmail.com        | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Kurosima Yuina  | NULL | NULL           |  NULL | NULL | kurosima@gmail.com     | 123123   | NULL
+    | NULL                |
+| NULL | NULL            | NULL               | Aragaki Yui     | NULL | NULL           |  NULL | NULL | aragaki@gmail.com      | 123123   | NULL
+    | NULL                |
++------+-----------------+--------------------+-----------------+------+----------------+-------+------+------------------------+----------+---------------------+---------------------+
