@@ -1,4 +1,3 @@
-
 <?php
 //クラスファイルを読み込む
 require_once 'Coffee.php';
