@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>L3-13</title>
+        <title>L3-14</title>
     </head>
 
     <body>
 
         <script>
-            window.onload = function () {
+
                 function digitalClock() {
                     // 現在の時刻を取得
                     const currentTime = new Date();
@@ -21,13 +21,12 @@
                     // デジタル時計の表示形式に整形
                     const formattedTime = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
                     // コンソールにデジタル時計を表示
-                    console.clear(); // コンソールをクリアして古い時刻を削除
+                    console.clear(formattedTime); // コンソールをクリアして古い時刻を削除
                     console.log(formattedTime); 
                 }
                 
                 // 1ミリ秒ごとにデジタル時計を表示
                 timer = setInterval(digitalClock, 1000);
-            }
             
         </script>
         
