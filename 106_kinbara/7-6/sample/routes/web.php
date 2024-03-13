@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 
+Route::get('/dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
