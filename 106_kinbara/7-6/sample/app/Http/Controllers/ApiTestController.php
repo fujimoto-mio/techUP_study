@@ -5,19 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ApiTestController extends Controller
 {
     //
     public function dataInsert(){
 
-        var_dump(1);
+        
         $user=[
         
         [
         'name'=> '魚太朗',
         'birthday' => '20210203',
-        'mail' => 'xxxxx@gmail.com',
+        'email' => 'xxxx1@gmail.com',
+        'password' => 'testtest1',
         'created_at' => now(),
         'updated_at' => now()
         ],
@@ -25,7 +27,8 @@ class ApiTestController extends Controller
         [
         'name'=> '猫仁田',
         'birthday' => '20200131',
-        'mail' => 'xxxxx@gmail.com',
+        'email' => 'xxxx2@gmail.com',
+        'password' => 'testtest2',
         'created_at' => now(),
         'updated_at' => now()
         ],
@@ -33,21 +36,18 @@ class ApiTestController extends Controller
         [
         'name'=> '枝豆三太朗',
         'birthday' => '20200202',
-        'mail' => 'xxxxx@gmail.com',
+        'email' => 'xxxx3@gmail.com',
+        'password' => 'testtest3',
         'created_at' => now(),
         'updated_at' => now()
         ]
 
-        
-
         ];
 
-        var_dump(2);
 
-        $cli= DB::table('users')
-        ->insert($user);
+        $cli=DB::table('users')->insert($user);
 
-        var_dump($cil);
+        var_dump($cli);
 
     }
     
