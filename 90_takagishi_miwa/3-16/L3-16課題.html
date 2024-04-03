@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <title>L3-16課題</title>
+</head>
+<body>
+    JavaScript
+<ul class="list-group">
+    <li class="list-group-item">100</li>
+    <li class="list-group-item">110</li>
+    <li class="list-group-item">120</li>
+    <li class="list-group-item">130</li>
+    <li class="list-group-item">140</li>
+</ul>
+
+<button type="submit" 
+        id="update" >変更</button>
+        <button type="reset"
+        id="reset">リセット</button>
+    <script>
+        document.getElementById("update").addEventListener("click", function()
+        {
+            var ulElement = document.querySelector('.list-group');
+            var ulChildren = ulElement.children;//il要素を取得
+            var length = ulChildren.length;//要素の長さを取得
+            for(var i = 0; i < length; i++) 
+            {
+                var value = parseInt(ulChildren[i].textContent);//文字列を整数に
+                ulChildren[i].textContent = value * 10;
+            }
+            });
+
+            document.getElementById("reset").addEventListener("click", function()
+            {
+                var ulElement = document.querySelector('.list-group');
+                var ulChildren = ulElement.children;
+                var length = ulChildren.length;
+                for(var i = 0; i < length; i++) {
+                    ulChildren[i].textContent = parseInt(ulChildren[i].textContent) / 10; //元に戻す
+                }
+            });
+        
+    </script>
+</body>
+</html>
