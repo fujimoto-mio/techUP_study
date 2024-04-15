@@ -1,0 +1,854 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  list-style: none;
+}
+
+body {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  line-height: 1.8;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  z-index: 10;
+  min-width: 1040px;
+  position: fixed;
+  top: 0;
+  background-color: #8e1717;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff; /* ホバー時のリンクの色 */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* ハンバーガーアイコンの色 */
+}
+
+header a figure {
+  text-align: center;
+  margin-block: 10px;
+}
+
+.mv_img {
+  margin-top: 55px;
+  background: url(./image/mv_top.jpeg) no-repeat center/cover;
+}
+
+.mv_img figure {
+  text-align: center;
+}
+
+main {
+  margin: 40px auto;
+  width: 1000px;
+  overflow: hidden;
+}
+
+main .intro {
+  text-align: center;
+}
+
+main .intro p {
+  margin: 15px;
+}
+
+main .intro p span {
+  font-size: 20px;
+  color: #be4125;
+}
+
+main .intro .signboard {
+  color: #be4125;
+  font-size: 14px;
+  margin-bottom: 40px;
+  border: solid 1px #be4125;
+  padding: 25px;
+}
+
+main .intro .signboard span {
+  font-size: 20px;
+}
+
+main .intro .signboard p {
+  margin: 15px;
+}
+
+main .intro .signboard .guidance {
+  margin: 15px;
+}
+
+main .intro .signboard .guidance .indent {
+  text-align: left;
+  width: 620px;
+  margin-inline: auto;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+
+main .intro .signboard .guidance .indent p {
+  padding-left: 1em;
+  text-indent: -1em;
+  margin: 0;
+}
+
+.cp_btn {
+  overflow: hidden;
+  background-color: #f4ebdc;
+}
+
+.cp_btn p {
+  margin: 40px auto;
+  width: 1000px;
+  overflow: hidden;
+}
+
+.cp_btn a img:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.kodawari_title {
+  text-align: center;
+  width: 960px;
+  height: 248px;
+  background: url(./image/kodawari_waku.png) no-repeat;
+  background-position: center;
+  margin: 40px auto;
+}
+
+.kodawari_title p {
+  padding-top: 105px;
+}
+
+.kodawari .pic {
+  margin: 50px auto;
+  height: 521px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.kodawari .pic figure {
+  text-align: center;
+}
+
+.kodawari .kodawari_1 {
+  background-image: url(./image/koda01_bg.jpg);
+}
+
+.kodawari .kodawari_2 {
+  background-image: url(./image/koda02_bg.jpg);
+}
+
+.kodawari .kodawari_3 {
+  background-image: url(./image/koda03_bg.jpg);
+}
+
+.kodawari .kodawari_4 {
+  background-image: url(./image/koda04_bg.jpg);
+}
+
+.chaba {
+  background: url(./image/tyaba_bg.jpg) repeat;
+  padding-block: 40px;
+  overflow: hidden;
+}
+
+.chaba .chaba_title {
+  text-align: center;
+  width: 1000px;
+  height: 309px;
+  background: url(./image/tyaba_title.png) no-repeat;
+  background-position: top center;
+  margin: 40px auto;
+}
+
+.chaba .chaba_title p {
+  padding-top: 180px;
+}
+
+.waku {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto 80px;
+}
+
+.waku .img_left {
+  float: left;
+  margin-right: 28px;
+}
+
+.waku .img_right {
+  float: right;
+  margin-left: 28px;
+}
+
+.waku .juku_text {
+  overflow: hidden;
+  width: 607px;
+  margin-top: 40px;
+}
+
+.waku .juku_text p {
+  margin-bottom: 20px;
+}
+
+.waku .juku_text .juku_tokuchou {
+  border: solid 1px #7e3f1d;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.waku .juku_text .juku_tokuchou ul {
+  color: #7e3f1d;
+}
+
+.bg-yellow {
+  background-color: #fff100;
+}
+
+.waku .nama_text {
+  width: 607px;
+  margin-top: 40px;
+}
+
+.waku .nama_text p {
+  margin-bottom: 20px;
+}
+
+.waku .nama_text .nama_tokuchou {
+  border: solid 1px #32793c;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.waku .nama_text .nama_tokuchou ul {
+  color: #32793c;
+}
+
+.waku .rou_text {
+  overflow: hidden;
+  width: 607px;
+}
+
+.waku .rou_text p {
+  margin-bottom: 20px;
+}
+
+.waku .rou_text .rou_tokuchou {
+  border: solid 1px #44301f;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.waku .rou_text .rou_tokuchou ul {
+  color: #44301f;
+}
+
+.biyou {
+  overflow: hidden;
+  width: 1000px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.biyou h3 {
+  margin-bottom: 20px;
+}
+
+.biyou ul li {
+  width: 230px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.bunka_content {
+  padding: 50px 0;
+  background: url(./image/bunka_bg.jpg) no-repeat top/cover fixed;
+}
+
+.bunka_content .bunka_title {
+  text-shadow: 2px 2px 1px #000;
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bunka_content .bunka_title figure {
+  margin-bottom: 20px;
+}
+
+.bunka_content .bunka_title p {
+  color: white;
+}
+
+.bunka_taiken {
+  width: 1000px;
+  margin: 40px auto 0;
+  background: rgba(253, 223, 176, 0.8);
+}
+
+.bunka_taiken .waku01 {
+  overflow: hidden;
+  padding: 30px;
+}
+
+.bunka_taiken .waku01 .text {
+  width: 518px;
+  margin-right: 30px;
+  float: left;
+}
+
+.bunka_taiken .waku01 .text h5 {
+  font-size: 20px;
+  color: #be4125;
+  border-bottom: solid 1px #be4125;
+  margin: 15px 0 10px;
+}
+
+.voice_content {
+  padding: 50px 0;
+  background: url(./image/voice_bg.png) no-repeat fixed;
+  background-position: left bottom;
+}
+
+.voice_content .voice_title {
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.voice_content .voice_title h3 {
+  margin-bottom: 20px;
+}
+
+.voice_content .voice_title p {
+  margin-bottom: 10px;
+}
+
+.voice_content ul {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.voice_content ul li {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.voice_content ul li h6 {
+  border-left: 3px solid #d0735f;
+  font-size: 20px;
+  padding-left: 10px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.voice_content ul li p.namae {
+  position: absolute;
+  bottom: 20px;
+}
+
+
+.voice_content ul li:nth-of-type(1) {
+  background-image: url(./image/voice_bg01.png);
+  width: 320px;
+  height: 295px;
+}
+
+.voice_content ul li:nth-of-type(2) {
+  background-image: url(./image/voice_bg02.png);
+  width: 320px;
+  height: 295px;
+  padding: 20px 16px;
+}
+
+.voice_content ul li:nth-of-type(3) {
+  background-image: url(./image/voice_bg03.png);
+  width: 320px;
+  height: 295px;
+  margin-right: 0;
+}
+
+.voice_content ul li:nth-of-type(4) {
+  background-image: url(./image/voice_bg04.png);
+  width: 320px;
+  height: 315px;
+}
+
+.voice_content ul li:nth-of-type(5) {
+  background-image: url(./image/voice_bg05.png);
+  width: 320px;
+  height: 315px;
+}
+
+.voice_content ul li:nth-of-type(6) {
+  background-image: url(./image/voice_bg06.png);
+  width: 320px;
+  height: 315px;
+  margin-right: 0;
+}
+
+.kentou_content {
+  background: url(./image/kentou_bg.jpg) repeat;
+  overflow: hidden;
+}
+
+.kentou_content .naiyou {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.kentou_content .kentou_pc {
+  float: left;
+  width: 500px;
+}
+
+.kentou_content .kentou_text {
+  float: left;
+  margin-left: 27px;
+  width: 473px;
+  color: white;
+}
+
+.kentou_content .kentou_text h3 {
+  margin: 30px 0 20px 0;
+}
+
+.kentou_content .kentou_text p {
+  margin-bottom: 20px;
+}
+
+.contact_link {
+  background-color: #f4ebdc;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.contact_link .naiyou {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.contact_link p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact_link .tel {
+  float: left;
+}
+
+.contact_link .form a {
+  margin-left: 40px;
+  display: block;
+  float: left;
+  border-radius: 10px;
+  background-color: #43362a;
+  padding: 44px;
+}
+
+.present_label {
+  position: relative;
+  background-color: #810a0a;
+}
+
+.present_label::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #810a0a;
+}
+
+.present_label p {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 1000px;
+  text-align: center
+}
+
+.present_content {
+  position: relative;
+}
+
+.present_content .left_moyou {
+  position: absolute;
+  z-index: -1;
+  top: 600px;
+  left: 0;
+}
+
+.present_content .left_moyou2 {
+  position: absolute;
+  z-index: -1;
+  top: 1700px;
+  left: 0;
+}
+
+.present_content .right_moyou {
+  position: absolute;
+  z-index: -1;
+  top: 30px;
+  right: 0;
+}
+
+.present_content .right_moyou2 {
+  position: absolute;
+  z-index: -1;
+  top: 1000px;
+  right: 0;
+}
+
+.present_content .naiyou {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.present_content .present_area {
+  margin: 80px 0 0 ;
+}
+
+.present_content .present_area p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.present_content .flow_area {
+  margin: 80px 0 0 ;
+}
+
+.present_content .flow_area p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.present_content .flow_area ul {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.present_content .flow_area ul li {
+  width: 25%;
+  border: solid 1px #c9c9c9;
+  padding: 20px 10px;
+}
+
+.present_content .flow_area ul li p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.present_content .flow_area ul p img {
+  width: 100%;
+}
+
+.present_content .flow_area ul li p span {
+  color: #810a0a;
+}
+
+.present_content .flow_area ul p.yaji {
+  float: left;
+  margin: 170px 5px 0;
+}
+
+.content {
+  padding: 50px;
+  border-left: solid 4px #c2af7c;
+  border-right: solid 4px #c2af7c;
+  width: 1000px;
+  margin: 0 auto;
+  background: url(./image/an_top_bg.jpg) center top no-repeat , url(./image/an_bottom_bg.jpg) center bottom no-repeat;
+  overflow: hidden;
+}
+
+.content form {
+  padding: 10px 0;
+}
+
+.content form h3 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content form h3 span {
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+}
+
+.content form .inner {
+  padding-bottom: 60px;
+}
+
+.content form .inner dt {
+  display: table-cell;
+  width: 430px;
+  vertical-align: middle;
+  float: left;
+  clear: both;
+  border-top: none;
+}
+
+.content form .inner dt span {
+  color: #be4125;
+  border: solid 1px #be4125;
+  padding: 2px 5px;
+  margin-left: 10px;
+}
+
+.content form .inner dl {
+  padding: 25px 0;
+  overflow: hidden;
+  border-bottom: solid 1px #bfbfbf;
+}
+
+.content form .inner dl dt p {
+  font-size: 12px;
+}
+
+.content form .inner dl dt div {
+  color: #810a0a;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.content form .inner dl dd {
+  display: table-cell;
+  width: 700px;
+  border-top: none;
+  text-align: left;
+}
+
+.content form .inner dl dd span {
+  color: #810a0a;
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: block;
+} 
+
+.content form .inner dl dd textarea {
+  line-height: 1.8;
+  height: 150px !important;
+  width: 100% !important;
+  padding: 10px !important;
+  border: solid 1px #bfbfbf;
+} 
+
+.content form .inner dl dd .age {
+  color: #810a0a;
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: block;
+}
+
+.content form .inner dl dd input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #bfbfbf;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #bfbfbf;
+}
+
+.content form .inner dl dd select {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #bfbfbf;
+}
+
+.content form .inner dl dd .area {
+  color: #810a0a;
+  font-size: 0.8em;
+  margin-top: 10px;
+  display: block;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0 2px;
+  display: none;
+}
+
+.content form .inner dl dd label {
+  position: relative;
+  padding: 0 0 0 37px !important;
+  margin: 3px;
+  display: inline-block;
+}
+
+.content form .inner dl dd label::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 18px;
+  margin-top: -7px;
+  width: 10px;
+  height: 10px;
+  background: #8e1717;
+  border-radius: 50%;
+}
+
+.content form .inner dl dd label::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 15px;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.content form .inner dl dd label:hover::after {
+  border: 2px solid #8e1717;
+}
+
+.footer_link {
+  text-align: center;
+  font-size: 12px;
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,Arial,"メイリオ",Meiryo,sans-serif;
+  font-weight: 400;
+  margin-top: 80px;
+}
+
+.footer_link a {
+  text-decoration: underline;
+  color: #2196F3;
+}
+
+.footer_link .link_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_link .link_list .link_item {
+  padding: 8px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin: 50px 0 20px;
+}
+
+.kiyaku_title {
+  position: relative;
+  background: #c2af7c;
+  text-align: center;
+  color: #fff;
+  padding-block: 10px;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.doui {
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+
+.doui label input {
+  vertical-align: middle;
+  margin: 0 2px;
+  display: none;
+}
+
+.content form .inner .doui label::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 22px;
+  margin-top: -7px;
+  width: 7px;
+  height: 12px;
+  border-right: 3px solid #810a0a;
+  border-bottom: 3px solid #810a0a;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+
+.content form .inner .doui label::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 15px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bfbfbf;
+}
+
+.content form .inner .doui label {
+  position: relative;
+  padding: 0 0 0 42px !important;
+  margin: 3px;
+  display: inline-block;
+}
+
+.inner button {
+  display: block;
+  position: relative;
+  margin: 40px auto 0;
+  background: none;
+  border: 0;
+  background: #810a0a;
+  color: #fff;
+  text-align: center;
+  width: 500px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  border-radius: 10px;
+}
