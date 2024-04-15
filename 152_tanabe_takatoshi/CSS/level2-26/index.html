@@ -15,7 +15,8 @@
   <title>プーアル古樹茶 専門ブランド | 株式会社木の舟</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./image/faviconV2.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
   <header id="header" class="header">
@@ -23,8 +24,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent"> <!-- justify-content-centerを追加 -->
-          <ul class="navbar-nav">
+        <!-- ハンバーガーボタン -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- ナビゲーションリンク -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home</a>
             </li>
@@ -44,7 +51,7 @@
   </header>
 
   <div class="mv_img">
-    <figure><img src="/image/mv_top_sub.jpeg"></figure>
+    <figure><img src="./image/mv_top_sub.jpeg"></figure>
   </div>
 
   <main>
@@ -631,5 +638,7 @@
     Copyright © 株式会社木の舟 all rights reserved.<br>
     〒650-0046 神戸市中央区港島中町6-3-6
   </footer>
-</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
