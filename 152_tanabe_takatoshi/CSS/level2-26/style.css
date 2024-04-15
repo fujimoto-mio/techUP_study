@@ -38,12 +38,17 @@ nav {
   margin-right: 10px;
 }
 
+.navbar-toggler-icon {
+  width: 1em; /* 任意の幅を指定 */
+  height: 1em; /* 任意の高さを指定 */
+}
+
 .navbar-nav .nav-link:hover {
   color: #fff; /* ホバー時のリンクの色 */
 }
 
 .navbar-toggler-icon {
-  background-color: #fff; /* ハンバーガーアイコンの色 */
+  color: #000; /* ハンバーガーアイコンの色 */
 }
 
 header a figure {
