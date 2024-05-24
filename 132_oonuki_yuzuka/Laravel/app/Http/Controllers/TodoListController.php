@@ -28,4 +28,4 @@ class TodoListController extends Controller
         return view('todo_list.index', ['todo_lists'=> $todo_lists]);
     
     }
-}
+};
