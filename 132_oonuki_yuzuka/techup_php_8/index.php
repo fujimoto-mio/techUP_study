@@ -3,16 +3,17 @@
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
-require_once 'Matcha.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="utf-8">
+
 <head>
-    <title>喫茶マシーン</title>
+  <title>喫茶マシーン</title>
 </head>
-    <body>
-<?php
+
+<body>
+  <?php
     //ドリッパーオブジェクトを生成する
     $dripper = new Dripper();
 
@@ -20,11 +21,7 @@ require_once 'Matcha.php';
     $coffee = new Coffee();
 
     //紅茶オブジェクトを生成する
-    $tea = new tea();
-    
-    //抹茶オブジェクトを生成する
-    $matcha = new Matcha();
-
+    $tea = new Tea(); // Teaクラスのインスタンス化で小文字のteaが使われていることに注意
 
     //ドリッパーにミルクを注ぐようにセットする
     print('ミルクを注ぐ機能:ON');
@@ -40,13 +37,6 @@ require_once 'Matcha.php';
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
 
-    //抹茶を注いでみる
-    print('抹茶をセットして注ぎます。<br>');
-    print($dripper->dripDrink($matcha) .'<br>');
-    print('<br>');
-
-
-
     //ドリッパーにミルクを注がないようにセットする
     print('ミルクを注ぐ機能:OFF');
     $dripper->setMilkStatus(false);
@@ -60,11 +50,8 @@ require_once 'Matcha.php';
     print('紅茶をセットして注ぎます。<br>');
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
-    //抹茶を注いでみる
-    print('抹茶をセットして注ぎます。<br>');
-    print($dripper->dripDrink($matcha) .'<br>');
-    print('<br>');
 
 ?>
-    </body>
+</body>
+
 </html>
