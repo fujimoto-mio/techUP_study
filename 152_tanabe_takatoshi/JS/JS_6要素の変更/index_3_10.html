@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>要素の変更</title>
+</head>
+<body>
+  <script>
+    let names = ["山田さん", "佐藤さん", "内田さん"];
+    console.log("最初に配列の値を表示します。");
+    for (let i = 0; i < names.length; i++) {
+      console.log(names[i]);
+    }
+    while (names.length > 0) {
+      console.log("配列の値を１つ消します。");
+      console.log(names[0] + "を消しました。");
+      names.shift();
+      console.log("残りを表示します。");
+      for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+      }
+    }
+    console.log("データがなくなりました。");
+  </script>
+</body>
+</html>
