@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>いろんなメソッド</title>
+</head>
+<body>
+  <script>
+    setInterval(function() {
+    // 現在の時刻を取得
+    let  currentTime = new Date();
+
+    // 時刻をフォーマットして表示
+    let  hours = currentTime.getHours();
+    let  minutes = currentTime.getMinutes();
+    let  seconds = currentTime.getSeconds();
+
+    // ゼロ埋めして二桁表示にする
+    hours = (hours < 10 ? "0" : "") + hours;
+    minutes = (minutes < 10 ? "0" : "") + minutes;
+    seconds = (seconds < 10 ? "0" : "") + seconds;
+
+    // コンソールに時刻を表示
+    console.log(hours + ":" + minutes + ":" + seconds);
+    }, 1000);
+  </script>
+</body>
+</html>
