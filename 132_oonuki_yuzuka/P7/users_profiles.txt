@@ -1,0 +1,56 @@
+mysql> SELECT m_users.id,m_users.user_name,m_users.mail_address,m_users.password,m_users.created,m_users.modified,m_profiles.id,m_profiles.name,m_profiles.kana,m_profiles.age,m_profiles.profile,m_profiles.place,m_profiles.sex,m_profiles.created,m_profiles.modified
+    -> FROM
+    -> m_users LEFT OUTER JOIN m_profiles ON m_users.id=m_profiles.id;
++----+-------------------+------------------------+----------+---------------------+---------------------+------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+| id | user_name         | mail_address           | password | created             | modified            | id   | name       | kana           | age  | profile        | place | sex  | created             | modified            |
++----+-------------------+------------------------+----------+---------------------+---------------------+------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+|  1 | Yamada Tarou      | Yamada_Tarou@gmail.com | 123123   | 2024-03-05 11:34:06 | 2024-03-05 11:34:06 |    1 | 山田　太郎 | ヤマダタロウ   |   21 | プロフィール１ |    20 |    1 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+|  2 | Suzuki Hanako     | yamda@gmail.com        | 123123   | 2024-03-05 11:37:55 | 2024-03-05 11:37:55 |    2 | 鈴木　花子 | スズキハナコ   |   33 | プロフィール２ |    30 |    2 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+|  3 | Suzuki Ichiro     | suzuki@gmail.com       | 123123   | 2024-03-05 11:37:55 | 2024-03-05 11:37:55 |    3 | 佐藤　治郎 | サトウジロウ   |   23 | プロフィール３ |    35 |    1 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+|  4 | Sato   Jiro       | sato@gmail.com         | 123123   | 2024-03-05 11:37:55 | 2024-03-05 11:37:55 |    4 | 虎杖悠仁   | イタドリユウジ |   15 | プロフィール4  |     4 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+|  5 | Itadori Yuji      | itadori@gmail.com      | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |    5 | 伏黒恵     | フシグロメグミ |   15 | プロフィール5  |    11 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+|  6 | Fushiguro megumi  | Fushiguro@gmail.com    | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |    6 | 釘崎野薔薇 | クギサキノバラ |   16 | プロフィール6  |     3 |    2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+|  7 | Kugisaki Nobara   | Kugisaki@gmail.com     | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |    7 | 禪院真希   | ゼンインマキ   |   16 | プロフィール7  |    26 |    2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+|  8 | Zen'in Maki       | Zen'in@gmail.com       | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |    8 | 狗巻棘     | イヌマキトゲ   |   17 | プロフィール8  |     0 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+|  9 | Inumaki Toge      | Inumaki@gmail.com      | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |    9 | ぱんだ     | パンダ         |    0 | プロフィール9  |     0 |    0 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| 10 | PANDA             | PANDA@gmail.com        | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |   10 | 乙骨憂太   | オッコツユウタ |   17 | プロフィール10 |     4 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| 11 | Okkotsu Yuta      | Okkotsu@gmail.com      | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |   11 | 東堂葵     | トウドウアオイ |   18 | プロフィール11 |    26 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| 12 | Todo Aoi          | Todo@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |   12 | 加茂憲紀   | カモノリトシ   |   18 | プロフィール12 |    26 |    1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| 13 | Kamo Noritoshi    | Kamo@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 |   13 | 西宮桃     | ニシミヤモモ   |   18 | プロフィール13 |     0 |    2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| 14 | Nishimiya Momo    | Nishimiya@gmail.com    | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 15 | Zen'in Mai        | Zen'in@gmail.com       | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 16 | Miwa Kasumi       | Miwa@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 17 | Muta kokichi      | Muta@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 18 | Gojo Satoru       | Gojo@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 19 | Ieiri Shoko       | Ieiri@gmail.com        | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 20 | Geto Suguru       | Geto@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 21 | Iori Utahime      | Iori@gmail.com         | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 22 | Nitta Arata       | Nitta@gmail.com        | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 23 | Nitta Akari       | Nitta@gmail.com        | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
+| 24 | Fushiguto Toji    | Fushiguro@gmail.com    | 123123   | 2024-03-06 23:35:15 | 2024-03-06 23:35:15 | NULL | NULL       | NULL           | NULL | NULL           |  NULL | NULL | NULL                | NULL                |
++----+-------------------+------------------------+----------+---------------------+---------------------+------+------------+----------------+------+----------------+-------+------+---------------------+---------------------+
+24 rows in set (0.00 sec)
+
+mysql> SELECT m_users.id,m_users.user_name,m_users.mail_address,m_users.password,m_users.created,m_users.modified,m_profiles.id,m_profiles.name,m_profiles.kana,m_profiles.age,m_profiles.profile,m_profiles.place,m_profiles.sex,m_profiles.created,m_profiles.modified
+    -> FROM
+    -> m_users RIGHT OUTER JOIN m_profiles ON m_users.id=m_profiles.name;
++------+-----------+--------------+----------+---------+----------+----+------------+----------------+-----+----------------+-------+-----+---------------------+---------------------+
+| id   | user_name | mail_address | password | created | modified | id | name       | kana           | age | profile        | place | sex | created             | modified            |
++------+-----------+--------------+----------+---------+----------+----+------------+----------------+-----+----------------+-------+-----+---------------------+---------------------+
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  1 | 山田　太郎 | ヤマダタロウ   |  21 | プロフィール１ |    20 |   1 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  2 | 鈴木　花子 | スズキハナコ   |  33 | プロフィール２ |    30 |   2 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  3 | 佐藤　治郎 | サトウジロウ   |  23 | プロフィール３ |    35 |   1 | 2024-03-05 12:36:36 | 2024-03-05 12:36:36 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  4 | 虎杖悠仁   | イタドリユウジ |  15 | プロフィール4  |     4 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  5 | 伏黒恵     | フシグロメグミ |  15 | プロフィール5  |    11 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  6 | 釘崎野薔薇 | クギサキノバラ |  16 | プロフィール6  |     3 |   2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  7 | 禪院真希   | ゼンインマキ   |  16 | プロフィール7  |    26 |   2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  8 | 狗巻棘     | イヌマキトゲ   |  17 | プロフィール8  |     0 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     |  9 | ぱんだ     | パンダ         |   0 | プロフィール9  |     0 |   0 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     | 10 | 乙骨憂太   | オッコツユウタ |  17 | プロフィール10 |     4 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     | 11 | 東堂葵     | トウドウアオイ |  18 | プロフィール11 |    26 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     | 12 | 加茂憲紀   | カモノリトシ   |  18 | プロフィール12 |    26 |   1 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
+| NULL | NULL      | NULL         | NULL     | NULL    | NULL     | 13 | 西宮桃     | ニシミヤモモ   |  18 | プロフィール13 |     0 |   2 | 2024-03-07 03:26:29 | 2024-03-07 03:26:29 |
++------+-----------+--------------+----------+---------+----------+----+------------+----------------+-----+----------------+-------+-----+---------------------+---------------------+
+13 rows in set (0.00 sec)
+
+mysql> 
