@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  animation: changeColor 3s infinite alternate; /* 5秒かけて色を変化させ、無限に繰り返す */
+}
+
+.timer {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  animation: changeColor 3s infinite alternate;
+
+}
+
+@keyframes changeColor {
+  0% { color: #ff1493; } /* ディープピンク */
+  25% { color: #00ff00; } /* ライムグリーン */
+  50% { color: #00ffff; } /* シアン */
+  75% { color: #ff00ff; } /* マゼンタ */
+  100% { color: #ff1493; } /* ディープピンク */
+} 
