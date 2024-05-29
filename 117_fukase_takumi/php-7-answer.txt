@@ -1,0 +1,22 @@
+ソースの流れ
+・Person.phpで性別、名前、年齢の関数を作る
+・Patient.phpで平均体重、身長、体重の関数を作る
+・index.phpで性別、名前、年齢、平均体重、身長、体重を宣言し呼び出す
+
+Person.php
+・name→宣言された名前
+・public function selfIntroduction(){→ｍかｆで宣言される性別
+・public function addAge(){→宣言された年齢＋0
+
+Patient.php
+・public function calculateStandardWeight(){→宣言された年齢の平均体重
+・public function getHeight(){→宣言された身長
+・public function getWeight(){→宣言された体重
+index.php
+
+・$patient = new Patient('tech太郎', 27, 'm', 1.6, 59.32);
+→名前、年齢、性別、身長、体重の宣言
+・print($patient -> selfIntroduction());
+→わたしはtech太郎、27才、男性です。の呼び出し
+・print('<br>身長：' . $patient -> getHeight() . 'm');
+→宣言された身長の呼び出し
