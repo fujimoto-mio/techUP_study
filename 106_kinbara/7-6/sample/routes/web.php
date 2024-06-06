@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\ApiTestController;
 
 Route::get('/dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
+Route::post('/dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
+Route::post('sample', 'ApiTestController@postValidates');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
