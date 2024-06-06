@@ -2,6 +2,7 @@
 //クラスファイルを読み込む
 require_once 'Coffee.php';
 require_once 'Tea.php';
+require_once 'Matcha.php';
 require_once 'Dripper.php';
 ?>
 <!DOCTYPE html>
@@ -22,6 +23,8 @@ require_once 'Dripper.php';
     //※追加
     $tea = new Tea();
 
+    $matcha = new Matcha();
+
     //ドリッパーにミルクを注ぐようにセットする
     print('ミルクを注ぐ機能:ON');
     $dripper->setMilkStatus(true);
@@ -39,6 +42,14 @@ require_once 'Dripper.php';
     print('紅茶をセットして注ぎます。<br>');
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
+
+    print('ミルクを注ぐ機能:ON');
+    $dripper->setMilkStatus(true);
+
+    print('抹茶をセットして注ぎます。<br>');
+    print($dripper->dripDrink($matcha) . '<br>');
+    print('<br>');
+
 
     //ドリッパーにミルクを注がないようにセットする
     print('ミルクを注ぐ機能:OFF');
@@ -62,6 +73,14 @@ require_once 'Dripper.php';
     print($dripper->dripDrink($tea) . '<br>');
     print('<br>');
 
+    print('ミルクを注ぐ機能:OFF');
+    //※追加
+    $dripper->setMilkStatus(false);
+
+    print('抹茶をセットして注ぎます。<br>');
+    //※追加
+    print($dripper->dripDrink($matcha) . '<br>');
+    print('<br>');
 ?>
     </body>
 </html>
