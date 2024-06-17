@@ -1,5 +1,5 @@
 <?php
-//TODO1 変数widthに15を代入してください
+//TODO1 変数widthに15を代入してください。
  $width = 15;
  
 // TODO2 変数heightに10を代入してください
