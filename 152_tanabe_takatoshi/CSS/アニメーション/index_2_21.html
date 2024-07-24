@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アニメーション</title>
+  <style>
+    input[type="radio"] {
+      display: none;
+    }
+
+    #tab1:checked ~ .tab_area .tab1_table,
+    #tab2:checked ~ .tab_area .tab2_table,
+    #tab3:checked ~ .tab_area .tab3_table{
+      background: #fff;
+      color: #000;
+    }
+
+    .tab_area label {
+      width: 150px;
+      margin: 0 5px;
+      display: inline-block;
+      padding: 12px 0;
+      color: #999;
+      background: #ddd;
+      text-align: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition:ease 0.2s opacity;
+    }
+
+    .tab_text {
+      display: none;
+    }
+
+    #tab1:checked ~ .text_area #text1,
+    #tab2:checked ~ .text_area #text2,
+    #tab3:checked ~ .text_area #text3 {
+      display: block;
+    }
+
+    .tab_text p {
+      margin-block: 1em;
+      margin-inline: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab_check">
+    <input id="tab1" type="radio" name="tab_btn" checked>
+    <input id="tab2" type="radio" name="tab_btn">
+    <input id="tab3" type="radio" name="tab_btn">
+
+    <div class="tab_area">
+      <label class="tab1_table" for="tab1">タブ1</label>
+      <label class="tab2_table" for="tab2">タブ2</label>
+      <label class="tab3_table" for="tab3">タブ3</label>
+    </div>
+    
+    <div class="text_area">
+      <div class="tab_text" id="text1">
+        <p>ダブルパネル-1</p>
+      </div>
+      <div class="tab_text" id="text2">
+        <p>ダブルパネル-2</p>
+      </div>
+      <div class="tab_text" id="text3">
+        <p>ダブルパネル-3</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

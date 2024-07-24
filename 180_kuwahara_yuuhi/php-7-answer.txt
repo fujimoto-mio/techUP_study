@@ -1,0 +1,31 @@
+index.php・・・実行クラス
+  -Patientクラスのインスタンスを生成し、引数にそれぞれの値をセット($name, $age, $gender, $height, $weight)
+  -PersonクラスからselfIntroduction()メソッドを呼びだして出力
+  -Patientクラスから身長、体重のゲッターを呼び出して出力
+  -PatientクラスからcalculateStandardWeight()メソッドを呼び出して出力
+
+Patient.php・・・Personクラスを継承するサブクラス(Personクラスの機能を引き継ぐことができ、Personクラスのメソッドをオーバーライドできる)
+  -2つのメンバ変数(private)を定義
+  -コンストラクタを定義し、仮引数($name, $age, $gender, $height, $weight)をセット
+  -Personクラスからコンストラクタを呼び出し、サブクラスで新たに追加した2つのメンバ変数を初期化
+  -calculateStandardWeight()メソッドで標準体重を計算しreturnで返す
+  -身長、体重のゲッターを定義し、returnで返す
+
+
+Person.php・・・スーパークラス(名前、年齢、性別と言った人間に関する情報がまとめられたクラス)
+  -3つのメンバ変数(private)を定義
+  -コンストラクタを定義し、各メンバ変数を初期化
+  -selfIntroduction()メソッドで条件分岐で得た結果を、returnで返す
+  -addAge()メソッドが呼び出されると、年齢(age)を１歳分インクリメントする
+
+
+〜実行の流れ〜
+  ・Person.phpで3つのメンバ変数を仮引数にセットしたコンストラクタを定義し初期化
+  ・Person.phpで'm'であれば男性、'f'であれば女性、それ以外であれば'[性別は不明]'の条件分岐メソッドを定義し、結果をreturnで返す
+  ・Person.phpを継承したPatient.phpで5つのメンバ変数を仮引数にセットしたコンストラクタを定義し、初期化
+  ・calculateStandardWeight()メソッドで標準体重を計算した結果をreturnで返す
+  ・private変数である$height,$weightをそれぞれゲッターを用いて定義し、それぞれの値をreturnで返す
+  ・index.phpで5つの実引数を持つPatientクラスのインスタンスを生成
+  ・Person.phpからselfIntroduction()メソッドを呼び出して出力
+  ・Patient.phpから2つのゲッターを呼び出して身長と体重を出力
+  ・Patient.phpからcalculateStandardWeight() メソッドを呼び出して出力
