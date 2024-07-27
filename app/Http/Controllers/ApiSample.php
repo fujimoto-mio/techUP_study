@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
-
+use GuzzleHttp\Promise\TaskQueue;
 
 class ApiSample extends Controller
 {
@@ -34,7 +34,7 @@ class ApiSample extends Controller
        // tasksテーブルに保存する方法は前回やっています。
        //※ $memberに　保存するカラム　name とstatusを設定してください。
        $name = $request->input('name');
-       
+
        $task = new Task;
        $task->name = $name;
        $task->status = 1;
