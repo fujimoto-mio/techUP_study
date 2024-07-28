@@ -1,0 +1,16 @@
+mysql> SELECT User, Host, authentication_string FROM mysql.user;
++---------------+-----------+-------------------------------------------+
+| User          | Host      | authentication_string                     |
++---------------+-----------+-------------------------------------------+
+| root          | localhost | *1BF3116A5372A85B80F3769F62A5162B482C00EE |
+| mysql.session | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mysql.sys     | localhost | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mamp          | localhost | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| root          | 127.0.0.1 | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| root          | ::1       | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| diarydbuser   | localhost | *9AA6032E6A53EC6F7A81E0F102367A4FC93FEABD |
+| myappdbuser   | localhost | *F1C39FD829C1D2AEB16675CCB10073E07F432982 |
+| newuser01     | %         | *4EE5C82C88D38D932C15ECA2042F16E56B90CC3C |
+| testuser      | localhost | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
++---------------+-----------+-------------------------------------------+
+10 rows in set (0.00 sec)
