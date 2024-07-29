@@ -1,16 +1,17 @@
 <?php
- feature/fukahori_P4_2
+require_once 'Coffee.php';
+require_once 'Tea.php';
+require_once 'Dripper.php';
+require_once 'Matcha.php'
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
 
 require_once 'Patient.php';
- master
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
- feature/fukahori_P4_2
    <meta charset="utf-8">
    <head>
       <title>喫茶マシーン</title>
@@ -19,6 +20,8 @@ require_once 'Patient.php';
       <?php
       $dripper = new Dripper();
       $coffee = new Coffee();
+      $tea = new tea();
+      $matcha = new matcha();
       //※追加
       $tea = new tea();
       print('ミルクを注ぐ機能:ON');
@@ -29,6 +32,23 @@ require_once 'Patient.php';
       print('紅茶をセットして注ぎます。<br>');
       print($dripper->dripDrink($tea) . '<br>');
       print('<br>');
+      print('抹茶をセットして注ぎます。<br>');
+      print($dripper->dripDrink($matcha) . '<br>');
+      print('<br>');
+      print('ミルクを注ぐ機能:OFF');
+      $dripper->setMilkStatus(false);
+      print('コーヒーをセットして注ぎます。<br>');
+      print($dripper->dripDrink($coffee) . '<br>');
+      print('<br>');
+      print('紅茶をセットして注ぎます。<br>');
+      print($dripper->dripDrink($tea) . '<br>');
+      print('<br>');
+      print('抹茶をセットして注ぎます。<br>');
+      print($dripper->dripDrink($matcha) . '<br>');
+      print('<br>');
+      ?>
+      </body>
+      </html>
       print('ミルクを注ぐ機能:OFF');
       //※追加
       $dripper->setMilkStatus(false);
@@ -61,4 +81,3 @@ print('標準体重は' . $patient -> calculateStandardWeight() . 'kgです。')
 ?>
  </body>
 </html>
- master
