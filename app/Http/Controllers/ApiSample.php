@@ -4,24 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use GuzzleHttp\Promise\TaskQueue;
 
 class ApiSample extends Controller
 {
+    //APIが実行される関数　　
     public function apiHello()
     {
         return response()->json(
             [
                 'name' => '田中',
                 'nick_name' => 'tanaka',
-                'age' => 26,
-                'profile' => [
-                    'sport' => 'basebool',
-                    'like' => 'move'
-                ]
+                "age" => 26,
+                "profile" => ["sport" => 'basebool', "like" => "move"]
             ]
         );
-        //return 'Hello API!!'; // コメントアウトされた行
+        //return 'Hello API!!';
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -30,23 +30,22 @@ class ApiSample extends Controller
      */
     public function nameSet(Request $request)
     {
+       //※ここに、データベースtest_dbのtasksテーブルに保存するプログラミングを記述してください。
+       // tasksテーブルに保存する方法は前回やっています。
+       //※ $memberに　保存するカラム　name とstatusを設定してください。
+       $name = $request->input('name');
 
-        
-        // 新しいタスクを作成
-        $task = new Task();
-        // タスクのプロパティに値を設定
-        $task->name = $request->input('name');
-        $task->status = 1; // 固定のステータス値
-
-        // データベースに保存
-        $task->save();
-        // 保存したタスクを配列に変換
-        $member = [
-            'name' => $task->name,
+       $task = new Task;
+       $task->name = $name;
+       $task->status = 1;
+       $task->save();
+       $member = [
+        'name' => $task->name,
             'status' => $task->status,
-        ];
+      ];
+ 
        /* JSONに変換してレポンスを返している */
         return response()->json($member);
     }
-}
 
+}
