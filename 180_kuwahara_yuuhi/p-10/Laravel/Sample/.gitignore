@@ -1,4 +1,7 @@
+<<<<<<< HEAD:.gitignore
+=======
 /.phpunit.cache
+>>>>>>> b05226e5d6e5a20eaf67ab862a82c971e90c9ef7:180_kuwahara_yuuhi/p-10/Laravel/Sample/.gitignore
 /node_modules
 /public/build
 /public/hot
@@ -18,3 +21,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD:.gitignore
+
+=======
+>>>>>>> b05226e5d6e5a20eaf67ab862a82c971e90c9ef7:180_kuwahara_yuuhi/p-10/Laravel/Sample/.gitignore
