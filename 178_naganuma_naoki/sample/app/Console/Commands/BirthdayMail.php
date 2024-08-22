@@ -49,28 +49,35 @@ class BirthdayMail extends Command
      */
     public function handle()
     {
+        Log::info('BirthdayMail command started');
         // タスク実行の日付が誕生日のユーザーを取得
-        $users = User::where('birthday', '>=', 20200201)->get();
+        //$users = User::where('birthday', '>=', 20200201)->get();
+        $today = today()->format('Y-m-d');
+        $users = User::where('birthday',  $today)->get();
         //var_dump($users);
         // 誕生日ユーザーがいなければ終了
-        if (empty($users)) {
+        //if (empty($users)) {
+        if ($users->isEmpty()) {
+           // Log::info('No users found for today\'s birthday');
             Log::debug("誕生日ユーザーがいなければ終了");
             echo "誕生日ユーザーがいなければ終了";
             return 0;
         }
         //配列でなく、オブジェクト型で表示を確認します
-        foreach ($users as $value) {
+        //foreach ($users as $value) {
+            foreach ($users as $user) {
             //var_dump($value->name);
+            SendMail::dispatch($user);
+        }
 
             // 取得したユーザーに対してメール送信（非同期で実行）
             $users->map(fn(User $user) => SendMail::dispatch($user));
 
             //  storage/logs/laravel.log にログが記載されます
-            Log::debug("プレゼント付与する処理がここで行われます。");
-            var_dump("プレゼント付与する処理がここで行われます。");
+         //   Log::debug("プレゼント付与する処理がここで行われます。");
+          // var_dump("プレゼント付与する処理がここで行われます。");
             /**  プレゼント付与する処理をいれる  **/
-
+            Log::info('BirthdayMail command finished');
             return Command::SUCCESS;
         }
     }
-}
