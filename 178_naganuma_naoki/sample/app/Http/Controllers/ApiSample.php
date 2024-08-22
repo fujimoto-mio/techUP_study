@@ -49,3 +49,4 @@ class ApiSample extends Controller
         return response()->json($member);
     }
 }
+

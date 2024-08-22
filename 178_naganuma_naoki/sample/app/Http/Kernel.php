@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Console\Commands\BirthdayMail;
 use Illuminate\Console\Scheduling\Schedule;
 
+
 class Kernel extends HttpKernel
 {
     /**
@@ -89,4 +90,5 @@ class Kernel extends HttpKernel
         $schedule->command('send:birthday-mail')->cron('* * * * *');
     }
     
+
 }
