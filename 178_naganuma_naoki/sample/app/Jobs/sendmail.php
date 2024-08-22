@@ -35,8 +35,8 @@ class sendMail implements ShouldQueue
     public function handle()
     {
         // ユーザーに対してメール送信する処理
-        //ここで本来mメールが送信されますが、メール送信機能の設定がされていないのでここでは省きます。
-        /* Mail::to($this->user->email)->send(new SampleMail());*/
+        //ここで本来mメールが送信されますが、メール送信機能の設定がされていないのでここでは省きます。 
+       // Mail::to($this->user->email)->send(new SampleMail());
         var_dump("メールが送信されます。！！");
     }
 }
