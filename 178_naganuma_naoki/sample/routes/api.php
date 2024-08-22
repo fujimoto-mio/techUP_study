@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 8323524ceb540dffb3fd992915be03ad3a851fad
 <?php
 
 use Illuminate\Http\Request;
