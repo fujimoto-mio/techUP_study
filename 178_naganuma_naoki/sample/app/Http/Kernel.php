@@ -3,9 +3,6 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use App\Console\Commands\BirthdayMail;
-use Illuminate\Console\Scheduling\Schedule;
-
 
 class Kernel extends HttpKernel
 {
@@ -67,28 +64,4 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
-
-        /**
-     * アプリケーションで提供するArtisanコマンド
-     *
-     * @var array
-     */
-    protected $commands = [
-        BirthdayMail::class
-    ];
- 
-    /**
-     * Define the application's command schedule.
-     *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-     * @return void
-     */
-    protected function schedule(Schedule $schedule)
-    {
-        // $schedule->command('inspire')->hourly();
-        // テストように毎分に実行します
-        $schedule->command('send:birthday-mail')->cron('* * * * *');
-    }
-    
-
 }
