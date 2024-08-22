@@ -1,4 +1,3 @@
-
 <?php
 
 use Illuminate\Http\Request;
@@ -17,14 +16,7 @@ Route::post('/nameset', [ApiSample::class, 'nameSet']);
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-
-Route::get('/apisample', [ApiSample::class, 'apiHello']);
-Route::post('/nameset', [ApiSample::class, 'nameSet']);
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
