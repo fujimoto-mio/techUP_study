@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApiTestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +20,3 @@ Route::post('/edit', [TaskController::class, 'edit']);  //タスク更新用
 Route::post('/delete', [TaskController::class, 'delete']);  //タスク削除用
 
 Route::resource('tasks', TaskController::class);
-Route::get('dataInsert', [ApiTestController::class, 'dataInsert']);
-
-
