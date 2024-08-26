@@ -1,0 +1,245 @@
+./mysql  Ver 14.14 Distrib 5.7.39, for osx10.12 (x86_64) using  EditLine wrapper
+yanagiseinashika-no-MacBook-Air:bin yanagiserika$ ./mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 189
+Server version: 5.7.39 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test_db            |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> use test_db;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT table_name, column_name FROM information_schema.columns WHERE column_name = [検索条件];
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[検索条件]' at line 1
+mysql> CREATE TABLE [テーブル名] (
+    ->   [フィールド名] [データ型] [オプション]
+    -> ) ENGINE=[InnoDB/MyISAM] DEFAULT CHARSET=[文字コード];
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[テーブル名] (
+  [フィールド名] [データ型] [オプション]
+) EN' at line 1
+mysql>  CREATE TABLE `m_users` (
+    ->           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->           `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+    ->           `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+    ->           `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+    ->           `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->           `modified` datetime DEFAULT NULL COMMENT "更新日"
+    ->         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1050 (42S01): Table 'm_users' already exists
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> use m_users
+ERROR 1049 (42000): Unknown database 'm_users'
+mysql> CREATE TABLE `m_users` (
+    ->           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->           `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+    ->           `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+    ->           `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+    ->           `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->           `modified` datetime DEFAULT NULL COMMENT "更新日"
+    ->         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1050 (42S01): Table 'm_users' already exists
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> show table status;
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+| Name    | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation       | Checksum | Create_options | Comment |
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+| m_users | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |              1 | 2024-08-24 10:51:38 | NULL        | NULL       | utf8_general_ci |     NULL |                |         |
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+1 row in set (0.00 sec)
+
+mysql> desc m_users;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| user_name    | varchar(100) | NO   |     | NULL    |                |
+| mail_address | varchar(200) | NO   |     | NULL    |                |
+| password     | varchar(100) | NO   |     | NULL    |                |
+| created      | datetime     | YES  |     | NULL    |                |
+| modified     | datetime     | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.05 sec)
+
+mysql> ALTER TABLE m_user RENAME m_profiles;
+ERROR 1146 (42S02): Table 'test_db.m_user' doesn't exist
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> mysqldump -u root -p test_db > level7_3_table_study.sql
+    -> 
+    -> CREATE TABLE `m_profiles` (
+    ->     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->     `user_id` int NOT NULL COMMENT "ユーザーID",
+    ->     `profile_text` TEXT COMMENT "プロフィールテキスト",
+    ->     `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->     `modified` datetime DEFAULT NULL COMMENT "更新日"
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysqldump -u root -p test_db > level7_3_table_study.sql
+
+CREATE TABLE `m_profile' at line 1
+mysql> show tables
+    ->  show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show tables' at line 2
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE `m_profiles` ADD `profile_image` VARCHAR(255) DEFAULT NULL COMMENT "プロフィール画像URL" AFTER `profile_text`;
+ERROR 1146 (42S02): Table 'test_db.m_profiles' doesn't exist
+mysql> 
+mysql> 1
+    -> mysqldump -u root -p test_db > level7_3_table_study.sql
+    -> 
+    -> 1
+    -> mysqldump -u root -p test_db > level7_3_table_study.sql
+    -> 
+    -> 1
+    -> mysqldump -u root -p test_db > level7_3_table_study.sql
+    -> mysqldump -u root -p test_db > level7_3_table_study.sql
+    -> CREATE TABLE `m_profiles` (
+    ->     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->     `user_id` int NOT NULL COMMENT "ユーザーID",
+    ->     `profile_text` TEXT COMMENT "プロフィールテキスト",
+    ->     `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->     `modified` datetime DEFAULT NULL COMMENT "更新日"
+    -> ) ENGINE=InnoD
+    -> 
+    -> CREATE TABLE `m_profiles` (
+    ->     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->     `user_id` int NOT NULL COMMENT "ユーザーID",
+    ->     `profile_text` TEXT COMMENT "プロフィールテキスト",
+    ->     `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->     `modified` datetime DEFAULT NULL COMMENT "更新日"
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1
+mysqldump -u root -p test_db > level7_3_table_study.sql
+
+1
+mysqldump -u root -' at line 1
+mysql> show tables
+    -> CREATE TABLE `m_profiles` (
+    ->     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->     `user_id` int NOT NULL COMMENT "ユーザーID",
+    ->     `profile_text` TEXT COMMENT "プロフィールテキスト",
+    ->     `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->     `modified` datetime DEFAULT NULL COMMENT "更新日"
+    -> ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE `m_profiles` (
+    `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COM' at line 2
+mysql> show table
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show tables' at line 2
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.01 sec)
+
+mysql> CREATE TABLE `m_profiles(`
+    ->           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->           `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+    ->           `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+    ->           `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+    ->           `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->           `modified` datetime DEFAULT NULL COMMENT "更新日"
+    -> CREATE TABLE `m_profiles`(
+    ->           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->           `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+    ->           `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+    ->           `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+    ->           `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->           `modified` datetime DEFAULT NULL COMMENT "更新日"
+    ->         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+          `user_name`' at line 2
+mysql> show table
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show tables' at line 2
+mysql> show tables
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show tables' at line 2
+mysql> show table status;
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+| Name    | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation       | Checksum | Create_options | Comment |
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+| m_users | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |              1 | 2024-08-24 10:51:38 | NULL        | NULL       | utf8_general_ci |     NULL |                |         |
++---------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+-----------------+----------+----------------+---------+
+1 row in set (0.01 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_users           |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE m_profiles
+    -> DESCRIBE m_profiles;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESCRIBE m_profiles' at line 2
+mysql> CREATE TABLE `m_profiles` (
+    ->           `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID",
+    ->           `user_name` VARCHAR(100) NOT NULL COMMENT "ユーザー名",
+    ->           `mail_address` VARCHAR(200) NOT NULL COMMENT "メールアドレス",
+    ->           `password` VARCHAR(100) NOT NULL COMMENT "パスワード",
+    ->           `created` datetime DEFAULT NULL COMMENT "登録日",
+    ->           `modified` datetime DEFAULT NULL COMMENT "更新日"
+    ->         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+Query OK, 0 rows affected (0.16 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_test_db |
++-------------------+
+| m_profiles        |
+| m_users           |
++-------------------+
+2 rows in set (0.03 sec)
+
+mysql> 
