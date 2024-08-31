@@ -1,0 +1,3 @@
+INSERT INTO m_users (user_name, mail_address, password, created, modified)　
+                    VALUES ("Yamada Taro", "yamda@gmail.com", "123123", now(), now());
+ 
