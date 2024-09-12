@@ -7,11 +7,13 @@ require_once 'Dripper.php';
 <!DOCTYPE html>
 <html lang="ja">
 <meta charset="utf-8">
+
 <head>
-    <title>喫茶マシーン</title>
+  <title>喫茶マシーン</title>
 </head>
-    <body>
-<?php
+
+<body>
+  <?php
     //ドリッパーオブジェクトを生成する
     $dripper = new Dripper();
 
@@ -19,8 +21,7 @@ require_once 'Dripper.php';
     $coffee = new Coffee();
 
     //紅茶オブジェクトを生成する
-    $tea = new tea();
-
+    $tea = new Tea(); // Teaクラスのインスタンス化で小文字のteaが使われていることに注意
 
     //ドリッパーにミルクを注ぐようにセットする
     print('ミルクを注ぐ機能:ON');
@@ -51,5 +52,6 @@ require_once 'Dripper.php';
     print('<br>');
 
 ?>
-    </body>
+</body>
+
 </html>
