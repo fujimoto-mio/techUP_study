@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; 
-
+use Illuminate\Support\Facades\DB; //追記
+ 
 class TodoListSeeder extends Seeder
 {
     /**
