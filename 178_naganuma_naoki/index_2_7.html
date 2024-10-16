@@ -1,0 +1,47 @@
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>フォーム部品について</title>
+</head>
+
+<body>
+    <fieldset>
+        <div class="form-group">
+            <label for="name">氏名</label>
+            <input type="text" id="name" name="name" size="20" maxlength="28">
+        </div>
+        <div class="form-group">
+            <label for="password">パスワード</label>
+            <input type="password" id="password" name="password" size="20" maxlength="18" value="">
+        </div>
+        <div class="form-group">
+            <label>性別</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="sex" value="男" checked="checked" />
+                <label for="male">男</label><br>
+                <input type="radio" id="female" name="sex" value="女" />
+                <label for="female">女</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="prefecture">県</label>
+            <select id="prefecture" name="prefecture">
+                <option value="東京" selected="selected">東京</option>
+                <option value="神奈川">神奈川</option>
+                <option value="千葉">千葉</option>
+                <option value="埼玉">埼玉</option>
+                <option value="群馬">群馬</option>
+                <option value="栃木">栃木</option>
+                <option value="茨城">茨城</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="txt">紹介</label>
+            <textarea id="txt" name="txt" rows="5" cols="20"></textarea>
+        </div>
+        <input type="submit" value="送信">
+    </fieldset>
+</body>
+
+</html>
