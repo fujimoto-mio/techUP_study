@@ -17,3 +17,4 @@ class Coffee implements IDrip
 		return 'ミルク' . $this->name . '(微糖)';
 	}
 }
+?>

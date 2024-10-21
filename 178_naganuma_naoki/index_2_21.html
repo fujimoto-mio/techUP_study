@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* CSS */
+        input[type="radio"] {
+            display: none;
+            /* ボタンを隠す*/
+        }
+
+        .tab_area label {
+            width: 150px;
+            margin: 0 5px;
+            display: inline-flex;
+            /* 隣接する要素と同じ行に配置*/
+            padding: 12px 0;
+            color: #999;
+            background: #ddd;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            transition: ease 0.2s opacity;
+            /*タブの状態間の変化を定義*/
+        }
+
+        .tab_panel {
+            display: none;
+        }
+
+        /* ラジオボタンでコンテンツ切り替えの制御 */
+        /* 連動させるため、連動させる要素にfor属性でラジオボタンのidを指定 */
+        /* ~ と同じ階層エリアに色変え　*/
+        /* タブ1 */
+        #tab1:checked~.tab_area .tab1_label {
+            background: #fff;
+            color: #000;
+        }
+
+        #tab1:checked~.panel_area #panel1 {
+            display: block;
+            /* ブロックスにする */
+        }
+
+        /* タブ2 */
+        #tab2:checked~.tab_area .tab2_label {
+            background: #fff;
+            color: #000;
+        }
+
+        #tab2:checked~.panel_area #panel2 {
+            display: block;
+            /* ブロックにする */
+        }
+
+        /* タブ3 */
+        #tab3:checked~.tab_area .tab3_label {
+            background: #fff;
+            color: #000;
+        }
+
+        #tab3:checked~.panel_area #panel3 {
+            display: block;
+            /* ブロックにする */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab_wrap">
+        <input id="tab1" type="radio" name="tab_btn" checked="">
+        <input id="tab2" type="radio" name="tab_btn">
+        <input id="tab3" type="radio" name="tab_btn">
+
+        <div class="tab_area">
+            <label class="tab1_label" for="tab1">タブ1</label>
+            <label class="tab2_label" for="tab2">タブ2</label>
+            <label class="tab3_label" for="tab3">タブ3</label>
+        </div>
+
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <p>タブパネル-1</p>
+            </div>
+            <div id="panel2" class="tab_panel">
+                <p>タブパネル-2</p>
+            </div>
+            <div id="panel3" class="tab_panel">
+                <p>タブパネル-3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
