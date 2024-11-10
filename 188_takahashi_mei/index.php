@@ -11,7 +11,9 @@ require_once 'Patient.php';
 	<body>
 <?php
 //インスタンスを生成する
-$patient = new Patient('山田太郎', 30, 'm', 1.65, 63.5);
+
+$patient = new Patient('アンパンマン', 45, 'm', 1.60, 112.0);
+
  
 print($patient -> selfIntroduction());
 print('<br>身長：' . $patient -> getHeight() . 'm');
