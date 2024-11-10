@@ -1,0 +1,25 @@
+php-7-answer.txt
+ソースの流れ
+・Person.phpで性別、年齢を定義。
+・patient.phpでperson.phpのクラスを読み込み患者に関するクラスをindex.phpに表示する。
+・index.phpで2つのクラスの内容を読み込みその内容をhtmlで表示する。
+
+Person.php
+・コンストラクタを生成（name,age,gender)
+・genderがｍなら男性ｆなら女性で表記しそれ以外は性別不明で表記
+名前、年齢、性別をreturnで返す
+・メソッドの呼び出しがあったとき、年齢を1歳足す
+
+patient.php
+・Personクラスファイルの読み込み
+・Personクラスを継承するクラスPatientクラスを定義
+・コンストラクタを生成（name,age,gender,height,weight)
+・標準体重を表すメソッド
+・身長を返すメソッド
+・体重を返すメソッド
+
+index.php
+・Patientクラスファイルの読み込み
+・HTMLの作成　タイトル「techUP　オブジェクト指向　課題」
+・インスタンスの作成+代入
+・<body>にてPersonクラスのselfIntroductionクラスを参照し、自己紹介、身長、体重、標準体重を表記
