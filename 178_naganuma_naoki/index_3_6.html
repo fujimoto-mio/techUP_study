@@ -1,0 +1,46 @@
+JavaScript
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScriptデータ型の扱い</title>
+</head>
+
+<body>
+  <p>JavaScript　データ型</p>
+  <script>
+    // 使用変数
+
+    var man = '男性';
+    var woman = '女性';
+    var m_age = 25;
+    var w_age = 22;
+    var m_name = '田中';
+    var w_name = '鈴木';
+
+    //if文の条件と表示結果の分岐
+    //①
+    // もし、変数manが'男性'と等しい時、変数と文字列を足して「田中は25の男性です。」と表示
+    // そうでない時は、「鈴木は22の女性です。」と表示
+    if (man === '男性') {
+      console.log("田中は25の男性です。");
+    }
+    else {
+      console.log('鈴木は22の女性です。');
+    }
+
+    //②
+    //もし変数m_ageがw_ageより大きい場合、変数と文字列を足して「田中は鈴木より年上です。」と表示
+    //そうでない時は、田中は鈴木より年下です。
+    if (m_age > w_age) {
+      console.log("田中は鈴木より年上です。");
+    }
+    else {
+      console.log('田中は鈴木より年下です。');
+    }
+
+  </script>
+</body>
+
+</html>
