@@ -1,18 +1,18 @@
 <?php
 class Person{
-	//プロパティ==========
+	//プロパティ
 	private $name = '';
 	private $age = 0;
 	private $gender = '';
 
-	//コンストラクタ==========
+	//コンストラクタ
 	public function __construct($name, $age, $gender){
 		$this -> name = $name;
 		$this -> age = $age;
 		$this -> gender = $gender;
 	}
 
-	//メソッド==========
+	//メソッド
 	public function selfIntroduction(){
 		if($this -> gender == 'm'){
 			$gendata = '男性';
