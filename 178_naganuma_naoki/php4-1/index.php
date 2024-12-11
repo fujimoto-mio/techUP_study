@@ -4,6 +4,7 @@ require_once 'Patient.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <meta charset="utf-8">
 
 <head>
@@ -24,3 +25,4 @@ require_once 'Patient.php';
 </body>
 
 </html>
+

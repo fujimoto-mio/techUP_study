@@ -4,11 +4,12 @@ require_once 'Person.php';
 
 class Patient extends Person
 {
+	//プロパティ==========
 	private $height = 0;		//身長(m)
 	private $weight = 0;		//体重(kg)
 
-	public function __construct($name, $age, $gender, $height, $weight)
-	{
+	//コンストラクタ==========
+	public function __construct($name, $age, $gender, $height, $weight){
 		//Personクラスのコンストラクタを呼び出す
 		parent::__construct($name, $age, $gender);
 
