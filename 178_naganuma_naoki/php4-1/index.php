@@ -22,5 +22,3 @@ require_once 'Patient.php';
 	print('標準体重は' . $patient->calculateStandardWeight() . 'kgです。');
 	?>
 </body>
-
-</html>
