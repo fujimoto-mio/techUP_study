@@ -25,4 +25,3 @@ require_once 'Patient.php';
 </body>
 
 </html>
-
