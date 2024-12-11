@@ -13,3 +13,20 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# システムファイルを無視
+.bash_history
+.gitconfig
+.lesshst
+.viminfo
+NTUSER.*
+
+# OS 特有のファイルを無視
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# キャッシュや一時ディレクトリ
+.cache/
+.p2/
+.vscode/
+Downloads/

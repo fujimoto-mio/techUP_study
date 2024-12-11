@@ -4,11 +4,9 @@ require_once 'Person.php';
 
 class Patient extends Person
 {
-	//プロパティ==========
 	private $height = 0;		//身長(m)
 	private $weight = 0;		//体重(kg)
 
-	//コンストラクタ==========
 	public function __construct($name, $age, $gender, $height, $weight){
 		//Personクラスのコンストラクタを呼び出す
 		parent::__construct($name, $age, $gender);
@@ -18,7 +16,6 @@ class Patient extends Person
 		$this -> weight = $weight;
 	}
 
-	//メソッド==========
 	//標準体重を返すメソッド
 	public function calculateStandardWeight(){
 		return $this -> height * $this -> height * 22;
