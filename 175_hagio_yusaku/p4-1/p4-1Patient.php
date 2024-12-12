@@ -1,6 +1,6 @@
 <?php
 //クラスファイルを読み込む
-require_once 'Person.php';
+require_once 'p4-1Person.php';
  
 class Patient extends Person
 {

@@ -1,6 +1,6 @@
 <?php
 //クラスファイルを読み込む
-require_once 'Patient.php';
+require_once 'p4-1Patient.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
