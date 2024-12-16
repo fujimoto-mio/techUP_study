@@ -1,5 +1,6 @@
 <?php
 //クラスファイルを読み込む
+
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
@@ -54,4 +55,5 @@ require_once 'Dripper.php';
 
 ?>
     </body>
+
 </html>

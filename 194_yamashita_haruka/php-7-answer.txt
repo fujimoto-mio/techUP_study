@@ -1,0 +1,69 @@
+ソースの流れ
+・Person.phpでPersonクラスを作成。
+・Patient.phpでrequire_onceを使いPerson.phpを読み込む。Personクラスを継承してPatientクラスを作成。
+・index.phpでrequire_onceを使いPatient.phpを読み込む。HTMLにPHPのコードを埋め込む。Patientクラスをインスタンス化して$patientに代入。$patientのプロパティーを定義したメソッドを実行してprintしていく。
+
+Person.php
+Personクラスを作成
+
+[プロパティー（データ）]
+・privateなnameプロパティーを定義
+・privateなageプロパティーを定義
+・privateなgenderプロパティーを定義
+
+[コンストラクタ]
+引数は$name, $age, $gender
+・呼び出した$nameインスタンスのをnameプロパティーに代入
+・呼び出した$ageインスタンスのをageプロパティーに代入
+・呼び出した$genderインスタンスのをgenderプロパティーに代入
+
+
+[メソッド(関数)]
+・publicなselfIntroduction()メソッドを定義
+if(呼び出したインスタンスのgenderプロパティーがmであれば)
+$gendataに男性を代入
+else if(fであれば)
+$gendataに女性を代入
+else(その他)
+$gendataに性別は不明を代入
+「わたしは.呼び出したインスタンスのnameプロパティー.、.呼び出したインスタンスのageプロパティー.才.$gendata.です。」をreturnする。
+
+・publicなaddAge()メソッドを定義
+呼び出したインスタンスのageプロパティーを1増やす。
+
+Patient.php
+・require_onceを使いPerson.phpを読み込む。
+・Personクラスを継承してPatientクラスを作成。
+
+Patientクラス
+
+[プロパティー（データ）]
+・privateなheightプロパティーを定義
+・privateなweightプロパティーを定義
+
+[コンストラクタ]
+引数は$name, $age, $gender, $height, $weight
+・Personクラスのコンストラクタの３つの処理を引き継ぐ
+・呼び出した$heightインスタンスのをheightプロパティーに代入
+・呼び出した$weightインスタンスのをweightプロパティーに代入
+
+[メソッド(関数)]
+・publicなcalculateStandardWeight()メソッドを定義//標準体重を返すメソッド
+「呼び出したインスタンスのheightプロパティー*呼び出したインスタンスのheightプロパティー*22」で出された標準体重をreturnする。
+・publicなgetHeight()メソッドを定義//身長を返すメソッド
+「呼び出したインスタンスのheightプロパティー」をreturnする。
+・publicなgetWeight()メソッドを定義//体重を返すメソッド
+「呼び出したインスタンスのweightプロパティー」をreturnする。
+
+
+index.php
+・require_onceを使いPatient.phpを読み込む。
+・HTMLにPHPのコードを埋め込む。
+・Patientクラスをインスタンス化して$patientに代入。
+引数は'山田太郎', 30, 'm', 1.65, 63.5
+printしていく
+・「$patientのselfIntroduction()メソッド」をprintする。　//selfIntroduction()はPerson.phpにある
+・改行入れて、「$patientのgetHeight() メソッド.m」をprintする。　//getHeight()はPatient.phpにある
+・改行入れて、「$patientのgetWeight() メソッド.kg」をprintする。　//getHeight()はPatient.phpにある
+・改行を２行入れる
+・「標準体重は.$patientのcalculateStandardWeight() メソッド.kgです。」をprintする。　//getHeight()はPatient.phpにある
