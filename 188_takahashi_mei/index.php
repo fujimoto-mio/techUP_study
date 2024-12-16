@@ -19,12 +19,12 @@ require_once 'Dripper.php';
     $coffee = new Coffee();
 
     //紅茶オブジェクトを生成する
-    $IDrip = new Tea();
+    $tea = new Tea();
 
 
 
     //ドリッパーにミルクを注ぐようにセットする
-    print('ミルクを注ぐ機能：ON');
+    print('ミルクを注ぐ機能：ON<br>');
     $dripper->setMilkStatus(true);
 
     //コーヒーを注いでみる
@@ -39,7 +39,8 @@ require_once 'Dripper.php';
 
     //ドリッパーにミルクを注がないようにセットする
     print('ミルクを注ぐ機能：OFF');
-    $IDrip->setIDrip(false);
+    $dripper->setMilkStatus(false);
+    
 
     //コーヒーを注いでみる
     print('コーヒーをセットして注ぎます。<br>');

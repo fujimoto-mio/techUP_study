@@ -14,6 +14,6 @@ class Coffee implements IDrip
 
 	//ミルクと一緒にそそぐメソッドをオーバーライド
 	public function dripWithMilk(){
-		return 'ミルク' . $this->name . '(微糖)';
+		return "ミルク". $this->name . "(微糖)";
 	}
 }
