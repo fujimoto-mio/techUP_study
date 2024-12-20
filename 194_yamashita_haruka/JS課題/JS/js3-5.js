@@ -1,0 +1,47 @@
+/* 注：暗黙の数値変換 */
+　　/* 文字列を数値演算すると暗黙に数値型に変換されます */    
+    console.log( '1' + 2 ); // "12"
+    console.log( '1' + '2' ); // "12"
+    console.log( "1" + "2" ); // "12"
+    console.log( 2 + '1' ); // "21"
+    console.log( 2 + 2 + '1' ); // "41" 
+    console.log( 6 - '2' ); // 4, 両方のオペランドを数値に変換します
+    console.log( 1 + 2 ); // 3
+    console.log( 6 - "2" ); // 4 
+    
+ 
+    let a, b, c;
+    a = b = c = 2 + 2;
+    console.log( a ); // 4
+    console.log( b ); // 4
+    console.log( c ); // 4
+	
+    let n = 2;
+    n = n + 5;
+    console.log(n);
+    n = n * 2;
+    console.log(n,"最終結果！");
+    
+    var i = 2; //もしくは n = 2;
+    i += 5; // n = 7 (n = n + 5 と同じ)
+    console.log(i);
+    i *= 2; // n = 14 (n = n * 2 と同じ)
+    console.log(i, "結果はあっていますか？");
+
+    /*インクリメント/デクリメント*/
+    /* これらの違いを確認しよう。*/    
+    /* なぜそうなるかを考えてみましょう。*/    
+    let counter = 2;
+    counter++;  // counter = counter + 1 と同じです インクリメント
+    console.log( counter ); // 3
+    
+    let counter2 = 2;
+    ++counter2;  // counter2 = counter2 + 1 と同じです インクリメント
+    console.log( counter2 ); // 3
+    
+    let counter3 = 2;
+    counter3--;   // counter3 = counter3 - 1 と同じで　デクリメント
+    console.log( counter3 ); // 1
+    let counter4 = 2;
+    --counter4;   // counter4 = counter4 - 1 と同じで　デクリメント
+    console.log( counter4 ); // 1
