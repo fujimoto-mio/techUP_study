@@ -1,5 +1,0 @@
-MySQLのユーザ情報
-
-Host:localhost
-User:tanabe
-password:7614
