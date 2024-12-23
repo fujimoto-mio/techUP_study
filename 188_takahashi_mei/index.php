@@ -1,5 +1,6 @@
 <?php
 //クラスファイルを読み込む
+
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
@@ -24,8 +25,6 @@ require_once "Matcha.php";
     $tea = new Tea();
     //抹茶オブジェクトの追加
     $matcha = new Matcha();
-
-
 
 
     //ドリッパーにミルクを注ぐようにセットする
