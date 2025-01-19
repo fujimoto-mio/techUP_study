@@ -25,8 +25,8 @@ index.php
 Patient.php
 
 ・require_once 'Person.php';で、Person.phpを読み込む。
-・class Patient extends Person{}で子クラスPatientに親クラスPersonクラスを継承
-・//ここでプロパティを定義し、初期値を設定
+・class Patient extends Person{}で子クラスPatientに親クラスPersonクラスを継承（省略されて効率的！）
+・//↓ここでプロパティを定義し、初期値を設定↓
     //コンストラクタ==========
     public function __construct($name, $age, $gender, $height, $weight) {
     ・Person.phpファイルの中のPersonクラスのコンストラクタを呼び出しつつ、
