@@ -1,0 +1,23 @@
+〈ソースの流れ〉
+index.phpが読み込まれると、require_once 'Patient.php';によってPatientクラスを読み込む。
+$patientインスタンスを生成する際、Patientクラスのコンストラクタが呼び出され、その中でPersonクラスのコンストラクタも呼び出される。その結果、name、age、genderが設定される。
+selfIntroduction()が呼び出され、Personクラスの自己紹介メソッドにより、患者の自己紹介が表示される。
+getHeight()とgetWeight()で、それぞれの身長と体重が表示され、calculateStandardWeight()で標準体重が計算され、その結果が表示される。
+
+Person.php
+・プロパティ：名前（name）、年齢（age）、性別（gender）
+・名前、年齢、性別を初期化
+・'m'='男性'、'f'='女性'、その他は'性別は不明'
+
+Patient.php
+・Personクラスを継承
+・プロパティ：身長（height）、体重（weight）
+・Personクラスのコンストラクタを呼び出す
+・名前、年齢、性別、身長、体重を初期化
+・calculateStandardWeight()で標準体重（身長*身長*22）を返す
+
+index.php
+・require_once 'Patient.php';でPatientクラスを読み込む
+・PatientクラスはPersonクラスを継承しているので、Personクラスも同時に読み込む
+・Patientクラスのインスタンスを生成
+・患者の名前、年齢、性別、身長、体重、標準体重を表示
