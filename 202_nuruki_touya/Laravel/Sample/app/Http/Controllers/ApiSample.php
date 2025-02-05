@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task; 
+use App\Models\User; 
 
 class ApiSample extends Controller
 {
@@ -42,5 +43,20 @@ class ApiSample extends Controller
 
         // JSON レスポンスを返す
         return response()->json($member);
+    }
+    
+    public function dataInsert()
+    {
+        $birthDay = new User;
+        $birthDay->name = '202_Nuruki_Touya';
+        $birthDay->email = 'sample@sample.com';
+        $birthDay->birthday = '2001-08-29';
+        $birthDay->password = ''; 
+        $birthDay->save();
+
+        return response()->json([
+            'message' => 'データが正常に挿入されました。',
+            'data' => $birthDay,
+        ]);
     }
 }
