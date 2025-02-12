@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\User;
 
 class ApiSample extends Controller
 
@@ -40,5 +41,28 @@ class ApiSample extends Controller
             ]
         );
         //return 'Hello API!!';
+    }
+
+        public function dataInsert(Request $request){
+
+            User::whereNull('name')->update(['name' => '田中']);
+
+            $name = $request->input('name','田中');
+            $birthday = $request->input('birthday','20200202');
+            $email = $request->input('email','tanaka@test.com');
+            $password = $request->input('password', 'default_password');
+        
+            $user = new User;
+            $user->name = $name;
+            $user->birthday = $birthday;
+            $user->email = $email;
+            $user->password = bcrypt($password);
+            $user->save();
+        
+            return response()->json([
+                'name' => $user->name,
+                'birthday' => $user->birthday,
+                'email' => $user->email,
+            ]);
     }
 }
