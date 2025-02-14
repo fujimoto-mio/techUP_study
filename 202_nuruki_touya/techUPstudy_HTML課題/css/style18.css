@@ -10,7 +10,6 @@ div.changed {
 div,
 input[type=checkbox]:checked ~ div {
 	transition-duration: 0.5s;
-	transition-delay: 0
 }
 input[type=checkbox]:checked ~ div.changed {
 	font-size: 36px;
