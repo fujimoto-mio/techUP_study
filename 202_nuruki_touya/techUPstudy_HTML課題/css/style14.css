@@ -1,0 +1,26 @@
+body {
+    font-family: 'メイリオ',sans-serif;
+    }
+
+.set_px {
+  font-size: 20px;
+}
+.set_em {
+  font-size: 2.5em;
+}
+
+h1 {
+  font-weight: bold;
+}
+ 
+h2 {
+    line-height: 15px
+ }
+ 
+.aligin { 
+    text-align: center;
+ }
+ 
+.decoration{
+    text-decoration: line-through;
+}
