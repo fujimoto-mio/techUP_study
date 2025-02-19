@@ -1,0 +1,32 @@
+index.php　→　Patient.phpを元に情報を開示
+Patient.php →Person.phpの情報が入ってる　患者の情報を追加
+Person.php　→患者さんの情報が入ってる　管理する　Patientに渡す
+
+
+ソースの流れ↓↓↓
+
+index.php↓
+・require_once'Patient.php';でPatient.phpを読み込み
+・<!DOCTYPE html>の部分は日本語対応の
+<html lang="ja">と<meta charset="utf-8">を指定
+・<body>内でPatientnoのインスタンスが作られている　情報を入力
+・printでそれぞれ出力
+
+Patient.php↓
+・require_once 'Person.php'　読み込んでる
+・privateは外部からのアクセス不可　クラス内のみアクセス可能
+・functionは再利用可能な形で定義
+・parent::__construct($name, $age, $gender);　Person内のものを呼び出し初期化
+・public function calculateStandardWeight(){
+		return $this -> height * $this -> height * 22;　標準体重の計算
+・public function クラス内のデータを持ってくる
+・return　戻り値　返す
+
+
+Person.php↓
+・private $name = '';
+	private $age = 0;
+	private $gender = '';　→初期化
+・$this -> 〇〇で代入していく
+・public function selfIntroduction()性別を判断　returnで紹介文を返す
+・public function addAge()　年齢の計算
