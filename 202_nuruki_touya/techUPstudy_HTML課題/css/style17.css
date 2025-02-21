@@ -1,0 +1,12 @@
+.L2-17 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #ff7d6e;
+    background: #ffebe9;
+    border-top: solid 12px #ff7d6e;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.30);
+}
+.L2-17 p {
+    margin: 10; 
+    padding: 20;
+}
