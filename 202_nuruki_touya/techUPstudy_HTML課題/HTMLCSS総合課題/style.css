@@ -241,7 +241,7 @@ nav li a:hover{
     flex-direction: column;
     align-items: center;
     gap: 80px; /* 間隔を調整 */
-    padding-top: 30rem;
+    padding-top: 24rem;
     position: relative;
 }
 .price-block {
@@ -310,7 +310,8 @@ nav li a:hover{
     align-items: center;
     padding: 240px ;
     position: relative;
-    padding-top: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
 }
 
 .concept-block {
