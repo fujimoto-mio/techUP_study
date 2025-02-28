@@ -1,0 +1,108 @@
+body {
+    background-color: #fcefd6; /* 希望の背景色 */
+  }
+
+  /*トップバー*/
+.top-bar {
+    background-color: #4e342e;
+    height: 24px;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    height: auto;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ヘッダーの背景を透過 */
+header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 224, 191, 0.8); /* 背景色を透過 */
+    padding: 20px 0;
+}
+
+/* ヘッダースタイル */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+/* ロゴの位置 */
+.header-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-logo .logo-image {
+    width: 150px;
+}
+
+/* タイトル */
+.header-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* ナビゲーションのスタイル */
+.navbar {
+    background-color: rgba(255, 224, 191, 0.8);
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+/* ナビゲーションリンクのスタイル */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
