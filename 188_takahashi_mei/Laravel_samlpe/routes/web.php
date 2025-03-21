@@ -20,3 +20,4 @@ Route::post('/edit',[TaskController::class,'edit']);  //タスク更新用
 Route::post('/delete',[TaskController::class,'delete']);
 
 Route::resource('tasks', TaskController::class);
+Route::get('dataInsert', [\App\Http\Controllers\ApiTestController::class, 'dataInsert']);
