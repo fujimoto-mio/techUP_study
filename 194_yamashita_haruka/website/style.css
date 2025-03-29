@@ -1,0 +1,573 @@
+@charset "UTF-8";
+
+/*全体*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+main {
+  margin-bottom: 100px;
+}
+
+
+
+/*ヘッダー*/
+.header-logo{
+  width: 210px;
+  margin-left:  20px;
+
+}
+
+/*=========================================
+#hamburger
+=========================================*/
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 150;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+/*  background-color: #77E1F2;*/
+}
+
+.hamburger.is-active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.hamburger span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  transition: transform .3s;
+}
+
+.hamburger.is-active span {
+  background-color: #ffffff;
+}
+
+.hamburger span:nth-child(1) {
+  top: 30%;
+}
+
+.hamburger span:nth-child(2) {
+  top: 60%;
+}
+
+.hamburger span:nth-child(3) {
+  top: 90%;
+}
+
+/*=========================================
+#drawer
+=========================================*/
+.drawer {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 130;
+  width: 100%;
+  height: 100vh;
+  background-color: #333333;
+  transition: opacity .3s, visibility .3s;
+}
+
+.drawer.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.drawer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.drawer__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.drawer__link {
+  color: #ffffff;
+}
+
+
+
+
+/* ===============================================
+# 共通
+=============================================== */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-style: italic;
+  vertical-align: middle;
+
+  shape-margin: .75rem;
+}
+
+
+/*メイン*/
+.top-section {
+  height:900px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.top-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.company-name-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(245, 176, 65, 0.8); /* 半透明の濃いオレンジ */
+  color: #fff;
+  padding: 25px 50px;
+  font-size: 2.5em;
+  border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*marginで左右幅*/
+.philosophy-section {
+  margin: 0 30px;
+  text-align: center;
+}
+
+/*見出し*/
+.philosophy-section h2.section-title,
+.company-section h2.section-title,
+.contact-section h2.section-title,
+.service-section h2.section-title {
+  margin-bottom: 30px;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+
+section .container h3 {
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+section .container p {
+  width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-size: 1.15rem;
+  text-align: center;
+
+}
+.section-title .title-icon {
+  color: #f5b041;
+  margin-right: 15px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.philosophy-section p {
+  font-size: 1.15em;
+  color: #444;
+}
+
+/*marginで左右幅*/
+.service-section {
+  margin: 0 30px;
+  text-align: center;
+}
+
+.service-section h2.section-title {
+  margin-bottom: 50px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  flex: 1 1 300px; /* 300px以上を確保しつつ、縮小可能 */
+  max-width: 400px;
+}
+
+.service-item h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.service-image {
+  margin: 0 auto 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.service-item p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/*marginで左右幅*/
+.company-section {
+  margin: 0 30px;
+  text-align: center;
+}
+
+
+/*会社情報のテーブル*/
+.table_design03 {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 70px;
+  margin: 0 auto;
+}
+.table_design03 th, .table_design03 td {
+  border-bottom: 2px solid #c1c7c6;
+  padding: 1em;
+}
+.table_design03 th {
+  border-bottom: 2px solid #FF6817;
+  font-weight: bold;
+  text-align: center;
+  width: 20%;
+  min-width: 4em;
+}
+
+
+.company-section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.company-section .company-info p {
+  margin-bottom: 10px;
+}
+
+.company-section h2.section-title:nth-child(2) {
+  margin-top: 60px;
+}
+
+.company-section .map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.company-section .map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.section-title {
+  font-size: clamp(32px, 5vw, 70px);
+}
+
+
+/*contact*/
+.section-title span {
+  background: linear-gradient(transparent 50%, #ffe7b9 0%);
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+} 
+
+footer {
+  background-color: #FFCC77; /* 画像から推測した濃いグレー */
+  color: #292929;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff; /* お問い合わせフォームの背景 */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  padding-right: 40px;
+}
+
+.contact-info h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.contact-info p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.contact-form {
+  flex: 1;
+  padding-left: 40px;
+  border-left: 1px solid #ccc;
+}
+
+.contact-form h2 {
+  display: none; /* タイトルは左側に表示 */
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+
+.contact-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form .form-group input[type="text"],
+.contact-form .form-group input[type="email"],
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.contact-form .form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .submit-button {
+  background-color: #f5b041; /* オレンジ */
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  width: auto; /* ボタンの幅を自動調整 */
+}
+
+.contact-form .submit-button:hover {
+  background-color: #e67e00;
+}
+
+/* フォームのタイトル */
+h2 {
+  margin-top: 50px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* フォーム全体のスタイル */
+form {
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* ラベルのスタイル */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 入力欄のスタイル */
+input, textarea {
+  width: 100%; /* box-sizingが適用されるので、paddingやborder込みで100%に収まる */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* テキストエリアの高さを調整 */
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* 送信ボタンのスタイル */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ホバー時のボタンスタイル */
+button:hover {
+  background-color: #218838;
+}
+
+/*contactフォーム*/
+input {
+  background-color: #FFE7B9;
+}
+
+
+
+/* レスポンシブ対応 */
+/*モバイル対応の強化*/
+@media screen and (max-width: 768px) {
+  .top-section {
+    min-height: 50vh;
+  }
+
+  .service-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-item {
+    width: 100%;
+  }
+}
+
+/* ナビゲーションのレスポンシブ最適化*/
+@media screen and (max-width: 768px) {
+  .hamburger {
+    right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .drawer__list {
+    gap: 30px;
+  }
+}
+
+/*フォントサイズの調整*/
+@media screen and (max-width: 768px) {
+  .philosophy-section h2.section-title,
+  .company-section h2.section-title,
+  .service-section h2.section-title,
+  .contact-section h2.section-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  section .container p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+
+/*Google Mapのサイズ調整*/
+@media screen and (max-width: 768px) {
+  .company-section .map-container iframe {
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 1024px) { /* タブレット */
+  .top-section {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 768px) { /* スマホ */
+  .top-section {
+    height: 10vh;
+  }
+  .top-image-container img {
+    object-position: right;
+  }
+}
+
+
+
+
