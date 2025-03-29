@@ -247,8 +247,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   <?php if (!empty($errors["general"])) { ?>
       <p style="color:red;"><?php echo htmlspecialchars($errors["general"], ENT_QUOTES, 'UTF-8'); ?></p>
   <?php } ?>
-  
-  <form action="./index.php" method="post">
+  <div id="contact">
+  <form action="./index.php#contact" method="post">
       <label>お名前 <input type="text" name="fullname" value="<?php echo isset($_SESSION["fullname"]) ? htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
       <?php if (!empty($errors["fullname"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["fullname"], ENT_QUOTES, 'UTF-8'); ?></span>
@@ -293,7 +293,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
       <input type="submit" name="confirm" value="確認">
   </form>
-
+  </div>
 <?php } elseif ($mode == "confirm") { ?>
   <form action="./index.php" method="post">
       <p>お名前: <?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></p>
