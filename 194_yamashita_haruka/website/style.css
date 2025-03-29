@@ -198,12 +198,13 @@ section .container h3 {
 }
 
 section .container p {
-  width: 600px;
   margin: 0 auto;
   line-height: 1.6;
   margin-top: 25px;
   font-size: 20px;
   text-align: center;
+  width: 600px;
+
 
 }
 .section-title .title-icon {
@@ -228,15 +229,20 @@ section .container p {
   margin-bottom: 50px;
 }
 
+/*イベント事業・買取事業*/
 .service-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
+
 
 .service-item {
   flex: 1 1 300px; /* 300px以上を確保しつつ、縮小可能 */
   max-width: 400px;
+  margin: 5px 40px  30px 40px;
+  justify-content: center;
+
+
 }
 
 .service-item h3 {
@@ -247,9 +253,6 @@ section .container p {
 
 .service-image {
   margin: 0 auto 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
 .service-image img {
@@ -261,7 +264,12 @@ section .container p {
 .service-item p {
   line-height: 1.8;
   color: #555;
+  max-width: 400px;
+  margin: 0 50px  20px 10px;
+  text-align: left;
+
 }
+
 
 /*marginで左右幅*/
 .company-section {
@@ -520,11 +528,13 @@ input {
   }
 
   .service-list {
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
   
   .service-item {
+    justify-content: center;
     width: 100%;
   }
 }
@@ -551,12 +561,8 @@ input {
     font-size: 40px;
     letter-spacing: 4px;
   }
-
-  section .container p {
-    width: 90%;
-    font-size: 1.5rem;
-  }
 }
+
 
 /*Google Mapのサイズ調整*/
 @media screen and (max-width: 768px) {
