@@ -10,14 +10,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     if (empty($_POST["fullname"])) {
         $errors["fullname"] = "お名前を入力してください。";
     }
-    if (empty($_POST["fullname_kana"])) {
-        $errors["fullname_kana"] = "お名前(フリガナ)を入力してください。";
-    }
     if (empty($_POST["company"])) {
         $errors["company"] = "会社を入力してください。";
-    }
-    if (empty($_POST["company_kana"])) {
-        $errors["company_kana"] = "会社(フリガナ)を入力してください。";
     }
     if (empty($_POST["tel"])) {
         $errors["tel"] = "電話番号を入力してください。";
@@ -34,9 +28,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     // エラーがない場合のみセッションに保存
     if (empty($errors)) {
         $_SESSION["fullname"]      = $_POST["fullname"];        
-        $_SESSION["fullname_kana"] = $_POST["fullname_kana"];
         $_SESSION["company"]       = $_POST["company"];
-        $_SESSION["company_kana"]  = $_POST["company_kana"];
         $_SESSION["tel"]          = $_POST["tel"];
         $_SESSION["email"]         = $_POST["email"];
         $_SESSION["message"]       = $_POST["message"];
@@ -46,7 +38,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 } elseif (isset($_POST["send"]) && $_POST["send"]) {
     // 再度入力チェック（セッションが空の場合）
     if (empty($_SESSION["fullname"]) || empty($_SESSION["email"]) || empty($_SESSION["message"]) 
-     || empty($_SESSION["fullname_kana"]) || empty($_SESSION["company"]) || empty($_SESSION["company_kana"]) || empty($_SESSION["tel"]))
+     || empty($_SESSION["company"]) || empty($_SESSION["tel"]))
     {
         $mode = "input";
         $errors["general"] = "入力内容に誤りがあります。";
@@ -58,9 +50,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         // メール内容
         $message = "お問い合わせを受け付けました。\r\n\r\n"
         . "【名前】" . $_SESSION["fullname"] . "\r\n"
-        . "【フリガナ】" . $_SESSION["fullname_kana"] . "\r\n"
         . "【会社】" . $_SESSION["company"] . "\r\n"
-        . "【会社(フリガナ)】" . $_SESSION["company_kana"] . "\r\n"
         . "【電話番号】" . $_SESSION["tel"] . "\r\n"
         . "【Eメール】" . $_SESSION["email"] . "\r\n"
         . "【お問い合わせ内容】" . $_SESSION["message"] . "\r\n";
@@ -255,24 +245,12 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <?php } ?>
       <br>
 
-      <label>お名前(フリガナ)<input type="text" name="fullname_kana" value="<?php echo isset($_SESSION["fullname_kana"]) ? htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
-      <?php if (!empty($errors["fullname_kana"])) { ?>
-          <span style="color:red;"><?php echo htmlspecialchars($errors["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?></span>
-      <?php } ?>
-      <br>
-
       <label>会社 <input type="text" name="company" value="<?php echo isset($_SESSION["company"]) ? htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
       <?php if (!empty($errors["company"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["company"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>会社(フリガナ) <input type="text" name="company_kana" value="<?php echo isset($_SESSION["company_kana"]) ? htmlspecialchars($_SESSION["company_kana"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
-      <?php if (!empty($errors["company_kana"])) { ?>
-          <span style="color:red;"><?php echo htmlspecialchars($errors["company_kana"], ENT_QUOTES, 'UTF-8'); ?></span>
-      <?php } ?>
-      <br>
-     
       <label>メールアドレス <input type="email" name="email" value="<?php echo isset($_SESSION["email"]) ? htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
       <?php if (!empty($errors["email"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["email"], ENT_QUOTES, 'UTF-8'); ?></span>
@@ -295,30 +273,27 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   </form>
   </div>
 <?php } elseif ($mode == "confirm") { ?>
-  <form action="./index.php" method="post">
-      <p>お名前 <?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>お名前(フリガナ) <?php echo htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>会社 <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>会社(フリガナ): <?php echo htmlspecialchars($_SESSION["company_kana"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>電話番号 <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>メールアドレス <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>メッセージ <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></p>
+  <form class="contact-response-form" action="./index.php#contact" method="post">
+    <table class="table_design04">
+      <tr><th>お名前</th><td><?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
+      <tr><th>会社</th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>  
+      <tr><th>電話番号</th><td> <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
+      <tr><th>メールアドレス</th><td> <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
+      <tr><th>メッセージ</th><td> <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></td></tr>
+    </table>
+        <input type="hidden" name="fullname" value="<?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="hidden" name="company" value="<?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="hidden" name="tel" value="<?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="hidden" name="email" value="<?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?>">
+        <input type="hidden" name="message" value="<?php echo htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8'); ?>">
 
-      <input type="hidden" name="fullname" value="<?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="fullname_kana" value="<?php echo htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="company" value="<?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="company_kana" value="<?php echo htmlspecialchars($_SESSION["company_kana"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="tel" value="<?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="email" value="<?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?>">
-      <input type="hidden" name="message" value="<?php echo htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8'); ?>">
-
-      <input type="submit" name="send" value="送信" class="backbutton">
-      <input type="submit" name="back" value="戻る" class="sendbutton">
+        <input type="submit" name="send" value="送信" class="backbutton">
+        <input type="submit" name="back" value="戻る" class="sendbutton">
   </form>
 
 <?php } else { ?>
-  <p>送信しました。お問い合わせありがとうございました。</p>
-  <a href="index.php"><button>ホームに戻る</button></a>
+  <p class="form-success">送信しました。お問い合わせありがとうございました。</p>
+  <a href="index.php"><button class="homebackbutton">ホームに戻る</button></a>
 <?php } ?>
 
     </main>
