@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 
@@ -130,33 +130,26 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/*トップ画像*/
+.top-image-container {
   background-size: cover;
   background-repeat: no-repeat;
-  font-style: italic;
-  vertical-align: middle;
-
-  shape-margin: .75rem;
+  background-position: center;
 }
-
+/*.top-image-container {
+  width: 100%;
+  height: 400px; 
+  background-image: url("./images/top.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat:no-repeat;
+} */
 
 /*メイン*/
 .top-section {
-  height:900px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+  margin-bottom: 45vh;
 }
 
-.top-image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .top-image-container img {
   width: 100%;
@@ -189,11 +182,14 @@ img {
 .company-section h2.section-title,
 .contact-section h2.section-title,
 .service-section h2.section-title {
-  margin-bottom: 30px;
-  font-size: 70px;
+  margin-bottom: 50px;
+  font-size: 50px;
   font-weight: bold;
   letter-spacing: 8px;
 }
+
+
+
 
 
 section .container h3 {
@@ -202,11 +198,11 @@ section .container h3 {
 }
 
 section .container p {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
   line-height: 1.6;
-  margin-top: 10px;
-  font-size: 1.15rem;
+  margin-top: 25px;
+  font-size: 20px;
   text-align: center;
 
 }
@@ -284,7 +280,7 @@ section .container p {
 }
 .table_design03 th, .table_design03 td {
   border-bottom: 2px solid #c1c7c6;
-  padding: 1em;
+  padding: 0.5em;
 }
 .table_design03 th {
   border-bottom: 2px solid #FF6817;
@@ -294,6 +290,11 @@ section .container p {
   min-width: 4em;
 }
 
+
+.table_design03 td {
+  text-align: left;
+  padding: 0 1.5em;
+}
 
 .company-section {
   max-width: 600px;
@@ -344,7 +345,7 @@ section .container p {
 footer {
   background-color: #FFCC77; /* 画像から推測した濃いグレー */
   color: #292929;
-  padding: 30px 0;
+  padding: 15px 0;
   text-align: center;
   font-size: 0.9em;
 }
@@ -435,9 +436,11 @@ footer {
 
 /* フォームのタイトル */
 h2 {
-  margin-top: 50px;
+  /*margin-top: 150px;*/
   font-size: 24px;
   color: #333;
+  padding: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 /* フォーム全体のスタイル */
@@ -446,9 +449,9 @@ form {
   padding: 20px;
   width: 90%;
   max-width: 400px;
-  margin: auto;
+  margin:0 auto;
   border-radius: 10px;
-  text-align: left;
+  text-align: center
 }
 
 /* ラベルのスタイル */
@@ -498,13 +501,22 @@ input {
   background-color: #FFE7B9;
 }
 
+.backbutton {
+  margin: 40px 0;
+}
 
+.backbutton,.sendbutton {
+  display: block;
+
+  width: 100px;
+  margin: 50px auto;
+}
 
 /* レスポンシブ対応 */
 /*モバイル対応の強化*/
 @media screen and (max-width: 768px) {
   .top-section {
-    min-height: 50vh;
+    min-height: 35vh;
   }
 
   .service-list {
@@ -542,7 +554,7 @@ input {
 
   section .container p {
     width: 90%;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -555,7 +567,8 @@ input {
 
 @media screen and (max-width: 1024px) { /* タブレット */
   .top-section {
-    height: 40vh;
+    height: 45vh;
+    margin-bottom: 0;
   }
 }
 
@@ -565,9 +578,9 @@ input {
   }
   .top-image-container img {
     object-position: right;
+    margin-bottom: 0;
+
   }
 }
-
-
 
 

@@ -145,7 +145,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <!--Top画像オレンジイメージ-->
         <section id="top" class="top-section">
             <div class="top-image-container">
-                <img src="images/top.jpg" alt="おしゃれなオレンジイメージ">
+              <img src="./images/top.jpg" alt="おしゃれなオレンジイメージ"> 
             </div>
         </section>
 
@@ -173,14 +173,14 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                 <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">SERVICE</span></h2>
                 <div class="service-list">
                     <div class="service-item">
-                        <h3>イベント事業</h3>
+                        <h3><font color="FF6817">/</font> イベント事業</h3>
                         <div class="service-image">
                             <img src="images/event.jpg" alt="イベント事業のイメージ">
                         </div>
                         <p>当社のイベントは携帯イベントをメインとし、お客様のニーズに合わせて、さまざまな携帯電話やスマートフォンに関するイベントを企画・運営しています。</p>
                     </div>
                     <div class="service-item">
-                        <h3>買取事業</h3>
+                        <h3><font color="FF6817">/</font> 買取事業</h3>
                         <div class="service-image">
                             <img src="images/purchase.jpg" alt="買取事業のイメージ">
                         </div>
@@ -296,13 +296,13 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   </div>
 <?php } elseif ($mode == "confirm") { ?>
   <form action="./index.php" method="post">
-      <p>お名前: <?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>お名前(フリガナ): <?php echo htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>会社: <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></p>
+      <p>お名前 <?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></p>
+      <p>お名前(フリガナ) <?php echo htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?></p>
+      <p>会社 <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></p>
       <p>会社(フリガナ): <?php echo htmlspecialchars($_SESSION["company_kana"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>電話番号: <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>メールアドレス: <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></p>
-      <p>メッセージ: <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></p>
+      <p>電話番号 <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></p>
+      <p>メールアドレス <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></p>
+      <p>メッセージ <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></p>
 
       <input type="hidden" name="fullname" value="<?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?>">
       <input type="hidden" name="fullname_kana" value="<?php echo htmlspecialchars($_SESSION["fullname_kana"], ENT_QUOTES, 'UTF-8'); ?>">
@@ -312,8 +312,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <input type="hidden" name="email" value="<?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?>">
       <input type="hidden" name="message" value="<?php echo htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8'); ?>">
 
-      <input type="submit" name="back" value="戻る">
-      <input type="submit" name="send" value="送信">
+      <input type="submit" name="send" value="送信" class="backbutton">
+      <input type="submit" name="back" value="戻る" class="sendbutton">
   </form>
 
 <?php } else { ?>
