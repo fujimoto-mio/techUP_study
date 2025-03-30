@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?20250330">
 </head>
 <body>
   <!--header-->
@@ -142,12 +142,15 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         <!--PHILOSOPHY-->
         <section id="philosophy" class="philosophy-section">
                 <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">PHILOSOPHY</span></h2>
-                <h3>「自ら輝き、周囲に光を与える太陽のような人材を育成する」</h3>
+                <h3 class="section-subtitle">
+                  「自ら輝き、周囲に光を与える太陽のような人材を育成する」
+                </h3>
                 <p>
                   この企業理念は、一人ひとりが持つ潜在能力を引き出し、自ら成長し続ける力を重視します。そして、その成長が周囲にも良い影響を与え、共に発展していける会社を目指します。
                 </p>
-                <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">VISION</span></h2>
-                <h3>
+        <!--VISION-->        
+                <h2 class="section-title" id="visionid"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">VISION</span></h2>
+                <h3 class="section-subtitle">
                   自ら輝き、共に未来を創る
                 </h3>
                 <p>
