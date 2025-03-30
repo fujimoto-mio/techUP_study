@@ -27,7 +27,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
     // エラーがない場合のみセッションに保存
     if (empty($errors)) {
-        $_SESSION["fullname"]      = $_POST["fullname"];        
+        $_SESSION["fullname"]      = $_POST["fullname"];
         $_SESSION["company"]       = $_POST["company"];
         $_SESSION["tel"]          = $_POST["tel"];
         $_SESSION["email"]         = $_POST["email"];
@@ -37,7 +37,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     }
 } elseif (isset($_POST["send"]) && $_POST["send"]) {
     // 再度入力チェック（セッションが空の場合）
-    if (empty($_SESSION["fullname"]) || empty($_SESSION["email"]) || empty($_SESSION["message"]) 
+    if (empty($_SESSION["fullname"]) || empty($_SESSION["email"]) || empty($_SESSION["message"])
      || empty($_SESSION["company"]) || empty($_SESSION["tel"]))
     {
         $mode = "input";
@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?9">
 </head>
 <body>
   <!--header-->
@@ -135,13 +135,12 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <!--Top画像オレンジイメージ-->
         <section id="top" class="top-section">
             <div class="top-image-container">
-              <img src="./images/top.jpg" alt="おしゃれなオレンジイメージ"> 
+              <img src="./images/top.jpg" alt="おしゃれなオレンジイメージ">
             </div>
         </section>
 
         <!--PHILOSOPHY-->
         <section id="philosophy" class="philosophy-section">
-            <div class="container">
                 <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">PHILOSOPHY</span></h2>
                 <h3>「自ら輝き、周囲に光を与える太陽のような人材を育成する」</h3>
                 <p>
@@ -152,14 +151,12 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                   自ら輝き、共に未来を創る
                 </h3>
                 <p>
-                  私たちは、一人ひとりの才能を最大限に引き出し、成長を促す環境を提供します。その結果、個々の成長が組織全体に光をもたらし、共に前進する企業文化を育てます。私たちは、社員が自らの力で未来を切り開き、その輝きが会社全体、そして社会に良い影響を与える、持続的な成長を実現します。</p>
+                  私たちは、一人ひとりの才能を最大限に引き出し、成長を促す環境を提供します。その結果、個々の成長が組織全体に光をもたらし、共に前進する企業文化を育てます。私たちは、社員が自らの力で未来を切り開き、その輝きが会社全体、そして社会に良い影響を与える、持続的な成長を実現します。
                 </p>
-            </div>
         </section>
 
         <!--SERVICE-->
         <section id="service" class="service-section">
-            <div class="container">
                 <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">SERVICE</span></h2>
                 <div class="service-list">
                     <div class="service-item">
@@ -176,13 +173,11 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                         </div>
                           <p>当社の買い取り事業では、お客様が不要になった物を迅速かつ高価で買い取ります。正確な査定と透明な取引を行い、どなたでも安心してご利用いただけるサービスを提供しています。</p>
                     </div>
-                </div>
-            </div>
         </section>
 
         <!--COMPANY-->
         <section id="company" class="company-section">
-            <div class="container">
+            <div class="">
                 <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">COMPANY</span></h2>
                 <!--会社情報テーブル-->
                 <table class="table_design03">
@@ -230,7 +225,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
             <div class="container">
                 <h2 class="section-title" id="contact"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">CONTACT</span></h2>
             </div>
-        </section>    
+        </section>
 
 
 <?php if ($mode == "input") { ?>
@@ -276,7 +271,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   <form class="contact-response-form" action="./index.php#contact" method="post">
     <table class="table_design04">
       <tr><th>お名前</th><td><?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
-      <tr><th>会社</th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>  
+      <tr><th>会社</th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>電話番号</th><td> <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>メールアドレス</th><td> <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>メッセージ</th><td> <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></td></tr>

@@ -138,16 +138,16 @@ a {
 }
 /*.top-image-container {
   width: 100%;
-  height: 400px; 
+  height: 400px;
   background-image: url("./images/top.jpg");
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat:no-repeat;
 } */
 
 /*メイン*/
 .top-section {
-  margin-bottom: 45vh;
+  margin-bottom: 5vh;
 }
 
 
@@ -183,11 +183,10 @@ a {
 .contact-section h2.section-title,
 .service-section h2.section-title {
   margin-bottom: 50px;
-  font-size: 50px;
+  font-size: 2vw;
   font-weight: bold;
   letter-spacing: 8px;
 }
-
 
 
 
@@ -210,7 +209,7 @@ section .container p {
 .section-title .title-icon {
   color: #f5b041;
   margin-right: 15px;
-  font-size: 1.5em;
+/*  font-size: 1.5em;*/
   vertical-align: middle;
 }
 
@@ -224,10 +223,10 @@ section .container p {
   margin: 0 30px;
   text-align: center;
 }
-
+/*
 .service-section h2.section-title {
   margin-bottom: 50px;
-}
+}*/
 
 /*イベント事業・買取事業*/
 .service-list {
@@ -238,10 +237,8 @@ section .container p {
 
 .service-item {
   flex: 1 1 300px; /* 300px以上を確保しつつ、縮小可能 */
-  max-width: 400px;
-  margin: 5px 40px  30px 40px;
+  margin: 10px;
   justify-content: center;
-
 
 }
 
@@ -265,7 +262,7 @@ section .container p {
   line-height: 1.8;
   color: #555;
   max-width: 400px;
-  margin: 0 50px  20px 10px;
+  margin: auto;
   text-align: left;
 
 }
@@ -309,6 +306,7 @@ section .container p {
   margin: 0 auto 40px;
   font-size: 1.1em;
   line-height: 1.8;
+  padding: 20px 30px;
 }
 
 .company-section .company-info p {
@@ -333,7 +331,7 @@ section .container p {
 }
 
 .section-title {
-  font-size: clamp(32px, 5vw, 70px);
+  /*font-size: clamp(32px, 5vw, 70px);*/
 }
 
 
@@ -341,14 +339,14 @@ section .container p {
 .section-title span {
   background: linear-gradient(transparent 50%, #ffe7b9 0%);
   display: inline-block;
-  padding: 5px 10px;
+  /*padding: 5px 10px;*/
 }
 
 .contact-section {
   max-width: 600px;
   margin: 0 auto 40px;
   text-align: center;
-} 
+}
 
 footer {
   background-color: #FFCC77; /* 画像から推測した濃いグレー */
@@ -558,7 +556,7 @@ input {
 /*モバイル対応の強化*/
 @media screen and (max-width: 768px) {
   .top-section {
-    min-height: 35vh;
+    /*min-height: 35vh;*/
   }
 
   .service-list {
@@ -566,10 +564,9 @@ input {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .service-item {
     justify-content: center;
-    width: 100%;
   }
 }
 
@@ -592,7 +589,7 @@ input {
   .company-section h2.section-title,
   .service-section h2.section-title,
   .contact-section h2.section-title {
-    font-size: 40px;
+    font-size: 7vw;
     letter-spacing: 4px;
   }
 }
@@ -607,14 +604,14 @@ input {
 
 @media screen and (max-width: 1024px) { /* タブレット */
   .top-section {
-    height: 45vh;
+    /*height: 45vh;*/
     margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 768px) { /* スマホ */
   .top-section {
-    height: 10vh;
+    /*height: 10vh;*/
   }
   .top-image-container img {
     object-position: right;
