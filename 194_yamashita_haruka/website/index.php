@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css?9">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!--header-->
@@ -234,13 +234,13 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   <?php } ?>
   <div id="contact">
   <form action="./index.php#contact" method="post">
-      <label>お名前 <input type="text" name="fullname" value="<?php echo isset($_SESSION["fullname"]) ? htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>ご担当者 <input type="text" name="fullname" value="<?php echo isset($_SESSION["fullname"]) ? htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
       <?php if (!empty($errors["fullname"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["fullname"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>会社 <input type="text" name="company" value="<?php echo isset($_SESSION["company"]) ? htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>企業名 <input type="text" name="company" value="<?php echo isset($_SESSION["company"]) ? htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
       <?php if (!empty($errors["company"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["company"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
@@ -264,14 +264,14 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <?php } ?>
       <br>
 
-      <input type="submit" name="confirm" value="確認">
+      <input type="submit" name="confirm" value="確認" class="confirm_submit">
   </form>
   </div>
 <?php } elseif ($mode == "confirm") { ?>
   <form class="contact-response-form" action="./index.php#contact" method="post">
     <table class="table_design04">
-      <tr><th>お名前</th><td><?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
-      <tr><th>会社</th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
+      <tr><th>ご担当者 </th><td><?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
+      <tr><th>企業名 </th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>電話番号</th><td> <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>メールアドレス</th><td> <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>メッセージ</th><td> <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></td></tr>

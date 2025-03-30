@@ -466,6 +466,7 @@ label {
   margin-top: 10px;
   font-weight: bold;
   color: #555;
+  text-align: left;
 }
 
 /* 入力欄のスタイル */
@@ -482,6 +483,7 @@ input, textarea {
 textarea {
   resize: vertical;
   height: 120px;
+  background-color: #FFE7B9;
 }
 
 /* 送信ボタンのスタイル */
@@ -511,6 +513,7 @@ input {
   margin: 40px 0;
 }
 
+/*送信、戻るボタン*/
 .backbutton,.sendbutton, .homebackbutton {
   display: block;
   width: 100px;
@@ -520,6 +523,14 @@ input {
 .homebackbutton {
   width: 140px;
 }
+
+/*確認ボタン*/
+.confirm_submit {
+  display: block;
+  width: 100px;
+  margin: 50px auto;
+}
+
 
 
 /*お問い合わせテーブル*/
@@ -535,7 +546,7 @@ input {
 }
 .table_design04 th {
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   min-width: 8em;
 }
 .table_design04 td {
@@ -607,6 +618,7 @@ input {
     /*height: 45vh;*/
     margin-bottom: 0;
   }
+
 }
 
 @media screen and (max-width: 768px) { /* スマホ */
@@ -618,6 +630,13 @@ input {
     margin-bottom: 0;
 
   }
+
+  input, textarea {
+    width: 82%; 
+    text-align: center;
+  }
 }
+
+
 
 
