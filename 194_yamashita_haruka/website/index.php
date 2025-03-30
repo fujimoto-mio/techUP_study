@@ -222,7 +222,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
         <!--CONTACT-->
         <section id="contact" class="contact-section">
-            <div class="container">
+            <div class="">
                 <h2 class="section-title" id="contact"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">CONTACT</span></h2>
             </div>
         </section>
@@ -234,31 +234,36 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   <?php } ?>
   <div id="contact">
   <form action="./index.php#contact" method="post">
-      <label>ご担当者 <input type="text" name="fullname" value="<?php echo isset($_SESSION["fullname"]) ? htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>ご担当者</label>
+      <input type="text" name="fullname" value="<?php echo isset($_SESSION["fullname"]) ? htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8') : ''; ?>">
       <?php if (!empty($errors["fullname"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["fullname"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>企業名 <input type="text" name="company" value="<?php echo isset($_SESSION["company"]) ? htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>企業名</label>
+      <input type="text" name="company" value="<?php echo isset($_SESSION["company"]) ? htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8') : ''; ?>">
       <?php if (!empty($errors["company"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["company"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>メールアドレス <input type="email" name="email" value="<?php echo isset($_SESSION["email"]) ? htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>メールアドレス</label>
+      <input type="email" name="email" value="<?php echo isset($_SESSION["email"]) ? htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8') : ''; ?>">
       <?php if (!empty($errors["email"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["email"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>電話番号<input type="tel" name="tel" value="<?php echo isset($_SESSION["tel"]) ? htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8') : ''; ?>"></label>
+      <label>電話番号</label>
+      <input type="tel" name="tel" value="<?php echo isset($_SESSION["tel"]) ? htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8') : ''; ?>">
       <?php if (!empty($errors["tel"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["tel"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>
       <br>
 
-      <label>メッセージ <textarea name="message" cols="30" rows="5"><?php echo isset($_SESSION["message"]) ? htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8') : ''; ?></textarea></label>
+      <label>メッセージ</label>
+      <textarea name="message" cols="30" rows="5"><?php echo isset($_SESSION["message"]) ? htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
       <?php if (!empty($errors["message"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["message"], ENT_QUOTES, 'UTF-8'); ?></span>
       <?php } ?>

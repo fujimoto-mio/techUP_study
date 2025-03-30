@@ -453,7 +453,7 @@ h2 {
 form {
   background-color: white;
   padding: 20px;
-  width: 90%;
+  /*width: 80%;*/
   max-width: 400px;
   margin:0 auto;
   border-radius: 10px;
@@ -464,6 +464,7 @@ form {
 label {
   display: block;
   margin-top: 10px;
+  margin-left: 20px;
   font-weight: bold;
   color: #555;
   text-align: left;
@@ -632,7 +633,7 @@ input {
   }
 
   input, textarea {
-    width: 82%; 
+    width: 82%;
     text-align: center;
   }
 }
