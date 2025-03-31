@@ -3,8 +3,10 @@
 require_once 'Coffee.php';
 require_once 'Tea.php';
 require_once 'Dripper.php';
+
 //4-3追加１
 require_once 'Matcha.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -67,7 +69,6 @@ require_once 'Matcha.php';
     print($dripper->dripDrink($matcha) . '<br>');
     print('<br>');
     
-
 ?>
     </body>
 </html>
