@@ -1,0 +1,30 @@
+ソースの流れ
+・index.php プログラムのはじまり
+・Patient.php 子クラスの定義　インスタンス作成
+・Person.php 親クラスの定義　基本情報
+
+index.php
+・require_once 'Patient.php';　Patient.phpファイルの読み込み
+・htmlの基本構造を定義（言語：日本語、文字コード：utf-8に指定、タイトル：techUPオブジェクト指向課題）
+・Patientのインスタンスを作成。
+・selfIntroduction()でメソッドの呼び出し。自己紹介/身長/体重を取得し、HTMLに出力。
+・calculateStandardWeight()を呼び出し、標準体重を計算し、出力。
+
+Patient.php
+・require_once 'Person.php';　Patient.phpファイルの読み込み
+・PatientクラスはPersonクラスを継承（Personクラスの機能をそのまま使える）
+・プロパティとして身長/体重を追加（クラス内のみアクセス可能）
+・construct()最初に実行される関数。患者情報として氏名/年齢/性別/身長/体重をセット
+・親クラスのコンストラクタ呼び出し
+・プロパティの初期化
+・標準体重の計算
+・身長の取得し返す
+・体重の取得し返す
+
+Person.php
+・Personクラスの作成
+・プロパティとして氏名/年齢/性別を保存（クラス内のみアクセス可能）
+・氏名/年齢/性別を取得しプロパティにセット
+・自己紹介メソッド（もしmなら男性、fなら女性、どちられでもなければ性別は不明）
+・retureで作成した文章を返す
+・年齢を１つ増やす
