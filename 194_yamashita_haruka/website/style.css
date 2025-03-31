@@ -254,8 +254,10 @@ section .container p {
 
 .service-item {
   flex: 1 1 300px; /* 300px以上を確保しつつ、縮小可能 */
-  margin: 10px;
+  margin: 0 auto;
   justify-content: center;
+  text-align: center;
+  width: 70%;
 
 }
 
@@ -277,7 +279,8 @@ section .container p {
 
 .service-item p {
   line-height: 1.8;
-  max-width: 300px;
+  /*max-width: 300px;*/
+  width: 70%;
   margin: auto;
   text-align: left;
 }
@@ -317,7 +320,7 @@ section .container p {
 }
 
 .company-section {
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.8;
@@ -353,7 +356,7 @@ section .container p {
 }
 
 .contact-section {
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin: 0 auto 40px;
   text-align: center;
 }
@@ -670,7 +673,7 @@ input {
   object-fit: cover;
 }
 .service-item p {
-  max-width: 100%;
+  width: 100%;
 }
 }
 
