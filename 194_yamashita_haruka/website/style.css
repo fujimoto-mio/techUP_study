@@ -111,8 +111,9 @@ main {
 .drawer__list {
   display: flex;
   flex-direction: column;
-
   gap: 50px;
+  padding: 0;
+  text-align: center;
 }
 
 .drawer__link {
@@ -188,7 +189,7 @@ a {
   letter-spacing: 8px;
 }
 
-.company-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title {
+.philosophy-section h2.section-title,.company-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title {
   margin-top: 100px;
 }
 
@@ -317,7 +318,7 @@ section .container p {
 
 .company-section {
   max-width: 600px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   font-size: 1.1em;
   line-height: 1.8;
   padding: 20px 30px;
@@ -538,6 +539,7 @@ input {
   display: block;
   width: 100px;
   margin: 50px auto;
+  text-align: center;
 }
 
 
@@ -581,7 +583,6 @@ input {
   font-weight: bold;
   unicode-bidi: isolate;
 }
-
 /* レスポンシブ対応 */
 /*モバイル対応の強化*/
 @media screen and (max-width: 768px) {
@@ -681,7 +682,7 @@ input {
 
   input, textarea {
     width: 93%;
-    text-align: center;
+    text-align: left;
   }
   .section-subtitle {
     font-size: 1.2em;
@@ -697,16 +698,16 @@ input {
   font-size: 1.2em;
 }
 /*sセクションの縦幅*/
- .contact-section h2.section-title, .service-section h2.section-title, #visionid {
+.philosophy-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title, #visionid {
   margin: 100px 0 0;
 }
 .company-section h2.section-title {
   margin: 100px 0 19.2px;
 }
-
-.philosophy-section h2.section-title {
-  margin: 24.9133px 0 0;
+.header-logo {
+  width: 89px;
 }
+
 
 
 form {

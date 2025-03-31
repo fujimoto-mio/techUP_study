@@ -8,10 +8,10 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 } elseif (isset($_POST["confirm"]) && $_POST["confirm"]) {
     // バリデーション（未入力チェック）
     if (empty($_POST["fullname"])) {
-        $errors["fullname"] = "お名前を入力してください。";
+        $errors["fullname"] = "ご担当者を入力してください。";
     }
     if (empty($_POST["company"])) {
-        $errors["company"] = "会社を入力してください。";
+        $errors["company"] = "企業名を入力してください。";
     }
     if (empty($_POST["tel"])) {
         $errors["tel"] = "電話番号を入力してください。";
@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css?20250330">
+    <link rel="stylesheet" href="style.css?20250331">
 </head>
 <body>
   <!--header-->
@@ -179,9 +179,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         </section>
 
         <!--COMPANY-->
-        <section id="company" class="company-section">
-            <div class="">
-                <h2 class="section-title"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">COMPANY</span></h2>
+        <section class="company-section">
+                <h2 class="section-title"  id="company" ><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">COMPANY</span></h2>
                 <!--会社情報テーブル-->
                 <table class="table_design03">
                     <tbody>
@@ -265,7 +264,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <?php } ?>
       <br>
 
-      <label>メッセージ</label>
+      <label>お問い合わせ内容</label>
       <textarea name="message" cols="30" rows="5"><?php echo isset($_SESSION["message"]) ? htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8') : ''; ?></textarea>
       <?php if (!empty($errors["message"])) { ?>
           <span style="color:red;"><?php echo htmlspecialchars($errors["message"], ENT_QUOTES, 'UTF-8'); ?></span>
@@ -282,7 +281,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
       <tr><th>企業名 </th><td> <?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>電話番号</th><td> <?php echo htmlspecialchars($_SESSION["tel"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
       <tr><th>メールアドレス</th><td> <?php echo htmlspecialchars($_SESSION["email"], ENT_QUOTES, 'UTF-8'); ?></td></tr>
-      <tr><th>メッセージ</th><td> <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></td></tr>
+      <tr><th>お問い合わせ内容</th><td> <?php echo nl2br(htmlspecialchars($_SESSION["message"], ENT_QUOTES, 'UTF-8')); ?></td></tr>
     </table>
         <input type="hidden" name="fullname" value="<?php echo htmlspecialchars($_SESSION["fullname"], ENT_QUOTES, 'UTF-8'); ?>">
         <input type="hidden" name="company" value="<?php echo htmlspecialchars($_SESSION["company"], ENT_QUOTES, 'UTF-8'); ?>">
@@ -295,7 +294,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   </form>
 
 <?php } else { ?>
-  <p class="form-success">送信しました。お問い合わせありがとうございました。</p>
+  <p class="form-success">送信完了いたしました。</p>
+  <p class="form-success">お問い合わせいただき、ありがとうございました。</p>
   <a href="index.php"><button class="homebackbutton">ホームに戻る</button></a>
 <?php } ?>
 
