@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css?20250331">
+    <link rel="stylesheet" href="style.css?20250401010101">
 </head>
 <body>
   <!--header-->
@@ -121,7 +121,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                 <a href="#company" class="drawer__link">COMPANY</a>
               </li>
               <li class="drawer__item">
-                <a href="#contact" class="drawer__link">CONTACT</a>
+                <a href="#contact1" class="drawer__link">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -223,7 +223,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         </section>
 
         <!--CONTACT-->
-        <section id="contact" class="contact-section">
+        <section id="contact1" class="contact-section">
             <div class="">
                 <h2 class="section-title" id="contact"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">CONTACT</span></h2>
             </div>
@@ -232,7 +232,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
 <?php if ($mode == "input") { ?>
   <?php if (!empty($errors["general"])) { ?>
-      <p style="color:red;"><?php echo htmlspecialchars($errors["general"], ENT_QUOTES, 'UTF-8'); ?></p>
+    <p style="color:red; text-align: center;"><?php echo htmlspecialchars($errors["general"], ENT_QUOTES, 'UTF-8'); ?></p>
   <?php } ?>
   <div id="contact">
   <form action="./index.php#contact" method="post">
@@ -302,7 +302,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     </main>
 
     <!--footer-->
-    <footer>
+    <footer class="footer-img">
         <div class="container">
             <p>&copy; 2025 SUN.Inc</p>
         </div>

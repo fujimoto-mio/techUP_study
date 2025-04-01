@@ -235,7 +235,8 @@ section .container p {
 
 /*marginで左右幅*/
 .service-section {
-  margin: 0 30px;
+ /* margin: 0 30px;*/
+  margin: 0;
   text-align: center;
 }
 /*
@@ -467,14 +468,14 @@ h2 {
 
 /* フォーム全体のスタイル */
 form {
-  background-color: white;
+  /*background-color: white;*/
   padding: 20px;
   /*width: 80%;*/
   max-width: 400px;
   margin:0 auto;
   border-radius: 10px;
   text-align: center;
-  font-size: 1em;;
+  font-size: 17px;
   
 }
 
@@ -536,6 +537,7 @@ input {
   display: block;
   width: 100px;
   margin: 50px auto;
+  text-align: center;
 }
 
 .homebackbutton {
@@ -555,7 +557,9 @@ input {
 
 /*お問い合わせテーブル*/
 .table_design04 {
+  table-layout: fixed;
   border-collapse: collapse;
+  table-layout: fixed;
   width: 100%;
   max-width: 700px;
   margin-bottom: 70px;
@@ -572,6 +576,9 @@ input {
 .table_design04 td {
   text-align: left;
   padding: 0 1.5em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .contact-response-form {
@@ -592,8 +599,172 @@ input {
   font-weight: bold;
   unicode-bidi: isolate;
 }
+
+
+#visionid, #service, #company, #contact1, .footer-img {
+  position: relative;
+  /*padding: 80px 0;*/
+}
+
+/*背景デザイン画像*/
+/*VISIONの前、左*/
+#visionid::before {
+  content: "";
+  position: absolute;
+  top: -183px;
+  left: -179px;
+  width: 621px;
+  height: 563px;
+  background: url(images/5.png);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  background-size: 87%;
+}
+
+/*SERVICEの前、右*/
+#service::before {
+  content: "";
+  position: absolute;
+  top: -144px;
+  right: -17px;
+  width: 218px;
+  height: 456px;
+  background: url(images/2.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 141%;
+}
+
+/*COMPANYの前、左*/
+#company::before {
+  content: "";
+  position: absolute;
+  top: -202px;
+  left: -179px;
+  width: 621px;
+  height: 563px;
+  background: url(images/6.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 64%;
+}
+
+/*CONTACTの前、右*/
+#contact1::before {
+  content: "";
+  position: absolute;
+  top: -144px;
+  right: -17px;
+  width: 218px;
+  height: 456px;
+  background: url(images/4.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 141%;
+}
+
+/*FOOTERの前、左*/
+.footer-img::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 3px;
+  width: 647px;
+  height: 270px;
+  background: url(images/1.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 50%;
+}
+
+
 /* レスポンシブ対応 */
 /*モバイル対応の強化*/
+
+@media screen and (max-width: 1024px) { /* タブレット */
+  .top-section {
+    /*height: 45vh;*/
+    margin-bottom: 0;
+  }
+  .section-subtitle {
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+   .philosophy-section p {
+    font-size: 1em;
+    color: #444;
+    width: 69%;
+}
+/*sセクションの縦幅*/
+.company-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title {
+  margin-top: 150px;
+}
+
+#visionid {
+  margin-top: 150px;
+}
+/*サービス画像の修正*/
+.service-list {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.service-image img {
+  width: 86%;
+  height: 87%;
+  object-fit: cover;
+}
+.service-item p {
+  width: 86%;
+}
+
+
+/*CONTACTの前、右*/
+
+#contact1::before {
+  content: "";
+  position: absolute;
+  top: -144px;
+  right: 2px;
+  width: 145px;
+  height: 456px;
+  background: url(images/4.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 127%;
+}
+/*SERVICEの前、右*/
+#service::before {
+  content: "";
+  position: absolute;
+  top: -144px;
+  right: 2px;
+  width: 145px;
+  height: 456px;
+  background: url(images/2.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 138%;
+}
+
+}
+
+
 @media screen and (max-width: 768px) {
   .service-list {
     display: flex;
@@ -603,6 +774,7 @@ input {
 
   .service-item {
     justify-content: center;
+   /* width: 80%;*/
   }
 }
 
@@ -651,7 +823,7 @@ input {
     text-align: left;
   }
   .section-subtitle {
-    font-size: 1.2em;
+    font-size: 1.4em;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -661,11 +833,11 @@ input {
     unicode-bidi: isolate;
 }
 .service-item h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 /*sセクションの縦幅*/
 .philosophy-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title, #visionid {
-  margin: 120px 0 0;
+  margin: 120px 0 40px;
 }
 .company-section h2.section-title {
   margin: 120px 0 19.2px;
@@ -690,52 +862,83 @@ form {
   width: 100%;
 }
 
+
+/*VISIONの前、左*/
+#visionid::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: -138px;
+  width: 306px;
+  height: 563px;
+  background: url(images/5.png);
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+  background-size: 94%;
 }
 
-@media screen and (max-width: 1024px) { /* タブレット */
-  .top-section {
-    /*height: 45vh;*/
-    margin-bottom: 0;
-  }
-  .section-subtitle {
-    display: block;
-    font-size: 1.3em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-   .philosophy-section p {
-    font-size: 1em;
-    color: #444;
-    width: 100%;
-}
-/*sセクションの縦幅*/
-.company-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title {
-  margin-top: 150px;
+/*COMPANYの前、左*/
+#company::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -91px;
+  width: 404px;
+  height: 563px;
+  background: url(images/6.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 50%;
 }
 
-#visionid {
-  margin-top: 150px;
+
+.footer-img::before {
+  content: "";
+  position: absolute;
+  top: -125px;
+  left: -7px;
+  width: 301px;
+  height: 188px;
+  background: url(images/1.png);
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  background-size: 75%;
 }
-/*サービス画像の修正*/
-.service-list {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
+
+
+
+/*お問い合わせテーブル*/
+.table_design04 {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 355px;
+  margin-bottom: 70px;
   margin: 0 auto;
 }
+.table_design04 th, .table_design04 td {
+  padding: 0.5em;
+}
+.table_design04 th {
+  font-weight: bold;
+  text-align: left;
+  min-width: 8em;
+}
+.table_design04 td {
+  text-align: left;
+  padding: 0 1.5em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
 
-.service-image img {
-  width: 86%;
-  height: 87%;
-  object-fit: cover;
+.philosophy-section p {
+  width: 80%;
 }
-.service-item p {
-  width: 86%;
-}
+
 }
 
 
