@@ -89,6 +89,9 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <link rel="stylesheet" href="style.css?20250401010101">
 </head>
 <body>
+
+
+ 
   <!--header-->
   <header>
     <!--企業ロゴ-->
@@ -300,15 +303,26 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 <?php } ?>
 
     </main>
-
     <!--footer-->
-    <footer class="footer-img">
+   <footer class="footer-img wrapper">
         <div class="container">
             <p>&copy; 2025 SUN.Inc</p>
         </div>
+        <ul class="md-flex">
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#philosophy">PHILOSOPHY・VISION</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#company">COMPANY</a></li>
+            <li><a href="#contact1">CONTACT</a></li>
+        </ul>
+
     </footer>
 
-    <!--Javascript-->
+
+      <!--Javascript-->
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+

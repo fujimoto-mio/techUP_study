@@ -106,20 +106,23 @@ main {
   align-items: center;
   height: 100%;
   padding: 0 20px;
+  
 }
 
 .drawer__list {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding: 0;
+  padding-left: 0;
   text-align: center;
 }
 
 .drawer__link {
   color: #ffffff;
 }
-
+.drawer__item {
+  list-style: none;
+}
 
 
 
@@ -366,13 +369,6 @@ section .container p {
 }
 
 
-footer {
-  background-color: #FFCC77; /* 画像から推測した濃いグレー */
-  color: #292929;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 0.9em;
-}
 
 
 .contact-wrapper {
@@ -674,7 +670,7 @@ input {
   top: -200px;
   left: 3px;
   width: 647px;
-  height: 270px;
+  height: 243px;
   background: url(images/1.png);
   background-repeat: no-repeat;
   opacity: 0.25;
@@ -682,9 +678,73 @@ input {
   background-size: 50%;
 }
 
+/*footer*/
+/*.md-flex a {
+  color: #292929;
+  text-decoration: none;
+}
+
+.md-flex {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-img {
+  padding: 2rem;
+  font-size: 15px;
+  color: #292929;
+  background: #FFCC77;
+  border-top: 1px solid #e5e7eb;
+}
+
+.md-flex a:hover {
+  color: #FFFFFF;
+}*/
+
+.md-flex {
+  display: flex;
+  padding-left:0;
+}
+.md-flex li {
+  list-style:none;
+  margin-left: 30px;
+  
+}
+
+.md-flex li a:hover {
+  color: #ffffff;
+}
+
+footer {
+  background-color: #FFCC77;
+  color: #292929;
+  padding: 15px 0;
+  /*text-align: center;*/
+  font-size: 0.9em;
+  /*height: 100px;*/
+}
+
+.footer-img {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*.container1 {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+}*/
 
 /* レスポンシブ対応 */
-/*モバイル対応の強化*/
+
 
 @media screen and (max-width: 1024px) { /* タブレット */
   .top-section {
@@ -938,6 +998,13 @@ form {
 .philosophy-section p {
   width: 80%;
 }
+
+.md-flex {
+  display: block;
+}
+
+
+
 
 }
 
