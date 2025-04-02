@@ -86,7 +86,8 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css?20250401010101">
+    <link rel="stylesheet" href="style.css?20250400202">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
 
@@ -96,15 +97,17 @@ if (isset($_POST["back"]) && $_POST["back"]) {
   <header>
     <!--企業ロゴ-->
     <div class="container">
-      <div class="header-group"></div>
-      <h1 class="logo">
-      <img src="images/logo.jpg" alt="SUN.株式会社 ロゴ" class="header-logo"></h1>
+      <div class="header-group">
 
-        <!-- ハンバーガーメニュー -->
-      <div class="hamburger js-hamburger sp-show">
-        <span></span>
-        <span></span>
-        <span></span>
+        <h1 class="logo" id="top">
+          <img src="images/logo.jpg" alt="SUN.株式会社 ロゴ" class="header-logo"></h1>
+          
+          <!-- ハンバーガーメニュー -->
+          <div class="hamburger js-hamburger sp-show">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
       </div>
       <!-- ドロワーメニュー -->
       <div class="drawer js-drawer">
@@ -131,14 +134,15 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         </div>
       </div>
     </div>
+
   </header>
 
   <!--main-->
     <main>
       <!--Top画像オレンジイメージ-->
-        <section id="top" class="top-section">
+        <section  class="top-section">
             <div class="top-image-container">
-              <img src="./images/top.jpg" alt="おしゃれなオレンジイメージ">
+              <img src="./images/top2.jpg" alt="おしゃれなオレンジイメージ">
             </div>
         </section>
 
@@ -305,16 +309,16 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     </main>
     <!--footer-->
    <footer class="footer-img wrapper">
-        <div class="container">
-            <p>&copy; 2025 SUN.Inc</p>
-        </div>
-        <ul class="md-flex">
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#philosophy">PHILOSOPHY・VISION</a></li>
-            <li><a href="#service">SERVICE</a></li>
-            <li><a href="#company">COMPANY</a></li>
-            <li><a href="#contact1">CONTACT</a></li>
-        </ul>
+     <ul class="md-flex">
+       <li><a href="#top">TOP</a></li>
+       <li><a href="#philosophy">PHILOSOPHY・VISION</a></li>
+       <li><a href="#service">SERVICE</a></li>
+       <li><a href="#company">COMPANY</a></li>
+       <li><a href="#contact1">CONTACT</a></li>
+      </ul>
+      <div class="container">
+          <p>&copy; 2025 SUN.Inc</p>
+      </div>
 
     </footer>
 

@@ -21,16 +21,24 @@ main {
 /*ヘッダー*/
 .header-logo{
   width: 210px;
-  margin-left:  20px;
+/*  margin-left:  20px;*/
+  /*margin-top: 20px;*/
+  position: relative;
+  top: 19px;
+  left: 21px;
+
 
 }
 
+.logo {
+  margin: 0;
+}
 /*=========================================
 #hamburger
 =========================================*/
 .hamburger {
   position: fixed;
-  top: 20px;
+  top: 9px;
   right: 40px;
   z-index: 150;
   width: 60px;
@@ -679,14 +687,9 @@ input {
 }
 
 /*footer*/
-/*.md-flex a {
+.md-flex a {
   color: #292929;
   text-decoration: none;
-}
-
-.md-flex {
-  list-style: none;
-  padding: 0;
 }
 
 .footer-img {
@@ -699,15 +702,18 @@ input {
 
 .md-flex a:hover {
   color: #FFFFFF;
-}*/
+}
 
 .md-flex {
   display: flex;
+  justify-content: center;
   padding-left:0;
+  margin: 20px 0;
 }
 .md-flex li {
   list-style:none;
   margin-left: 30px;
+  text-align: center;
   
 }
 
@@ -720,29 +726,24 @@ footer {
   color: #292929;
   padding: 15px 0;
   /*text-align: center;*/
+  /*font-size: 0.9em;
+  /*height: 100px;*/
+}
+footer {
+  background-color: #FFCC77;
+  color: #292929;
+  padding: 15px 0;
+  text-align: center;
   font-size: 0.9em;
   /*height: 100px;*/
 }
 
 .footer-img {
-  display: flex;
+  /*display: flex;*/
   justify-content: space-between;
   padding: 10px 15px;
 
 }
-
-.wrapper {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/*.container1 {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-  min-height: 100vh;
-}*/
-
 /* レスポンシブ対応 */
 
 
@@ -1001,6 +1002,10 @@ form {
 
 .md-flex {
   display: block;
+}
+.md-flex li {
+  margin-left: 0;
+  
 }
 
 
