@@ -148,14 +148,6 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
-/*.top-image-container {
-  width: 100%;
-  height: 400px;
-  background-image: url("./images/top.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-} */
 
 /*メイン*/
 .top-section {
@@ -228,32 +220,23 @@ section .container p {
 .section-title .title-icon {
   color: #f5b041;
   margin-right: 15px;
-/*  font-size: 1.5em;*/
   vertical-align: middle;
 }
 
-/*.philosophy-section p {
-  font-size: 1.15em;
-  color: #444;
-  width: 100px;
-}*/
 .philosophy-section p {
   font-size: 1.15em;
   color: #292929;
   width: 700px;
   margin: 0 auto;
+  text-align: justify;
+  text-align-last: center;
 }
 
 /*marginで左右幅*/
 .service-section {
- /* margin: 0 30px;*/
   margin: 0;
   text-align: center;
 }
-/*
-.service-section h2.section-title {
-  margin-bottom: 50px;
-}*/
 
 /*イベント事業・買取事業*/
 .service-list {
@@ -284,14 +267,12 @@ section .container p {
 }
 
 .service-image img {
-  width: 70%;/*100から70%*/
+  width: 70%;
   height: 70%;
   object-fit: cover;
 }
 
 .service-item p {
-  line-height: 1.8;
-  /*max-width: 300px;*/
   width: 70%;
   margin: auto;
   text-align: left;
@@ -725,9 +706,6 @@ footer {
   background-color: #FFCC77;
   color: #292929;
   padding: 15px 0;
-  /*text-align: center;*/
-  /*font-size: 0.9em;
-  /*height: 100px;*/
 }
 footer {
   background-color: #FFCC77;
@@ -735,11 +713,9 @@ footer {
   padding: 15px 0;
   text-align: center;
   font-size: 0.9em;
-  /*height: 100px;*/
 }
 
 .footer-img {
-  /*display: flex;*/
   justify-content: space-between;
   padding: 10px 15px;
 
@@ -764,8 +740,10 @@ footer {
 }
    .philosophy-section p {
     font-size: 1em;
-    color: #444;
+    color: #292929;
     width: 69%;
+    text-align: justify;
+    text-align-last: center;
 }
 /*sセクションの縦幅*/
 .company-section h2.section-title, .contact-section h2.section-title, .service-section h2.section-title {
@@ -998,6 +976,8 @@ form {
 
 .philosophy-section p {
   width: 80%;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .md-flex {

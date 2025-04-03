@@ -86,7 +86,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUN.株式会社</title>
-    <link rel="stylesheet" href="style.css?20250400202">
+    <link rel="stylesheet" href="style.css?202504003">
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
