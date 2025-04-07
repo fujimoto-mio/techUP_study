@@ -56,7 +56,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         . "【お問い合わせ内容】" . $_SESSION["message"] . "\r\n";
 
         // メールヘッダー
-        $headers = "From: misty009club@gmail.com\r\n";
+        $headers = "From: fujimura@sun-inc.jp\r\n";
         $headers .= "Reply-To: " . $_SESSION["email"] . "\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         //$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -71,7 +71,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
         }
 
         // 管理者への通知
-        mb_send_mail("misty009club@gmail.com", "お問い合わせがありました", $message, $headers);
+        mb_send_mail("fujimura@sun-inc.jp", "お問い合わせがありました", $message, $headers);
 
         // セッションをクリア
         $_SESSION = array();
@@ -92,7 +92,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 <body>
 
 
- 
+
   <!--header-->
   <header>
     <!--企業ロゴ-->
@@ -101,7 +101,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
 
         <h1 class="logo" id="top">
           <img src="images/logo.jpg" alt="SUN.株式会社 ロゴ" class="header-logo"></h1>
-          
+
           <!-- ハンバーガーメニュー -->
           <div class="hamburger js-hamburger sp-show">
             <span></span>
@@ -155,7 +155,7 @@ if (isset($_POST["back"]) && $_POST["back"]) {
                 <p>
                   この企業理念は、一人ひとりが持つ潜在能力を引き出し、自ら成長し続ける力を重視します。そして、その成長が周囲にも良い影響を与え、共に発展していける会社を目指します。
                 </p>
-        <!--VISION-->        
+        <!--VISION-->
                 <h2 class="section-title" id="visionid"><span style="background: linear-gradient(transparent 50%, #ffe7b9 0%);">VISION</span></h2>
                 <h3 class="section-subtitle">
                   自ら輝き、共に未来を創る
