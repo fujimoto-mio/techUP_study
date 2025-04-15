@@ -8,6 +8,7 @@
     <title>Todo</title>
     <!--　headタグの中で以下の記述により、Tailwind CSSを読み込でおきます  -->
     <!-- 実装したい方はこちらで、https://reffect.co.jp/html/tailwindcss-for-beginners -->
+
 <!-- V2の場合 -->
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
@@ -25,6 +26,7 @@
         </div>
     </div>
 </header>
+
 
 <main class="grow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -80,6 +82,7 @@
                                   <td class="p-0 text-right text-sm font-medium">
                                       <div class="flex justify-end">
                                           <div>
+
                                           <form action="/tasks/{{ $item->id }}"
                                                 method="post"
                                                 class="inline-block text-gray-500 font-medium"
@@ -94,6 +97,7 @@
                                                 <button type="submit"
                                                     class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
                                             </form>
+
                                           </div>
                                           <div>
                                               <a href="/tasks/{{ $item->id }}/edit/"
@@ -122,15 +126,18 @@
   @endif
   {{-- 追記ここまで --}}
 
+
         </div>
     </div>
 </main>
 <footer class="bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
         <div class="py-4 text-center">
             <p class="text-white text-sm">Todoアプリ</p>
         </div>
     </div>
+
 </footer>
 
 <script>
@@ -142,6 +149,7 @@
         }
     }
 </script>
+
 </body>
 
 </html>

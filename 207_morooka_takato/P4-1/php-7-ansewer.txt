@@ -1,0 +1,32 @@
+ソースの流れ
+・Person.phpで「名前、性別、年齢」を取得
+・Patient.phpで「標準体重、身長、体重」を取得
+・index.phpで取得したデータを関数を用いて出力する
+
+Person.php
+・メンバ変数に 「名前($name)、年齢($age)、性別($gender)」
+・「__construct」は初期化メソッドで最初に実行される。引数で得た値をそれぞれの$this->〇〇のメンバ変数に入る
+・「selfIntroduction」メソッドは条件分岐により性別を判断し「m」なら男性、「f」なら女性、それ以外なら[性別不明]、最後に「わたしは(名前)、(年齢)才、(性別)です。」と返すようになっている関数。
+・「addAge」メソッドは年齢に＋１する関数。
+
+patient.php
+・Personクラスを継承
+・メンバ変数に 「身長($hight)、体重($weight)」
+・「__construct」は初期化メソッドで最初に実行される。引数で得た値をそれぞれの$this->〇〇のメンバ変数に入る。加えPersonクラスを呼び出し引数で得た「名前($name)、年齢($age)、性別($gender)」をPersonクラスの「__construct」の引数として与える。
+・「calculateStandardWeight」メソッドは、身長($hight)×身長($hight)×22の結果を返す関数。
+・「getHeight」メソッドは身長($hight)の値を返す関数
+・「getWeight」メソッドは体重($weight)の値を返す関数
+
+index.php
+・new Patientでpatientクラスをインスタンス化し変数$patientに代入。また名前、年齢、性別、身長、体重を引数として渡している
+・「selfIntroduction」メソッドを呼び出し。
+・改行後「getHeight」メソッドを呼び出し。
+・改行後「getWeight」メソッドを呼び出し。
+・２回改行
+・最後に「calculateStandardWeight」メソッドを呼び出し。
+
+◎出力結果
+わたしは山田太郎、30才、男性です。
+身長：1.65m
+体重：63.5kgです。
+標準体重は59.895kgです。

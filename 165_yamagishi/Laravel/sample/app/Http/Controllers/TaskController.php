@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Task;
 use Illuminate\Support\Facades\Validator;
 
@@ -43,7 +44,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-     //バリデーションのリールを記載
+
       $rules = [
         'task_name' => 'required|max:100',
       ];
@@ -64,6 +65,7 @@ class TaskController extends Controller
      
       //リダイレクト
       return redirect('/tasks');
+
     }
 
     /**
