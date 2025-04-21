@@ -8,26 +8,22 @@
     <title>Todo</title>
     <!--　headタグの中で以下の記述により、Tailwind CSSを読み込でおきます  -->
     <!-- 実装したい方はこちらで、https://reffect.co.jp/html/tailwindcss-for-beginners -->
-
-<!-- V2の場合 -->
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
-<!-- V3の場合 -->
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- @vite('resources/css/app.css') -->
-
+    <!-- V2の場合 -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- V3の場合 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- @vite('resources/css/app.css') -->
 </head>
 
 <body class="flex flex-col min-h-[100vh]">
-<header class="bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="py-6">
-            <p class="text-white text-xl">Todoアプリ</p>
+    <header class="bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="py-6">
+                <p class="text-white text-xl">Todoアプリ</p>
+            </div>
         </div>
-    </div>
-</header>
-
-
+    </header>
 <main class="grow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="py-[100px]">
@@ -48,12 +44,12 @@
                             </div>
                             @enderror
                     </label>
-
+ 
                     <button type="submit" class="mt-8 p-4 bg-slate-800 text-white w-full max-w-xs hover:bg-slate-900 transition-colors">
                         追加する
                     </button>
                 </div>
-
+ 
             </form>
             {{-- 追記 --}}
   @if ($tasks->isNotEmpty())
@@ -82,22 +78,19 @@
                                   <td class="p-0 text-right text-sm font-medium">
                                       <div class="flex justify-end">
                                           <div>
+                                              <form action="/tasks/{{ $item->id }}"
+                                                  method="post"
+                                                  class="inline-block text-gray-500 font-medium"
+                                                  role="menuitem" tabindex="-1">
+                                                  @csrf
+                                                  @method('PUT')
 
-                                          <form action="/tasks/{{ $item->id }}"
-                                                method="post"
-                                                class="inline-block text-gray-500 font-medium"
-                                                role="menuitem" tabindex="-1">
-                                                @csrf
-                                                @method('PUT')
-
-                                                {{-- 完了ボタンの追記します。 --}}
-                                                <input type="hidden" name="status" value="{{$item->status}}">
-                                                {{-- 完了ボタンの追記します。 --}}
-
-                                                <button type="submit"
-                                                    class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
-                                            </form>
-
+                                            {{-- 完了ボタンの追記します。 --}}
+                                            <input type="hidden" name="status" value="{{$item->status}}">
+                                            {{-- 完了ボタンの追記します。 --}}
+                                                  <button type="submit"
+                                                      class="bg-emerald-700 py-4 w-20 text-white md:hover:bg-emerald-800 transition-colors">完了</button>
+                                              </form>
                                           </div>
                                           <div>
                                               <a href="/tasks/{{ $item->id }}/edit/"
@@ -125,31 +118,26 @@
       </div>
   @endif
   {{-- 追記ここまで --}}
-
-
+ 
         </div>
     </div>
 </main>
-<footer class="bg-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-
+    <footer class="bg-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="py-4 text-center">
             <p class="text-white text-sm">Todoアプリ</p>
         </div>
     </div>
-
-</footer>
-
-<script>
-    function deleteTask() {
-        if (confirm('本当に削除しますか？')) {
-            return true;
-        } else {
-            return false;
+    </footer>
+    <script>
+        function deleteTask() {
+            if (confirm('本当に削除しますか？')) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
-</script>
-
+    </script>
 </body>
 
 </html>

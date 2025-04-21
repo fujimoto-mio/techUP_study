@@ -44,28 +44,31 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-
-      $rules = [
-        'task_name' => 'required|max:100',
-      ];
-      //エラー時のメッセージ
-      $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
-     
-      //バリデーションのエラーならここで処理をします。
-      Validator::make($request->all(), $rules, $messages)->validate();
-
-      //モデルをインスタンス化
-      $task = new Task;
-     
-      //モデル->カラム名 = 値 で、データを割り当てる
-      $task->name = $request->input('task_name');
-     
-      //データベースに保存
-      $task->save();
-     
-      //リダイレクト
-      return redirect('/tasks');
-
+    $rules = [
+    'task_name' => 'required|max:100',
+    ];
+    //エラー時のメッセージ
+    $messages = ['required' => '必須項目です', 'max' => '100文字以下にしてください。'];
+    
+    //バリデーションのエラーならここで処理をします。
+    Validator::make($request->all(), $rules, $messages)->validate();
+    
+    //モデルをインスタンス化　初期呼び出し
+    $task = new Task;
+    
+    //その中にinput　された'task_name'　を取得します。
+    //モデル->カラム名 = 値 で、データを割り当てる
+    $task->name = $request->input('task_name');
+    
+    //var_dump($task); //バーダンプして表示を確認してみよう。
+    //exit;  //ここでストップさせる
+    
+    //データベースに保存
+    $task->save();
+    
+    //リダイレクトして　tasksにもどる
+    return redirect('/tasks');
+    
     }
 
     /**
