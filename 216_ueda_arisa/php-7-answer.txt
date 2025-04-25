@@ -1,0 +1,9 @@
+Person.php 「人間」という基本クラス（名前、年齢、性別）
+Patient.php 「患者」クラス（身長、体重、標準体重の計算）　Personを継承している
+index.php Webページで表示する実行ファイル
+
+ソースの流れ
+・index.php　スタート地点
+　Person.phpとPatient.phpを読み込む
+・患者のオブジェクトを作る
+・患者の情報を画面に表示
