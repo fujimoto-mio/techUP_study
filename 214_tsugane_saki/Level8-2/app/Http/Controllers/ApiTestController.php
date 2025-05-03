@@ -11,6 +11,6 @@ class ApiTestController extends Controller
     public function dataInsert()
     {
         InsertBirthdayUser::dispatch();
-        return response()->json(['message' => 'データ挿入ジョブを実行しました']);
+        return response()->json(['message' => 'データ挿入ジョブを実行しました'],200,[],JSON_UNESCAPED_UNICODE);
     }
 }
