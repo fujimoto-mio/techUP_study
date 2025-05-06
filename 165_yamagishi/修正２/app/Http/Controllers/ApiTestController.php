@@ -13,7 +13,6 @@ class ApiTestController extends Controller
         $user = new User();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
-        $user->password = bcrypt('password'); 
         $user->save();
 
         return response()->json([
