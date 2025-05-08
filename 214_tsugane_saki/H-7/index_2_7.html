@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <table border="0" cellpadding="5">
+            <tr>
+                <td>氏名</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>パスワード</td>
+                <td><input type="password" name="passwd"/></td>
+            </tr>
+            <tr>
+                <td>性別</td>
+                <td>
+                    <input type="radio" name="gender" value="man" checked="checked">男<br>
+                    <input type="radio" name="tgender" value="woman">女
+                </td>
+            </tr>
+            <tr>
+                <td>県</td>
+                <td>
+                    <select name="prefecture">
+                        <option value="tokyo">東京</option>
+                        <option value="kanagawa">神奈川</option>
+                        <option value="chiba">千葉</option>
+                        <option value="saitama">埼玉</option>
+                        <option value="gunnma">群馬</option>
+                        <option value="tochigi">栃木</option>
+                        <option value="ibaraki">茨城</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>紹介</td>
+                <td><textarea name="txt" rows="5" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td>ボタン</td>
+                <td><input type="submit" name="btn3" value="送信"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
