@@ -14,21 +14,21 @@
 
             <tr>
                 <td>カナ（半角）</td>
-                <td><input type="text" name="kana" pattern=""></td>
+                <td><input type="text" name="kana" pattern="^[ｧ-ﾝﾞﾟ]+$" title="半角カタカナで入力してください"></td>
             </tr>
 
             <tr>
-                <td>年齢（数値：１～１００歳まで）</td>
+                <td>年齢</td>
                 <td><input type="number" name="age" min="1" max="100"></td>
             </tr>
 
             <tr>
                 <td>自己紹介（１００文字まで）</td>
-                <td><textarea name="intro" maxlength="100" rows="5" cols="20">テキストエリア</textarea></td>
+                <td><textarea name="intro" maxlength="100" rows="5" cols="20"></textarea></td>
             </tr>
 
             <tr>
-                <td>出身地：住所都道府県（４７都道府県選択可能）</td>
+                <td>出身地：住所都道府県</td>
                 <td>
                     <select name="prefecture">
                         <option value="北海道">北海道</option>
@@ -84,16 +84,34 @@
 
             <tr>
                 <td>性別</td>
-                <td><input type="radio" name="gender" value="男" checked="checked"/>男<br>
+                <td><input type="radio" name="gender" value="男" checked/>男<br>
                     <input type="radio" name="gender" value="女" />女
-                </td>
-                
+                </td>                
             </tr>
-                <td>趣味</td>
-            <tr>
 
+            <tr>
+                <td>趣味</td>
+                <td><input type="checkbox" name="hobby" value="映画"/>映画
+                    <input type="checkbox" name="hobby" value="釣り"/>釣り
+                    <input type="checkbox" name="hobby" value="読書"/>読書
+                    <input type="checkbox" name="hobby" value="カラオケ"/>カラオケ
+                    <input type="checkbox" name="hobby" value="ボーリング"/>ボーリング
+                </td>
+            </tr>
+
+            <tr>
+                <td>生年月日</td>
+                <td><input type="date" name="birth" min="1980-01-01" max="2021-01-01"></td>
+            </tr>
+
+            <tr>
+                <td>パスワード</td>
+                <td><input type="password" name="passwd" maxlength="5"></td>
             </tr>
         </table>
+        <br>
+        <input type="submit" name="btn3" value="確定">        
     </form>
+
 </body>
 </html>
