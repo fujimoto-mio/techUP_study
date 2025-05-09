@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <!--CSS-->
         <link rel="stylesheet" href="style.css">
+        <!--java-->
+        <script src="js/script_top.js" defer></script>
     </head>
     <body>
         <!--ソーシャルメディアのアイコン-->
@@ -38,12 +40,12 @@
                         <img src="images/Nyan Paradise.png" alt="nyan pardise">
                         </a>
                     </div>
-                    <nav>
+                    <nav class="sticky">
                         <ul class="navigtion">
                             <li><img src="images/nikukyu.png"> <a href="#">News</a></li>
                             <li><img src="images/nikukyu.png"><a href="#">スタッフ猫紹介</a></li>
                             <li><img src="images/nikukyu.png"><a href="#">メニュー・料金</a></li>
-                            <li><img src="images/nikukyu.png"><a href="#">アクセス</a></li>
+                            <li><img src="images/nikukyu.png"><a href="#access">アクセス</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,14 +62,20 @@
                 </div>
             </div>
 
-            <!--ニュースセクション-->
-        <article class="news">
-            <p>↓JavaScriptで動的なニュースメニューを作成予定↓</p>
-            <ul class="news-slider">
-                <li class="news"><img src="images/banner-campaign.jpg" alt="news1"></li>
-            </ul>
-        
-        </article>
+         <!--ニュースセクション-->
+         <article class="news">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="images/banner-campaign3.jpg" alt="news3"></div>
+                    <div class="carousel-slide"><img src="images/banner-campaign1.jpg" alt="news1"></div>
+                    <div class="carousel-slide"><img src="images/banner-campaign2.jpg" alt="news2"></div>
+               </div>
+                 <button class="carousel-button prev-btn" id="prevBtn">&#60;</button>
+                 <button class="carousel-button next-btn" id="nextBtn">&#62;</button>
+            </div>
+         </article>
+  
+  
 
             <!--スタッフ猫の紹介-->
         <section class="staff-neko-img">
@@ -92,7 +100,7 @@
                 <div class="price-text">
                     <h1>Nyan Paradiseの料金プラン</h1>
                     <p>当店では、お客様に満足いただけるよう<br>様々な料金プランをご用意しております。<br>ぜひご確認のうえ、癒しのひとときをご計画ください。</p>
-                    <a href="#" class="btn">詳しくはこちらから</a>
+                    <a href="#" class="more-info-btn">詳しくはこちらから</a>
                 </div>
                 
             </div>
@@ -103,13 +111,13 @@
                 <div class="concept-text">
                     <h1>Nyan Paradiseのコンセプト</h1>
                     <p>猫と癒しの空間で、都会の忙しさを忘れませんか？<br>猫好きや初心者さんでも安心して楽しめる<br>リラックス体験をどうぞ。</p>
-                    <a href="#" class="btn">詳しくはこちらから</a>   
+                    <a href="#access"class="more-info-btn">アクセスはこちらから</a>   
                 </div>
             </div>
         </section>
         <!--フッター-->
         <footer class="page-footer">
-            <main class="information-wrapper">
+            <main class="information-wrapper" id="access">
                 <section class="information">
                     <div class="information-div">
                         <h3 class="information-head">Information</h3>
