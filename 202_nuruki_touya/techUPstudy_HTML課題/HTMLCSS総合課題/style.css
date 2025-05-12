@@ -35,7 +35,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    height: 7.5rem;
+    top: 0;
 }
 
 /* ロゴの位置 */
@@ -60,6 +61,7 @@ header {
 }
 
 /* ナビゲーション */
+
 nav ul {
     display: flex;
     gap: 20px;
@@ -88,7 +90,7 @@ nav li a:hover{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* ビューポート全体をカバー */
+    height: 91vh; /* ビューポート全体をカバー */
     z-index: -1; /* 他の要素の背面に配置 */
 }
 
@@ -100,7 +102,7 @@ nav li a:hover{
 /* ボタンのスタイル */
 .reservation {
     position: absolute;
-    bottom: 1%; /* 画像の下部に配置 */
+    bottom: 10%; /* 画像の下部に配置 */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -108,46 +110,73 @@ nav li a:hover{
 
 .reservation-btn {
     display: inline-block;
-    background-color: #fcefd6; 
-    color: #ffffff;
+    padding: 12px 20px;
+    background: #fff;
+    color: #8B5E3C;
+    border-radius: 30px;
+    text-decoration: none;
     font-size: 1.8rem;
     font-weight: bold;
     border: 2px solid #8B5E3C;
-    padding: 10px 20px;
-    border-radius: 20px; /* 角丸 */
-    text-decoration: none;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
     transition: all 0.3s ease;
-    text-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5),
-    1px -1px 3px rgba(0, 0, 0, 0.5),
-    -1px 1px 3px rgba(0, 0, 0, 0.5),
-    1px 1px 3px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 /* ホバー時のエフェクト */
 .reservation-btn:hover {
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
-    background: #ddd1bbd2;
+    background:  #dddddd;
 }
 
 /*ニュースメニュー*/
-.news{
-    background-color: #fcefd6;
-    height: 300px;
-    font-size: large;
-    font-weight: bold;
-    text-align: center;
-}
-
-.news-slider {
+.carousel-container {
+    position: relative;
+    width: 669px;
+    height: 199px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  
+  .carousel-track {
     display: flex;
-    justify-content: center;
-    gap: 80px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-684px); /* 669 + 左右マージン(15) */
+  }
+  
+  .carousel-slide {
+    min-width: 669px;
+    height: 199px;
+    margin: 0 15px;
+  }
+  
+  .carousel-slide img {
+    width: 669px;
+    height: 199px;
+    display: block;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prev-btn {
+    left: -40px;
+  }
+  
+  .next-btn {
+    right: -40px;
+  }
+  
 /*スタッフ猫紹介の背景*/
 .staff-neko-img {
     position: relative; /* header-container の背面に配置 */
@@ -162,6 +191,7 @@ nav li a:hover{
     height: 100%;
     object-fit: cover; 
 }
+
 /*スタッフ猫紹介　本文*/
 .staff-neko-section {
     position: relative;
@@ -218,12 +248,12 @@ nav li a:hover{
 
 .more-info-btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 20px;
     background: #fff;
     color: #8B5E3C;
-    border-radius: 30px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border: 2px solid #8B5E3C;
     position: relative;
@@ -232,7 +262,8 @@ nav li a:hover{
 }
 
 .more-info-btn:hover {
-    background: #dddddd;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    background:  #dddddd;
 }
 
 /* 料金ページの導線 */
@@ -279,7 +310,7 @@ nav li a:hover{
 }
 
 .price-text p {
-    text-align: justify;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     color: #333;
@@ -287,20 +318,22 @@ nav li a:hover{
 
 .btn {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 20px;
-    color: #A04D2E;
-    background: white;
-    border: 2px solid #A04D2E;
+    background: #fff;
+    color: #8B5E3C;
     border-radius: 20px;
     text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #8B5E3C;
     position: relative;
-    z-index: 3;
+    transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .btn:hover {
-    background: #ffd3c3;
-    color: white;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    background:  #dddddd;
 }
 
 /* コンセプト導線の画像 */
