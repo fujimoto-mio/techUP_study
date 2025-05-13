@@ -6,15 +6,44 @@
   <style>
     .container{
       position: relative;
+      width: 400px;
+      height: 300px;
+      background-color: pink;
+    }
+
+    .square {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-family: sans-serif;
+    }
+
+    .one  {
+      width: 300px;
+      height: 200px;
+      background-color: cyan;
+      z-index: 1;
+    }
+
+    .two {
+      width: 200px;
+      height: 100px;
+      background-color: magenta;
+      color: white;
+      z-index: 2;
     }
     
   </style>
 </head>
 <body>
     <div class="container">
-       <div class="layer bottom"></div>
-       <div class="layer middle"></div>
-       <div class="layer top">ロゴ表示</div>
+       <div class="square one"></div>
+       <div class="square two">ロゴ表示</div>
     </div>
 </body>
 </html>
