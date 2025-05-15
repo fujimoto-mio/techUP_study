@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>アニメーション課題</title>
+  <style>
+    input[type="radio"] {
+      display: none;
+    }
+    .tab_area label {
+      width:150px;
+      margin:0 5px;
+      display: inline-block; 
+      padding:12px 0;
+      color:#999;
+      background:#ddd;
+      text-align:center;
+      font-size:13px;
+      cursor:pointer;
+      transition:ease 0.2s opacity;
+    }
+    .tab_panel {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    #tab1:checked ~ .tab_area .tab1_label {
+      background:#fff;
+      color:#000;
+    }
+    #tab1:checked ~ .panel_area #panel1 {
+      display:block;
+    }
+    #tab2:checked ~ .tab_area .tab2_label {
+      background-color: #fff;
+      color: #000;
+    }
+    #tab2:checked ~ .panel_area #panel2 {
+      display: block;
+    }
+    #tab3:checked ~ .tab_area .tab3_label {
+      background: #fff;
+      color: #000;
+    }
+    #tab3:checked ~ .panel_area #pane13 {
+        display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="tab_wrap">
+    <input id="tab1" type="radio" name="tab_btn" checked="checked">
+    <div class="tab_area">
+      <label class="tab1_label" for="tab1">タブ1</label>
+    </div>
+    <div class="panel_area">
+      <div id="panel1" class="tab_panel">
+        <p>タブパネル-1</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
