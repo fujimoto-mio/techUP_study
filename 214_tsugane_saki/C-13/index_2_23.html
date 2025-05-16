@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <title>グリッドの設定課題</title>
+    </head>
+      <style>
+        .wrapper_1 {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 2fr;
+            grid-template-rows: 1fr 1.5fr 2fr;
+        }
+        
+        .herder {
+          grid-column-start: content-1;
+          grid-column-end: content-2;
+          background: #0000ff;
+        }
+        .content-1 {
+          background: #00ff00;
+        }
+        .content-2 {
+          background: #ff0000;
+        }
+        .content-3-1 {
+          background: #00ffff;
+        }
+        .content-3-2 {
+          background: white;
+        }
+        .content-3-3 {
+          background: #ffff00;
+        }
+        .content-4-1 {
+          background: purple;
+        }
+        .content-4-2 {
+          background: magenta;
+        }
+        .fooder {
+          grid-column-start: content-1;
+          grid-column-end: content-2;
+          background: brown;
+        }
+      </style>
+
+    <body>      
+      <div class="wrapper_1">
+        <div class="herder">header</div>
+        <div class="content-1">content-1</div>
+        <div class="content-2">content-2</div>
+        <div class="content-3-1">content-3-1</div>
+        <div class="content-3-2">content-3-2</div>
+        <div class="content-3-3">content-3-3</div>
+        <div class="content-4-1">content-4-1</div>
+        <div class="content-4-2">content-4-2</div>
+        <div class="fooder">fooder</div>
+      </div>
+    </body>
+  </html>
