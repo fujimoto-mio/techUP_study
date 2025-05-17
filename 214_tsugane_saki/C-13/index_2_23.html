@@ -2,25 +2,42 @@
   <html lang="ja">
     <head>
       <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>グリッドの設定課題</title>
     </head>
       <style>
-        .wrapper_1 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        .container {
+          display: grid;
+          grid-template-rows: auto auto auto auto auto;
+          border: 2px solid black;
+          padding: 10px;
+        }
+        .row2, .row3, .row4 {
+          display: grid;
+          min-height: 20px;
         }
         
         .herder {
           background: #0000ff;
           grid-column-start: 1;
-          grid-column-end: 2;
+          grid-column-end: -1;
+        }
+        .fooder {
+          background: brown;
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .row2 {
+          grid-template-columns: 1fr 1fr;
         }
         .content-1 {
           background: #00ff00;
         }
         .content-2 {
           background: #ff0000;
+        }
+        .row3 {
+          grid-template-columns: 1fr 1fr 1fr;
         }
         .content-3-1 {
           background: #00ffff;
@@ -31,69 +48,37 @@
         .content-3-3 {
           background: #ffff00;
         }
+        .row4 {
+          grid-template-columns: 1fr 1fr;
+        }
         .content-4-1 {
           background: purple;
         }
         .content-4-2 {
           background: magenta;
         }
-        .fooder {
-          background: brown;
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-
-        @media screen and (min-width: 480px) {
-          .wrapper_1 {
-            grid-template-columns: 1fr 1fr;
-          }
-          .content-1 {
-            grid-column: span 1;
-          }
-          .content-2 {
-            grid-column: span 1;
-          }
-        }
-        @media screen and (min-width: 768px) {
-          .wrapper_1 {
-            grid-template-columns: 1fr 1fr 1fr;  
-            }
-          .content-3-1 {
-            grid-column: span 1;
-            }
-          .content-3-2 {
-            grid-column: span 1;
-            }
-          .content-3-3 {
-            grid-column: span 1;
-            }
-        }
-        @media screen and (min-width: 1024px) {
-          .wrapper_1 {
-            grid-template-columns: 1fr ;
-          }
-          .content-4-1 {
-            grid-column: span 1;
-          }
-          .content-4-2 {
-            grid-column: span 1;
-          }
-          .footer {
-            grid-column: span 1;
-          }
-        }
       </style>
 
     <body>      
-      <div class="wrapper_1">
+      <div class="container">
         <div class="herder">header</div>
-        <div class="content-1">content-1</div>
-        <div class="content-2">content-2</div>
-        <div class="content-3-1">content-3-1</div>
-        <div class="content-3-2">content-3-2</div>
-        <div class="content-3-3">content-3-3</div>
-        <div class="content-4-1">content-4-1</div>
-        <div class="content-4-2">content-4-2</div>
+
+        <div class="row2">
+          <div class="content-1">content-1</div>
+          <div class="content-2">content-2</div>
+        </div>
+
+        <div class="row3">
+          <div class="content-3-1">content-3-1</div>
+          <div class="content-3-2">content-3-2</div>
+          <div class="content-3-3">content-3-3</div>
+        </div>
+
+        <div class="row4">
+          <div class="content-4-1">content-4-1</div>
+          <div class="content-4-2">content-4-2</div>
+        </div>
+
         <div class="fooder">fooder</div>
       </div>
     </body>
