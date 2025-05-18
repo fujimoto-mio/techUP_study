@@ -4,18 +4,133 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>PGCD スカルプケアトライアルセット</title>
-      <style>
-        body {
-          font-family: sans-serif;
-          margin: 0;
-          padding: 0;
-          background: white;
-          color: #333;
-        }
-
     </head>
+    <style>
+      .hero {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      .model-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .soap-image {
+        position: absolute;
+        top: 500px;
+        left: 50px;
+        width: 150px;
+        height: 250px;
+        z-index: 1;
+      }
+
+      .hero-catch {
+        position: absolute;
+        top: 700px;
+        left: 50px;
+        font-size: 80px;
+        color: white;
+        text-align: center;
+        font-family: Yu Mincho, serif;
+        padding: 40px 20px;
+        margin: 0;
+        z-index: 2;
+      }
+      .hero-sub {
+        position: absolute;
+        top: 20px;
+        left: 500px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 60px;
+        color: white;
+        font-family: Yu Mincho, serif;
+        padding: 20px 40px;
+        margin: 0;
+        z-index: 2;
+      }
+
+      .intro-offer {
+        background-color: white;
+        width: 100vw;
+        padding: 40px 20px;
+      }
+      .intro-title-box {
+        background-color: rgb(109, 6, 95);
+        width: 100%;
+        height: 80px;
+        font-size: 20px;
+        color: white;
+        font-family: Yu Mincho, serif;
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+        line-height: 1.5;
+      }
+      .item-image {
+        width: 100%;
+        height: 300px;
+        padding: 30px;
+      }
+      .set-contents {
+        list-style: none;
+        padding: 0;
+        font-size: 10px;
+      }
+      .cta-button {
+        background-color: rgb(138, 204, 39);
+        color: white;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 10px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 30px;
+        text-align: center;
+      }
+      .cta-button:hover {
+        background-color: rgb(138, 204, 39);
+      }
+      .note {
+        font-size: 10px;
+        color: black;
+      }
+    </style>
+
     <body>
-      
-      </body>
+      <header>
+        <div class="logo"></div>
+      </header>
+
+      <main>
+        <section class="hero">
+            <img src="images/top.webp" alt="モデル" class="model-image">
+            <img src="images/top_soap.webp" alt="石鹸" class="soap-image">
+            <h1 class="hero-catch">だから私は石鹸。</h1>
+            <p class="hero-sub">自分の髪を、<br>人生で一番美しく。</p>
+        </section>
+        <section class="intro-offer">
+          <div class="intro-title-box">
+            <h2 class="intro-title">髪と頭皮の未来を変える。<br>初めての石鹸チャレンジセット</h2>
+          </div>
+          <img src="images/item.webp" alt="石鹸セット" class="item-image">
+          <ul class="set-contents">
+            <li>【スカルプケアソープ】サボン　モーヴ　４５ｇ（約３週間分）</li>
+            <li>【医薬部外品】育毛美容液　カンテサンス　２０ｍＬ（約１０日分）</li>
+          </ul>
+          <a href="#" class="cta-button">今すぐお申込み！</a>
+          <p class="note">＃ご注文金額が８，８００円（税込）未満の場合は、送料全国一律５５０円（税込）をご負担いただいております。</p>
+        </section>
+        
+
+
+        <section class="features"></section>
+        <section class="testimonials"></section>
+        <section class="cta"></section>
+        <section class="legal"></section>
+      </main>
+
+      <footer></footer>
     </body>
   </html>
