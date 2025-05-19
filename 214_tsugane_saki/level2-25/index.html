@@ -52,26 +52,32 @@
       }
 
       .intro-offer {
-        background-color: white;
-        width: 100vw;
-        padding: 40px 20px;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Yu Mincho, serif;
+        background-color: #fff;
+        color: #333;
+      }
+      .container{
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 60px 20px 20px;
       }
       .intro-title-box {
         background-color: rgb(109, 6, 95);
-        width: 100%;
-        height: 80px;
         font-size: 20px;
         color: white;
-        font-family: Yu Mincho, serif;
         text-align: center;
-        padding: 50px;
-        margin: 0;
+        padding: 20px;
         line-height: 1.5;
+        margin-top: 40px;
       }
       .item-image {
         width: 100%;
-        height: 300px;
-        padding: 30px;
+        margin-top: 20px;
       }
       .set-contents {
         list-style: none;
@@ -83,11 +89,13 @@
         color: white;
         display: inline-block;
         width: 100%;
-        padding: 30px 10px;
+        padding: 15px 30px;
         font-size: 20px;
         font-weight: bold;
         border-radius: 30px;
         text-align: center;
+        margin: 30px auto 0;
+        display: block;
       }
       .cta-button:hover {
         background-color: rgb(138, 204, 39);
@@ -95,7 +103,70 @@
       .note {
         font-size: 10px;
         color: black;
+        margin-top: 20px;
       }
+
+      .content {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .headline {
+        background-color: rgb(109, 6, 95);
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .sub-headline {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .shampoo-image {
+        max-width: 1080px;
+        padding: 20px;
+        margin: 20px;
+        z-index: 1;
+      }
+      .annotation-2 {
+        font-size: 1.5px;
+        color: #61186b;
+      }
+      .message {
+        font-size: 20px;
+        color: #61186b;
+      }
+      .annotation-1 {
+        font-size: 10px;
+        color: #61186b;
+      }
+
+      .content-2 {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .catchphrase {
+        font-size: 20px;
+        text-align: center;
+        color: #61186b;
+        z-index: 2;
+      }
+      .soap-image2 {
+        max-width: 1080px;
+        padding: 20px;
+        margin: 20px;
+        z-index: 1;
+      }
+      .sub-text {
+        font-size: 15px;
+        text-align: center;
+        color: #61186b;
+      }
+
     </style>
 
     <body>
@@ -122,7 +193,22 @@
           <a href="#" class="cta-button">今すぐお申込み！</a>
           <p class="note">＃ご注文金額が８，８００円（税込）未満の場合は、送料全国一律５５０円（税込）をご負担いただいております。</p>
         </section>
-        
+        <section class="content-1">
+          <h1 class="headline">事実。</h1>
+          <p class="sub-headline">“頭皮ストレスフリー”<br>だから、髪が立つ<sup>＊１</sup>。</sup></p>
+          <img src="images/shampoo.webp" alt="髪を洗う女性" class="shampoo-image">
+          <img src="images/fact_a.svg" alt="満足度" class="best-98">
+            <p class="annotation-2">＊２：２０２０年３月の後に、サボンモーヴを含む定期ＢＯＸを<br>ご利用のお客様１６１名にサンプル調査を行った結果。</p>
+           <p class="message">頭皮を変えれば、髪が変わる！</p>
+           <img src="images/three_points.webp" alt="3要素" class="three-points">
+           <img src="images/fact_b.webp" alt="リンス不要" class="no-lins">
+            <p class="annotation-1">＊１髪にハリ・コシのある状態</p>
+          </section>
+          <section class="content-2">
+            <h1 class="catchphrase">オンナの髪、あきらめない。<br>噂のスカルプケアソープ</h1>
+               <img src="images/soap.webp" alt="石鹸２" class="soap-image2">
+            <p class="sub-text">リンス・コンディショナー不要<br>＜サボン　モーヴ＞</p>
+          </section>
 
 
         <section class="features"></section>
