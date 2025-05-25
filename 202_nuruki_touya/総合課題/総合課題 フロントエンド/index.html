@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>202_塗木統耶 HTML/CSS総合課題</title>
+  <!-- BootstrapのCDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+</head>
+<body>
+
+  <!-- ソーシャルメディアのアイコン -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.youtube.com" target="_blank">
+        <img src="images/youtube-icon.png" alt="YouTube" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <div class="header-wrapper">
+    <header>
+      <div class="header-container">
+        <div class="header-logo">
+          <a href="HTMLCSS総合課題.html">
+            <img src="images/logo.png" alt="Nyan Paradiseロゴ" class="logo-image">
+          </a>
+        </div>
+        <div class="header-title">
+          <a href="index.html">
+            <img src="images/Nyan Paradise.png" alt="nyan pardise">
+          </a>
+        </div>
+        <nav class="sticky">
+          <ul class="navigtion">
+            <li><img src="images/nikukyu.png"> <a href="news.html">News</a></li>
+            <li><img src="images/nikukyu.png"><a href="#">スタッフ猫紹介</a></li>
+            <li><img src="images/nikukyu.png"><a href="menu.html">メニュー・料金</a></li>
+            <li><img src="images/nikukyu.png"><a href="#access">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- 猫の画像と来店予約ボタン -->
+  <div class="header-img">
+    <div class="header-img-cat">
+      <img src="images/hero-cat.jpg" alt="猫カフェ　猫">
+    </div>
+    <div class="reservation">
+      <a href="#" class="reservation-btn">来店予約をする</a>
+    </div>
+  </div>
+
+  <!-- ニュースセクション -->
+<article class="news">
+  <div id="news-carousel" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <a href="news.html">
+            <img src="images/banner-campaign1.jpg" alt="news1">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="news.html">
+            <img src="images/banner-campaign2.jpg" alt="news2">
+          </a>
+        </li>
+        <li class="splide__slide">
+          <a href="news.html">
+            <img src="images/banner-campaign3.jpg" alt="news3">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+
+  <!-- SplideのJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#news-carousel', {
+        type        : 'loop',
+        perPage     : 1,
+        focus       : "center",
+        padding     : '30%',
+        autoplay    : true,
+        interval    : 3500,
+        speed       : 1500,
+        pauseOnHover: true,
+        arrows      : true,
+        pagination  : true,
+        breakpoints : {
+          768: {
+            padding: '10%',
+            gap: '1rem'
+          }
+        }
+      }).mount();
+    });
+  </script>
+
+  <!-- スタッフ猫の紹介 -->
+  <section class="staff-neko-img">
+    <div class="staff-neko-section">
+      <h2 class="section-title">スタッフ猫ご紹介</h2>
+      <ul class="staff-neko-slider">
+        <li class="staff-neko"><img src="images/cat1.png" alt="スタッフ猫1"></li>
+        <li class="staff-neko"><img src="images/cat2.png" alt="スタッフ猫2"></li>
+        <li class="staff-neko"><img src="images/cat3.png" alt="スタッフ猫3"></li>
+        <li class="staff-neko"><img src="images/cat4.png" alt="スタッフ猫4"></li>
+        <li class="staff-neko"><img src="images/cat5.png" alt="スタッフ猫5"></li>
+      </ul>
+      <div class="button-container">
+        <a href="#" class="more-info-btn">詳しくはこちらから</a>
+      </div>
+    </div>
+  </section>
+
+<!-- 料金表 -->
+<section class="price-wrapper">
+  <div class="price-block">
+    <img class="price-cat fade-left" src="images/price-neko.png" alt="料金プランの猫">
+    <div class="price-text fade-right fade-delay">
+      <h1>Nyan Paradiseの料金プラン</h1>
+      <p>当店では、お客様に満足いただけるよう<br>
+         様々な料金プランをご用意しております。<br>
+         ぜひご確認のうえ、癒しのひとときをご計画ください。</p>
+      <a href="menu.html" class="more-info-btn">詳しくはこちらから</a>
+    </div>
+  </div>
+</section>
+
+<!-- コンセプト -->
+<section class="concept-wrapper">
+  <div class="concept-block">
+    <img class="concept-img fade-left" src="images/action-neko.png" alt="コンセプトの猫">
+    <div class="concept-text fade-right fade-delay">
+      <h1>Nyan Paradiseのコンセプト</h1>
+      <p>猫と癒しの空間で、都会の忙しさを忘れませんか？<br>
+         猫好きや初心者さんでも安心して楽しめる<br>
+         リラックス体験をどうぞ。</p>
+      <a href="#access" class="more-info-btn">アクセスはこちらから</a>
+    </div>
+  </div>
+</section>
+
+
+<!--フェードインとフェードアウトするjs-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');   // 表示
+        } else {
+          entry.target.classList.remove('visible'); // 非表示
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-left, .fade-right').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+
+  <!-- フッター -->
+  <footer class="page-footer">
+    <main class="information-wrapper" id="access">
+      <section class="information">
+        <div class="information-div">
+          <h3 class="information-head">Information</h3>
+          <table class="info">
+            <tr><th>住所</th><td>東京都港区六本木 0-0 ◯◯◯</td></tr>
+            <tr><th>電話</th><td>03-1111-XXXX</td></tr>
+            <tr><th>営業時間</th><td>10:00〜20:00</td></tr>
+            <tr><th>店休日</th><td>水曜</td></tr>
+          </table>
+        </div>
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.447256421792!2d139.73430457624426!3d35.6659877308104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b835ec8b0af%3A0x9b0355e3df3a9ebc!2z5YWt5pys5pyoROOCueOCr-OCqOOCog!5e0!3m2!1sen!2sjp!4v1688540719182!5m2!1sen!2sjp" width="720" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+    <div class="copyright">
+      <small>&copy; 2025 Nyan Paradise</small>
+    </div>
+  </footer>
+
+</body>
+</html>
