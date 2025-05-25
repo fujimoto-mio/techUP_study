@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>無限ループカルーセル</title>
+  <title>見切れ付きカルーセル</title>
   <style>
     body {
       font-family: sans-serif;
@@ -13,7 +13,7 @@
 
     .carousel-container {
       position: relative;
-      width: 669px;
+      width: 699px; /* 669px + 左右margin合計30px */
       height: 199px;
       margin: 0 auto;
       overflow: hidden;
@@ -27,7 +27,7 @@
     .carousel-slide {
       min-width: 669px;
       height: 199px;
-      margin: 0 15px;
+      margin: 0 15px; /* 左右 margin で“チラ見せ” */
       box-sizing: border-box;
     }
 
@@ -65,14 +65,9 @@
 
   <div class="carousel-container">
     <div class="carousel-track" id="carouselTrack">
-      <!-- クローン3 -->
-      <div class="carousel-slide"><img src="images/banner-campaign3.jpg" alt="clone3"></div>
-      <!-- 本体 -->
       <div class="carousel-slide"><img src="images/banner-campaign1.jpg" alt="news1"></div>
       <div class="carousel-slide"><img src="images/banner-campaign2.jpg" alt="news2"></div>
       <div class="carousel-slide"><img src="images/banner-campaign3.jpg" alt="news3"></div>
-      <!-- クローン1 -->
-      <div class="carousel-slide"><img src="images/banner-campaign1.jpg" alt="clone1"></div>
     </div>
     <button class="carousel-button prev-btn" id="prevBtn">&#60;</button>
     <button class="carousel-button next-btn" id="nextBtn">&#62;</button>
@@ -82,59 +77,51 @@
     document.addEventListener("DOMContentLoaded", function () {
       const track = document.getElementById('carouselTrack');
       const slides = document.querySelectorAll('.carousel-slide');
-      const slideCount = slides.length;
-      const slideWidth = 699; // 669 + margin 15*2
-      let currentIndex = 1;
-  
-      // 初期位置
-      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-  
+      const slideWidth = 699; // 669 + 15*2（左右margin）
+      let currentIndex = 0;
+      let isAnimating = false;
+
       function updateSlide(withTransition = true) {
+        isAnimating = true;
         track.style.transition = withTransition ? 'transform 0.5s ease-in-out' : 'none';
         track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
       }
-  
+
       function goToNextSlide() {
-        currentIndex++;
+        if (isAnimating) return;
+        currentIndex = (currentIndex + 1) % slides.length;
         updateSlide();
       }
-  
+
       function goToPrevSlide() {
-        currentIndex--;
+        if (isAnimating) return;
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         updateSlide();
       }
-  
+
       document.getElementById('nextBtn').addEventListener('click', () => {
         goToNextSlide();
         stopAutoSlide();
       });
-  
+
       document.getElementById('prevBtn').addEventListener('click', () => {
         goToPrevSlide();
         stopAutoSlide();
       });
-  
+
       track.addEventListener('transitionend', () => {
-        if (currentIndex === slideCount - 1) {
-          currentIndex = 1;
-          updateSlide(false);
-        } else if (currentIndex === 0) {
-          currentIndex = slideCount - 2;
-          updateSlide(false);
-        }
+        isAnimating = false;
       });
-  
-      let autoSlide = setInterval(goToNextSlide, 3000);
-  
+
+      let autoSlide = setInterval(goToNextSlide, 5000);
+
       function stopAutoSlide() {
         clearInterval(autoSlide);
       }
-  
-      updateSlide(); // 初回反映
+
+      updateSlide(false); // 初期表示
     });
   </script>
-  
-
 
 </body>
 </html>
