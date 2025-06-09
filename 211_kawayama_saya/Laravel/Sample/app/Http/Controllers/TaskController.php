@@ -159,6 +159,13 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 指定された ID のタスクを取得
+    $task = Task::find($id);
+
+    // タスクが存在する場合は削除
+    if ($task) {
+        $task->delete();
+    }
+    return redirect('/tasks');
     }
 }
