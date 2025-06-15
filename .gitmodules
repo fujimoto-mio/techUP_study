@@ -1,0 +1,3 @@
+[submodule "216_ueda_arisa/216_ueda_arisa/src"]
+	path = 216_ueda_arisa/216_ueda_arisa/src
+	url = https://github.com/arisa-525/laravel_app.git
