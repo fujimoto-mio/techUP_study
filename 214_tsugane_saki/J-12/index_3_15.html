@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  
+  <script>
+   'use strict';
+   //※ヒント　this.name = name の利用
+
+/* sample answer */
+  function Who(name){
+   this.name = name;
+  };
+  Who.prototype.getName = function(){
+   console.log('Myname is ' + this.name);
+  };
+  var o = new Who('morita');
+  o.getName();
+
+   function Who(name) {
+    this.name = name;
+   }
+   Who.prototype.getName = function() {
+    console.log('Myname is' + this.name);
+   }
+   const person = new Who('tanaka');
+   person.getName();
+  </script>
+</body>
+</html>
