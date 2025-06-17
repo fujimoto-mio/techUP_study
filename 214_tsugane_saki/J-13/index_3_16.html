@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <title>JavaScriptBasic</title>
 </head>
+
 <body>
   <ul class="list-group">
     <li class="list-group-item">100</li>
@@ -13,31 +15,33 @@
     <li class="list-group-item">140</li>
   </ul>
 
-  <button id = "changeBtn">変更</button>
-  <button id = "resetBtn">リセット</button>
+  <button id="changeBtn">変更</button>
+  <button id="resetBtn">リセット</button>
 
   <script>
-   'use strict';
+    'use strict';
 
-  var ul = document.querySelector('.list-group');
-  var liItems = ul.querySelectorAll('.list-group-item');
-  var values = [];
-  liItems.forEach(function(li) {            
-    values.push(parseInt(li.textContent));
-  });
+    var ul = document.querySelector('.list-group');
+    var liItems = ul.querySelectorAll('.list-group-item');
+    var values = [];
 
-  document.getElementById('changeBtn').addEventListener('click', function() {
-    for (var i = 0; i < liItems.length; i++) {
-      var value = parseInt(liItems[i].textContent);
-      liItems[i].textContent = value * 10;
-    }
-  });
-
-  document.getElementById('resetBtn').addEventListener('click', function() {
-    liItems.forEach(function(item, index) {
-      item.textContent = values[index];
+    liItems.forEach(function (li) {
+      values.push(parseInt(li.textContent));
     });
-  });
+
+    document.getElementById('changeBtn').addEventListener('click', function () {
+      for (var i = 0; i < liItems.length; i++) {
+        var value = parseInt(liItems[i].textContent);
+        liItems[i].textContent = value * 10;
+      }
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', function () {
+      liItems.forEach(function (item, index) {
+        item.textContent = values[index];
+      });
+    });
   </script>
 </body>
+
 </html>
