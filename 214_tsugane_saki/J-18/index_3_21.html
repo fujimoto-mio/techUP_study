@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>canvasアニメーション作成課題</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const image = new Image();
+        image.src = "https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png"
+
+        image.onload = function () {
+            canvas.wigth = 500;
+            canvas.height = 500;
+
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 100;
+            let angle = 0;
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.wigth, canvas.height);
+
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                ctx.drawImage(image, x, y, 60, 60);
+                angle += 0.05;
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+    </script>
+</body>
+
+</html>
