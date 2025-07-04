@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiSample;
+feature/ootsuka_p-8
+use \App\Http\Controllers\ApiProductController;
+master
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +18,13 @@ use App\Http\Controllers\ApiSample;
 |
 */
 Route::get('/apisample', [ApiSample::class, 'apiHello']);
-
+feature/ootsuka_p-8
+Route::post('/nameset', [ApiSample::class, 'nameSet']);
+Route::get('products', [ApiProductController::class, 'index']);
+Route::post('products', [ApiProductController::class, 'store']);
 Route::post('/nameset', [ApiSample::class, 'nameSet']);
 
+master
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

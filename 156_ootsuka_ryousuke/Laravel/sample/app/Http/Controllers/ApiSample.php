@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+feature/ootsuka_p-8
 
+master
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -21,10 +23,9 @@ public function apiHello(){
     //return 'Hello API!!';
 }
 
-
-
     //APIが実行される関数
-    public function nameSet(Request $request)
+public function nameSet(Request $request)
+master
     {
         
         $task = new Task;
