@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TestQueueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::post('/edit',[TaskController::class,'edit']);  //タスク更新
 Route::post('/delete',[TaskController::class,'delete']);  //タスク削除
 
 Route::resource('tasks', TaskController::class);
+
+Route::get('/test-job', [TestQueueController::class, 'dispatchSlowJob']);
