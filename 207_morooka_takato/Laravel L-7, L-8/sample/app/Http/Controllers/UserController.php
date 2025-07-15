@@ -14,7 +14,7 @@ class UserController extends Controller
     {
 
         $user= User::where('email', $request->email)->first();
-
+        
             // エラー処理の追加
             if (!$user || !Hash::check($request->password, $user->password)) {
                 return response([
