@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -21,10 +20,7 @@ public function apiHello(){
     //return 'Hello API!!';
 }
 
-
-
-    //APIが実行される関数
-    public function nameSet(Request $request)
+public function nameSet(Request $request)
     {
         
         $task = new Task;

@@ -1,7 +1,4 @@
-<?php
-
-namespace App\Console\Commands;
-
+<?
 use App\Jobs\sendMail;
 use App\Models\User;
 use Carbon\CarbonImmutable;

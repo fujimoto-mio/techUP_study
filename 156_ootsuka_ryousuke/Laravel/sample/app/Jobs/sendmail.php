@@ -8,28 +8,28 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SampleMail;
 
+
 class sendmail implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
+    
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct()
     {
         $this->user = $user;
     }
- 
+
     /**
-     * ジョブの実行
-     * このメッソドがキューでJOBを処理するときに呼び出されます。
+     * Execute the job.
+     *
      * @return void
      */
     public function handle()

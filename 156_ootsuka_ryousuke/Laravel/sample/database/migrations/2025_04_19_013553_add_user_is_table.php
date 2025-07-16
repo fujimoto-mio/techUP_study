@@ -30,4 +30,11 @@ class AddUserIsTable extends Migration
             $table->dropColumn('birthday');  //カラム削除
         });
     }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+   
 }
