@@ -1,0 +1,329 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Yu Mincho', sans-serif;
+}
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+.hero-image-container img.main-visual-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: 1;
+}
+.hero-image-container img.soap-image {
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    width: 20%;
+    height: 28%;
+    z-index: 2;
+}
+.hero-text-container h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 75px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 3;
+}
+.hero-text-container h2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 60px;
+    line-height: 1.2;
+    writing-mode: vertical-rl;
+    z-index: 3;
+}
+.hero-text-container h2 span {
+    display: block;
+}
+
+#offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: white;
+    padding: 10px;
+}
+.challenge_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(63, 3, 37);
+    font-size: 20px;
+    line-height: 1.2;
+}
+.offer-image-container img.challenge-set-image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+.offer-text-container {
+    width: 100%;
+    padding: 20px 10px;
+}
+.offer-text-container li{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    color: black;
+}
+.btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 0;
+    background-color: rgb(90, 148, 4);
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: rgb(90, 148, 4, 0.8);
+}
+.offer-note {
+    font-size: 10px;
+    color: black;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+}
+
+#fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    color: white;
+    padding: 10px;
+}
+#fact h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+    background-color: rgb(172, 12, 102);
+    width: 100%;
+    min-height: 150px;
+    position: relative;
+    clip-path: polygon(
+        0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%
+    );
+}
+.fact-text-container{
+    width: 100%;
+    padding: 20px 10px;
+    position: relative;
+}
+p.header-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(172, 12, 102);
+}
+p.challenge_message {
+    margin-top: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(172, 12, 102);
+}
+.fact-image-container{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin: 10px 0;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.fact-image-container img.shampoo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
+}
+.fact-image-container img.percent-image {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 50%;
+    height: auto;
+    z-index: 1;
+}
+.fact-image-container img.three-points-image {
+    position: relative;
+    height: 20%;
+    z-index: 1;
+}
+.fact-image-container img.no-shampoo-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 20%;
+    z-index: 1;
+}
+.note {
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+#soap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgb(215, 238, 245);
+}
+#soap h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(172, 12, 102);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.soap-image-container {
+  width: 50%;
+  max-width: 500px;
+  margin: 60px;
+}
+.soap-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.soap-text-container p {
+  font-size: 15px;
+  color: rgb(172, 12, 102);
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#attention {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+.attention-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+.attention-image-container img {
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+.attention-text-container {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: rgb(172, 12, 102);
+  text-align: center;
+  line-height: 1.5;
+}
+.attention-text-container .note-1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.attention-text-container .note-2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.attention-text-container .note-3 {
+  font-size: 12px;
+  color: #555;
+}
+.attention-ingredient-wrap {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.attention-ingredient-wrap img.base-soap {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+}
+.attention-ingredient-wrap img.ingredient-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  width: auto;
+  max-width: 500px;
+  z-index: 2;
+}
+
+#start {
+  background-color: #f0e6ed;
+  text-align: center;
+  position: relative;
+}
+.start-image-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.start-image-container img {
+  width: 100%;
+  display: block;
+}
+.start-text-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+  color: rgb(172, 12, 102);
+  text-align: center;
+}
+.start-text-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: rgb(172, 12, 102);
+}
+.start-text-container p {
+  font-size: 18px;
+  margin: 0;
+  color: rgb(172, 12, 102);
+}

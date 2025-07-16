@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>カウントダウンタイマー作成課題</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- 全体のレイアウト用コンテナ -->
+    <div class="container">
+
+        <!-- カウントダウン全体のブロック -->
+        <div class="countdown">
+
+            <!-- カウントダウンのメインタイトル -->
+            <h1 class="countdown-title">
+                Countdown to
+                <!-- JavaScriptで次の年を挿入する場所 -->
+                <span id="year" class="new-year"></span>
+            </h1>
+
+            <!-- 残り時間を表示する部分 -->
+            <div class="time-container">
+                <!-- 残り日数の表示 -->
+                <p class="time">
+                    <span id="days" class="time-num"></span>
+                    <span class="time-label">days</span>
+                </p>
+
+                <!-- 残り時間（時）の表示 -->
+                <p class="time">
+                    <span id="hours" class="time-num"></span>
+                    <span class="time-label">hours</span>
+                </p>
+
+                <!-- 残り時間（分）の表示 -->
+                <p class="time">
+                    <span id="minutes" class="time-num"></span>
+                    <span class="time-label">minutes</span>
+                </p>
+
+                <!-- 残り時間（秒）の表示 -->
+                <p class="time">
+                    <span id="seconds" class="time-num"></span>
+                    <span class="time-label">seconds</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/time.js" defer></script>
+</body>
+
+</html>

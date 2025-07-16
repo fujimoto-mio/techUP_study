@@ -1,0 +1,42 @@
+{
+    "name": "symfony/yaml",
+    "type": "library",
+    "description": "Loads and dumps YAML files",
+    "keywords": [],
+    "homepage": "https://symfony.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabien Potencier",
+            "email": "fabien@symfony.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://symfony.com/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "symfony/polyfill-ctype": "^1.8"
+    },
+    "require-dev": {
+<<<<<<<< HEAD:180_kuwahara_yuuhi/p-8/Laravel/Sample/vendor/symfony/yaml/composer.json
+        "symfony/console": "^6.4|^7.0"
+========
+        "symfony/console": "^5.4|^6.0|^7.0"
+>>>>>>>> 42c6f267d4718ce98589e2494e9290c533a2395a:194_yamashita_haruka/再提出Level8-1 API/vendor/symfony/yaml/composer.json
+    },
+    "conflict": {
+        "symfony/console": "<6.4"
+    },
+    "autoload": {
+        "psr-4": { "Symfony\\Component\\Yaml\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "bin": [
+        "Resources/bin/yaml-lint"
+    ],
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,44 @@
+input[type="radio"] {
+    display: none;
+}
+
+.tab_area label {
+    width: 150px;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 12px 0;
+    color: #999;
+    background: #ddd;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: ease 0.2s opacity;
+}
+
+.tab_panel {
+    display: none;
+}
+
+#tab1:checked ~ .tab_area .tab1_label {
+    background: #fff;
+    color: #000;
+}
+#tab1:checked ~ .panel_area #panel1 {
+    display: block;
+}
+
+#tab2:checked ~ .tab_area .tab2_label {
+    background: #fff;
+    color: #000;
+}
+#tab2:checked ~ .panel_area #panel2 {
+    display: block;
+}
+
+#tab3:checked ~ .tab_area .tab3_label {
+    background: #fff;
+    color: #000;
+}
+#tab3:checked ~ .panel_area #panel3 {
+    display: block;
+}

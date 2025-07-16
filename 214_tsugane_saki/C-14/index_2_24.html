@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>変数の宣言課題</title>
+  <style>
+    :root {
+      --my-cool-bachground: #73a4f4;
+    }
+
+    .container {
+          display: grid;
+          grid-template-rows: auto auto auto auto auto;
+          border: 2px solid black;
+          padding: 10px;
+        }
+        .row2, .row3, .row4 {
+          display: grid;
+          min-height: 20px;
+        }
+
+        .herder {
+          background: var(--my-cool-bachground);
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .fooder {
+          background: var(--my-cool-bachground);
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+
+        .row2 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .row3 {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        .row4 {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .content-1, .content-2, .content-3-1, .content-3-2, .content-3-3, .content-4-1, .content-4-2 {
+          background: var(--my-cool-bachground);
+        }
+  </style>
+</head>
+  <body>
+     <div class="container">
+        <div class="herder">header</div>
+
+        <div class="row2">
+          <div class="content-1">content-1</div>
+          <div class="content-2">content-2</div>
+        </div>
+
+        <div class="row3">
+          <div class="content-3-1">content-3-1</div>
+          <div class="content-3-2">content-3-2</div>
+          <div class="content-3-3">content-3-3</div>
+        </div>
+
+        <div class="row4">
+          <div class="content-4-1">content-4-1</div>
+          <div class="content-4-2">content-4-2</div>
+        </div>
+        <div class="fooder">fooder</div>
+      </div>
+  </body>
+</html>
