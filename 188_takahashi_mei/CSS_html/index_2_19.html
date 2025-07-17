@@ -1,0 +1,57 @@
+<html>
+  <body>
+    <header>
+      header
+    </header>
+
+    <div class="main">
+        <div class="item1"></div>
+        <div class="contentA">コンテンツA</div>
+        <div class="item2"></div>
+    </div>
+
+    <footer>
+      footer
+    </footer>
+  </body>
+
+    <style>
+      body{
+        min-width: 380px;  /*最小横幅の指定*/
+      }
+
+      header{
+        background-color: hotpink; /*背景色*/
+        width: 100%;  /*横幅*/
+        height: 50px;  /*高さ*/
+        text-align: center;  /*文字を真ん中に*/
+        line-height: 50px;  /*行の高さ*/
+      }
+
+      .main {
+        display: flex;  /*横並び*/
+      }
+
+      .item1,.item2{
+        background-color: rgb(229, 244, 66);
+        width: 16px;
+        height: 400px;
+      }
+
+      .contentA{
+        background-color: rgba(191, 207, 247, 0.623);
+        height: 400px;
+        text-align: center;
+        flex: 1;
+      }
+
+      footer {
+        background-color: hotpink;
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+      }
+
+    </style>
+</html>
