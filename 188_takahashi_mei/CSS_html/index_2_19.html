@@ -1,44 +1,38 @@
 <html>
-  <body>
-    <header>
-      header
-    </header>
-
-    <div class="main">
-        <div class="item1"></div>
-        <div class="contentA">コンテンツA</div>
-        <div class="item2"></div>
-    </div>
-
-    <footer>
-      footer
-    </footer>
-  </body>
-
+  <head>
+    <title>フレックスボックス課題</title>
     <style>
-      body{
-        min-width: 380px;  /*最小横幅の指定*/
+      body {
+        min-width: 380px;
+          /*最小横幅の指定*/
       }
 
-      header{
-        background-color: hotpink; /*背景色*/
-        width: 100%;  /*横幅*/
-        height: 50px;  /*高さ*/
-        text-align: center;  /*文字を真ん中に*/
-        line-height: 50px;  /*行の高さ*/
+      header {
+        background-color: hotpink;
+        /*背景色*/
+        width: 100%;
+        /*横幅*/
+        height: 50px;
+        /*高さ*/
+        text-align: center;
+        /*文字を真ん中に*/
+        line-height: 50px;
+        /*行の高さ*/
       }
 
       .main {
-        display: flex;  /*横並び*/
+        display: flex;
+        /*横並び*/
       }
 
-      .item1,.item2{
+      .item1,
+      .item2 {
         background-color: rgb(229, 244, 66);
         width: 16px;
         height: 400px;
       }
 
-      .contentA{
+      .contentA {
         background-color: rgba(191, 207, 247, 0.623);
         height: 400px;
         text-align: center;
@@ -52,6 +46,22 @@
         text-align: center;
         line-height: 80px;
       }
-
     </style>
+  </head>
+
+  <body>
+    <header>
+      header
+    </header>
+
+    <div class="main">
+      <div class="item1"></div>
+      <div class="contentA">コンテンツA</div>
+      <div class="item2"></div>
+    </div>
+
+    <footer>
+        footer
+    </footer>
+  </body>
 </html>
