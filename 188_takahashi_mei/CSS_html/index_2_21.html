@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>タブのきりかえ課題</title>
+    <style>
+        .tab_wrap {
+            width: 100%;
+            margin: 20px auto;
+        }
+    
+        input[type="radio"] {
+            display: none;
+            /*ラジオボタンを見えなくする */
+        }
+    
+        .tab_area {
+    
+            display: flex;
+            /*タブを横並びに*/
+            margin-right: 50%;
+            /*右側に余白指定 */
+    
+        }
+    
+        .tab_area label {
+            flex: 1;
+            padding: 10px 0;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #ffffff7e;
+            background-color: rgba(128, 128, 128, 0.247);
+            border-top-left-radius: 8px;
+            /*左上をまるく*/
+            border-top-right-radius: 8px;
+            /*右上をまるく*/
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            /*指の形にするカーソル*/
+        }
+    
+        .panel_area {
+            /* プロパティ */
+            flex: 1;
+            width: 80%;
+            padding: 40px;
+            height: 200px;
+    
+            /*絶対配置。切り替えたときにずれないように*/
+            position: relative;
+            min-height: 200px;
+            /* 高さを最小限保証 */
+    
+            /* パネルの箱の装飾 */
+            border-top: 6px solid rgba(255, 0, 0, 0.897);
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        .tab_panel {
+            /*透明にする。非表示扱いにする*/
+            opacity: 0;
+            visibility: hidden;
+    
+            /* ふわっと切り替えるアニメーションの指定 */
+            /* opacity と visibility の変化を0.３秒かけて */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+            /* タブを切り替えてもずれない */
+            position: absolute;
+        }
+    
+        /* クリックした時のタブの表示 */
+        #tab1:checked~.tab_area .tab1_label,
+        #tab2:checked~.tab_area .tab2_label,
+        #tab3:checked~.tab_area .tab3_label {
+            background: rgba(255, 0, 0, 0.897);
+            color: #fff;
+            font-weight: bold;
+        }
+    
+        /* クリックしたときのパネルの表示 */
+        #tab1:checked~.panel_area #panel1,
+        #tab2:checked~.panel_area #panel2,
+        #tab3:checked~.panel_area #panel3 {
+            opacity: 1;
+            /* 不透明に */
+            visibility: visible;
+            /* 触れるように表示 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab_wrap">
+        <!-- ラジオボタン -->
+        <input id="tab1" type="radio" name="tab_btn" checked="checked">
+        <input id="tab2" type="radio" name="tab_btn">
+        <input id="tab3" type="radio" name="tab_btn">
+
+        <!-- タブラベル -->
+        <!-- ラジオボタンのidをfor属性で指定 -->
+        <div class="tab_area">
+            <label class="tab1_label" for="tab1">タブ1</label>
+            <label class="tab2_label" for="tab2">タブ2</label>
+            <label class="tab3_label" for="tab3">タブ3</label>
+        </div>
+
+        <!-- パネル表示 -->
+        <div class="panel_area">
+            <div id="panel1" class="tab_panel">
+                <p>タブパネル-1。あいうえお</p>
+            </div>
+            <div id="panel2" class="tab_panel">
+                <p>タブパネル-2。かきくけこ</p>
+            </div>
+            <div id="panel3" class="tab_panel">
+                <p>タブパネル-3。さしすせそ</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
