@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブデザイン課題</title>
+
+    <style>
+        body {
+            background-color: #3571e8;
+            
+        }
+        header {
+            background-color: #e73562;
+            text-align: center;
+            color: #ffffff;
+            
+            
+        }
+        .text-box {
+            margin: 0 auto;
+            padding: 5px 45px;
+            background-color:#ffffff;
+
+        }
+        .text {
+            color: #333333;
+
+         }
+        p {
+            line-height: 1.6;
+
+        }
+        footer {
+            background-color: #e73562;
+            color: #ffffff;
+            text-align: center;
+
+        }
+
+        /* 　ここから課題内容です。レスポンシブ対応 　*/
+
+        /* 480px以下:フォントサイズ15px */
+        @media screen and (max-width: 480px) {
+        body {
+            font-size: 15px;
+          }
+        .text-box {
+            padding: 5px 30px;
+        }
+        
+        }
+
+        /* 481px〜768px：フォントサイズ20px */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+        body {
+            font-size: 20px;
+          }
+        }
+
+        /* 769px〜1024px：フォントサイズ25px */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+        body {
+            font-size: 25px;
+           }
+        }
+
+        /* 1025px以上：フォントサイズ30px */
+        @media screen and (min-width: 1025px) {
+        body {
+            font-size: 30px;
+          }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header><h1>フランスパン</h1></header>
+    <div class="text-box">
+        <div class="text">
+            <h2>フランスパンの起源と由来</h2>
+                <p>	「フランスパン」は、日本で広く普及する際に「フランス風のパン」として定着した名称です。
+                明治時代以降、西洋文化が日本に入り始めた頃にフランス式の硬いパンを紹介され、そう呼ばれるようになりました。</p>
+                
+            <h2>本場フランスでの歴史</h2>
+                 <p>フランスでのフランスパンの原型は、18世紀末から19世紀にかけてすでに存在していました。
+                 特に現在の「バゲット」の形が定着したのは、1920年代以降といわれています。</p>
+                <p>この頃、労働法でパン職人の出勤時間が遅くなり、早く焼ける細長いパンが求められるようになって、バゲットが広まったとされます。</p>
+        </div>
+    </div>
+    <footer>Je voudrais une baguette, s'il vous plaît.</footer>
+    
+</body>
+</html>
