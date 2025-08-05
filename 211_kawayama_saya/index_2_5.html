@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>文章構造のdiv/spanの違い</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Header</h1>
+</header>
+
+<section>
+    <h2>Article1</h2>
+    <article>
+        <p>一つ目のアーティクル</p>
+
+        <div>
+            <p>こんにちは！<span style="color: red;">こちらはspanタグを使っています。</span></p>
+        </div>
+    </article>
+</section>
+
+<section>
+    <h2>Article2</h2>
+    <article>
+        <p>二つ目のアーティクル</p>
+
+        <div>
+            <p>こちらはdivタグで表示しています。</p>
+            <p>いろんな表示方法があるのでためしてください。<br>これは改行されています。</p>
+            <p><span style="font-weight: bold;">改行できていますか？</span></p>
+        </div>
+    </article>
+</section>
+
+<footer>
+    <p>Footer</p>
+</footer>
+
+</body>
+</html>
