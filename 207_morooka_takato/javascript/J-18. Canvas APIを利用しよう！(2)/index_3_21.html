@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvasで画像を円周上に回転</title>
+  <style>
+    body {
+        font-family: serif;
+    }
+  </style>
+</head>
+<body>
+    <h1 >Canvasでアニメーションを描く</h1>
+    <p>図形を表示するには、canvasタグをサポートしたブラウザが必要です。</p>
+  <canvas></canvas>
+
+  <script>
+    // Canvasの要素を取得
+    var canvas = document.querySelector("canvas");
+    // Canvas要素から2D描画コンテキストを取得
+    var ctx = canvas.getContext('2d');
+    // 新しい画像オブジェクトを作成（画像を操作するため）
+    var image = new Image();
+    // 画像のURLを指定（幽霊の画像）
+    var imageURL = 'https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png';
+
+    // 画像がロードされた後に描画を開始する
+    image.onload = function() {
+      // canvas要素の横の長さを指定 - ①
+       canvas.width = 600;
+      // canvas要素の縦の長さを指定
+       canvas.height =600;
+      // 横の座標を指定（①の半分の長さ）
+      var centerX = 500;
+      // 縦の座標を指定（②の半分の長さ）
+      var centerY = 450;
+      // 半径を定義
+      var radius =150;
+      // 角度の定義 - ③
+      var angle = 0;
+
+      // アニメーションを開始する関数
+      function animate() {
+        // Canvasをクリア（以前の描画を消去）
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 画像を円の周りに描画
+        var x = centerX + Math.cos(angle) * radius - image.width / 2;
+        var y = centerY + Math.sin(angle) * radius - image.height / 2;
+        ctx.drawImage(image, x, y, 60, 60,);
+
+        // 画像を回転させるために角度を更新
+        angle += 0.006;
+
+        // アニメーションを続ける
+        requestAnimationFrame(animate);
+      }
+
+      // アニメーションを開始
+      animate();
+    };
+
+    // 画像の読み込みを開始
+    image.src = imageURL;
+  </script>
+</body>
+</html>
