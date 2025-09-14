@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>J-5. 関数定義</title>
+</head>
+
+<body>
+  <script>
+    alert("XXを関数で確認します。");
+    //4との比較をする関数
+    function check1(num) {
+      if (num >= 4) {
+        console.log("値は４以上です。");
+      } else {
+        console.log("値は４未満です。");
+      }
+    }
+    // 10との比較をする関数
+    function check2(num) {
+      if (num >= 10) {
+        console.log("値は１０以上です。");
+      } else {
+        console.log("値は１０未満です。");
+      }
+    }
+    //実行：数値5をチェック
+    var value = 5;
+    check1(value); // 1つ目の関数を実行
+    check2(value);  // 2つ目の関数を実行
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+
+function event(){
+
+const now_time = new Date();
+const Hou = now_time.getHours();
+const Min = now_time.getMinutes();
+const Sec = now_time.getSeconds();
+
+if(Hou < 10){
+    Hou + '0';
+}
+if(Min < 10){
+    Min + '0';
+}
+if(Sec < 10){
+    Sec + '0';
+}
+ console.log( Hou + ':' + Min + ':' + Sec);
+}
+
+setInterval(event, 1000);
+
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+</style>
+<body>
+    <form>
+        <input id="number" type="number" value="0">
+        <input id="btn" type="button" value="ボタン">
+    </form>   
+</body>
+<script>
+
+    const btn = document.getElementById('btn');
+    const number = document.getElementById('number');
+
+    btn.addEventListener('click', function(e){
+        number.stepUp(1);
+    })
+
+</script>
+ 
+</html>

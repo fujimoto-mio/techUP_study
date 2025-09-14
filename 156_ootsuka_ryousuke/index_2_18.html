@@ -2,24 +2,27 @@
 <html>
 <head>
 <title>Level2-18 課題用</title>
- <style>
-    .container {
-      display: flex;
+  <style>
+    .sample{
+     font-size: 50px;
     }
-    .item{
-      background-color: #00FFFF;
+    a:hover {
+      color:pink;
+      font-style: italic;
+      text-decoration: none;
     }
-  </style>
- 
-  <body>
-     <div >
-      <div class="item">フレックス 1</div>
-      <div class="item">フレックス 2</div>
-      <div class="item">フレックス 3</div>
-      <div class="item">フレックス 4</div>
-    </div>
- 
-    <div class="container">
+    a::before {
+      content: "→";
+      color: green;
+    }
+    a::after {
+      content: "←";
+      color: green;
+    }
+     </style>
+</head>
+   <body>
+      <div class="container">
       <div class="item">フレックス 1</div>
       <div class="item">フレックス 2</div>
       <div class="item">フレックス 3</div>

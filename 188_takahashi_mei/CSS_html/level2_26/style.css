@@ -1,0 +1,897 @@
+html, body {
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 0.9rem;
+}
+
+body {
+  font-family: 'M PLUS 1p', sans-serif;
+  color: rgb(85, 85, 85);
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  line-height: 1.8em;
+  letter-spacing: 0.09em;
+  font-weight: 100;
+}
+a {
+  text-decoration: none;
+}
+
+.site-title img {
+  height: 50px;
+  margin-top: 12px;
+  margin-right: 200px;
+}
+.navbar-nav .nav-link {
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgb(255, 246, 65) !important;
+}
+
+.mainvisua {
+  position: relative;
+  min-height: 75vh;
+}
+
+.mainvisual img {
+  display: inline-block;
+  height: 750px;
+  width: 100%;
+}
+
+.main-titl {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  color: white;
+  /* padding: 20px 50px; */
+  z-index: 3;
+}
+
+.main-titl p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.main-titl img {
+  height: 30%;
+  width: 100%;
+}
+
+.mainvisual .contact-image {
+  position: absolute;
+  top: 78%;
+  right: 18%;
+  height: 100px;
+  z-index: 4;
+}
+
+.mainvisual .contact-image img {
+  height: 90%;
+  width: 100%;
+}
+
+.contact-image img {
+  transition: opacity 0.8s ease;
+}
+
+.contact-image img:hover {
+  color: white;
+  opacity: 0.6;
+}
+
+.contact-image {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.contact-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 10%;
+  height: 85%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-20deg);
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -60%;
+  }
+  30% {
+    left: 150%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.trouble-section {
+  margin: 40px auto;
+  padding: 0 10%;
+  flex-wrap: nowrap;
+}
+
+.content-title {
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+}
+
+.content-title p {
+  font-size: 23px;
+  height: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.content-title span {
+  color: rgb(79, 170, 112);
+}
+
+hr {
+  height: 4px;
+  width: 60px;
+  border-width: 300;
+  border: none;
+  background-color: rgb(79, 170, 112);
+  text-align: center;
+  margin: 30px auto;
+}
+
+.trouble-section .content-title span:first-of-type {
+  color: red;
+}
+
+.trouble-section h2 span:not(:first-of-type) {
+  position: relative;
+}
+
+.trouble-section h2 span:not(:first-of-type)::before {
+  content: "";
+  position: absolute;
+  top: -0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.2em;
+  height: 0.2em;
+  background: rgb(79, 170, 112);
+  border-radius: 50%;
+}
+
+.trouble-content {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+
+.trouble-content ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+}
+
+
+.trouble-content li {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.trouble-content li span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.trouble-content li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 2px;
+  width: 100%;
+  background-color: red;
+}
+
+.checkbox1,
+.checkbox2{
+  display: flex;
+  align-items: center;     
+  gap: 15px;         
+}
+
+.checkbox1::before,
+.checkbox2::before {
+  content: "";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-image: url('imgs/trouble-point.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.trouble-content img {
+  height: 300px;
+  padding: 30px;
+}
+.top-tag,.chat img {
+  position: fixed;  
+  z-index: 1000;  
+  object-fit: cover;
+}
+.top-tag{
+    top: 65%;            
+    right: 0; 
+}
+.chat img{
+    top: 90%;            
+    right: 2%; 
+    width: 65px;     
+    height: 65px;      
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);;
+}
+
+/* 解決セクション */
+.solution-section {
+  background-image: url("imgs/solution-bg.jpg");
+  /* width: 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0 30px 30px;
+}
+
+.solution-section img {
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.solution-section p,
+.solution-section h2 {
+  color: white;
+}
+
+.solution-section h2 span {
+  color: rgb(255, 246, 65);
+  position: relative;
+}
+
+.solution-section h2 span::before {
+  content: "";
+  position: absolute;
+  top: -0.1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.2em;
+  height: 0.2em;
+  background: rgb(255, 246, 65);
+  border-radius: 50%;
+}
+
+.checkbox2::before {
+  background-image: url('imgs/solution-point.png');
+}
+
+.solution-list ul {
+  flex-direction: column;
+  text-align: left;
+  font-size: 25px;
+  line-height: 1.8;
+  padding-left: 20%;
+  color: white;
+}
+
+.solution-list li span {
+  text-decoration: underline;
+  color: rgb(255, 246, 65);
+}
+
+.box {
+  background-color: aliceblue;
+  margin: 20px 13%;
+  border: 8px solid rgb(64, 117, 210);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.text p {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  color: #595858;
+}
+
+.box .contact-image {
+  margin: 0 auto;
+}
+
+/* <!-- ウェブサイトをトータルサポート --> */
+
+.supports {
+  text-align: center;
+  padding: 5%;
+  margin: 0, auto;
+  align-items: center;
+}
+
+.supports .content-title p {
+  height: 90px;
+}
+
+.text-supports {
+  margin: 45px;
+}
+
+.text-supports p {
+  color: #5a5959;
+  font-size: 20px;
+}
+
+.supports ul {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.supports li {
+  width: calc(100% / 5 - 20px);
+  text-align: center;
+  margin: 0 10px 10px 0;
+}
+
+.supports li p {
+  color: #6a87cf;
+  font-size: 17px;
+}
+
+/* Ability */
+.ability {
+  background-image: url("imgs/strong-point-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+
+.text-1 {
+  margin: 45px 0;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.clam-ability {
+  display: flex;
+  justify-content: center;
+  gap: 30px;         
+  padding: 0 5%;
+  flex-wrap: wrap;
+}
+
+.box-ability {
+  background-color: rgb(255, 255, 255);
+  margin: 0 15px 50px;
+  /* height: 630px; */
+  max-width: 350px;
+}
+.box-ability img {
+width: 100%;
+width: 100%;
+object-fit: cover;
+
+}
+
+.box-ability p {
+  font-size: 15px;
+  color: rgb(58, 194, 149);
+  margin: 25px 0 10px;
+}
+
+.box-ability h3 {
+  font-size: 35px;
+  color: rgb(58, 194, 149);
+  font-weight: bold;
+}
+
+.box-ability hr {
+  background-color: #e6e5e5;
+  width: 90%;
+}
+
+.clam-text p {
+  padding: 0 20px;
+  color: rgb(112, 111, 111);
+  text-align: left;
+}
+
+/*  Works制作実績  */
+.works {
+  /* background-color: #6657da; */
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.works-sample {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.work-box img {
+  width: 380px;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.8s ease;
+}
+
+.work-box img:hover,
+.work-box p:hover {
+  color: rgb(0, 141, 0);
+  opacity: 0.6;
+}
+
+.next {
+  /* margin: 0 auto; */
+  padding: 3%;
+}
+
+.work-box p {
+  font-size: 15px;
+  color: rgb(40, 84, 204);
+  margin-top: 5px;
+  transition: opacity 0.8s ease;
+}
+.work-box span {
+  font-size: 10px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+/* <!--  Voiceお客様の声--> */
+.voice {
+  background-image: url("imgs/voice-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.voice-sample {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+}
+
+.voice-box {
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  border: 1px solid rgb(194, 192, 192);
+}
+
+.voice-box img {
+  margin: 20px;
+}
+
+.voice-box .name {
+  font-size: 17px;
+  color: rgb(21, 175, 21);
+  margin-bottom: 6px;
+}
+
+.voice-box .name-sub {
+  font-size: 13px;
+  color: #6eb147;
+  margin-bottom: 15px;
+}
+
+.read-more-button {
+  background-color: rgb(72, 176, 108);
+  font-size: 15px;
+  width: 150px;
+  padding: 4px;
+  border: 1px solid #87da57;
+  border-radius: 4px;
+  color: #ffffff;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: white;
+   color: rgb(72, 176, 108);
+}
+.voice-next {
+  margin: 0 auto;
+  padding-top: 170px;
+}
+/*  About　Juitaについて */
+.about {
+  flex-wrap: wrap;
+}
+
+.about .content-title {
+  text-align: center;
+  background-image: url(imgs/about-ti-bg.png);
+  background-repeat: round;
+  height: 160px;
+  margin: 0, auto;
+  padding-top: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+}
+
+.about .content-title hr {
+  background-color: #ffffff;
+  height: 1px;
+}
+
+.about-content {
+  background-image: url(imgs/about-bg.png);
+  background-repeat: round;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 6% 15%;
+}
+
+.about-text {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+}
+
+.about-text img {
+  height: 250px;
+}
+
+/* Q&Aよくある質問 */
+.question {
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.faq {
+  /* background-color: aquamarine; */
+  padding: 45px 18%;
+}
+
+.faq details {
+  background-color: #6c6a6a15;
+  margin: 5px 0;
+  padding: 15px;
+  transition: all 0.8s ease;
+  word-break: break-word;
+  position: relative;
+  font-size: 17px;
+}
+
+.faq details[open] {
+  padding-bottom: 4%;
+  background-color: white;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  display: block;
+}
+
+.faq details summary {
+  position: relative;
+  padding-right: 25px;
+  /* トグル用のスペース */
+  cursor: pointer;
+}
+
+.faq summary:hover {
+  color: #5bb1df;
+}
+
+.faq summary::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.4s ease;
+}
+
+.faq details[open] summary::after {
+  content: "▲";
+  color: #5bb1df;
+}
+
+.faq p {
+  margin: 10px;
+}
+
+.label-q {
+  font-size: 30px;
+  font-weight: 550;
+  margin-right: 10px;
+}
+
+.label-a {
+  font-size: 30px;
+  margin-right: 10px;
+  font-weight: 580;
+  color: rgb(255, 132, 0);
+}
+
+/* Contact Form　ご相談・お問い合わせフォーム */
+.contact {
+  background-color: rgba(218, 218, 218, 0.234);
+  padding: 100px 0;
+}
+
+.contact-text p {
+  color: #eb5d40;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.contact-form {
+  margin: 40px auto;
+  padding: 5%;
+  width: 60%;
+  background-color: #fdfdfd;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  width: 300px;
+}
+
+.form-radio {
+  display: flex;
+  gap: 130px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.radio {
+  margin: 20px;
+  margin-left: 90px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.radio label {
+  margin-left: 100px;
+}
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: red;
+  margin: px;
+}
+
+input[type="radio"]:checked+span {
+  color: red;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 120px;
+}
+
+.privacy-box {
+  border: none;
+  margin: 20px 0;
+  background: #87da57;
+  font-size: 14px;
+}
+
+.privacy-box summary {
+  background: #dde0e8;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  list-style: none;
+  text-align: center;
+  height: 50px;
+  padding: 15px;
+  font-weight: 100;
+}
+
+.privacy-content {
+  padding: 20px 40px;
+  background-color: #ecf1f2;
+  line-height: 1.3;
+}
+
+.privacy-content p {
+  text-align: left;
+  font-size: 15px;
+  color: #878787;
+}
+
+.privacy-content span {
+  font-weight: bold;
+}
+
+.privacy-content hr {
+  height: 1px;
+  width: 100%;
+  margin: 5px;
+  background-color: #d5cece;
+}
+
+.privacy-box summary {
+  position: relative;
+  cursor: pointer;
+}
+
+.privacy-box summary::after {
+  content: "+";
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.privacy-box[open] summary::after {
+  content: "-";
+  transform: translateY(-50%) scale(0.7); /* 開いた時 */
+  background-color: rgb(91, 90, 90);
+  color: white;
+}
+
+.form-group {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+}
+
+.form-checkbox {
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="checkbox"]:checked+span {
+  color: red;
+}
+
+.contact-form .form-submit {
+  display: flex;
+  justify-content: center;
+}
+
+/* <!-- 会社info --> */
+.company-info {
+  background-image: url(imgs/about-bg.png);
+  background-repeat: round;
+  color: white;
+  padding: 30px;
+  padding: 10% 20%;
+  margin: 0 auto;
+  font-weight: lighter
+}
+
+.company-info .company-logo {
+  display: block;
+  width: 130px;
+  max-width: 200px;
+}
+
+.company-info dl {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: stretch;
+}
+
+.company-info dt {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.company-info dt,
+.company-info dd {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.company-info dt:first-of-type,
+.company-info dd:first-of-type {
+  border-top: 1px solid white;
+}
+
+.form-group img {
+  margin-right: 30px;
+}
+
+/* footer */
+footer {
+  background-image: url(imgs/about-ti-bg.png);
+  background-repeat: round;
+  padding: 20px;
+  text-align: center;
+}
+footer p{
+  font-size: 12px;
+  color: white;
+}
+
+footer a{
+  color: #5780da;
+}
