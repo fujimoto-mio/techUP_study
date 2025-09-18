@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>J-7. 要素の変更</title>
+</head>
+
+<body>
+    <script>
+        const name_array = ["山田さん", "佐藤さん", "内田さん"];
+
+        console.log('最初に配列の値を表示します。');   /*　繰り返し処理で配列の中身を全て表示 */
+        for (let i = 0; i < name_array.length; i++) {
+            console.log(name_array[i]);
+        }
+
+        while (name_array.length > 0) {
+            const name_shift = name_array.shift(); /* 配列の最初の値を削除します */
+            console.log('配列の値を1つ消します。');
+            console.log(name_shift + 'を消しました'); /*　削除した値を表示します */
+            if (name_array.length !== 0) {   /*　中身がまだある時に実行 */
+                console.log('残りを表示します。');
+                for (let i = 0; i < name_array.length; i++) {
+                    console.log(name_array[i]);
+                }
+            } else {               /*　中身がない時に実行 */
+                console.log("データがなくなりました。");
+            }
+        }
+    </script>
+</body>
+</html>
