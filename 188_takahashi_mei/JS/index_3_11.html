@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>J-8. 構文の使い方</title>
+</head>
+
+<body>
+    <script>
+        const array_test = ["a", "b", "c"];
+
+         // mapを使って新しい配列を作成
+        const map_test = array_test.map(x => x + "_set");
+        console.log(map_test);
+
+        for (let i = 0; i < array_test.length; i++) {
+            console.log(array_test[i]+ "_set");
+        }
+    </script>
+</body>
+</html>
