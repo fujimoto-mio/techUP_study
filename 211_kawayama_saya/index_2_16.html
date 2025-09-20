@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>三層構造ロゴ表示</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #ffc0cb; /* ピンク背景 */
+      font-family: 'Arial', sans-serif;
+    }
+
+    .outer {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .background_label {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .middle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 200px;
+      background-color: #00ffff; /* シアン背景 */
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner {
+      background-color: #ff00ff; /* マゼンタ背景 */
+      color: white;
+      padding: 20px 40px;
+      font-size: 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="background_label">背景表示</div>
+    <div class="middle">
+      <div class="inner">ロゴ表示</div>
+    </div>
+  </div>
+</body>
+</html>
