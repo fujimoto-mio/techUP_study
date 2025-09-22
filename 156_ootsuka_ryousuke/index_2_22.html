@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>レスポンシブルWebデザイン</title>
+</head>
+<style>
+    p{
+        color:pink;
+        font-size:10px;
+    }
+
+    @media screen and (min-width:100px) and ( max-width:480px) {
+        p{
+            color:blue;
+            font-size:15px;
+        }
+    }
+    
+    @media screen and (min-width:481px) and ( max-width:767px) {
+        p{
+        color:yellow;
+        font-size:20px;
+        }
+    }
+    
+    
+    @media screen and (min-width:768px) and ( max-width:1023px) {
+        p{
+        color:red;
+        font-size:25px;
+        }
+    }
+    
+
+    @media screen and (min-width:1024px) {
+        p{
+        color:orange;
+        font-size:30px;
+        }
+    }
+</style>
+    <body>
+        <h1>ここはH1で変わらない</h1>
+        <p>レスポンシブルWebデザイン</p>
+        <p>画面変化に応じて文字色と文字サイズが変化する。</p>
+        <p>横幅にのみ対応し縦幅には変化しない。</p>     
+    </body>
+</html>
