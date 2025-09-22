@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<form action="/upload/image" method="post" enctype="multipart/form-data">
+  <label for="title">メール　　　:</label>
+  <input type="email" id="email" name="image_title"><br>
+
+  <label for="img">送信ファイル:</label>
+  <input type="file" id="img" name="uploaded_image" accept="image/*"><br>
+
+  <button type="submit">送信</button>
+</form>  
+</body>
+</html>
