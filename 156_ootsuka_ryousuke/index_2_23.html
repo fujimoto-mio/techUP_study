@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グリッドの設定</title>
+</head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12列分割する*/
+  grid-template-rows: repeat(12, 1fr);    /* 12行分割する*/
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  background: blue;
+  color: white;
+}
+
+.content-1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  background: limegreen;
+  color: white;
+}
+
+.content-2 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  background: red;
+  color: white;
+}
+
+.content-3-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background: cyan;
+  color: black;
+}
+
+.content-3-2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  background: white;
+  color: black;
+}
+
+.content-3-3 {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  background: yellow;
+  color: black;
+}
+
+.content-4-1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  background: purple;
+  color: white;
+}
+
+.content-4-2 {
+  grid-column-start: 7;
+  grid-column-end: 13;
+  background: magenta;
+  color: white;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  background: saddlebrown;
+  color: white;
+}
+
+</style>
+<body>
+  <div class="grid-container">
+    <!--1列目-->
+    <div class="header">header</div>
+    <!--2列目-->
+    <div class="content-1">content-1</div>
+    <div class="content-2">content-2</div>
+    <!--3列目*/-->
+    <div class="content-3-1">content-3-1</div>
+    <div class="content-3-2">content-3-2</div>
+    <div class="content-3-3">content-3-3</div>
+    <!--4列目-->
+    <div class="content-4-1">content-4-1</div>
+    <div class="content-4-2">content-4-2</div>
+    <!--5列目-->
+    <div class="footer">fooder</div>
+  </div>
+</body>
+</html>
