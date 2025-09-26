@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>中央ロゴ配置デモ</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .background-area {
+      position: relative;
+      width: 100vw;
+      height: 350px;
+      background-color: #ffdada;
+    }
+    .background-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: 22px;
+    }
+    .background-color {
+      position: absolute;
+      z-index: 5;
+      background-color: #ea6468;
+      width: 520px;
+      height: 220px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .center-logo {
+      position: absolute;
+      z-index: 10;
+      background-color: #c4f773;
+      width: 400px;
+      height: 150px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 38px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-area">
+    <div class="background-label">背景表示</div>
+    <div class="background-color"></div>
+    <div class="center-logo">ロゴ表示</div>
+  </div>
+</body>
+</html>
