@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>属性セレクターを使う</title>
+  <style>
+    .mint-box {
+      background-color: #ffffff;
+      border-top: 5px solid #ff7d6e;
+      color: #ff7d6e;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      margin: 0;
+      padding: 0;
+    }
+    .inner-sheet {
+        background-color: #ffebe9;
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .mint-box p {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body style="background-color: #ffffff;"> 
+  <div class="mint-box">
+    <div class="inner-sheet">
+        <p>このような影（box-shadow）をつけて<br>少し浮いたように見せた枠を作成しました。</p>
+        <p>
+        背景は白<br>
+        ミント風の配色は、#ffebe9<br>
+        トップのボーダ色は、#ff7d6e<br>
+        文字色は、#ff7d6e<br>
+        子孫セレクターをつかって<br>
+        marginを10px<br>
+        paddingを20px<br>
+        で設定してください。
+        </p>
+    </div>
+   </div>
+</body>
+</html>
