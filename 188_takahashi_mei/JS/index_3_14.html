@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>J-11. いろんなメソッド</title>
+</head>
+
+<body>
+    <script>
+        //関数をsetInterval()で処理する
+        //関数の定義
+        function now_time() {
+            // 現在時間を取得
+            const now_time = new Date();
+            // 取得した現在時間の情報から「時間」を取得
+            let hours = now_time.getHours();
+            // 取得した現在時間の情報から「分」を取得
+            let minutes = now_time.getMinutes();
+            // 取得した現在時間の情報から「秒」を取得
+            let seconds = now_time.getSeconds();
+
+            //取得してそのまま値を使用すると、日時が一桁の時、一桁で表示されてしまうため変換して表示する
+            //もし、「時間」が10より小さい時、「時間」を'0'+「時間」に変換
+            if (hours < 10) hours = '0' + hours;
+            //もし、「分」が10より小さい時、「分」を'0'+「分」に変換
+            if (minutes < 10) minutes = '0' + minutes;
+            //もし、「秒」が10より小さい時、「秒」を'0'+「秒」に変換
+            if (seconds < 10) seconds = '0' + seconds;
+
+            console.log(hours + ':' + minutes + ':' + seconds);
+        }
+        // 1秒ごとにnow_time()を実行
+        setInterval(now_time, 1000);
+    </script>
+</body>
+</html>
