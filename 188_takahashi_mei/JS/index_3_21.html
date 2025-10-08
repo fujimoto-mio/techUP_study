@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>J-18. Canvas APIを利用しよう!(2)</title>
+</head>
+
+<body onLoad="test()">
+    <h2>Canvasで図形を描く</h2>
+    <canvas width="600" height="600" id="takopi">
+        図形を表示するには、canvasタグをサポートしたブラウザが必要です。
+    </canvas>
+    <script>
+        // ▼ canvas要素を取得（JavaScriptから絵を描く対象をつかむ）
+        var canvas = document.getElementById('takopi');
+        // ▼ 2D描画用のツール（ペンや筆みたいなもの）を取得
+        var ctx = canvas.getContext('2d');
+        // ▼ 円運動に使う変数
+        var degree = 0;     //中心点からの角度
+        var drawRadius = 10;   //動かしたい円の半径
+        var moveRadius = 150;	//動いてもらいたい円の半径
+        var CENTER_X = 300;     // 回転の中心のX座標
+        var CENTER_Y = 300;     // 回転の中心のY座標
+        // ▼ 表示する画像を用意（Imageオブジェクトを作る）
+        var img = new Image();
+        // ▼ 画像のURL
+        img.src = "https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png"
+        // ▼ 画像が読み込まれたらloop関数（アニメーション）を開始
+        img.onload = function () {
+            loop();
+        };
+
+        // ▼ アニメーションを1フレームずつ描く関数
+        function loop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);   //背景を消す（前のフレームの残像を消す）
+            ctx.fillStyle = '#FFFFFF';      //背景を白く塗り直す（塗らないと透明のままになる）
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // --- 回転する位置を計算
+            // Math.cos と Math.sin は角度からX・Y座標を求めるために使う
+            // degree は角度なので、ラジアンに直すために「Math.PI / 180」をかけてる
+            var x = Math.cos(Math.PI / 180 * degree) * moveRadius + CENTER_X;
+            var y = Math.sin(Math.PI / 180 * degree) * moveRadius + CENTER_Y;
+            // --- 画像を描画する（位置は中心に合うように調整）
+            var size = 70; // 画像サイズ（必要に応じて調整）
+            ctx.drawImage(img, x - size / 2, y - size / 2, size, size);
+            // --- 次の角度に進める（＝動く）
+            degree++;
+            // --- 次のフレームを予約（ループのように繰り返す）
+            window.requestAnimationFrame(loop);
+        }
+    </script>
+</body>
+</html>
