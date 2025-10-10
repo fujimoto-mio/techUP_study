@@ -1,0 +1,371 @@
+body {
+  background-color: #fcefd6;
+}
+
+/* トップバー */
+.top-bar {
+  background-color: #4e342e;
+  height: 24px;
+  padding: 20px 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  height: auto;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* 透過ヘッダー */
+header {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 224, 191, 0.8), rgba(255, 242, 228, 0.95));
+  padding: 20px 0;
+}
+
+/* ヘッダー内構造 */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 7.5rem;
+  top: 0;
+}
+
+.header-logo {
+  position: absolute;
+  left: 20px;
+  top: 12.5%;
+  transform: translateY(-50%);
+}
+
+.header-logo .logo-image {
+  width: 150px;
+}
+
+.header-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* ナビゲーション */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+nav li a:hover {
+  color: #7e7e7ed0;
+  transform: translateY(5px);
+}
+
+/* フッター ------------------------------- */
+.page-footer {
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+}
+
+.information-head {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.information > div {
+  width: 50%;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 320px;
+}
+
+.information-info {
+  margin-bottom: 2rem;
+}
+
+.information .info {
+  padding: 0;
+}
+
+.information-wrapper {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.info {
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+}
+
+.info th,
+.info td {
+  border-bottom: 1px solid #c9c2bc;
+}
+
+.info th {
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+
+.info td {
+  padding: 1rem 0;
+}
+
+.copyright {
+  background-color: #4e342e;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 125px;
+  color: #fff;
+}
+
+/* splideの箇所 */
+.news {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.splide {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+.splide__slide img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* ニューススライダー */
+.splide {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+.splide__track {
+  overflow: hidden;
+}
+
+.splide__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.splide__slide {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0px;
+}
+
+/* Splideの矢印 */
+.splide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* 各ニュースのグリッド */
+.news-list {
+  background-color: #f2e3c6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.news-list h2 {
+  font-size: 2em;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.news-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.news-item img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.news-caption {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+/* モーダル */
+.modal {
+  display: none;
+  max-width: 640px;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+/* オーバーレイ */
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(251, 234, 204, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* モーダル本体 */
+.modal__container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.modal.is-open .modal__container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* モーダル内の画像 */
+.modal__image img {
+  display: block;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border-radius: 6px;
+}
+
+/* タイトル */
+.modal__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6B4F3F;
+  text-align: center;
+}
+
+/* 本文 */
+.modal__content {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+/* 閉じるボタン */
+.modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 200;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__close:hover {
+  background: #ddd;
+}
+
+.modal__close .close-icon {
+  font-size: 20px;
+  color: #333;
+  line-height: 1;
+}

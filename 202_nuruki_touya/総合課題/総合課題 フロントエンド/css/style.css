@@ -1,5 +1,5 @@
 body {
-    background-color: #fcefd6; /* 希望の背景色 */
+    background-color: #fcefd6;
   }
 /*トップバー*/
 .top-bar {
@@ -24,12 +24,11 @@ body {
 
 /* 透過 */
 header {
-    position: absolute;
+    position: absolute; 
     width: 100%;
-    background-color: rgba(255, 224, 191, 0.8); /* 背景色を透過 */
+    background: linear-gradient(to bottom, rgba(255, 224, 191, 0.8), rgba(255, 242, 228, 0.95));
     padding: 20px 0;
 }
-
 /* ヘッダースタイル */
 .header-container {
     display: flex;
@@ -86,23 +85,23 @@ nav li a:hover{
 }
 /*ヘッダーの猫の画像*/    
 .header-img-cat {
-    position: relative; /* header-container の背面に配置 */
+    position: relative; 
     top: 0;
     left: 0;
     width: 100%;
-    height: 91vh; /* ビューポート全体をカバー */
-    z-index: -1; /* 他の要素の背面に配置 */
+    height: 91vh;
+    z-index: -1; 
 }
 
 .header-img-cat img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 画像の比率を維持しつつ、全体をカバー */
+    object-fit: cover; 
 }
 /* ボタンのスタイル */
 .reservation {
     position: absolute;
-    bottom: 10%; /* 画像の下部に配置 */
+    bottom: 10%; 
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -130,61 +129,61 @@ nav li a:hover{
 }
 
 /*ニュースメニュー*/
-.carousel-container {
-  position: relative;
-  width: 669px;         /* 表示領域（1枚分） */
-  height: 199px;
+.news{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.splide {
+  width: 100%;
   margin: 0 auto;
-  overflow: hidden;     /* はみ出しを隠す */
+  position: relative;
+  padding: 0 10px;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-  min-width: 669px;
-  height: 199px;
-  margin: 0 15px;       /* 左右のマージンで“見切れ”効果 */
-  box-sizing: border-box;
-}
-
-.carousel-slide img {
-  width: 669px;
-  height: 199px;
+.splide__slide img {
+  max-width: 700px;         
+  width: 100%;            
+  height: auto;           
   display: block;
+  margin: 0 auto;
+  border-radius: 8px;      
 }
 
-  
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    font-size: 2rem;
-    padding: 0 15px;
-    cursor: pointer;
-    z-index: 2;
-  }
-  
-  .prev-btn {
-    left: -40px;
-  }
-  
-  .next-btn {
-    right: -40px;
-  }
+/*splideのボタン*/
+.splide__arrow {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  font-size: 2rem;
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.splide__arrow--prev {
+  left: 100px; 
+}
+
+.splide__arrow--next {
+  right: 100px;
+}
+
+.splide__arrow:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
   
 /*スタッフ猫紹介の背景*/
 .staff-neko-img {
-    position: relative; /* header-container の背面に配置 */
+    position: relative; 
     top: 0;
     left: 0;
-    width: 100%; /* ビューポート全体をカバー */
-    z-index: 0; /* 他の要素の背面に配置 */
+    width: 100%; 
+    z-index: 0; 
 }
 
 .staff-neko-backgaound img{
@@ -195,10 +194,11 @@ nav li a:hover{
 
 /*スタッフ猫紹介　本文*/
 .staff-neko-section {
+    background-position: center;
     position: relative;
     width: 100%;
-    height: 650px; /* 高さを適宜調整 */
-    background-image: url("images/staff-neko-background.jpg");
+    height: 600px; 
+    background-image: url("../images/staff-neko-background.jpg");
     background-size: cover;
     text-align: center;
     z-index: 1;
@@ -272,8 +272,8 @@ nav li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px; /* 間隔を調整 */
-    padding-top: 24rem;
+    gap: 80px; 
+    padding-top: 22rem;
     position: relative;
 }
 .price-block {
@@ -287,7 +287,7 @@ nav li a:hover{
 .price-block img {
     position: absolute;
     top: -30%;
-    left: -45%; /* 画像を左に寄せる */
+    left: -45%; 
     width: 600px;
     max-width: 100%;
     z-index: 1;
@@ -344,8 +344,8 @@ nav li a:hover{
     align-items: center;
     padding: 240px ;
     position: relative;
-    padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-top: 15rem;
+    padding-bottom: 2rem;
 }
 
 .concept-block {
@@ -359,7 +359,7 @@ nav li a:hover{
 .concept-block img {
     position: absolute;
     top: -30%;
-    right: -45%; /* 画像を左に寄せる */
+    right: -45%; 
     width: 600px;
     max-width: 100%;
     z-index: 1;
@@ -386,13 +386,44 @@ nav li a:hover{
     font-weight: bold;
 }
 
+/*フェードイン*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left, .fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+.fade-left {
+  transform: translateX(-50px);
+}
+
+.fade-left.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-delay {
+  transition-delay: 0.5s;
+}
 
 /* フッター
 ------------------------------- */
 .page-footer {
     background-size: cover;
     background-position: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 .information-head {
@@ -452,8 +483,8 @@ nav li a:hover{
     background-color:  #4e342e;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 6rem;
+    margin-top: 125px;
     color: #fff;
 }
-
 /*レスポンシブ対応*/
+
