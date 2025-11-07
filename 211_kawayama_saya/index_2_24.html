@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>C-13. グリッドの設定</title>      
+      <style>
+        :root {
+        --text-color-default: #ffffff;
+        --text-color-on-white: #000000;
+        }
+
+        .wrapper_1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .wrapper_1 div {
+            color: var(--text-color-default);
+        }
+
+        .row1 {
+            display: grid;
+            grid-template-columns: 1fr;
+            background: #0000ff;
+        }
+
+        .row2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .row2 > div:nth-child(1) { background: #00ff00; }
+        .row2 > div:nth-child(2) { background: #ff0000; }
+
+        .row3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .row3 > div:nth-child(1) { background: #00ffff; }
+        .row3 > div:nth-child(2) {
+            background: #ffffff; 
+            color: var(--text-color-on-white);
+        }
+        .row3 > div:nth-child(3) {
+            background: #ffff00;
+            color: var(--text-color-on-white)
+        }
+
+        .row4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .row4 > div:nth-child(1) { background: #800080; }
+        .row4 > div:nth-child(2) { background: #ff00ff; }
+
+        .row5 {
+            display: grid;
+            grid-template-columns: 1fr;
+            background: #9c744a;
+        }
+
+      </style>
+    </head>
+    <body>   
+    <div class="wrapper_1">
+        <div class="row1"><div>header</div></div>
+        <div class="row2">
+            <div>content-1</div>
+            <div>content-2</div>
+        </div>
+        <div class="row3">
+            <div>content-3-1</div>
+            <div>content-3-2</div>
+            <div>content-3-3</div>
+        </div>
+        <div class="row4">
+            <div>content-4-1</div>
+            <div>content-4-2</div>
+        </div>
+        <div class="row5"><div>footer</div></div>
+        </div>
+    </body>
+  </html>
