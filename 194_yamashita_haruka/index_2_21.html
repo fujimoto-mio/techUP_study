@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C-11. アニメーションを使う課題</title>
+<style>
+  .tab-group {
+    width: 100%;
+  }
+
+  /* ラジオボタンは非表示 */
+  .tab-group input[type="radio"] {
+    display: none;
+  }
+
+  /* ラベルをタブ風に表示 */
+  .tab-group label {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    background: #e0e0e0;
+    color: #aaa;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  /* 選択中のタブは白背景で黒文字 */
+  .tab-group input[type="radio"]:checked + label {
+    background: #fff;
+    color: #000;
+  }
+
+  /* タブパネルは初期非表示 */
+  .tab-panel {
+    display: none;
+    font-size: 24px;
+    margin-top: 24px;
+  }
+
+  /* 対応したタブが選択されたらパネルを表示 */
+  #tab1:checked ~ #panel1,
+  #tab2:checked ~ #panel2,
+  #tab3:checked ~ #panel3 {
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="tab-group">
+    <input type="radio" id="tab1" name="tab" checked />
+    <label for="tab1">タブ1</label>
+
+    <input type="radio" id="tab2" name="tab" />
+    <label for="tab2">タブ2</label>
+
+    <input type="radio" id="tab3" name="tab" />
+    <label for="tab3">タブ3</label>
+
+    <div class="tab-panel" id="panel1">タブパネル-1</div>
+    <div class="tab-panel" id="panel2">タブパネル-2</div>
+    <div class="tab-panel" id="panel3">タブパネル-3</div>
+  </div>
+</body>
+</html>
