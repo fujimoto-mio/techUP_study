@@ -1,0 +1,76 @@
+<!--backgroundに入れる方法-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>C-10. 画像の配置課題</title>
+<style>
+.ichi { /* .① */
+  background: url('https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg') no-repeat 0 0;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  width: 900px;    /* 画像の幅に合わせ調整 */
+  height: 500px;   /* 画像の高さに合わせ調整 */
+}
+.ni {   /* .② */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ni img {
+  width: 320px;    /* 小さく表示したいサイズ */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px #999;
+}
+</style>
+</head>
+<body>
+  <div class="ichi">
+    <div class="ni">
+      <img src="https://techup.tokyo/wp-content/uploads/2021/12/image1.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!--positionで配置する方法-->
+<!--
+  <!DOCTYPE html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8">
+      <title>C-10. 画像の配置課題</title>
+      <style>
+        .img-wrapper {
+          position: relative;
+          width: 1000px; 
+          margin: 40px auto;
+        }
+        .base-img {
+          width: 100%;
+          height: 700px;
+          object-fit: cover;/*画像の左上を表示させる*/
+          object-position: 0 0;
+          
+        }
+        .overlap-img {
+          position: absolute;
+          left: 0px;   
+          top: 0px;   
+          width: 350px; 
+        }
+      </style>
+    </head>
+    <body>
+      <div class="img-wrapper">
+        <img class="base-img" src="https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg" alt="Base Image">
+        <img class="overlap-img" src="https://techup.tokyo/wp-content/uploads/2021/12/image1.jpg" alt="Overlap Image">
+      </div>
+    </body>
+    </html>
+    
+    -->
