@@ -1,0 +1,63 @@
+/* グリッド化 */
+.wrapper1,
+.wrapper2,
+.wrapper3,
+.wrapper4,
+.wrapper5 {
+    display: grid;
+}
+
+/* ヘッダー（1行目）*/
+.wrapper1 {
+    background: blue;
+    grid-template-columns: 1fr;
+}
+
+/* 2行目*/
+.wrapper2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.content1 {
+    background: lime;
+}
+
+.content2 {
+    background: red;
+}
+
+/* ３カラム　３行目 */
+.wrapper3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content3-1 {
+    background: cyan; 
+}
+
+.content3-2 {
+    background: white; 
+}
+
+.content3-3 {
+    background: yellow; 
+}
+
+/* ２カラム　４行目 */
+.wrapper4 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.content4-1 {
+    background: purple;
+}
+
+.content4-2 {
+    background: magenta; 
+}
+
+/* フッター　５行目 */
+.wrapper5 {
+    background: brown;
+    grid-template-columns: 1fr;
+}
