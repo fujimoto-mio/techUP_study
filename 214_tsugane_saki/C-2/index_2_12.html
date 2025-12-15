@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSスタイルの継承</title>
+    <style>
+      .box1{
+        border: solid 10px red;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .box2{
+        border: solid 10px yellow;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .box3{
+        border: solid 10px green;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      継承テスト１
+        <div class="box2">
+            継承テスト２
+            <div class="box3">
+                継承テスト３
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

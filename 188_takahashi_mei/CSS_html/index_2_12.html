@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>継承テスト</title>
+        <style>
+            .element {
+               margin-left: 20px;
+            }
+            .box1 {
+                border: 5px solid red;
+                
+            }
+            .box2 {
+                border: 5px solid yellow;
+               
+            }
+            .box3 {
+                border: 5px solid green;
+                           
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            継承テスト１
+            <div class="box2 element">
+                継承テスト２
+                <div class="box3 element">
+                    継承テスト３
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

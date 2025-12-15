@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>円の弧を描く</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="300" height="300" style="border:1px solid #ccc;"></canvas>
+  <p>学生時代は数学の先生が苦手でした</p>
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // 描画開始のメソッド
+    ctx.beginPath();
+    //円の情報を定義するメソッド
+    ctx.arc(150, 150, 100, Math.PI  / 180, 1.5 * Math.PI);
+    // 実行するメソッド
+    ctx.stroke();
+  </script>
+</body>
+</html>

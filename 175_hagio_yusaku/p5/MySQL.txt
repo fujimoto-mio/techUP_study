@@ -1,0 +1,15 @@
+MariaDB [(none)]> SELECT Host, User, Password, authentication_string FROM mysql.user;
++-----------+-------+-------------------------------------------+-------------------------------------------+
+| Host      | User  | Password
+| authentication_string                     |
++-----------+-------+-------------------------------------------+-------------------------------------------+
+| localhost | root  | *5CDAFBA267D67B00F2EFFE85B954EDEBF68454E3 | *5CDAFBA267D67B00F2EFFE85B954EDEBF68454E3 |
+| localhost | hagio | *5CDAFBA267D67B00F2EFFE85B954EDEBF68454E3 | *5CDAFBA267D67B00F2EFFE85B954EDEBF68454E3 |
+| 127.0.0.1 | root  |
+|                                           |
+| ::1       | root  |
+|                                           |
+| localhost | pma   |
+|                                           |
++-----------+-------+-------------------------------------------+-------------------------------------------+
+5 rows in set (0.002 sec)

@@ -1,0 +1,167 @@
+[2024-10-09 15:39:30] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-10-09 15:51:15] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-10-09 15:51:21] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-10-09 15:51:30] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-11-21 00:48:34] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-11-21 23:43:03] local.DEBUG: [{"id":1,"name":"\u30c6\u30b9\u30c81","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":2,"name":"\u30c6\u30b9\u30c82","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"},{"id":3,"name":"\u30c6\u30b9\u30c83","created_at":"2024-10-09T05:26:51.000000Z","updated_at":"2024-10-09T05:26:51.000000Z"}]  
+[2024-11-22 22:52:23] local.ERROR: Call to a member function useCurrent() on null {"exception":"[object] (Error(code: 0): Call to a member function useCurrent() on null at C:\\Users\\hagi-\\learning\\database\\migrations\\2024_11_22_224430_create_tasks_table.php:20)
+[stacktrace]
+#0 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(226): CreateTasksTable->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
+#1 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(263): Illuminate\\Database\\Schema\\Builder->Illuminate\\Database\\Schema\\{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
+#2 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(223): tap(Object(Illuminate\\Database\\Schema\\Blueprint), Object(Closure))
+#3 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('tasks', Object(Closure))
+#4 C:\\Users\\hagi-\\learning\\database\\migrations\\2024_11_22_224430_create_tasks_table.php(16): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#5 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateTasksTable->up()
+#6 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateTasksTable), 'up')
+#7 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#8 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTasksTable), 'up')
+#9 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\\hagi-\\\\...', 3, false)
+#10 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#11 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(84): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#12 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#13 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#14 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#15 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#17 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#18 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#19 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#20 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\Users\\hagi-\\learning\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+"} 
+[2024-11-22 23:17:15] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already exists (SQL: create table `tasks` (`id` bigint unsigned not null auto_increment primary key, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_general_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already exists (SQL: create table `tasks` (`id` bigint unsigned not null auto_increment primary key, `created_at` timestamp null, `updated_at` timestamp null) default character set utf8 collate 'utf8_general_ci') at C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:712)
+[stacktrace]
+#0 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('create table `t...', Array, Object(Closure))
+#1 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(490): Illuminate\\Database\\Connection->run('create table `t...', Array, Object(Closure))
+#2 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `t...')
+#3 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(223): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('tasks', Object(Closure))
+#6 C:\\Users\\hagi-\\learning\\database\\migrations\\2024_11_22_224430_create_tasks_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateTasksTable->up()
+#8 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateTasksTable), 'up')
+#9 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTasksTable), 'up')
+#11 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\\hagi-\\\\...', 3, false)
+#12 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#13 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(84): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#14 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#15 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#16 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#17 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#22 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\\hagi-\\learning\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tasks' already exists at C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:501)
+[stacktrace]
+#0 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(501): PDOStatement->execute()
+#1 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(705): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('create table `t...', Array)
+#2 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(672): Illuminate\\Database\\Connection->runQueryCallback('create table `t...', Array, Object(Closure))
+#3 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(490): Illuminate\\Database\\Connection->run('create table `t...', Array, Object(Closure))
+#4 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(109): Illuminate\\Database\\Connection->statement('create table `t...')
+#5 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(364): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(223): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Database\\Schema\\Builder->create('tasks', Object(Closure))
+#8 C:\\Users\\hagi-\\learning\\database\\migrations\\2024_11_22_224430_create_tasks_table.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(472): CreateTasksTable->up()
+#10 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(CreateTasksTable), 'up')
+#11 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(403): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(202): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTasksTable), 'up')
+#13 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(167): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\\hagi-\\\\...', 3, false)
+#14 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(112): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#15 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(84): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#16 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(606): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#17 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#18 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#19 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#24 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Command\\Command.php(298): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(120): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(1040): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(301): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\Users\\hagi-\\learning\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2024-11-23 22:05:34] local.ERROR: Command "make" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make\" is not defined.
+
+Did you mean one of these?
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php:720)
+[stacktrace]
+#0 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('make')
+#1 C:\\Users\\hagi-\\learning\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\hagi-\\learning\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\hagi-\\learning\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

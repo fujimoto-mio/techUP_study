@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Level2-18 課題用</title>
+  <style>
+    .sample {
+      font-size: 30px;
+      background-color: rgb(217, 237, 237);
+      padding: 10px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    .sample::before {
+      content: "♥";
+      color: #ed85e2;
+    }
+
+    /*チェックされているときにspanタグの文字がおおきくなる*/
+    input[type="checkbox"]:checked+span {
+      font-size: 50px;
+      color: #ff7d6e;
+    }
+
+    span {
+      font-size: 30px;
+      transition: 0.3s ease;
+      /*０．３秒かけて変化*/
+    }
+
+    /*偶数奇数番目で色をかえる*/
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 奇数番目の要素 */
+    .container a:nth-child(odd) {
+      background-color: #ffebe9;
+    }
+
+    /* 偶数番目の要素 */
+    .container a:nth-child(even) {
+      background-color: #d7f5f2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <a class="sample" href="https://techup.shop">サンプルリンク１</a>
+    <a class="sample" href="https://techup.shop">サンプルリンク２</a>
+    <a class="sample" href="https://techup.shop">サンプルリンク３</a>
+    <a class="sample" href="https://techup.shop">サンプルリンク４</a>
+    <a class="sample" href="https://techup.shop">サンプルリンク５</a>
+  </div><br>
+
+  <input type="checkbox">
+  <span>チェックで大きくなる文字</span>
+</body>
+
+</html>

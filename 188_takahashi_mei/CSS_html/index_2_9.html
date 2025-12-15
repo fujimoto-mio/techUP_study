@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>formタグの意味と使い方</title>
+ 
+</head>
+<body>
+  
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <p>
+          <label>メール: 
+            <input type="email" name="email" required>
+          </label>
+        </p>
+
+        <p>
+           <label>送信ファイル: 
+             <input type="file" name="send_file" required>
+           </label> 
+        </p> 
+
+        <p> 
+            <button type="submit">送信</button>
+        </p>
+    </form>
+
+</body>
+</html>

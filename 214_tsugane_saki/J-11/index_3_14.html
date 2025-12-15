@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  
+  <script>
+   'use strict';
+    
+   function time() {
+    const now_time = new Date();
+    let hour = now_time.getHours();
+    let minute = now_time.getMinutes();
+    let second = now_time.getSeconds();
+
+    if(hour < 10) {
+      hour = '0' + hour;
+    }
+    if(minute < 10) {
+      minute = '0' + minute;
+    }
+    if(second < 10) {
+      second = '0' + second;
+    }
+
+    console.log(`${hour}:${minute}:${second}`)
+   }
+
+   setInterval(time, 1000);
+  </script>
+</body>
+</html>

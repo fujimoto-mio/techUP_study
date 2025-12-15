@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  <script>
+   'use strict';
+
+   const names = ['山田さん', '佐藤さん', '内田さん'];
+
+   console.log('最初にこの配列を表示します。');
+   for(let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+   }
+
+   while(names.length > 0) {
+    const shiftNames = names.shift();
+    console.log('配列の値を１つ消します。')
+    console.log(shiftNames + 'を消しました');
+
+    if(names.length !== 0) {
+      console.log('残りを表示します。')
+      for(let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+      }
+    }else{
+        console.log('データがなくなりました。');
+      }
+    }
+  </script>
+</body>
+</html>

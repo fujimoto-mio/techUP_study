@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無限ループカルーセル</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 50px;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 669px;
+      height: 199px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 669px;
+      height: 199px;
+      margin: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .carousel-slide img {
+      width: 669px;
+      height: 199px;
+      display: block;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0 15px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .prev-btn {
+      left: -40px;
+    }
+
+    .next-btn {
+      right: -40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">ニュースカルーセル</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- クローン3 -->
+      <div class="carousel-slide"><img src="images/banner-campaign3.jpg" alt="clone3"></div>
+      <!-- 本体 -->
+      <div class="carousel-slide"><img src="images/banner-campaign1.jpg" alt="news1"></div>
+      <div class="carousel-slide"><img src="images/banner-campaign2.jpg" alt="news2"></div>
+      <div class="carousel-slide"><img src="images/banner-campaign3.jpg" alt="news3"></div>
+      <!-- クローン1 -->
+      <div class="carousel-slide"><img src="images/banner-campaign1.jpg" alt="clone1"></div>
+    </div>
+    <button class="carousel-button prev-btn" id="prevBtn">&#60;</button>
+    <button class="carousel-button next-btn" id="nextBtn">&#62;</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.getElementById('carouselTrack');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const slideCount = slides.length;
+      const slideWidth = 699; // 669 + margin 15*2
+      let currentIndex = 1;
+  
+      // 初期位置
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+  
+      function updateSlide(withTransition = true) {
+        track.style.transition = withTransition ? 'transform 0.5s ease-in-out' : 'none';
+        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+      }
+  
+      function goToNextSlide() {
+        currentIndex++;
+        updateSlide();
+      }
+  
+      function goToPrevSlide() {
+        currentIndex--;
+        updateSlide();
+      }
+  
+      document.getElementById('nextBtn').addEventListener('click', () => {
+        goToNextSlide();
+        stopAutoSlide();
+      });
+  
+      document.getElementById('prevBtn').addEventListener('click', () => {
+        goToPrevSlide();
+        stopAutoSlide();
+      });
+  
+      track.addEventListener('transitionend', () => {
+        if (currentIndex === slideCount - 1) {
+          currentIndex = 1;
+          updateSlide(false);
+        } else if (currentIndex === 0) {
+          currentIndex = slideCount - 2;
+          updateSlide(false);
+        }
+      });
+  
+      let autoSlide = setInterval(goToNextSlide, 3000);
+  
+      function stopAutoSlide() {
+        clearInterval(autoSlide);
+      }
+  
+      updateSlide(); // 初回反映
+    });
+  </script>
+  
+
+
+</body>
+</html>
