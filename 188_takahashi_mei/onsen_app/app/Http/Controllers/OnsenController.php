@@ -37,8 +37,8 @@ class OnsenController extends Controller
     //詳細
     public function show($id)
     {
-        $onsen = Onsen::findOrFail($id);
-        return response()->json($onsen);
+        $onsen = Onsen::with(['reviews.user'])->findOrFail($id);
+        return view('onsens.show', compact('onsen'));
     }
     //編集
     public function update(Request $request, $id)

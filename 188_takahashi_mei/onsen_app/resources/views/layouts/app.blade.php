@@ -16,6 +16,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            <x-header />
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -28,9 +29,10 @@
             @endisset
 
             <!-- Page Content -->
-            <main>
+            <main class="container mx-auto px-4 py-6">
                 {{ $slot }}
             </main>
         </div>
+        <x-footer />
     </body>
 </html>
