@@ -1,0 +1,342 @@
+.newsblog-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../../images/newsblog/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FBFEFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: -1;
+}
+
+.newsblog-hero_inner {
+    padding: 0 0 70px 120px;
+}
+
+.newsblog-hero_title {
+    font-size: 120px;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* ===============================
+   FILTER FORM CARD
+================================ */
+.newsblog-filter {
+    margin-top: 100vh; 
+    padding: 40px 0;
+    background: #FBFEFF;
+    text-align: center;
+}
+
+.filter-form-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    max-width: 300px;
+    flex: 1;
+}
+
+.filter-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #30343A;
+    text-align: center;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.filter-group select:focus {
+    border-color: #4176BF;
+    box-shadow: 0 0 0 3px rgba(65, 118, 191, 0.2);
+    outline: none;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.filter-button {
+    background-color: #4176BF;
+    color: #FBFEFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 200px;
+    max-width: 280px;    
+}
+
+.filter-button:hover {
+    opacity: 0.85;
+}
+
+.filter-clear {
+    color: #4176BF;
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ===============================
+   POSTS LIST (3列グリッド)
+================================ */
+.newsblog-posts{
+    background: #FBFEFF;  
+    text-align: center;  
+}
+
+/* コンテナ */
+.newsblog-posts .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding-left: 150px;
+    padding-right: 150px;
+    box-sizing: border-box;   
+}
+.post-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-link:hover .post-item {
+    transform: translateY(-5px);
+}
+
+.post-item {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+    min-width: 0;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+    font-size: 14px;
+    color: #30343A;
+}
+.work-meta-left span,
+.work-meta-right span {
+    font-weight: 600;
+}
+.post-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.post-meta-left span + span::before {
+    content: "|";
+    margin: 0 8px;
+    color: #999;
+}
+
+.post-meta-right {
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #4176BF;
+}
+
+.post-image {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.post-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.post-tags {
+    margin-bottom: 1rem;
+}
+
+.post-tag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    background: #e5f0ff;
+    color: #4176BF;
+    border-radius: 0.3rem;
+    font-size: 12px;
+}
+
+.post-title {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.post-title a {
+    color: #30343A;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.post-title a:hover {
+    color: #4176BF;
+}
+
+.post-excerpt {
+    font-size: 14px;
+    color: #606060;
+    line-height: 1.6;
+}
+
+.no-posts {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    padding-top: 2rem;
+}
+
+.pagination {
+    grid-column: 1 / -1;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+/* ===============================
+   レスポンシブ対応
+================================ */
+@media screen and (max-width: 1024px) {
+    .newsblog-posts .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .post-title {
+        font-size: 16px;
+    }
+
+    .post-excerpt {
+        font-size: 13px;
+    }
+
+    .post-meta {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .newsblog-hero {
+        height: 40vh;
+        padding: 0;
+    }
+    .newsblog-hero_inner {
+        padding: 0 0 32px 16px;
+    } 
+    .newsblog-hero_title {
+        font-size: 30px;
+        margin-bottom: 6px;
+    }
+    .newsblog-filter {
+        margin-top: 40vh;
+        padding: 40px 10px;
+    }
+
+    .filter-form-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;
+    }
+
+    .filter-group {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .newsblog-posts .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-left: 12px;
+        padding-right: 12px;        
+    }
+
+    .post-title {
+        font-size: 16px;
+    }
+
+    .post-excerpt {
+        font-size: 14px;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+
+    .post-meta-right {
+        color: #4176BF;
+    }
+
+    .post-image img {
+        max-width: 100%;
+    }
+
+    .post-tags a {
+        font-size: 11px;
+        margin-right: 0.3rem;
+        margin-bottom: 0.3rem;
+        display: inline-block;
+    }   
+}

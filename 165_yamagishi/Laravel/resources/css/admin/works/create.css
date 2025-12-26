@@ -1,0 +1,173 @@
+/* ===============================
+   RESET
+=============================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ===============================
+   CREATE WORKS FORM
+=============================== */
+body {
+    background: #e7e6e6;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #30343A;
+}
+
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 32px;
+    background: #FBFEFF;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   タイトル
+=============================== */
+.create-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #4176BF;
+}
+
+/* ===============================
+   FORM GROUP
+=============================== */
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #30343A;
+}
+
+/* ===============================
+   INPUTS
+=============================== */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    background: #FBFEFF;
+    font-size: 14px;
+    color: #30343A;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+input[type="number"] {
+    max-width: 140px;
+}
+
+/* focus */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #30343A;
+}
+
+/* ===============================
+   FORM ROW
+=============================== */
+.form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* ===============================
+   チェックボックス
+=============================== */
+.form-group input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.05);
+}
+
+/* ===============================
+    送信ボタン
+=============================== */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    padding: 10px 24px;
+    background: #4176BF;
+    color: #FBFEFF;
+    border: none;
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    opacity: .85;
+}
+
+.form-actions a {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #30343A;
+}
+
+/* ===============================
+   エラー
+=============================== */
+.error-box {
+    margin-bottom: 32px;
+    padding: 16px 20px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+/* =========================
+   レスポンシブ（768px以下）
+========================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 32px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input[type="number"] {
+        max-width: 100%;
+    }
+}

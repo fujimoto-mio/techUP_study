@@ -1,0 +1,67 @@
+.coming-soon{
+    position: relative;
+    padding: 150px 0;
+    width: 100%;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FBFEFF;
+    color: #30343A;
+    text-align: left;
+}
+
+.coming-soon_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.coming-soon h1{
+    color: #4176BF;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+}
+.coming-soon p{
+    font-size: 20px;
+    line-height: 2.2;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+}
+.top_link{
+    align-self: flex-end;
+    font-size: 18px;
+    text-decoration: none;
+    color: #4176BF;
+    opacity: .6;
+}
+.top_link:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+/* =========================================================
+   レスポンシブ対応
+========================================================= */
+@media (max-width: 768px) {
+  .coming-soon{
+        padding: 120px 0 60px;
+    }
+
+    .coming-soon_inner {
+        max-width: 350px;
+    }
+    .coming-soon h1{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    .coming-soon p{
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+    .top_link{
+        font-size: 16px;
+    }
+}
