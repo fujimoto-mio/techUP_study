@@ -6,11 +6,7 @@
     </x-slot>
 
     <div class="max-w-3xl mx-auto py-6">
-        @if (session('success'))
-            <div class="mb-4 p-4 bg-green-100 text-green-800 rounded">
-                {{ session('success') }}
-            </div>
-        @endif
+       
         <!-- 温泉情報 -->
         <div class="bg-white p-6 rounded shadow mb-6">
             <p class="text-gray-600">住所：{{ $onsen->address }}</p>
@@ -51,6 +47,11 @@
                         </button>
                     </form>
                 </div>
+                    @if (session('success'))
+                        <div class="mb-4 p-4 bg-green-100 text-green-800 rounded">
+                             {{ session('success') }}
+                        </div>
+                    @endif
             @else
                 <p class="text-center text-gray-500">
                     レビューを書くには <a href="/login" class="text-blue-500">ログイン</a> してください
