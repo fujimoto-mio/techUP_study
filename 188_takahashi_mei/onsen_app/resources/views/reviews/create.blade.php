@@ -24,11 +24,11 @@
                 <!-- コメント -->
                 <label class="block mb-2">コメント</label>
                 <textarea name="comment" rows="5"
-                          class="w-full mb-2 p-2 border rounded"></textarea>
+                        class="w-full mb-2 p-2 border rounded">{{ old('comment') }}</textarea>
                 @error('comment')
-                    <p class="text-red-500 text-sm">{{ $message }}</p>
+                    <p class="text-red-500 text-sm mt-2">{{ $message }}</p>
                 @enderror
-
+                
                 <!-- 投稿ボタン -->
                 <button type="submit"
                         class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
