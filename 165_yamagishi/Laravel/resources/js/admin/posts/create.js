@@ -1,5 +1,8 @@
 import tinymce from 'tinymce/tinymce';
 
+import 'tinymce/skins/ui/oxide/skin.min.css';
+import 'tinymce/skins/content/default/content.min.css';
+
 // アイコン・テーマ・DOMモデル・プラグインを読み込み
 import 'tinymce/icons/default';
 import 'tinymce/themes/silver';

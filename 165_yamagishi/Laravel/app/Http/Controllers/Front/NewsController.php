@@ -19,43 +19,26 @@ class NewsController extends Controller
      */
     public function index(Request $request, $lang)
     {
-        // ==================================================
-        // 公開済み投稿を対象にクエリ生成
-        // ==================================================
         $query = Post::where('is_published', true);
 
-        // ==================================================
-        // ジャンルで絞り込み
-        // ==================================================
-        if ($request->genre) {
+        if ($request->filled('genre')) {
             $query->where('type', $request->genre);
         }
 
-        // ==================================================
-        // サービスで絞り込み
-        // ==================================================
-        if ($request->service) {
+        if ($request->filled('service')) {
             $query->where('service', $request->service);
         }
 
-        // ==================================================
-        // タグで絞り込み
-        // ==================================================
-        if ($request->tag) {
-            $query->where('tags', 'like', "%{$request->tag}%");
+        if ($request->filled('tag')) {
+            $query->whereNotNull('tags')
+                ->where('tags', 'like', "%{$request->tag}%");
         }
 
-        // ==================================================
-        // 並び順・ページネーション
-        // ==================================================
         $posts = $query
             ->orderBy('created_at', 'desc')
             ->paginate(9)
             ->withQueryString();
 
-        // ==================================================
-        // View へデータを渡す
-        // ==================================================
         return view('front.newsblog.index', [
             'posts'           => $posts,
             'currentGenre'    => $request->genre,
@@ -64,6 +47,7 @@ class NewsController extends Controller
             'lang'            => $lang,
         ]);
     }
+
 
     /**
      * 投稿詳細ページ

@@ -25,7 +25,7 @@
         <div class="site-header_logo">
             <a href="{{ route('front.home', ['lang' => $lang]) }}" class="site-header_logo-link">
                 <img src="{{ asset('images/GN_Logo_Black.svg') }}" alt="GLOBE NATION Logo" width="48">
-                <span class="site-header_logo-text">GLOBE NATION</span>
+                <span class="site-header_logo-text font-roboto">GLOBE NATION</span>
             </a>
         </div>
 
@@ -205,7 +205,7 @@
                 <a href="{{ route('front.gnmedia', ['lang' => $lang]) }}" class="solution-link">
                     <img src="{{ asset('images/GNMEDIA_LOGO_Black.svg') }}" class="gn-solution-logo" alt="GLOBE NATION MEDIA LOGO">
                     <div class="contents_text">
-                        <h3>GLOBE NATION MEDIA</h3>
+                        <h3 class="font-roboto">GLOBE NATION MEDIA</h3>
                         <p class="solutions-subtitle">メディア・コンテンツ発信事業</p>
                         <p class="copy-en">“One voice can change the world.”</p>
                         <p class="solutions-text">
@@ -222,7 +222,7 @@
                 <a href="{{ route('front.gnstudio', ['lang' => $lang]) }}" class="solution-link">
                     <img src="{{ asset('images/GNSTUDIO_LOGO_Black.svg') }}" class="gn-solution-logo" alt="GLOBE NATION STUDIO LOGO">
                     <div class="contents_text">
-                        <h3>GLOBE NATION STUDIO</h3>
+                        <h3 class="font-roboto">GLOBE NATION STUDIO</h3>
                         <p class="solutions-subtitle">映像制作・クリエイティブ制作事業</p>
                         <p class="copy-en">“Tell your stories and messages.”</p>
                         <p class="solutions-text">
@@ -238,7 +238,7 @@
                 <a href="{{ route('front.gnacademy', ['lang' => $lang]) }}" class="solution-link">
                     <img src="{{ asset('images/GNACADEMY_LOGO_Black.svg') }}" class="gn-solution-logo" alt="GLOBE NATION ACADEMY LOGO">
                     <div class="contents_text">
-                        <h3>GLOBE NATION ACADEMY</h3>
+                        <h3 class="font-roboto">GLOBE NATION ACADEMY</h3>
                         <p class="solutions-subtitle">教育・コンサルティング事業</p>
                         <p class="copy-en">Coming soon…</p>
                         <p class="solutions-text">
@@ -259,19 +259,56 @@
         <h2 class="section_title-en">NEWS & BLOG</h2>
         <p class="section_title-ja">ニュース & ブログ</p>
     </div>
-    <div class="news_grid">
-        @foreach ($latestNews as $item)
-            <article class="news-card">
-                <div class="news-card_thumb"></div>
-                <p class="news-card_date">{{ $item->published_at->format('Y.m.d') }}</p>
-                <h3 class="news-card_title">{{ Str::limit($item->title, 40) }}</h3>
-                <p class="news-card_excerpt">{{ Str::limit(strip_tags($item->body), 60) }}</p>
-                <a href="{{ route('front.news.show', ['lang' => $lang, 'slug' => $item->slug]) }}" class="news-card_more">
-                    続きを読む →
+    <div class="newsblog-posts">
+        <div class="container">
+            @forelse ($latestNews as $item)
+                <a href="{{ route('front.news.show', ['lang' => $lang, 'slug' => $item->slug]) }}"
+                class="post-link">
+
+                    <article class="post-item">
+                        {{-- メタ情報 --}}
+                    <div class="post-meta">
+                        <div class="post-meta-left">
+                            <span class="post-genre">{{ strtoupper($item->type ?? '') }}</span>
+                            <span class="post-date">{{ $item->created_at?->format('Y-m-d') ?? '' }}</span>
+                        </div>
+                        <div class="post-meta-right">
+                            @if(!empty($item->service))
+                                <span class="post-service">{{ strtoupper($item->service) }}</span>
+                            @endif
+                        </div>
+                    </div>
+
+                        {{-- 画像 --}}
+                        <div class="post-image">
+                            @if($item->image_path)
+                                <img src="{{ asset('storage/' . $item->image_path) }}"
+                                    alt="{{ $item->title }}">
+                            @else
+                                <img src="{{ asset('images/no-image.jpg') }}"
+                                    alt="No image">
+                            @endif
+                        </div>
+
+                        {{-- タイトル --}}
+                        <h2 class="post-title">
+                            {{ $item->title }}
+                        </h2>
+
+                        {{-- 抜粋 --}}
+                        <p class="post-excerpt">
+                            {{ \Illuminate\Support\Str::limit(strip_tags($item->content), 80) }}
+                        </p>
+
+                    </article>
                 </a>
-            </article>
-        @endforeach
+            @empty
+                <p class="no-posts">投稿はまだありません。</p>
+            @endforelse
+        </div>
     </div>
+
+
     <div class="all-newsblog-section_link-wrapper">
         <a href="{{ route('front.newsblog.index', ['lang' => $lang]) }}" class="all-newsblog-link">
             ▶ ALL NEWS & BLOG

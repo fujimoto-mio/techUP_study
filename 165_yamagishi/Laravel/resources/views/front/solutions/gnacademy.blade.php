@@ -27,7 +27,7 @@
 <section class="gnacademy-hero">
     <div class="gnacademy-hero_inner">
         <p class="gnacademy-hero_title">教育・コンサルティング事業</p>
-        <h1 class="gnacademy-hero_subtitle">GLOBE NATION ACADEMY</h1>
+        <h1 class="gnacademy-hero_subtitle font-roboto">GLOBE NATION ACADEMY</h1>
     </div>
 </section>
 

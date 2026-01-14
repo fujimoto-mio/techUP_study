@@ -33,7 +33,7 @@
   </div>    
     <div class="gnmedia-hero_inner">
         <p class="gnmedia-hero_title">メディア・コンテンツ発信事業</p>
-        <h1 class="gnmedia-hero_subtitle">GLOBE NATION MEDIA</h1>
+        <h1 class="gnmedia-hero_subtitle font-roboto">GLOBE NATION MEDIA</h1>
     </div>
 </section>
 

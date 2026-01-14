@@ -52,8 +52,10 @@
             <h2 class="section_italic_title-bg" aria-hidden="true">MESSAGE</h2>
         </div>
         <h2 class="message-title">Together, We Shape the GLOBE.</h2>
-        <p class="message-sub">共に描こう、世界のカタチ。</p>
+
         <div class="message">
+            <p class="message-sub">共に描こう、世界のカタチ。</p>
+
             <p>
                 みなさま、はじめまして。<br>
                 GLOBE NATION代表の瀬田と申します。
@@ -138,11 +140,11 @@
                         <h2 class="mvv-title">MISSION</h2>
                         <h2 class="mvv-subtitle">あらゆる垣根を越え、人と人・今と未来を繋ぐ。</h2>
                         <p class="mvv-text">
-                            GLOBE NATIONは、人種・国籍・文化・言語などあらゆる垣根を越え、<br>
+                            GLOBE NATIONは、人種・国籍・文化・言語など<br class="sp">あらゆる垣根を越え、<br>
                             一人ひとりの物語や視点、経験を丁寧に繋ぎ合わせ、<br>
                             互いを理解し合い、共存できる未来のカタチを作ります。<br>
                             私たちは“分断”ではなく“繋がり”を広げ、<br>
-                            誰もが尊厳をもって語り、学び、関われる世界を目指します。
+                            誰もが尊厳をもって語り、学び、<br class="sp">関われる世界を目指します。
                         </p>
                     </div>
                 </div>
@@ -155,10 +157,10 @@
                         <h2 class="mvv-title">VISION</h2>
                         <h2 class="mvv-subtitle">共創で世界と未来のカタチを作る原動力に。</h3>
                         <p class="mvv-text">
-                            GLOBE NATIONは国際協力・映像・教育を統合した“共創型インパクト組織”として、<br>
-                            社会課題の現場と世界中の人々・企業・コミュニティを繋ぎ、<br>
+                            GLOBE NATIONは国際協力・映像・教育を統合した<br class="sp">“共創型インパクト組織”として、<br>
+                            社会課題の現場と世界中の<br class="sp">人々・企業・コミュニティを繋ぎ、<br>
                             気づき・学びと協働が循環する社会モデルを実装します。<br>
-                            その結果、誰もが自ら未来・世界のカタチを描く主体へと変わる環境を創出します。
+                            その結果、誰もが自ら未来・世界のカタチを描く主体へと<br class="sp">変わる環境を創出します。
                         </p>
                     </div>
 
@@ -269,7 +271,7 @@
 
                 <div class="owner-history">
                     <p>大阪出身。<br>
-                        和歌山大学経済学部に入学後、<br>米国インディアナ州にある四年制私立大学Hanover College(国際学専攻)へ編入。<br>
+                        和歌山大学経済学部に入学後、<br>米国インディアナ州にある四年制私立大学<br class="sp">Hanover College(国際学専攻)へ編入。<br>
                         アメリカの大学在学中に、映像が持つ「メッセージ性」に魅了される。
                     </p>
                     <p>

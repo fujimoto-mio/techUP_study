@@ -11,14 +11,12 @@ use Illuminate\Support\Str;
  *
  * - $fillable で保存可能なカラムを指定
  * - 保存前に slug を自動生成
+ * - 公開時に published_at を自動設定
  */
 class Post extends Model
 {
     use HasFactory;
 
-    /**
-     * 保存可能カラム（mass assignment 対応）
-     */
     protected $fillable = [
         'type',        // ジャンル（news / blog）
         'title',       // タイトル
@@ -30,23 +28,22 @@ class Post extends Model
         'published_at',// 公開日
         'service',     // サービス名
     ];
+    
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
 
-    /**
-     * モデルの保存前処理
-     *
-     * - slug が空の場合、title から自動生成
-     * - 既存 slug と重複しないように末尾に数字を付与
-     */
     protected static function boot()
     {
         parent::boot();
 
         static::saving(function ($post) {
+            // ===============================
             // slug が空なら title から自動生成
+            // ===============================
             if (empty($post->slug)) {
                 $slug = Str::slug($post->title);
 
-                // 既存の slug と重複しないように末尾に数字を追加
                 $count = 1;
                 $baseSlug = $slug;
                 while (Post::where('slug', $slug)->exists()) {
@@ -55,6 +52,14 @@ class Post extends Model
 
                 $post->slug = $slug;
             }
+
+            // ===============================
+            // 公開時に published_at を自動設定
+            // ===============================
+            if ($post->is_published && !$post->published_at) {
+                $post->published_at = now();
+            }
         });
     }
 }
+

@@ -59,3 +59,52 @@
     text-decoration: underline;
     opacity: 0.8;
 }
+/* =========================================
+   Responsive (max-width: 768px)
+========================================= */
+@media screen and (max-width: 768px) {
+    .news-show .container {
+    padding: 100px 16px 10px;
+    }
+
+    /* タイトル */
+    .post-title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    }
+
+    /* メタ情報 */
+    .post-meta {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+    }
+
+    /* 画像 */
+    .post-image {
+    margin-bottom: 20px;
+    }
+
+    .post-image img {
+    border-radius: 6px;
+    }
+
+    /* 本文 */
+    .post-content {
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    }
+
+    /* 戻るリンク */
+    .back-link {
+    margin-top: 20px;
+    }
+
+    .back-link a {
+    font-size: 12px;
+    }
+}

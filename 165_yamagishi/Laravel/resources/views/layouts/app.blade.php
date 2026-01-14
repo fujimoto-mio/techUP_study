@@ -34,6 +34,13 @@
     <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('images/favicon-512.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/favicon-512.png') }}">
 
+    {{-- Google Fonts Noto Sans JP Roboto Condensed --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+
     {{-- 共通CSS --}}
     @vite(['resources/css/front/common.css'])
 

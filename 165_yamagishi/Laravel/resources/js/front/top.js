@@ -1,140 +1,173 @@
-/* =========================================================
-   YouTube背景動画制御 + ページアニメーション統合版
-========================================================= */
+/* =================================================
+   YouTube背景 + ページアニメーション 完全版
+================================================= */
 
-let player; // YouTubeプレイヤーオブジェクト
+let player;
 
-// =============================
-// YouTube APIロード
-// =============================
+/* =============================
+   YouTube API 遅延ロード
+============================= */
 function loadYouTubeAPI() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     if (window.YT && window.YT.Player) return resolve();
 
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    tag.id = 'youtube-api-script';
-    document.body.appendChild(tag);
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(script);
 
     window.onYouTubeIframeAPIReady = () => resolve();
   });
 }
 
-// =============================
-// YouTubeプレイヤー初期化
-// =============================
-function initYouTubePlayer(videoId) {
-  player = new YT.Player("yt-player", {
+/* =============================
+   YouTube Player 初期化
+============================= */
+function initYouTube(videoId) {
+  player = new YT.Player('yt-player', {
     videoId,
     playerVars: {
       autoplay: 1,
       controls: 0,
-      showinfo: 0,
-      modestbranding: 1,
       loop: 1,
       playlist: videoId,
       mute: 1,
-      rel: 0,
-      playsinline: 1
+      playsinline: 1,
+      modestbranding: 1,
+      rel: 0
     },
     events: {
-      onReady: (event) => {
-        event.target.mute();
-        event.target.playVideo();
+      onReady: e => {
+        e.target.mute();
+        e.target.playVideo();
       }
     }
   });
 }
 
-// =============================
-// 汎用フェードイン監視
-// =============================
-function observeFadeIn(targetSelectorOrNode, options = { threshold: 0.15, rootMargin: '0px 0px -20% 0px' }, childSelectors = []) {
-  if (!targetSelectorOrNode) return;
+/* =================================================
+   HERO フェードイン
+================================================= */
+const heroObserver = new IntersectionObserver(
+  ([entry], obs) => {
+    if (!entry.isIntersecting) return;
 
-  let targets;
-  if (typeof targetSelectorOrNode === 'string') {
-    targets = document.querySelectorAll(targetSelectorOrNode);
-  } else if (targetSelectorOrNode instanceof Element) {
-    targets = [targetSelectorOrNode];
-  } else if (NodeList.prototype.isPrototypeOf(targetSelectorOrNode) || Array.isArray(targetSelectorOrNode)) {
-    targets = targetSelectorOrNode;
-  } else {
-    return;
+    entry.target
+      .querySelectorAll('.hero-content_copy-en, .hero-content_copy-ja')
+      .forEach((el, i) =>
+        setTimeout(() => el.classList.add('fade-in'), i * 120)
+      );
+
+    obs.unobserve(entry.target);
+  },
+  { threshold: 0.2 }
+);
+
+/* =================================================
+   ABOUT + ナビ背景 & 動画ぼかし
+================================================= */
+
+let lastScrollY = window.scrollY;
+
+const aboutObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      const nav = document.querySelector('.global-nav');
+      const bgVideo = document.querySelector('.js-bg-video');
+
+      const currentScrollY = window.scrollY;
+      const isScrollingUp = currentScrollY < lastScrollY;
+      lastScrollY = currentScrollY;
+
+      if (entry.isIntersecting) {
+        /* ========= ABOUT に入った ========= */
+
+        entry.target
+          .querySelectorAll(
+            '.about-section_left, .about-section_right p, .about-section_link-wrapper'
+          )
+          .forEach((el, i) => {
+            if (!el.classList.contains('fade-in')) {
+              setTimeout(() => el.classList.add('fade-in'), i * 120);
+            }
+          });
+
+        nav?.classList.add('is-visible');
+        bgVideo?.classList.add('is-blur');
+
+      } else {
+        /* ========= ABOUT を抜けた ========= */
+
+        if (isScrollingUp) {
+          /* 上に戻ったときだけ OFF */
+          nav?.classList.remove('is-visible');
+          bgVideo?.classList.remove('is-blur');
+        }
+        /* 下に抜けた場合は何もしない */
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+    rootMargin: '0px 0px 30% 0px'
   }
+);
 
-  if (!targets.length) return;
+/* ABOUT 監視開始 */
+document.querySelectorAll('.about-section')
+  .forEach(el => aboutObserver.observe(el));
 
-  const observer = new IntersectionObserver((entries, obs) => {
+
+/* =================================================
+   SOLUTIONS（カード単位フェード・SPは画像先）
+================================================= */
+const solutionsObserver = new IntersectionObserver(
+  (entries, obs) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
 
-      let nodesToAnimate = [];
-      if (Array.isArray(childSelectors) && childSelectors.length) {
-        childSelectors.forEach(sel => {
-          const found = entry.target.querySelectorAll(sel);
-          if (found.length) nodesToAnimate = nodesToAnimate.concat(Array.from(found));
-        });
-      } else {
-        nodesToAnimate = [entry.target];
-      }
+      const isSP = window.matchMedia('(max-width: 768px)').matches;
 
-      nodesToAnimate.forEach((el, i) => {
-        if (!el) return;
-        setTimeout(() => el.classList.add('fade-in'), i * 120);
-      });
+      if (isSP) {
+        // ① 画像フェード
+        entry.target.classList.add('fade-in-img');
+
+        // ② 少し遅れてテキスト
+        setTimeout(() => {
+          entry.target.classList.add('fade-in-text');
+        }, 250);
+
+      } else {
+        // PCは従来通り
+        entry.target.classList.add('fade-in');
+      }
 
       obs.unobserve(entry.target);
     });
-  }, options);
+  },
+  { threshold: 0.3 }
+);
 
-  targets.forEach(t => observer.observe(t));
-}
 
-// =============================
-// ナビ背景 & 動画ぼかし切替
-// =============================
-function observeNavBlur(sloganSelector, navSelector, bgVideoSelector) {
-  const slogan = document.querySelector(sloganSelector);
-  const nav = document.querySelector(navSelector);
-  const bgVideo = document.querySelector(bgVideoSelector);
-  if (!slogan || !nav) return;
-
-  new IntersectionObserver(
-    ([entry]) => {
-      nav.classList.toggle('is-visible', !entry.isIntersecting);
-      bgVideo?.classList.toggle('is-blur', !entry.isIntersecting);
-    },
-    { threshold: 0.15 }
-  ).observe(slogan);
-}
-
-// =============================
-// DOMContentLoaded で初期化
-// =============================
+/* =================================================
+   DOMContentLoaded
+================================================= */
 document.addEventListener('DOMContentLoaded', async () => {
-  // YouTube背景動画
+
+  /* YouTube 背景 */
   await loadYouTubeAPI();
-  initYouTubePlayer(window._GLOBE_BG_VIDEO_ID || 'qZ_BO9WMSTs');
+  initYouTube(window._GLOBE_BG_VIDEO_ID || 'qZ_BO9WMSTs');
 
-  // ナビ背景 + 動画ぼかし切替
-  observeNavBlur('.js-slogan', '.global-nav', '.js-bg-video');
+  /* HERO */
+  const hero = document.querySelector('.hero-content');
+  if (hero) heroObserver.observe(hero);
 
-  // HEROセクションフェードイン
-  observeFadeIn('.hero-content', 
-    { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }, 
-    ['.hero-content_copy-en', '.hero-content_copy-ja']
-  );
+  /* ABOUT */
+  document
+    .querySelectorAll('.about-section')
+    .forEach(el => aboutObserver.observe(el));
 
-  // ABOUTセクションフェードイン
-  observeFadeIn('.about-section', 
-    { threshold: 0.12, rootMargin: '0px 0px -25% 0px' }, 
-    ['.about-section_left', '.about-section_right p', '.about-section_link-wrapper']
-  );
-
-  // SOLUTIONSセクションフェードイン（li単位）
-  observeFadeIn('.gn-media, .gn-studio, .gn-academy', 
-    { threshold: 0.6, rootMargin: '0px 0px -10% 0px' }
-  );
-
+  /* SOLUTIONS */
+  document
+    .querySelectorAll('.gn-media, .gn-studio, .gn-academy')
+    .forEach(el => solutionsObserver.observe(el));
 });

@@ -84,8 +84,11 @@ class PostController extends Controller
             'tags',
         ]);
 
-        // 公開フラグ（チェックボックス対応）
         $data['is_published'] = $request->boolean('is_published');
+
+        if ($data['is_published']) {
+            $data['published_at'] = now();
+        }
 
         // ==================================================
         // 画像アップロード処理
@@ -98,6 +101,7 @@ class PostController extends Controller
         // データ保存
         // ==================================================
         Post::create($data);
+
 
         return redirect()
             ->route('admin.posts.index')
@@ -141,8 +145,16 @@ class PostController extends Controller
             'tags',
         ]);
 
-        // 公開フラグ
         $data['is_published'] = $request->boolean('is_published');
+
+        if (
+            $data['is_published'] &&
+            !$post->is_published &&
+            is_null($post->published_at)
+        ) {
+            $data['published_at'] = now();
+        }
+
 
         // ==================================================
         // 画像アップロード処理（差し替え）

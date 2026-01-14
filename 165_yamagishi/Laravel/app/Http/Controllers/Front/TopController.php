@@ -23,9 +23,10 @@ class TopController extends Controller
     {
         // 公開済みニュースの最新3件を取得
         $latestNews = Post::where('is_published', true)
-            ->orderBy('published_at', 'desc')
+            ->latest('published_at')
             ->take(3)
             ->get();
+
 
         // TOPページ表示
         return view('front.top', [

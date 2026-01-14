@@ -17,23 +17,23 @@
 @endpush
 
 @section('content')
+
+{{-- HERO --}}
 <section class="works-hero">
     <div class="works-hero_inner">
-        <p class="works-hero_title">制作実績</p>        
-        <h1 class="works-hero_subtitle">WORKS</p>
+        <p class="works-hero_title">制作実績</p>
+        <h1 class="works-hero_subtitle">WORKS</h1>
     </div>
 </section>
-{{-- ===============================
-    FILTER / TAG SECTION
-================================--}}
+
+{{-- FILTER --}}
 <section class="works-filter">
     <div class="container">
-        {{-- 絞り込みフォーム（ジャンル・サービス・タグなど） --}}
         <form action="{{ route('front.works.index', ['lang'=>app()->getLocale()]) }}" method="GET" class="filter-form-card">
 
-            {{-- 例：カテゴリー --}}
+            {{-- カテゴリー --}}
             <div class="filter-group">
-                <label>カテゴリー</label>            
+                <label>カテゴリー</label>
                 <select name="type">
                     <option value="">ALL</option>
                     <option value="pr" {{ request('type')=='pr' ? 'selected' : '' }}>PR</option>
@@ -41,10 +41,9 @@
                 </select>
             </div>
 
-
-            {{-- 例：サービス --}}
+            {{-- サービス --}}
             <div class="filter-group">
-                <label for="genre">サービス</label> 
+                <label>サービス</label>
                 <select name="service">
                     <option value="">ALL</option>
                     <option value="gnstudio" {{ request('service')=='gnstudio' ? 'selected' : '' }}>GN STUDIO</option>
@@ -55,61 +54,50 @@
 
             <div class="filter-actions">
                 <button type="submit" class="filter-button">絞り込み</button>
-
-                <!-- クリアボタン：常に表示 -->
                 <a href="{{ route('front.works.index', ['lang' => app()->getLocale()]) }}" class="filter-clear">クリア</a>
             </div>
 
         </form>
     </div>
 </section>
-{{-- ===============================
-   WORKS LIST
-================================--}}
+
+{{-- WORKS LIST --}}
 <section class="works-posts">
     <div class="container">
-        @forelse($works as $work)
-            @if($work->slug)
-            <a href="{{ route('front.works.show', ['lang' => app()->getLocale(), 'slug' => $work->slug]) }}" class="work-link">
-            @endif        
+        @forelse($works ?? [] as $work)
+
+            @if(!empty($work->slug))
+                <a href="{{ route('front.works.show', ['lang' => app()->getLocale(), 'slug' => $work->slug]) }}" class="work-link">
+            @endif
+
             <article class="work-item">
 
                 <div class="work-meta">
                     <div class="work-meta-left">
-                        <span class="work-category">{{ strtoupper($work->type) }}</span>
-                        <span class="work-date">{{ $work->created_at->format('Y-m-d') }}</span>
+                        <span class="work-category">{{ strtoupper($work->type ?? '') }}</span>
+                        <span class="work-date">{{ $work->created_at?->format('Y-m-d') ?? '' }}</span>
                     </div>
                     <div class="work-meta-right">
-                        @if($work->service)                    
+                        @if(!empty($work->service))
                             <span class="work-service">{{ strtoupper($work->service) }}</span>
                         @endif
-                    </div>                        
+                    </div>
                 </div>
 
-                <!-- YouTube動画埋め込み -->
-                @if($work->youtube_url)
+                {{-- YouTube動画 --}}
+                @if(!empty($work->youtube_url))
                     @php
                         $youtube_id = null;
-
-                        // youtu.be/xxxx
-                        if (preg_match('~youtu\.be/([^\?]+)~', $work->youtube_url, $matches)) {
-                            $youtube_id = $matches[1];
-                        }
-                        // youtube.com/watch?v=xxxx
-                        elseif (preg_match('~v=([^\&]+)~', $work->youtube_url, $matches)) {
-                            $youtube_id = $matches[1];
-                        }
-                        // youtube.com/embed/xxxx
-                        elseif (preg_match('~/embed/([^\?]+)~', $work->youtube_url, $matches)) {
-                            $youtube_id = $matches[1];
-                        }
+                        if (preg_match('~youtu\.be/([^\?]+)~', $work->youtube_url, $matches)) $youtube_id = $matches[1];
+                        elseif (preg_match('~v=([^\&]+)~', $work->youtube_url, $matches)) $youtube_id = $matches[1];
+                        elseif (preg_match('~/embed/([^\?]+)~', $work->youtube_url, $matches)) $youtube_id = $matches[1];
                     @endphp
 
                     @if($youtube_id)
                         <div class="work-video">
                             <iframe
                                 src="https://www.youtube.com/embed/{{ $youtube_id }}"
-                                title="{{ $work->title }}"
+                                title="{{ $work->title ?? '' }}"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -118,9 +106,8 @@
                     @endif
                 @endif
 
-
-                <!-- タグ -->
-                @if($work->tags)
+                {{-- タグ --}}
+                @if(!empty($work->tags))
                     <p class="work-tags">
                         @foreach(explode(',', $work->tags) as $tag)
                             <span class="work-tag">{{ trim($tag) }}</span>
@@ -128,26 +115,25 @@
                     </p>
                 @endif
 
-                <!-- タイトル -->                
-                <h2 class="work-title">
-                        {{ $work->title }}
-                </h2>
+                {{-- タイトル --}}
+                <h2 class="work-title">{{ $work->title ?? '' }}</h2>
 
-                <!-- 本文プレビュー -->
-                <p class="work-excerpt">
-                    {{ \Illuminate\Support\Str::limit(strip_tags($work->content), 150) }}
-                </p>
+                {{-- 本文プレビュー --}}
+                <p class="work-excerpt">{{ \Illuminate\Support\Str::limit(strip_tags($work->content ?? ''), 150) }}</p>
 
             </article>
-            @if($work->slug)
-            </a>
-            @endif            
+
+            @if(!empty($work->slug))
+                </a>
+            @endif
+
         @empty
             <p class="no-works">投稿はまだありません。</p>
         @endforelse
 
+        {{-- ページネーション --}}
         <div class="pagination">
-            {{ $works->links() }}
+            {{ $works?->links() ?? '' }}
         </div>
     </div>
 </section>
@@ -159,16 +145,16 @@
             <h2 class="section_title-bg" aria-hidden="true">SOCIAL MEDIA</h2>
             <h2 class="section_title-en">SOCIAL MEDIA</h2>
             <p class="section_title-ja">公式アカウント</p>
-        </div>    
+        </div>
         <h2 class="follow-us">FOLLOW US</h2>
         <div class="follow_icons">
-            <a href="https://www.youtube.com/@GLOBENATIONMEDIA" target="_blank" class="follow_icon">@include('icons.youtube')</a>
-            <a href="https://www.instagram.com/globe.nation" target="_blank" class="follow_icon">@include('icons.instagram')</a>
-            <a href="https://www.tiktok.com/@globe.nation" target="_blank" class="follow_icon">@include('icons.tiktok')</a>
-            <a href="https://www.facebook.com/WeAreGLOBENATION/" target="_blank" class="follow_icon">@include('icons.facebook')</a>
-            <a href="https://x.com/globe_nation" target="_blank" class="follow_icon">@include('icons.x')</a>
+            @foreach(['youtube','instagram','tiktok','facebook','x'] as $icon)
+                @if(view()->exists("icons.$icon"))
+                    <a href="#" target="_blank" class="follow_icon">@include("icons.$icon")</a>
+                @endif
+            @endforeach
         </div>
-    </div>    
+    </div>
 </section>
 
 {{-- CTA --}}
@@ -181,7 +167,3 @@
 </section>
 
 @endsection
-
-@push('scripts')
-    @vite('resources/js/front/works/works.js')
-@endpush

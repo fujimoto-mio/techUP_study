@@ -20,21 +20,16 @@ class WorksController extends Controller
      */
     public function index(Request $request)
     {
-        // 公開済み実績をベースにクエリ生成
-        $query = Work::query()
-            ->where('is_published', true);
+        $query = Work::where('is_published', true);
 
-        // カテゴリー（type）で絞り込み
         if ($request->filled('type')) {
             $query->where('type', $request->type);
         }
 
-        // サービスで絞り込み
         if ($request->filled('service')) {
             $query->where('service', $request->service);
         }
 
-        // 表示順 → 作成日の順で並び替え
         $works = $query
             ->orderBy('sort_order', 'asc')
             ->orderBy('created_at', 'desc')
@@ -44,17 +39,17 @@ class WorksController extends Controller
         return view('front.works.index', compact('works'));
     }
 
-    /**
-     * 実績詳細ページ
-     *
-     */
     public function show($lang, $slug)
     {
-        // 公開済みかつ指定スラッグの実績を取得
-        $work = Work::where('slug', $slug)
-            ->where('is_published', true)
-            ->firstOrFail();
+        try {
+            $work = Work::where('slug', $slug)
+                ->where('is_published', true)
+                ->firstOrFail();
 
-        return view('front.works.show', compact('work'));
+            return view('front.works.show', compact('work'));
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            abort(404);
+        }
     }
+        
 }

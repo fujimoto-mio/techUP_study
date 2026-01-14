@@ -23,10 +23,6 @@ class AboutController extends Controller
             $lang = 'ja';
         }
 
-        // ==================================================
-        // View へデータを渡す
-        // ※ lang はヘッダー表示や言語切替リンクで使用
-        // ==================================================
         return view('front.about', compact('lang'));
     }
 }

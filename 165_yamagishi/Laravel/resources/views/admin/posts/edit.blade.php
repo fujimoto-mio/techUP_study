@@ -4,8 +4,6 @@
     @vite([
         'resources/css/admin/posts/create.css',
         'resources/js/admin/posts/create.js',
-        'node_modules/tinymce/skins/ui/oxide/skin.min.css',
-        'node_modules/tinymce/skins/content/default/content.min.css',
     ])
 @endpush
 

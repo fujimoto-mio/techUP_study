@@ -9,7 +9,7 @@
   height: 100vh;
   color: #FBFEFF;
   z-index: 1;
-  background-image: url("../../../images/gnacademy/hero.jpg");
+  background-image: url("/images/gnacademy/hero.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,7 +29,6 @@
   letter-spacing: 0.12em;
   margin-bottom: 12px;
   text-shadow: 2px 2px 16px rgba(0,0,0,0.9);  
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 .gnacademy-hero_subtitle {
@@ -37,7 +36,6 @@
   letter-spacing: 0em;
   opacity: 0.85;
   text-shadow: 2px 2px 16px rgba(0,0,0,0.9);  
-  font-family:"Roboto Condensed", sans-serif;
 }
 
 /* =========================================================

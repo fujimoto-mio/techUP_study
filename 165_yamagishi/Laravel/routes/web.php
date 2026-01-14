@@ -1,19 +1,29 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Front\TopController;              
-use App\Http\Controllers\Front\AboutController;            
-use App\Http\Controllers\Front\SolutionsController;        
+use App\Http\Controllers\Front\TopController;
+use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\SolutionsController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\WorksController;
-use App\Http\Controllers\Front\PostsController;            
+use App\Http\Controllers\Front\PostsController;
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController as AdminPostController;
 use App\Http\Controllers\Admin\WorkController as AdminWorkController;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\ImageUploadController;
+
+/*
+|--------------------------------------------------------------------------
+| ルート直下 → 日本語トップへリダイレクト
+|--------------------------------------------------------------------------
+*/
+Route::get('/', function () {
+    return redirect('/ja');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Coming Soon（EN専用）

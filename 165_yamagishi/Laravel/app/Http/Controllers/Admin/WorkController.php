@@ -30,11 +30,6 @@ class WorkController extends Controller
             $query->where('tags', 'like', "%{$tag}%");
         }
 
-        // ==================================================
-        // タグ検索
-        // ※ 現在は管理画面・フロント画面からの導線なし
-        //   （将来拡張用に処理のみ残している）
-        // ==================================================
         $works = $query
             ->orderBy('sort_order', 'asc')
             ->orderBy('created_at', 'desc')
@@ -75,7 +70,7 @@ class WorkController extends Controller
         // ==================================================
         $data = [
             'title'        => $request->input('title'),
-            'slug'         => (string) Str::uuid(), // 一意な識別子
+            'slug'         => (string) Str::uuid(),
             'content'      => $request->input('content'),
             'youtube_url'  => $request->input('video_url'),
             'type'         => $request->input('type'),

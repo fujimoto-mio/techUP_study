@@ -35,7 +35,7 @@
     <div class="gnstudio-hero_inner">
         <div class="gnstudio-hero_text">
             <p class="gnstudio-hero_title">映像制作・クリエイティブ制作事業</p>
-            <h1 class="gnstudio-hero_subtitle">GLOBE NATION STUDIO</h1>
+            <h1 class="gnstudio-hero_subtitle font-roboto">GLOBE NATION STUDIO</h1>
         </div>
     </div>
 

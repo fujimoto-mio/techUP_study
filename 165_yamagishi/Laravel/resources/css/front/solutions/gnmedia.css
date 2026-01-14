@@ -51,7 +51,6 @@
   letter-spacing: 0.12em;
   margin-bottom: 12px;
   text-shadow: 2px 2px 16px rgba(0,0,0,0.9);  
-  font-family: "Noto Sans JP", sans-serif;
 }
 
 .gnmedia-hero_subtitle {
@@ -59,7 +58,6 @@
   letter-spacing: 0em;
   opacity: 0.85;
   text-shadow: 2px 2px 16px rgba(0,0,0,0.9);
-  font-family:"Roboto Condensed", sans-serif;
 }
 
 /* =========================================================
@@ -78,7 +76,7 @@
   text-align: left;
   z-index: 2;
   margin-top: 100vh;
-  background-image: url('../../../images/gnmedia/message_bg.jpg');
+  background-image: url('/images/gnmedia/message_bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;   
@@ -93,7 +91,7 @@
     rgba(251, 254, 255, 0.95) 0%,
     rgba(251, 254, 255, 0.85) 10%,
     rgba(251, 254, 255, 0.7) 20%,    
-    rgba(251, 254, 255, 0.4) 50%,
+    rgba(251, 254, 255, 0.6) 50%,
     rgba(251, 254, 255, 0.7) 80%,
     rgba(251, 254, 255, 0.9) 90%,       
     rgba(251, 254, 255, 0.98) 95%,    
@@ -168,12 +166,11 @@
 .section_header.gnmedia-works_header{
 position: relative;
 margin-bottom: 200px;
-font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
 font-style: normal;
 text-align: center;
 }
 .section_title-bg {
-  bottom: -10%;
+  bottom: -4%;
 }
 
 .gnmedia-works-list {
@@ -282,7 +279,7 @@ text-align: center;
   GN MEDIA COLLABORATION
 ========================================================= */
 .gnmedia-collaboration-section {
-  padding: 50px 0;
+  padding: 25px 0;
   background: #FBFEFF;
 }
 
@@ -293,7 +290,7 @@ text-align: center;
 }
 
 .gnmedia-collaboration-title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: 0.08em;
   margin-bottom: 120px;
@@ -302,6 +299,7 @@ text-align: center;
 
 .gnmedia-collaboration-text .gnmedia-collaboration-lead {
   position: relative;
+  font-size: 22px;
 }
 
 .gnmedia-collaboration-text .gnmedia-collaboration-lead::after {
@@ -332,7 +330,7 @@ text-align: center;
 
 
 .gnmedia-collaboration-text p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 2.8;
   letter-spacing: 0.12em;
   margin-bottom: 64px;
@@ -344,7 +342,7 @@ text-align: center;
   margin-top: 16px;
   margin-bottom: 120px;
   padding: 24px 64px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   color: #FBFEFF;
   background-color: #4176BF;
@@ -397,12 +395,12 @@ text-align: center;
   }
 
   .gnmedia-message-sub {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .gnmedia-message {
     margin-top: 40px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 2.2em;
     letter-spacing: 0.05em;
   }
@@ -439,12 +437,12 @@ text-align: center;
   }
 
   .gnmedia-works-title {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
   }
   .gnmedia-works-subtitle {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.08em;
     margin-bottom: 24px;
   }
@@ -459,7 +457,7 @@ text-align: center;
   }
 
   .gnmedia-works-examples-title {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.08em;
   }
 
@@ -489,7 +487,7 @@ text-align: center;
   }
 
   .gnmedia-collaboration-text .gnmedia-collaboration-lead {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 32px;
   }
 
@@ -499,7 +497,7 @@ text-align: center;
   }
 
   .gnmedia-collaboration-text p {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 2.2;
     letter-spacing: 0.08em;
     margin-bottom: 32px;
@@ -511,7 +509,7 @@ text-align: center;
     max-width: 300px;
     margin: 32px auto 64px;
     padding: 18px 20px;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 10px;
     text-align: center;
   }
