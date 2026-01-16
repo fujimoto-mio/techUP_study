@@ -1,0 +1,796 @@
+/* =========================================================
+  ABOUT US HERO
+========================================================= */
+.about-hero {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* ===============================
+   背景スライドショー
+================================ */
+.about-hero_bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.about-hero_bg .bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.about-hero_bg .bg.is-active {
+  opacity: 1;
+}
+
+.bg1 {
+  background-image: url("/images/about/hero1.jpg");
+  animation-delay: 0s;
+}
+
+.bg2 {
+  background-image: url("/images/about/hero2.jpg");
+  animation-delay: -5s;
+}
+
+.bg3 {
+  background-image: url("/images/about/hero3.jpg");
+  animation-delay: -10s;
+}
+
+.bg4 {
+  background-image: url("/images/about/hero4.jpg");
+  animation-delay: -15s;
+}
+
+.bg5 {
+  background-image: url("/images/about/hero5.jpg");
+  animation-delay: -20s;
+}
+
+
+/* ===============================
+  テキスト
+================================ */
+.about-hero_inner {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 150px 200px;
+}
+
+.about-hero_title {
+  font-size: 120px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #FBFEFF;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);  
+}
+
+
+/* =========================================================
+  MESSAGE SECTION
+========================================================= */
+.message-section {
+  position: relative;
+  padding: 100px 0 150px;
+  width: 100%;
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FBFEFF;
+  color: #30343A;
+  text-align: left;
+  z-index: 2; 
+  margin-top: 100vh;
+  background-image: url('/images/about/message_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+.message-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 254, 255, 0.95) 0%,
+    rgba(251, 254, 255, 0.6) 70%,
+    rgba(251, 254, 255, 0.6) 80%,    
+    rgba(251, 254, 255, 0.93) 90%,
+    rgba(251, 254, 255, 0.95) 95%,    
+    #FBFEFF 100%
+  );
+}
+
+.message-section_inner{
+  position: relative;
+  text-align: left;
+  margin: 100px auto;
+  max-width: 1500px; 
+  z-index: 2; 
+}
+
+.section_header .section_italic_title-bg {
+  bottom: -5%;
+}
+
+.message-title {
+  font-size: 40px;
+  letter-spacing: 0.12em;
+  margin: 80px 0 36px;
+  color: #4176BF;  
+}
+.message-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.message-sub {
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  color: #30343A;
+}
+.message {
+  margin-top: 100px;
+  font-size: 20px;
+  line-height: 3.5em;
+  letter-spacing: 0.25em;
+  color: #30343A;
+}
+.message p{
+  margin-bottom: 60px;
+}
+.message p,
+.message-sub {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.message p.visible,
+.message-sub.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+  VALUE / VISION / MISSION
+========================================================= */
+
+.mvv-section {
+  position: relative;
+  padding: 10px 0 ;
+  width: 100%;
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FBFEFF;
+  color: #30343A;
+  text-align: left;
+}
+
+
+.mvv-block {
+  position: relative;
+  margin: 100px auto 200px;
+  max-width: 1500px;
+  text-align: center;
+}
+
+.mvv-block {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.mvv-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mvv-inner {
+  display: flex;
+  align-items: center;
+}
+
+.mvv-textarea {
+  flex: 1;
+}
+
+.mvv-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #4176BF;
+}
+
+.mvv-subtitle {
+  position: relative;
+  display: inline-block;  
+  font-size: 40px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  color: #30343A;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.mvv-subtitle::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: 32px;
+
+  background: linear-gradient(to right, rgb(65, 118, 191), transparent);
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.mvv-subtitle.is-visible::after {
+  animation: leadLineFlow 1.2s ease-out forwards;
+}
+@keyframes leadLineFlow {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.mvv-text{
+  font-size: 20px;
+  line-height: 3.5em;
+  letter-spacing: 0.25em; 
+}
+
+/* =========================================================
+  OVERVIEW SECTION
+========================================================= */
+.overview-section{
+  background: #FBFEFF;
+  padding: 100px 0 ;
+}
+.overview-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section_header.overview_header{
+position: relative;
+margin-bottom: 250px;
+width: 100%;
+font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+font-style: normal;
+text-align: center;
+}
+.section_header .section_title-bg {
+  bottom: -5%;
+}
+.overview-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.overview-title {
+  border: 1.8px solid #4176BF;
+  color: #4176BF;
+  padding: 18px 24px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.overview-content {
+  margin-left: 40px;
+  font-size: 20px;
+  line-height: 3.2;
+  color: #30343A;
+}
+
+.overview-block::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 1.4px;
+  background: #4176BF;
+}
+
+.overview-block.contact::after {
+  bottom: -50px;
+}
+
+.services-list p {
+  margin: 0 0 6px;
+}
+
+.sns-area {
+  margin-top: 80px;
+  margin-left: 0px;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+}
+
+.sns-area img,
+.sns-area svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* =========================================================
+  OWNER SECTION
+========================================================= */
+
+.owner-section {
+  background: #FBFEFF;
+  padding: 100px 0;
+}
+.ownermessage-wrapper {
+  max-width: 1500px;
+  margin: 60px auto 120px;
+  padding: 0;
+  position: relative;
+}
+
+.ownermessage_header .section_italic_title-bg {
+  bottom: -4%;
+}
+
+.owner-profile {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 200px;
+}
+
+.owner-photo img {
+  width: 450px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.owner-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.owner-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+.owner-name-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 400px;
+}
+.name-ja {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 800;
+  color: #30343A;
+}
+.name-en {
+  font-size: 48px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #30343A;
+}
+.job-title {
+  font-size: 24px;
+  line-height: 1.9;
+  letter-spacing: 1px;
+  color: #30343A;
+  border-left: 1px solid #4176BF;
+  padding-left: 20px;
+  margin-left: 20px;
+
+}
+
+.owner-history p {
+  margin-bottom: 40px;
+  color: #30343A;
+  line-height: 1.6;
+  font-size: 20px;
+  letter-spacing: 0.18em;
+}
+
+.bottom-line {
+  margin-top: 100px;
+  width: 100%;
+  height: 1.4px;
+  background: #4176BF;
+}
+
+/* =========================================================
+  レスポンシブ対応
+========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+  /* ===============================
+    テキスト
+  ================================ */
+  .about-hero_inner {
+    padding: 0 0 50px 100px;
+  }
+
+  .about-hero_title {
+    font-size: 80px; 
+  }
+
+
+  /* =========================================================
+    MESSAGE SECTION
+  ========================================================= */
+  .message-section {
+    padding: 10px 0 60px;
+  }
+
+  .message-section_inner{
+    max-width: 1100px; 
+  }
+
+  .section_header .section_italic_title-bg {
+    bottom: -2%;
+  }
+
+  .message-title {
+    font-size: 28px;
+    margin: 40px 0 18px; 
+  }
+  .message-sub {
+    font-size: 20px;
+  }
+  .message {
+    margin-top: 50px;
+    font-size: 15px;
+    line-height: 3em;
+  }
+  .message p{
+    margin-bottom: 60px;
+  }
+  /* =========================================================
+    VALUE / VISION / MISSION
+  ========================================================= */
+  .mvv-block {
+    margin: 50px auto 100px;
+    max-width: 1100px;
+  }
+
+  .mvv-title {
+    font-size: 24px;
+  }
+
+  .mvv-subtitle {
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .mvv-subtitle::after {
+    margin-top: 28px;
+  }
+
+  .mvv-text{
+    font-size: 15px;
+    line-height: 3em;
+  }
+
+  /* =========================================================
+    OVERVIEW SECTION
+  ========================================================= */
+  .overview-section{
+    background: #FBFEFF;
+    padding: 50px 0 ;
+  }
+  .overview-wrapper {
+    max-width: 1100px;
+    padding: 0 100px;
+  }
+  .section_header.overview_header{
+  margin-bottom: 100px;
+  }
+  .section_header .section_title-bg {
+    bottom: -2%;
+  }
+
+  .overview-title {
+    padding: 18px 18px;
+    font-size: 18px;
+    min-width: 180px;
+  }
+
+  .overview-content {
+    margin-left: 40px;
+    font-size: 15px;
+  }
+
+  .sns-area {
+    margin-top: 40px;
+  }
+
+  .sns-area img,
+  .sns-area svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* =========================================================
+    OWNER SECTION
+  ========================================================= */
+
+  .owner-section {
+    background: #FBFEFF;
+    padding: 20px 0;
+  }
+  .ownermessage-wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+  }
+
+  .ownermessage_header .section_italic_title-bg {
+    bottom: -3%;
+  }
+
+  .owner-profile {
+    gap: 30px;
+    padding-top: 100px;
+  }
+
+  .owner-photo img {
+    width: 350px;
+  }
+
+  .owner-info {
+    min-width: 300px;
+  }
+
+  .owner-header {
+    gap: 230px;
+    margin-bottom: 30px;
+  }
+  .owner-name-block {
+    margin-right: 0px;
+  }
+  .name-ja {
+    font-size: 20px;
+  }
+  .name-en {
+    font-size: 36px;
+  }
+  .job-title {
+    font-size: 18px;
+  }
+
+  .owner-history p {
+    margin-bottom: 30px;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+  }
+
+  .bottom-line {
+    margin-top: 60px;
+    height: 0.8px;
+  }  
+}  
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh;
+    padding: 0;
+  }
+  .about-hero_inner {
+    padding: 0 0 32px 16px;
+  } 
+  .about-hero_title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .message-section {
+    margin-top: 40vh;
+    padding: 10px 0;
+  }
+
+  .message-section_inner {
+    margin: 40px 20px;
+  }
+  .message-title {
+    font-size: 18px;
+    margin: 20px 0 20px;
+  }
+
+  .message-sub {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .message {
+    margin-top: 40px;
+    font-size: 12px;
+    line-height: 2.4em;
+    letter-spacing: 0.08em;
+  }
+
+  .message p {
+    margin-bottom: 40px;
+  }
+
+  .mvv-section {
+    padding: 50px 0 25px;
+  }
+
+  .mvv-block {
+    margin: 20px auto 50px;
+  }
+
+  .mvv-inner {
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .mvv-title {
+    font-size: 14px;
+  }
+
+  .mvv-subtitle {
+    font-size: 13px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .mvv-subtitle::after {
+    height: 3px;
+    margin-top: 16px;
+  }
+  .mvv-text {
+    font-size: 12px;
+    line-height: 2em;
+    letter-spacing: 0.08em;
+  }
+
+  .overview-section{
+    padding: 10px 0 ;
+  }  
+  .overview-wrapper {
+    padding: 0 20px;
+  }
+  .section_header .section_title-bg {
+    bottom: -2%;
+  }
+  .section_header.overview_header {
+    margin-bottom: 60px;
+  }
+
+  .overview-block {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .overview-title {
+    min-width: 125px;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .overview-content {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .overview-block::after {
+    bottom: -20px;
+    height: 0.8px;
+  }
+
+  .overview-block.contact::after {
+    bottom: -30px;
+  }
+  .sns-area {
+    gap: 28px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .sns-area img,
+  .sns-area svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .owner-section{
+    padding: 20px 0;
+  }
+
+  .ownermessage-wrapper {
+    margin: 20px 20px 40px;
+    padding: 0;
+  }
+
+  .owner-profile {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .owner-photo img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .owner-header {
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 80px;
+  }
+
+  .owner-name-block {
+    margin-right: 0;
+  }
+
+  .name-ja {
+    font-size: 14px;
+  }
+
+  .name-en {
+    font-size: 18px;
+  }
+
+  .job-title {
+    font-size: 12px;
+    padding-left: 5px;
+    margin-left: 0;
+  }
+
+  .owner-history p {
+    font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .bottom-line {
+    margin-top: 80px;
+  }
+
+}
+

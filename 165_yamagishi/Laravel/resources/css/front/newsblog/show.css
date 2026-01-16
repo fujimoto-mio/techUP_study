@@ -1,0 +1,145 @@
+.news-show .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 150px 20px;
+    text-align: left;
+}
+
+.post-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4176BF;
+}
+
+.post-meta {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.post-meta span {
+    font-weight: 600;
+}
+
+.post-image {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    color: #333;
+    margin-bottom: 40px;
+    overflow-wrap: break-word;
+    word-break: break-word;    
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.back-link a {
+    color: #4176BF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+/* =========================================
+   Responsive
+========================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    .news-show .container {
+        max-width: 800px;
+        padding: 100px 20px;
+    }
+
+    .post-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .post-meta {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .post-image {
+        margin-bottom: 20px;
+    }
+
+    .post-content {
+        font-size: 15px;
+        margin-bottom: 20px;  
+    }
+
+    .back-link {
+        font-size: 15px;
+        margin-top: 30px;
+    }
+}    
+@media screen and (max-width: 768px) {
+    .news-show .container {
+    padding: 100px 16px 10px;
+    }
+
+    /* タイトル */
+    .post-title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    }
+
+    /* メタ情報 */
+    .post-meta {
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+    }
+
+    /* 画像 */
+    .post-image {
+    margin-bottom: 20px;
+    }
+
+    .post-image img {
+    border-radius: 6px;
+    }
+
+    /* 本文 */
+    .post-content {
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+    overflow-wrap: break-word;
+    word-break: break-word;    
+    }
+
+    /* 戻るリンク */
+    .back-link {
+    margin-top: 20px;
+    }
+
+    .back-link a {
+    font-size: 12px;
+    }
+}

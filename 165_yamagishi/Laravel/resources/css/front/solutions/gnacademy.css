@@ -1,0 +1,296 @@
+/* =========================================================
+  GN ACADEMY HERO
+========================================================= */
+.gnacademy-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #FBFEFF;
+  z-index: 1;
+  background-image: url("/images/gnacademy/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.gnacademy-hero_inner {
+  text-align: left;
+  padding: 0 0 70px 120px;
+}
+
+.gnacademy-hero_title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 16px rgba(0,0,0,0.9);  
+}
+
+.gnacademy-hero_subtitle {
+  font-size: 120px;
+  letter-spacing: 0em;
+  opacity: 0.85;
+  text-shadow: 2px 2px 16px rgba(0,0,0,0.9);  
+}
+
+/* =========================================================
+  GN ACADEMY MESSAGE SECTION
+========================================================= */
+.gnacademy-message-section {
+  position: relative;
+  padding: 100px 0 100px;
+  width: 100%;
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background: #FBFEFF;
+  color: #30343A;
+  text-align: left;
+  z-index: 2;
+  margin-top: 100vh;
+}
+.gnacademy-message-section_inner{
+  position: relative;
+  text-align: left;
+  margin: 100px auto;
+  max-width: 1600px;
+  background: #FBFEFF;
+}
+
+.gnacademy-message-title {
+  font-size: 48px;
+  letter-spacing: 0.12em;
+  margin: 0px 0 80px;
+  color: #4176BF;  
+}
+
+.gnacademy-message-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gnacademy-message-sub {
+  font-size: 32px;
+  letter-spacing: 0.12em;
+  color: #30343A;
+}
+.gnacademy-message {
+  margin-top: 100px;
+  font-size: 22px;
+  line-height: 3.5em;
+  letter-spacing: 0.25em;
+  color: #30343A;
+}
+.gnacademy-message p{
+  margin-bottom: 60px;
+}
+
+.gnacademy-message p,
+.gnacademy-message-sub {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.gnacademy-message p.visible,
+.gnacademy-message-sub.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* =========================================================
+  GN ACADEMY Related Project
+========================================================= */
+.gnacademy-related {
+  margin-top: 120px;
+}
+
+.gnacademy-related-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+  color: #30343A;
+}
+
+.gnacademy-related-title span {
+  font-size: 32px;
+  font-weight: 400;
+  margin-left: 30px;
+}
+
+.gnacademy-related-link {
+  font-size: 24px;
+  padding-top: 15px;
+  padding-left: 25px;
+  letter-spacing: 0.08em;  
+}
+
+.gnacademy-related-link a {
+  color: #4176BF;
+  text-decoration: none;
+  transition: all 0.3s ease;  
+}
+
+.gnacademy-related-link a:hover {
+  opacity: 0.7;
+  border-bottom: 1px solid rgba(65,118,191,0.4);
+}
+
+/* =========================================================
+   レスポンシブ対応
+========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+  /* =========================================================
+    GN ACADEMY HERO
+  ========================================================= */
+  .gnacademy-hero_inner {
+    padding: 0 0 50px 100px;
+  }
+
+  .gnacademy-hero_title {
+    font-size: 28px; 
+  }
+
+  .gnacademy-hero_subtitle {
+    font-size: 80px;
+  }
+
+  /* =========================================================
+    GN ACADEMY MESSAGE SECTION
+  ========================================================= */
+  .gnacademy-message-section {
+    padding: 10px 0 60px;
+  }
+  .gnacademy-message-section_inner{
+    margin: 60px auto;
+    max-width: 1100px;
+  }
+
+  .gnacademy-message-title {
+    font-size: 28px;
+    margin: 0px 0 50px;  
+  }
+
+  .gnacademy-message-sub {
+    font-size: 20px;
+  }
+  .gnacademy-message {
+      margin-top: 50px;
+      font-size: 15px;
+      line-height: 3em;
+  }
+  .gnacademy-message p{
+    margin-bottom: 60px;
+  }
+  /* =========================================================
+    GN ACADEMY Related Project
+  ========================================================= */
+  .gnacademy-related {
+    margin-top: 80px;
+  }
+
+  .gnacademy-related-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .gnacademy-related-title span {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .gnacademy-related-link {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 10px; 
+  }
+}  
+@media screen and (max-width: 768px) {
+  .gnacademy-hero {
+    height: 50vh;
+  }
+
+  .gnacademy-hero_inner {
+    padding: 0 0 40px 20px; 
+  }
+
+  .gnacademy-hero_title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .gnacademy-hero_subtitle {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .gnacademy-message-section {
+    padding: 40px 0;
+    margin-top: 50vh;
+  }
+
+  .gnacademy-message-section_inner {
+    margin: 40px auto;
+    padding: 0 20px;    
+  }
+
+  .gnacademy-message-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .gnacademy-message-sub {
+    font-size: 16px;
+  }
+
+  .gnacademy-message {
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 2.2em;
+    letter-spacing: 0.1em;
+  }
+
+  .gnacademy-message p {
+    margin-bottom: 24px;
+  }
+
+  .gnacademy-related {
+    margin-top: 64px;
+  }
+  .gnacademy-related-title {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #4176BF;
+    margin-bottom: 0px;
+  }
+
+  .gnacademy-related-title span {
+    display: block;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 4px;
+    color: #30343A;
+  }
+
+  .gnacademy-related-link {
+    font-size: 12px;
+    padding-top: 4px;
+    padding-left: 10px;
+    word-break: break-all;  
+  }
+}

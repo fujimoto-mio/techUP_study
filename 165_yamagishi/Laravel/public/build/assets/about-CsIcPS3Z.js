@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelectorAll(".about-hero_bg .bg"),o=4e3;let c=0;const s=e=>{const n=(e+1)%t.length;t[e].classList.add("is-active"),setTimeout(()=>{t[e].classList.remove("is-active"),s(n)},o)};s(c)});

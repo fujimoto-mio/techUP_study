@@ -1,0 +1,401 @@
+/* Eric Meyer’s Reset v2.0 | 20110126 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* 全セクション共通 */
+section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* HTML5要素のブロック化 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* body 基本スタイル */
+body {
+  line-height: 1;
+}
+
+/* リストの装飾削除 */
+ol, ul {
+  list-style: none;
+}
+
+/* 引用符の削除 */
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* テーブルのボーダー崩れ防止 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================
+  管理ナビ
+========================= */
+.admin-nav {
+  background-color: #30343A;
+  height: 64px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.admin-nav-inner {
+  height: 100%;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+  ブランド（ロゴ＋会社名）
+========================= */
+
+.admin-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.admin-brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+.admin-brand-name {
+  color: #FBFEFF;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.admin-nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-nav-list li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.admin-nav-list li a {
+  color: #FBFEFF;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+}
+
+.admin-nav-list .active {
+  color: #E5EEFF;
+  border-bottom: 2px solid #4176BF;
+} 
+
+
+.admin-nav-item {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+  color: #FBFEFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* =========================
+  ナビドロップダウン
+========================= */
+
+.has-dropdown {
+  position: relative;
+  color: #FBFEFF;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  padding: 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+}
+
+/* ▼ マーク */
+.dropdown-trigger::after {
+  content: "▼";
+  display: inline-block;
+  margin-left: 0.8rem;
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+.admin-nav-item:hover {
+  color: #E5EEFF;
+}
+
+.has-dropdown:hover .dropdown-trigger::after {
+  transform: rotate(180deg) translateY(-1px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #1f2937;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 100;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  color: #FBFEFF;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.admin-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-user-name {
+  color: #FBFEFF;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ログアウト */
+.logout-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #FBFEFF;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+/* =========================
+  ハンバーガー
+========================= */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 24px;
+  position: relative;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #FBFEFF;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+/* ハンバーガー開閉アニメーション */
+.hamburger.is-open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+
+.hamburger,.mobile-menu {
+  display: none;
+}
+
+.mobile-nav-list a.active {
+  color: #E5EEFF;
+  font-weight: 600;
+}
+
+/* =========================
+  メニューオーバーレイ
+========================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 150;
+}
+
+.menu-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.menu-open {
+  overflow: hidden;
+}
+
+/* =========================
+  レスポンシブ（768px以下）
+========================= */
+@media (max-width: 768px) {
+  .admin-nav-list {
+    display: none;
+  }
+
+  .admin-user-name,
+  .logout-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .admin-nav-left {
+    gap: 1rem;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 280px;
+    height: calc(100vh - 64px);
+    background: #1f2937;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 200;
+    display: block;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-list {
+    padding: 1rem;
+  }
+
+  .mobile-nav-list li a,
+  .mobile-dropdown-trigger {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    color: #FBFEFF;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .mobile-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 1rem 0;
+  }
+
+  .mobile-user {
+    color: #FBFEFF;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-logout {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #FBFEFF;
+    border-radius: 4px;
+  }
+
+  .mobile-dropdown-menu {
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .mobile-dropdown.is-open .mobile-dropdown-menu {
+    display: block;
+  }
+}
