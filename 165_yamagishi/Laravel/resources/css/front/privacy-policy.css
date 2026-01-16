@@ -27,11 +27,38 @@
 }
 
 .privacy-policy p {
+    font-size: 16px;
     margin-bottom: 20px;
 }
 /* =========================================================
    レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    .privacy-policy {
+        padding: 150px 0;
+    }
+
+    .privacy-policy_inner {
+        max-width: 1100px;
+    }
+
+    .privacy-policy_title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .privacy-policy_subtitle {
+        font-size: 20px;
+        margin: 40px 0 28px;
+    }
+
+    .privacy-policy p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}    
+
+
 @media (max-width: 768px) {
     .privacy-policy{
         padding: 100px 0 40px;

@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const index = Array.from(items).indexOf(entry.target);
-        const delay = index * 600;
+        const delay = index * 600; // 順番に600ms間隔でフェードイン
 
         setTimeout(() => {
           entry.target.classList.add("show");
         }, delay);
 
-        issueObserver.unobserve(entry.target);
+        issueObserver.unobserve(entry.target); // 一度表示したら監視解除
       }
     });
   }, {

@@ -11,7 +11,7 @@
 
     {{-- 管理画面 共通CSS / JS --}}
     @vite([
-        'resources/css/admin/admin.css',
+        'resources/css/admin/common.css',
         'resources/js/admin/app.js'
     ])
 

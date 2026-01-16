@@ -154,6 +154,72 @@
 /* =========================================================
    レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+  /* =========================================================
+    GN ACADEMY HERO
+  ========================================================= */
+  .gnacademy-hero_inner {
+    padding: 0 0 50px 100px;
+  }
+
+  .gnacademy-hero_title {
+    font-size: 28px; 
+  }
+
+  .gnacademy-hero_subtitle {
+    font-size: 80px;
+  }
+
+  /* =========================================================
+    GN ACADEMY MESSAGE SECTION
+  ========================================================= */
+  .gnacademy-message-section {
+    padding: 10px 0 60px;
+  }
+  .gnacademy-message-section_inner{
+    margin: 60px auto;
+    max-width: 1100px;
+  }
+
+  .gnacademy-message-title {
+    font-size: 28px;
+    margin: 0px 0 50px;  
+  }
+
+  .gnacademy-message-sub {
+    font-size: 20px;
+  }
+  .gnacademy-message {
+      margin-top: 50px;
+      font-size: 15px;
+      line-height: 3em;
+  }
+  .gnacademy-message p{
+    margin-bottom: 60px;
+  }
+  /* =========================================================
+    GN ACADEMY Related Project
+  ========================================================= */
+  .gnacademy-related {
+    margin-top: 80px;
+  }
+
+  .gnacademy-related-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .gnacademy-related-title span {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .gnacademy-related-link {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 10px; 
+  }
+}  
 @media screen and (max-width: 768px) {
   .gnacademy-hero {
     height: 50vh;

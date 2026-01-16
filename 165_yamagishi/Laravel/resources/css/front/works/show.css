@@ -53,6 +53,7 @@
     padding-top: 56.25%;
     background: #30343A;
     overflow: hidden;
+    border-radius: 12px;
     margin: 0 auto 88px;
     max-width: 900px;
 }
@@ -139,9 +140,74 @@
 /* =========================================================
   レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    /* ===============================
+    HERO
+    =============================== */
+    .work-show-hero .container {
+        max-width: 800px;
+    }
+
+    .work-show-category {
+        font-size: 20px;
+    }
+
+    .work-show-title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .work-show-date {
+        font-size: 14px;
+    }
+
+    /* ===============================
+    CONTENT
+    =============================== */
+    .work-show-content {
+        padding: 60px 0;
+    }
+
+    .work-show-content .container {
+        max-width: 800px;
+    }
+
+    /* ===============================
+    VIDEO
+    =============================== */
+    .work-show-video {
+        margin: 0 auto 60px;
+    }
+    /* ===============================
+    META
+    =============================== */
+    .work-show-meta {
+        margin-bottom: 50px;
+        font-size: 12px;
+    }
+    /* ===============================
+    BODY
+    =============================== */
+    .work-show-body {
+        font-size: 15px;
+        line-height: 3;
+    }
+
+    .work-show-body p + p {
+        margin-top: 2em;
+    }
+
+    /* ===============================
+    BACK
+    =============================== */
+    .work-show-back a {
+        font-size: 14px;
+    }
+}    
+
 @media (max-width: 768px) {
     .work-show-hero {
-        padding: 120px 0 96px;
+        padding: 100px 0 40px;
     }
 
     .work-show-category {
@@ -157,28 +223,31 @@
 
     .work-show-date {
         font-size: 12px;
-        opacity: 0.45;
     }
     .work-show-content {
-        padding: 60px 20px;
+        padding: 40px 20px 10px;
     }
 
     .work-show-video {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         max-width: 100%;
     }
 
     .work-show-meta {
         gap: 16px;
-        margin-bottom: 48px;
+        margin-bottom: 40px;
     }
 
     .work-show-body {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 2;
     }
 
     .work-show-back {
-        margin-top: 60px;
+        margin-top: 40px;
     }
+
+    .work-show-back a {
+        font-size: 12px;
+    }    
 }

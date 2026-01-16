@@ -842,6 +842,293 @@ text-align: center;
 /* =========================================================
   レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+  .gnstudio-hero_inner {
+    padding: 0 0 50px 100px;
+  }
+
+  .gnstudio-hero_title {
+    font-size: 28px;
+  }
+
+  .gnstudio-hero_subtitle {
+    font-size: 80px;
+  }
+  /* =========================================================
+    GN STUDIO MESSAGE SECTION
+  ========================================================= */
+  .gnstudio-message-section {
+    padding: 10px 0 60px; 
+  }
+
+  .gnstudio-message-section_inner{
+    margin: 60px auto;
+    max-width: 1100px;
+  }
+
+  .gnstudio-message-title {
+    font-size: 28px;
+    margin: 0px 0 50px;  
+  }
+
+  .gnstudio-message-sub {
+    font-size: 20px;
+  }
+  .gnstudio-message {
+    margin-top: 50px;
+    font-size: 15px;
+    line-height: 3em;
+  }
+  .gnstudio-message p{
+    margin-bottom: 60px;
+  }
+  /* =========================================================
+    CUSTOMER ISSUES
+  ========================================================= */
+  .gnstudio-issues-section{
+    padding: 50px 0;
+  }
+
+  .section_header.gnstudio-issues_header{
+    margin-bottom: 70px;
+  }
+  .gnstudio-issues_header .section_title-bg {
+    bottom: 32.5%;
+  }
+
+  .gnstudio-customer-issues{
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+  .issue-item {
+    width: 350px;
+  }
+
+  .issue-icon-wrapper {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+
+  .issue-icon-wrapper svg {
+    transform: translate(-50%, -40%) scale(0.6);
+  }
+  .issue-icon-wrapper.hourglass svg {
+    transform: translate(-50%, -42%) scale(0.52);
+  }
+
+  .issue-text {
+    font-size: 18px; 
+  }
+
+  .contact-box {
+    margin-top: 80px;
+  }
+
+  .contact-note{
+    font-size: 28px;
+  }
+  .contact-method {
+    gap: 100px; 
+    margin-top: 80px;
+  }
+
+  .contact-label {
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .btn {
+    padding: 18px 15px;
+    font-size: 20px;
+  }
+  .web-contact .btn,
+  .phone-contact .btn {
+    max-width: 250px;
+  }
+  /* =========================================================
+    STRENGTH
+  ========================================================= */
+  .strength-section{
+    padding: 10px 0;
+  }
+
+  .strength-section_inner{
+    max-width: 1100px;
+  }
+
+  .strength_header .section_italic_title-bg {
+    bottom: -3.5%;
+  }
+
+  .strength{
+    padding-top: 100px;
+    gap: 150px;
+  }
+
+  .strength-item{
+    gap: 10px;
+  }
+
+  .strength-title{
+    margin: 0 0 30px 0;
+    font-size: 20px;
+  }
+
+  .strength-title-bg{
+    position: absolute;
+    top: -31%;
+    font-size: 150px;
+  }
+
+  .strength p{
+    font-size: 14px; 
+    letter-spacing: 0.08em;
+    line-height: 3;
+  }
+
+  /* =========================================================
+    FLOW
+  ========================================================= */
+  .flow-section{
+    padding: 10px 0 0;
+  }
+
+  .flow-section_inner{
+    margin: 30px auto 0;
+    max-width: 1100px;
+  }
+  .flow_header .section_italic_title-bg {
+    bottom: -3.5%;
+  }
+
+  .flow{
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .flow > div {
+    margin-bottom: 60px;
+  }
+
+  .flow-title{
+    font-size: 20px;
+  }
+
+  .flow-item {
+    margin-left: 500px;
+  }
+
+  .flow-toggle {
+    font-size: 24px;
+  }
+
+  .flow p{
+    font-size: 15px; 
+  }
+  /* =========================================================
+    GN STUDIO WORKS
+  ========================================================= */
+
+  .gnstudio-works-section {
+    padding: 30px 0 ;
+  }
+  .section_header.gnstudio-works_header{
+  margin-bottom: 30px;
+  }
+  .gnstudio-works_header .section_title-bg {
+    bottom: 32.5%;
+  }
+
+  .attention {
+    padding: 0 20px;
+    font-size: 13px;
+    margin-bottom: 100px;
+  }
+  .gnstudio-works-block {
+    margin: 50px auto 100px;
+    max-width: 1100px;
+  }
+
+  .gnstudio-works-inner {
+    gap:40px;
+  }
+
+  .gnstudio-works-textarea {
+    flex: 0 0 45%;
+  }
+
+  .gnstudio-works-title {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    color: #4176BF;
+    margin-bottom: 30px;
+  }
+
+  .gnstudio-works-text {
+    font-size: 15px;
+    line-height: 2.8em;
+    letter-spacing: 0.25em;
+  }
+  .gnstudio-works-small-text {
+    font-size: 12px;
+  }
+  .gnstudio-works-video {
+    max-width: 450px;
+  }
+
+  .erl-link{
+    font-size: 12px;
+  }
+
+  .studio-section_link-wrapper {
+    max-width: 1100px;
+    margin: 20px auto 0;
+  }
+
+  .studio-section_link {
+    border: 2px solid #30343A;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+  /* =========================================================
+    FAQ
+  ========================================================= */
+  .gnstudio-faq-section {
+    padding: 40px 0 50px;
+  }
+  .gnstudio-faq_inner{
+    margin-bottom: 100px;
+  }
+  .gnstudio-faq_header{
+    padding-bottom: 50px;
+  }
+  .gnstudio-faq_header .section_title-bg {
+    bottom: 50%;
+  }
+
+  .gnstudio-faq-list {
+    max-width: 900px;
+  }
+
+  .faq-item {
+    padding: 20px 0 4px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+
+  .faq-toggle {
+    font-size: 24px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}  
 @media (max-width: 768px) {
   .gnstudio-hero {
     height: 50vh;

@@ -35,7 +35,7 @@
     "isEntry": true
   },
   "resources/css/front/about.css": {
-    "file": "assets/about-tNwkXXkB.css",
+    "file": "assets/about-DGnaiiGE.css",
     "src": "resources/css/front/about.css",
     "isEntry": true
   },
@@ -45,68 +45,64 @@
     "isEntry": true
   },
   "resources/css/front/common.css": {
-    "file": "assets/common-D3WqN2b_.css",
+    "file": "assets/common-BKSzI0XH.css",
     "src": "resources/css/front/common.css",
     "isEntry": true
   },
   "resources/css/front/contact/show.css": {
-    "file": "assets/show-Cl2xFokw.css",
+    "file": "assets/show-BylqXMAM.css",
     "src": "resources/css/front/contact/show.css",
     "isEntry": true
   },
   "resources/css/front/contact/thanks.css": {
-    "file": "assets/thanks-mXj7Tl_P.css",
+    "file": "assets/thanks-BDkYyV4Z.css",
     "src": "resources/css/front/contact/thanks.css",
     "isEntry": true
   },
   "resources/css/front/newsblog/newsblog.css": {
-    "file": "assets/newsblog-Cs4K693E.css",
+    "file": "assets/newsblog-D9sv28cx.css",
     "src": "resources/css/front/newsblog/newsblog.css",
     "isEntry": true
   },
   "resources/css/front/newsblog/show.css": {
-    "file": "assets/show-BJGLD2oN.css",
+    "file": "assets/show-CzsYCdFk.css",
     "src": "resources/css/front/newsblog/show.css",
     "isEntry": true
   },
   "resources/css/front/privacy-policy.css": {
-    "file": "assets/privacy-policy-Mir5Wu16.css",
+    "file": "assets/privacy-policy-DMT43S-h.css",
     "src": "resources/css/front/privacy-policy.css",
     "isEntry": true
   },
   "resources/css/front/solutions/gnacademy.css": {
-    "file": "assets/gnacademy-Dvi8WFNT.css",
+    "file": "assets/gnacademy-DNaSoCGB.css",
     "src": "resources/css/front/solutions/gnacademy.css",
     "isEntry": true
   },
   "resources/css/front/solutions/gnmedia.css": {
-    "file": "assets/gnmedia-COKCu3rs.css",
+    "file": "assets/gnmedia-Bc6x448r.css",
     "src": "resources/css/front/solutions/gnmedia.css",
     "isEntry": true
   },
   "resources/css/front/solutions/gnstudio.css": {
-    "file": "assets/gnstudio-BWpU0K73.css",
+    "file": "assets/gnstudio-CWWZ6qr9.css",
     "src": "resources/css/front/solutions/gnstudio.css",
     "isEntry": true
   },
   "resources/css/front/top.css": {
-    "file": "assets/top-CSXA_b-n.css",
+    "file": "assets/top-CjOn95ad.css",
     "src": "resources/css/front/top.css",
     "isEntry": true
   },
   "resources/css/front/works/show.css": {
-    "file": "assets/show-DYyj4Z-u.css",
+    "file": "assets/show-BpWHrbU4.css",
     "src": "resources/css/front/works/show.css",
     "isEntry": true
   },
   "resources/css/front/works/works.css": {
-    "file": "assets/works-Cfu6kLSo.css",
+    "file": "assets/works-qnfL_NxU.css",
     "src": "resources/css/front/works/works.css",
     "isEntry": true
-  },
-  "resources/images/works/hero.jpg": {
-    "file": "assets/hero-BLzHlQ5L.jpg",
-    "src": "resources/images/works/hero.jpg"
   },
   "resources/js/admin/app.js": {
     "file": "assets/app-BjjdKk-5.js",

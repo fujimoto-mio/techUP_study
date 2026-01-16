@@ -1,6 +1,6 @@
 .contact-thanks {
     text-align: center;
-    padding: 300px 20px;
+    padding: 250px 20px;
 }
 
 .contact-thanks h2 {
@@ -11,7 +11,8 @@
 }
 
 .contact-thanks p {
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 60px;
     line-height: 1.8;
     color: #30343A;
     font-size: 18px;
@@ -31,6 +32,26 @@
 /* =========================================================
    レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    .contact-thanks {
+        padding: 150px 20px;
+    }
+
+    .contact-thanks h2 {
+        font-size: 32px;
+    }
+
+    .contact-thanks p {
+        margin-top: 60px;
+        line-height: 2.5;
+        font-size: 15px;
+    }
+    .back-home {
+        font-size: 15px;
+    }
+
+}    
+
 @media (max-width: 768px) {
   .contact-thanks {
     text-align: center;

@@ -41,11 +41,14 @@
     letter-spacing: 0.08em;
     color: #333;
     margin-bottom: 40px;
+    overflow-wrap: break-word;
+    word-break: break-word;    
 }
 
 .back-link {
     text-align: center;
     margin-top: 40px;
+    font-size: 16px;
 }
 
 .back-link a {
@@ -60,8 +63,38 @@
     opacity: 0.8;
 }
 /* =========================================
-   Responsive (max-width: 768px)
+   Responsive
 ========================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    .news-show .container {
+        max-width: 800px;
+        padding: 100px 20px;
+    }
+
+    .post-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .post-meta {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .post-image {
+        margin-bottom: 20px;
+    }
+
+    .post-content {
+        font-size: 15px;
+        margin-bottom: 20px;  
+    }
+
+    .back-link {
+        font-size: 15px;
+        margin-top: 30px;
+    }
+}    
 @media screen and (max-width: 768px) {
     .news-show .container {
     padding: 100px 16px 10px;
@@ -97,6 +130,8 @@
     line-height: 1.7;
     letter-spacing: 0.04em;
     margin-bottom: 32px;
+    overflow-wrap: break-word;
+    word-break: break-word;    
     }
 
     /* 戻るリンク */

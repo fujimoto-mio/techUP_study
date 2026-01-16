@@ -136,6 +136,60 @@ textarea:focus {
 /* =========================================================
    レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+    .contact-title {
+        padding: 120px 20px 80px;
+    }
+
+    .contact-title h2 {
+        font-size: 40px;
+    }
+
+    .contact-title p {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    .contact-form {
+        max-width: 800px;
+    }
+
+    .form-group {
+        margin-bottom: 28px;
+    }
+
+    .form-group label {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .required {
+        font-size: 16px;
+    }
+
+
+    input,
+    select,
+    textarea {
+        font-size: 15px;
+    }
+
+    .form-check {
+        padding-top: 16px;
+        gap: 30px;
+        font-size: 15px;
+    }
+
+    .form-submit {
+        margin-top: 40px;
+    }
+
+    .form-submit button {
+        font-size: 18px;
+    }
+
+}
+
 @media (max-width: 768px) {
     .contact-container {
         padding: 0;

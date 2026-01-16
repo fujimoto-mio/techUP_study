@@ -245,6 +245,9 @@ body.menu-open {
 .sp{
   display: none;
 }
+.np{
+  display: none;
+}
 .section_header {
   position: relative;
   overflow: hidden;
@@ -518,7 +521,6 @@ body.menu-open {
 /* =========================================================
   Footer
   ========================================================= */
-
 .site-footer {
   background: #30343A;
   color: #FBFEFF;
@@ -601,6 +603,139 @@ body.menu-open {
 /* =========================================================
   レスポンシブ対応
 ========================================================= */
+@media (max-width: 1680px) and (min-width: 1025px){
+  .site-header {
+    padding: 0 40px;
+    height: 65px;
+  }
+  .site-header_logo img {
+    width: 60px;
+  }
+  .site-header_logo-text {
+    letter-spacing: 0.6px;
+    font-size: 15px;
+  }
+
+  .nav-right {
+    gap: 36px;
+  }
+
+  .page-link{
+  padding:  15px 20px;
+  font-size: 16px;
+  }
+  .arrow{
+    font-size: 14px;
+  }
+
+  .dropdown-link {
+  padding: 12px 20px;
+  font-size: 16px;
+  }
+
+  .site-header_lang {
+    font-size: 16px;
+  }
+
+  .dropdown-menu {
+    min-width: 240px;
+  }
+
+  .dropdown-link {
+    font-size: 18px;
+  }
+
+  .section_title-en {
+    font-size: 48px;
+  }
+
+  .section_title-bg {
+    font-size: 80px;
+  }
+
+  .section_italic_title-en {
+    font-size: 48px;
+  }
+
+  .section_italic_title-bg {
+    font-size: 80px;
+  }
+  .np {
+    display: inline;
+  }
+  .follow-section { 
+    padding: 100px 0 50px; 
+  }
+  .follow_header {
+    margin-bottom: 100px;
+  }
+  .follow_header .section_title-bg {
+    bottom: 32.5%;
+  }
+  .follow-us{
+    font-size: 36px; 
+    margin-bottom: 80px;
+  }
+
+  .follow_icons { 
+    gap: 100px; 
+  }
+  .follow_icon svg { 
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .cta-section { 
+    padding: 200px 0;
+  }
+  .cta_text { 
+    font-size: 20px; 
+  }
+  .cta_button { 
+    padding: 60px 80px; 
+    font-size: 24px; 
+  }
+
+  .site-footer {
+    font-size: 15px;
+    padding: 50px 0 20px;  
+  }
+
+  .footer_inner {
+    gap: 60px;
+  }
+
+  .footer_nav {
+    padding-left: 30px;
+  }  
+
+  .footer_col {
+    min-width: 200px;
+  }
+
+  .footer_col:not(:first-child) {
+    padding-left: 30px;
+  }
+
+  .footer_bottom {
+    margin-top: 40px;
+  }
+
+  .footer_sns {
+    gap: 75px;
+    margin-bottom: 40px;
+  }
+
+  .footer_sns-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer_copy {
+    font-size: 12px;
+  }  
+}
+
 @media (max-width: 768px) {
   .site-header {
   padding: 0 10px;
