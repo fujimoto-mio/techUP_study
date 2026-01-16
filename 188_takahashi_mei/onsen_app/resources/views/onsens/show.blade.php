@@ -3,14 +3,24 @@
         <h2 class="font-semibold text-xl">
             {{ $onsen->name }}
         </h2>
+        <form action="{{ route('onsens.like', $onsen) }}" method="POST">
+        @csrf
+        <button class="text-red-500">
+            {{ auth()->user()?->likedOnsens->contains($onsen->id) ? '❤️' : '🤍' }}
+         </button>
+        </form>
     </x-slot>
 
     <div class="max-w-3xl mx-auto py-6">
        
         <!-- 温泉情報 -->
         <div class="bg-white p-6 rounded shadow mb-6">
-            <p class="text-gray-600">住所：{{ $onsen->address }}</p>
+        @if($onsen->image_url)
+             <img src="{{ $onsen->image_url }}" 
+             class="w-full max-h-96 object-contain rounded-xl mb-4">
+            @endif
             <p class="mt-2">{{ $onsen->description }}</p>
+            <p class="text-gray-600">住所：{{ $onsen->address }}</p>            
         </div>
 
        <!-- レビュー一覧 -->
@@ -46,6 +56,7 @@
                             投稿する
                         </button>
                     </form>
+                    
                 </div>
                     @if (session('success'))
                         <div class="mb-4 p-4 bg-green-100 text-green-800 rounded">
