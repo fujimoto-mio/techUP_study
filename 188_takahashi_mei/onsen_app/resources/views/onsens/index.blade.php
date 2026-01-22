@@ -48,13 +48,29 @@
                         {{ $onsen->name }}
                     </a>
                 </h3>
+                @auth
+                <form action="{{ route('onsens.like', $onsen) }}" method="POST">
+                    @csrf
+                    <button class="text-red-500">
+                        {{ auth()->user()?->likedOnsens->contains($onsen->id) ? '❤️' : '🤍' }}
+                    </button>
+                </form>
+                @else
+                    <a href="{{ route('login') }}" class="text-gray-400">
+                        🤍 ログインしていいね
+                    </a>
+                @endauth
 
+                @if($onsen->image_url)
+                     <img src="{{ $onsen->image_url }}" 
+                     class="w-full max-h-40 object-contain rounded-lg mb-2">
+                @endif
                 <p class="text-sm text-gray-600 mt-1">
                     住所：{{ $onsen->address }}
                 </p>
 
                 <p class="text-sm text-gray-600">
-                    評価：{{ $onsen->avg_rating ?? '未評価' }}
+                    評価：{{ number_format($onsen->reviews_avg_rating ?? 0, 1) }}
                 </p>
                 {{-- タグ --}}
                 @if ($onsen->tags->isNotEmpty())

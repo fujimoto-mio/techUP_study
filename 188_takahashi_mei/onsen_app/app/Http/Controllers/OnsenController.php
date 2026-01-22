@@ -18,7 +18,9 @@ class OnsenController extends Controller
     // 一覧 + 都道府県検索
     public function index(Request $request)
     {
-        $query = Onsen::with('tags');
+        $query = Onsen::with('tags')
+            ->withAvg('reviews', 'rating')
+            ->withCount('likes');
         // 都道府県で絞り込み
         if ($request->filled('prefecture_id')) {
             $query->where('prefecture_id', $request->prefecture_id);
