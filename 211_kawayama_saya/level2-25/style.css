@@ -1,95 +1,270 @@
+/* =========================
+   ベース
+========================= */
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Shippori Mincho B1', serif;
+  color: #231815;
+  background: #fff;
+  line-height: 1.7;
 }
 
-header {
-    background: #000;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h2, h3 {
+  margin: 0;
+  font-weight: bold;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.5rem;
+/* =========================
+   ヒーローセクション
+========================= */
+
+/* ヒーロー全体：背景画像に置き換え（紫は削除） */
+.hero-block {
+  position: relative;
+  background-image: url("image/mv-bg-sp.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  overflow: hidden;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+/* 上部を白くする帯（ロゴの少し下まで） */
+.hero-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 180px; /* ロゴ高さに合わせて 120〜180px の範囲で微調整 */
+  background: #ffffff;
+  z-index: 1;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+/* 内部コンテナ（コンテンツは白帯の上に表示） */
+.hero-inner {
+  position: relative;
+  z-index: 2;               /* 白帯より前面に出す */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;            /* 左右2カラム */
+  align-items: flex-start;  /* 左カラムを上寄せ（公式寄せ） */
+  gap: 1.6rem;              /* 参考サイトに近いタイトさ */
+  padding: 2.2rem 1rem 4rem;/* 上はロゴ位置に合わせ、下に余裕を持たせる */
 }
 
-.hero {
-    text-align: center;
-    margin: 2rem 0;
+.title-main {
+  width: auto;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.hero img {
-    width: 100%;
-    max-width: 1200px;
+/* タイトルのサイズと重なりを厳密に指定 */
+.hero-title {
+  position: relative;
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+  z-index: 10;                 /* 画像より前面 */
+  margin-right: -120px;        /* 右へ重ねる量（公式寄せ） */
+  transform: translateY(40px); /* 下にずらして mv01 の右上にかかるように */
 }
 
-.hero h2 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+/* ロゴを公式寄せで大きく */
+.hero-logo {
+  display: block; 
+  margin-top: 12px; /* 白帯内で少し下げる */
+  margin-bottom: 6px;
+  pointer-events: auto;
 }
 
-.items {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+/* title01 を大きく（公式寄せ） */
+.title-main {
+  height: 110px;   /* 大きめに */
+  width: auto;
+  display: block;
+  margin-bottom: 6px;
 }
 
-.card {
-    width: 300px;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* title02 を小さめに */
+.title-sub.title-02 {
+  height: 38px;    /* title01 より小さく */
+  width: auto;
+  display: block;
+  margin-top: 8px;
 }
 
-.card img {
-    aspect-ratio: 4 / 3; 
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 0;
-    padding: 0;
-    display: block;
+/* title03 をさらに小さく（title02 と同じ視覚バランスに） */
+.title-sub.title-03 {
+  height: 32px;    /* title02 より小さめ */
+  width: auto;
+  display: block;
+  margin-top: 6px;
 }
 
-.price {
-    font-weight: bold;
-    margin: 0.5rem 0;
+/* 画像群：右寄せ・縦細め・見切れ軽減 */
+.hero-images-row {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: stretch;
+  overflow: hidden;
 }
 
-.detail {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+/* 各画像の比率を調整（縦長にしつつ幅を少し広げて見切れを抑える） */
+.hero-images-row img {
+  width: 26%;          /* 少し広めにして見切れを軽減 */
+  height: 480px;       /* 縦長の印象を維持 */
+  object-fit: cover;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
+/* mv01 の重要箇所が見えるように左寄せで微調整 */
+.hero-images-row img:nth-child(1) {
+  object-position: 12% 38%; /* 横12%（左寄せ強め）、縦38%（上寄せ） */
+}
+
+/* mv02 中央、mv03 を右寄せ気味 */
+.hero-images-row img:nth-child(2) { object-position: 50% 50%; }
+.hero-images-row img:nth-child(3) { object-position: 88% 50%; }
+
+
+
+
+
+
+/* =========================
+   ② イントロ
+========================= */
+.intro {
+  max-width: 900px;
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.title-logo {
+  width: 260px;
+  margin-bottom: 1.5rem;
+}
+
+.collab-title {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.collab-script {
+  font-family: 'Brush Script MT', cursive;
+  color: #7f0073;
+  margin-right: 0.5rem;
+}
+
+.collab-bold {
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.intro-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================
+   ③ 商品セクション
+========================= */
+.product-section {
+  padding: 6rem 0;
+}
+
+.product-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.product-photo img {
+  width: 480px;
+  height: auto;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.item-list .item {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.item .name {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+
+/* =========================
+   ④ ARCHIVE
+========================= */
+.archive {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 3rem;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.archive h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.archive .staff {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* =========================
+   ⑤ フッター
+========================= */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #f5f5f5;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: #f5f5f5;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ページトップ */
+#pagetop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  cursor: pointer;
+}
+
+#pagetop img {
+  width: 100%;
 }
