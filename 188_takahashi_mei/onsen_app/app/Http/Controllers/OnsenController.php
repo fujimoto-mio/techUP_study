@@ -32,7 +32,11 @@ class OnsenController extends Controller
             });
         }
 
-        $onsens = $query->paginate(10)->withQueryString();
+        $onsens = $query
+            ->withAvg('reviews', 'rating')
+            ->paginate(10)
+            ->withQueryString();
+
         $prefectures = Prefecture::all();
         $tags = Tag::all();
         return view('onsens.index', compact('onsens', 'prefectures','tags'));
@@ -69,7 +73,9 @@ class OnsenController extends Controller
     //詳細
     public function show($id)
     {
-        $onsen = Onsen::with(['reviews.user'])->findOrFail($id);
+        $onsen = Onsen::with(['images','reviews.user'])
+            ->withAvg('reviews', 'rating')
+            ->findOrFail($id);
         return view('onsens.show', compact('onsen'));
     }
     //編集
