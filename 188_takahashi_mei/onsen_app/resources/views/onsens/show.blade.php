@@ -26,13 +26,15 @@
                         @foreach($onsen->images as $image)
                             <div class="swiper-slide">
                                 <img src="{{ $image->image_path }}"
-                                    class="w-full max-h-96 object-contain rounded-xl cursor-pointer">
+                                    class="w-full max-h-96 object-contain rounded-xl cursor-pointer"
+                                    onclick="openModal('{{ $image->image_path }}')">
                             </div>
                         @endforeach
                     </div>
-
                     <div class="swiper-pagination"></div>
                 </div>
+
+
             @endif
             <!-- 星評価 -->
             @php
@@ -80,7 +82,14 @@
                             {{ $rating }} / 5
                         </span>
                     </div>
-
+                    @if($review->images->count())
+                        <div class="flex gap-2 mt-2">
+                            @foreach($review->images as $image)
+                                <img src="{{ $image->image_path }}" class="w-32 h-32 object-cover rounded cursor-pointer"
+                                    onclick="openModal('{{ $image->image_path }}')">
+                            @endforeach
+                        </div>
+                    @endif
                     <p class="mt-2">{{ $review->comment }}</p>
 
                     <p class="text-sm text-gray-500">
@@ -95,7 +104,8 @@
                 <div class="bg-white p-6 rounded shadow">
                     <h3 class="text-lg font-semibold mb-4">レビューを書く</h3>
 
-                    <form method="POST" action="{{ route('reviews.store', $onsen->id) }}">
+                    <form method="POST" action="{{ route('reviews.store', $onsen->id) }}" enctype="multipart/form-data">
+
                         @csrf
                         <!-- 星評価 -->
                         <label class="block mb-2 font-semibold">評価</label>
@@ -114,6 +124,8 @@
                         <!-- コメント -->
                         <label class="block mb-2">コメント</label>
                         <textarea name="comment" rows="4" class="w-full mb-2 p-2 border rounded"></textarea>
+                        <label class="block mb-2 font-semibold">画像（複数可）</label>
+                        <input type="file" name="images[]" multiple class="mb-4 border rounded p-2">
 
                         <button class="px-4 py-2 bg-blue-500 text-white rounded">
                             投稿する
@@ -121,6 +133,7 @@
                         @error('comment')
                             <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                         @enderror
+
                     </form>
 
                 </div>
@@ -134,6 +147,14 @@
                     レビューを書くには <a href="/login" class="text-blue-500">ログイン</a> してください
                 </p>
             @endauth
+            
+            <!-- モーダル -->
+            <div id="imageModal"
+                class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+                <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer"
+                    onclick="closeModal()">&times;</span>
+                <img id="modalImg" src="" class="max-h-[90%] max-w-[90%] rounded shadow-lg">
+            </div>
 
         </div>
         <!-- ⭐️評価JS -->
@@ -190,5 +211,16 @@
                     },
                 });
             });
+            // モーダル
+            function openModal(src) {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImg');
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                document.getElementById('imageModal').classList.add('hidden');
+            }
         </script>
 </x-app-layout>
