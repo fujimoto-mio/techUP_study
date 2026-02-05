@@ -37,8 +37,21 @@
                     検索
                 </button>
             </div>
+            <!-- フリーワード検索 -->
+            <input  type="text"
+                    name="keyword"
+                    value="{{ request('keyword') }}"
+                    placeholder="温泉名・住所・説明で検索"
+                    class="border rounded px-4 py-2 w-64"
+            >
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                検索
+            </button>
+            <a href="{{ route('onsens.index') }}" class="text-sm underline text-gray-500">
+                条件クリア
+            </a>
         </form>
-        
+
         {{-- 一覧 --}}
         @forelse ($onsens as $onsen)
             <div class="bg-white p-4 rounded shadow mb-4">

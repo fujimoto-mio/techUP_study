@@ -19,6 +19,10 @@ class Onsen extends Model
         "image_url",
         "avg_rating",
     ];
+    public function prefecture()
+    {
+        return $this->belongsTo(Prefecture::class);
+    }
     public function reviews()
     {
         return $this->hasMany(Review::class);
