@@ -54,6 +54,12 @@
                 <label class="block mb-1">画像</label>
                 <input type="file" name="images[]" multiple>
             </div>
+            <div>
+                <label class="block mb-1">画像URL</label>
+                <input type="text" name="image_urls[]" class="w-full border rounded px-3 py-2 mb-2"
+                    placeholder="https://example.com/image.jpg">
+                <input type="text" name="image_urls[]" class="w-full border rounded px-3 py-2" placeholder="複数登録したい場合">
+            </div>
 
             <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded">
                 登録する

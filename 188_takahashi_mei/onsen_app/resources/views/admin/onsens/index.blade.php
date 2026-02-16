@@ -2,10 +2,14 @@
     <div class="max-w-5xl mx-auto py-10">
 
         <h1 class="text-xl font-bold mb-6">温泉管理</h1>
-        
+        @if (session('success'))
+            <div class="mb-4 p-3 bg-green-100 text-green-800 rounded">
+                {{ session('success') }}
+            </div>
+        @endif
         <!-- 都道府県で絞る -->
         <form method="GET" action="{{ route('admin.onsens.index') }}" class="mb-4 flex gap-3">
-           
+
             <select name="prefecture_id" class="border rounded px-3 py-2">
                 <option value="">すべての都道府県</option>
                 @foreach($prefectures as $prefecture)

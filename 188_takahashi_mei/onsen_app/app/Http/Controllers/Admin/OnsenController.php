@@ -17,19 +17,19 @@ class OnsenController extends Controller
     {
         $query = Onsen::with('images', 'tags', 'prefecture');
 
-    //都道府県フィルタ
-    if ($request->filled('prefecture_id')) {
-        $query->where('prefecture_id', $request->prefecture_id);
+        //都道府県フィルタ
+        if ($request->filled('prefecture_id')) {
+            $query->where('prefecture_id', $request->prefecture_id);
+        }
+        $onsens = $query->latest()
+            ->paginate(10)
+            ->withQueryString();
+
+        $prefectures = Prefecture::all();
+
+        return view('admin.onsens.index', compact('onsens', 'prefectures'));
     }
-    $onsens = $query->latest()
-                    ->paginate(10)
-                    ->withQueryString();
 
-    $prefectures = Prefecture::all();
-
-    return view('admin.onsens.index', compact('onsens','prefectures'));
-}
-    
 
     /**
      * Show the form for creating a new resource.
@@ -56,6 +56,7 @@ class OnsenController extends Controller
             'prefecture_id' => 'required|exists:prefectures,id',
             'tags' => 'array',
             'images.*' => 'image|max:2048',
+            'image_urls.*' => 'nullable|url'
         ]);
 
         $onsen = Onsen::create([
@@ -74,12 +75,23 @@ class OnsenController extends Controller
                 ]);
             }
         }
+        if ($request->filled('image_urls')) {
+            foreach ($request->image_urls as $url) {
+                if ($url) {
+                    $onsen->images()->create([
+                        'image_path' => $url
+                    ]);
+                }
+            }
+        }
 
         if ($request->filled('tags')) {
             $onsen->tags()->sync($request->tags);
         }
 
-        return redirect()->route('admin.onsens.index');
+        return redirect()
+            ->route('admin.onsens.index')
+            ->with('success', '温泉を登録しました');
 
     }
 
@@ -129,7 +141,9 @@ class OnsenController extends Controller
 
         $onsen->tags()->sync($request->tags ?? []);
 
-        return redirect()->route('admin.onsens.index');
+        return redirect()
+            ->route('admin.onsens.index')
+            ->with('success', '温泉を更新しました');
     }
 
     /**
@@ -139,6 +153,8 @@ class OnsenController extends Controller
     {
         //削除
         $onsen->delete();
-        return redirect()->route('admin.onsens.index');
+        return redirect()
+            ->route('admin.onsens.index')
+            ->with('success', '温泉を削除しました');
     }
 }

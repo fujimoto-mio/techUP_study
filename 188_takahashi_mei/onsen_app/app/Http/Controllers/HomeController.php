@@ -8,7 +8,12 @@ class HomeController extends Controller
 {
     //
     public function index()
-    {
-        return view("home");
-    }
+{
+    $images = ['onsen1.jpg', 'onsen2.jpg', 'onsen3.jpg'];
+    $image = $images[array_rand($images)];
+
+    return view('home', compact('image'));
+}
+
+
 }

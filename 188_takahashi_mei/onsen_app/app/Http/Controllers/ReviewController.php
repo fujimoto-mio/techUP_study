@@ -55,11 +55,11 @@ class ReviewController extends Controller
                     ]);
                 } catch (\Exception $e) {
                     // ログに出すだけで処理を止めない
-                    \Log::error('画像保存エラー: '.$e->getMessage());
+                    \Log::error('画像保存エラー: ' . $e->getMessage());
                 }
             }
         }
-    
+
         return redirect()->route('onsens.show', $onsenId)->with('success', 'レビューを投稿しました');
     }
     //編集
@@ -92,7 +92,9 @@ class ReviewController extends Controller
             }
         }
 
-        return redirect()->route('mypage');
+        return redirect()
+            ->route('mypage')
+            ->with('success', 'レビューを更新しました');
     }
     //削除
     public function destroy(Review $review)
@@ -101,7 +103,9 @@ class ReviewController extends Controller
 
         $review->delete();
 
-        return redirect()->route('mypage');
+        return redirect()
+            ->route('mypage')
+            ->with('success', 'レビューを削除しました');
     }
 
 }
