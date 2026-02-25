@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid課題</title>
+
+<style>
+.wrapper_1 {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr;
+  grid-template-rows: 1fr 1.5fr 1fr;
+}
+
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: blue;
+  color: #fff;
+  padding: 20px;
+}
+
+.box2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background: green;
+  padding: 20px;
+}
+
+.box3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background: red;
+  color: #fff;
+  padding: 20px;
+}
+
+.box4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background: cyan;
+  padding: 20px;
+}
+
+.box5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background: white;
+  padding: 20px;
+}
+
+.box6 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background: yellow;
+  padding: 20px;
+}
+
+.box7 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background: purple;
+  color: #fff;
+  padding: 20px;
+}
+
+.box8 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background: magenta;
+  padding: 20px;
+}
+
+.box9 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background: brown;
+  color: #fff;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper_1">
+  <div class="box1">header</div>
+
+  <div class="box2">content-1</div>
+  <div class="box3">content-2</div>
+
+  <div class="box4">content-3-1</div>
+  <div class="box5">content-3-2</div>
+  <div class="box6">content-3-3</div>
+
+  <div class="box7">content-4-1</div>
+  <div class="box8">content-4-2</div>
+
+  <div class="box9">footer</div>
+</div>
+</body>
+</html>
