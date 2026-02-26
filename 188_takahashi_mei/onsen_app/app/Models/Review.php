@@ -21,4 +21,8 @@ class Review extends Model
     {
         return $this->belongsTo(Onsen::class);
     }
+    public function images()
+    {
+        return $this->hasMany(ReviewImage::class)->orderBy("sort_order");
+    }
 }

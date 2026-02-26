@@ -8,4 +8,9 @@ class Prefecture extends Model
 {
     protected $fillable = ['code', 'name'];
     public $timestamps = false;
+
+    public function onsens()
+    {
+        return $this->hasMany(Onsen::class);
+    }
 }
