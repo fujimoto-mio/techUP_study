@@ -6,13 +6,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OnsenController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//TOP画面
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
+
 })->middleware(['auth', 'verified'])->name('dashboard');
 //ログイン（未）
 Route::get('/onsens', [OnsenController::class, 'index'])->name('onsens.index');
@@ -38,5 +39,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/mypage/icon', [MypageController::class, 'updateIcon'])->name('mypage.icon');
 
 });
+//管理者用画面
+Route::middleware(['auth','admin'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::resource('onsens', \App\Http\Controllers\Admin\OnsenController::class);
+    });
 
 require __DIR__ . '/auth.php';
