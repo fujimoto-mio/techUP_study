@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSSスタイルの継承</title>
+</head>
+<style>
+    .gaideline{
+        background-color: white;
+        height: 400px;
+        width: 500px;
+        padding: 5px;
+        border: 3px solid black;
+    }
+    .parent_1{
+        background-color: white;
+        margin: 0 auto;
+        border: 5px solid red;
+    }
+    .child_1{
+        background-color: white;
+        margin: 0 auto 0 1em;
+        border: 5px solid yellow;
+    }
+    .child_2{
+        background-color: white;
+        margin: inherit;
+        border: 5px solid green;      
+    }
+</style>
+<body>
+    <div class="gaideline">
+        <div class="parent_1">
+            継承テスト1
+            <div class="child_1">
+                継承テスト2
+                <div class="child_2">
+                    継承テスト3
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

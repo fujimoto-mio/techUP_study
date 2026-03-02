@@ -1,0 +1,458 @@
+body {
+    background-color: #fcefd6; /* 希望の背景色 */
+  }
+/*トップバー*/
+.top-bar {
+    background-color: #4e342e;
+    height: 24px;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    height: auto;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* 透過 */
+header {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 224, 191, 0.8); /* 背景色を透過 */
+    padding: 20px 0;
+}
+
+/* ヘッダースタイル */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 7.5rem;
+    top: 0;
+}
+
+/* ロゴの位置 */
+.header-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-logo .logo-image {
+    width: 150px;
+}
+
+/* タイトル */
+.header-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ナビゲーション */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+nav li a:hover{
+    color: #7e7e7ed0; 
+    transition: all 0.3s ease;
+    transform: translateY(5px);
+}
+/*ヘッダーの猫の画像*/    
+.header-img-cat {
+    position: relative; /* header-container の背面に配置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91vh; /* ビューポート全体をカバー */
+    z-index: -1; /* 他の要素の背面に配置 */
+}
+
+.header-img-cat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の比率を維持しつつ、全体をカバー */
+}
+/* ボタンのスタイル */
+.reservation {
+    position: absolute;
+    bottom: 10%; /* 画像の下部に配置 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.reservation-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #fff;
+    color: #8B5E3C;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: 2px solid #8B5E3C;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* ホバー時のエフェクト */
+.reservation-btn:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    background:  #dddddd;
+}
+
+/*ニュースメニュー*/
+.carousel-container {
+    position: relative;
+    width: 669px;
+    height: 199px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-684px); /* 669 + 左右マージン(15) */
+  }
+  
+  .carousel-slide {
+    min-width: 669px;
+    height: 199px;
+    margin: 0 15px;
+  }
+  
+  .carousel-slide img {
+    width: 669px;
+    height: 199px;
+    display: block;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 15px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prev-btn {
+    left: -40px;
+  }
+  
+  .next-btn {
+    right: -40px;
+  }
+  
+/*スタッフ猫紹介の背景*/
+.staff-neko-img {
+    position: relative; /* header-container の背面に配置 */
+    top: 0;
+    left: 0;
+    width: 100%; /* ビューポート全体をカバー */
+    z-index: 0; /* 他の要素の背面に配置 */
+}
+
+.staff-neko-backgaound img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/*スタッフ猫紹介　本文*/
+.staff-neko-section {
+    position: relative;
+    width: 100%;
+    height: 650px; /* 高さを適宜調整 */
+    background-image: url("images/staff-neko-background.jpg");
+    background-size: cover;
+    text-align: center;
+    z-index: 1;
+}
+
+.section-title {
+    padding: 4rem;
+    height: 42px;
+    font-size: 42px;
+    color: #8B5E3C;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.staff-neko-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 0;
+}
+
+.staff-neko-slider {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.staff-neko img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*スタッフ猫紹介ボタン*/
+
+.button-container {
+    margin-top: 5%;
+    position: relative;
+    z-index: 2;
+}
+
+.more-info-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #8B5E3C;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #8B5E3C;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.more-info-btn:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    background:  #dddddd;
+}
+
+/* 料金ページの導線 */
+.price-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; /* 間隔を調整 */
+    padding-top: 24rem;
+    position: relative;
+}
+.price-block {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.price-block img {
+    position: absolute;
+    top: -30%;
+    left: -45%; /* 画像を左に寄せる */
+    width: 600px;
+    max-width: 100%;
+    z-index: 1;
+}
+/*テキストボックス（料金プラン）*/
+.price-text {
+    max-width: 700px;
+    text-align: center;
+    left: 50%;
+    padding: 60px 40px;
+    background: rgba(248, 211, 186, 0.7);
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.price-text h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #A04D2E;
+}
+
+.price-text p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #8B5E3C;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid #8B5E3C;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.btn:hover {
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+    background:  #dddddd;
+}
+
+/* コンセプト導線の画像 */
+.concept-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 240px ;
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+.concept-block {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.concept-block img {
+    position: absolute;
+    top: -30%;
+    right: -45%; /* 画像を左に寄せる */
+    width: 600px;
+    max-width: 100%;
+    z-index: 1;
+}
+/*コンセプト導線の本文*/
+.concept-text {
+    max-width: 700px;
+    text-align: center;
+    right: 50%;
+    padding: 60px 40px;
+    background: rgba(248, 211, 186, 0.7);
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+}
+
+.concept-text h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #A04D2E;
+}
+
+.concept-text p{
+    font-weight: bold;
+}
+
+
+/* フッター
+------------------------------- */
+.page-footer {
+    background-size: cover;
+    background-position: center;
+    padding-top: 1rem;
+}
+
+.information-head {
+    margin-bottom: 10px; /* テーブルとの間隔を開ける */
+    text-align: center;  /* 文字を中央揃え */
+    font-size: 1.5em;    /* 見出しのサイズを少し大きく */
+}
+.information {
+    display: flex; /* 横並びにする */
+    justify-content: space-between; /* 両端に配置 */
+    align-items: flex-start; /* 上端揃え */
+    gap: 20px; /* 間隔を開ける */
+}
+
+.information > div {
+    width: 50%; /* 半分ずつに分ける */
+}
+
+.location-map iframe {
+    width: 100%; /* divいっぱいに広げる */
+    height: 320px; /* 高さはそのまま */
+}
+
+.information-info {
+    margin-bottom: 2rem;
+}
+
+.information .info {
+    padding: 0;
+}
+
+.information-wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.info {
+    width: 100%;
+    max-width: 544px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+.info th,.info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.info td {
+    padding: 1rem 0;
+}
+.copyright {
+    background-color:  #4e342e;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/*レスポンシブ対応*/

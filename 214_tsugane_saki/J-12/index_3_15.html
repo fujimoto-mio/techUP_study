@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  
+  <script>
+   function Who(name) {
+    this.name = name;
+   }
+   Who.prototype.getName = function() {
+    console.log('Myname is ' + this.name);
+   }
+   const person = new Who('tanaka');
+   person.getName();
+  </script>
+</body>
+</html>

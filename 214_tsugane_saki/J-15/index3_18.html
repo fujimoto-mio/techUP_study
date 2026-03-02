@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript フォームの操作</title>
+</head>
+
+<body>
+    <input id="hoge" name="hoge" type="number" value="0" step="1">
+    <input id="btn" type="button" value="ボタン">
+
+    <script>
+        'use strict';
+
+        document.getElementById('btn').onclick = function () {
+
+            const elm = document.getElementById('hoge')
+
+            elm.stepUp(1);
+
+        }
+
+    </script>
+</body>
+
+</html>

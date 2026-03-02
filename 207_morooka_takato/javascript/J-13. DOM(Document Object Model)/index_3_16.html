@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>DOM</title>
+</head>
+</head>
+    <body>
+        <form>
+            <ul class="list-group">
+                <li class="list-group-item">100</li>
+                <li class="list-group-item">110</li>
+                <li class="list-group-item">120</li>
+                <li class="list-group-item">130</li>
+                <li class="list-group-item">140</li>
+            </ul>
+
+            <input id="btn" type="button" value="変更">
+            <input id="resetbtn" type="reset" value="リセット">
+        </form>
+    </body>
+    <script>
+
+        var ListGroup = document.getElementsByTagName('ul');
+        var listItems = document.querySelectorAll('ul > li');
+        var items = [];
+
+        listItems.forEach(function(li) {
+            items.push(parseInt(li.textContent));
+        });
+
+        document.getElementById('btn').addEventListener('click', function(){
+
+            var ListGroupItem = document.getElementsByClassName('list-group-item');
+
+            for (let i = 0;  ListGroupItem.length > i; i++){
+                var ListItems = parseInt(listItems[i].textContent);
+                listItems[i].textContent = ListItems * 10;
+            } 
+        });
+
+        document.getElementById('resetbtn').addEventListener('click', function(){
+            var ListGroupItem = document.querySelectorAll('.list-group-item');
+
+            ListGroupItem.forEach(function(item, index){
+                item.textContent = items[index];
+            });
+        });
+
+
+
+    </script>
+</html>

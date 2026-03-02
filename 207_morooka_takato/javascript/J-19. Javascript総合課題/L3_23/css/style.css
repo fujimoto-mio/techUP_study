@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 62.5%;
+}
+body{
+    background-color:dimgray;
+}
+
+#content{
+    text-align: center;
+    margin-top: 20%;
+}
+
+#countdown{
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+}
+
+.time{
+    color:blanchedalmond;
+    font-size: 5rem;
+    font-family: "Merriweather", serif;
+    letter-spacing:20px
+}
+
+.times{
+    color:aliceblue;
+    font-size: 10rem;
+    font-family: "Merriweather", serif;
+    
+}
+
+#happy{
+    font-size: 13rem;
+    color :rgb(80, 43, 43);
+}
+

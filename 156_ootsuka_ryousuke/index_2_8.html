@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>入力部品を使う</title>
+</head>
+<body>
+<section>
+    <h2>かき氷</h2>
+    <div class="center">
+        <p>好きなシロップを選んでね!<br>※シロップは複数選択可能です!</p>
+    </div>
+</section>
+
+<form class="center" action="" method="post">
+    <table>
+        <tr>
+          <td>
+                <label>
+                    <input type="checkbox" name="check1" value="check1" checked="checked"/>イチゴ<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="check2" value="check2" checked="checked"/>レモン<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="check3" value="check3" checked="checked"/>オレンジ<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="check4" value="check4" checked="checked"/>カルピス<br>
+                </label>
+                <label>
+                    <input type="checkbox" name="check5" value="check5" checked="checked"/>ブルーハワイ<br>
+                </label>
+          </td>
+        </tr>
+        <tr>
+            <td>
+               <input type="button" name="btn1" value="送信" onclick="alert('送信ボタンが押されました');">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

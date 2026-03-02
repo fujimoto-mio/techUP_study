@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>画像の配置</title>
+</head>
+<style>
+.sample_img{
+    background: url(https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg) no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    width: 800px;
+    height: 500px;
+  }
+ 
+.img{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+ 
+.img img{
+    width: 200px;
+    height: 200px;
+  }
+</style>
+<body>
+<div class="sample_img">
+    <div class="img">
+        <img src="https://techup.tokyo/wp-content/uploads/2021/12/image1.jpg" alt="背景2">
+    </div>
+</div>
+</body>
+</html>

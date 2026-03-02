@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS継承の課題</title>
+  <style>
+    .parent {
+      border-style: solid;
+      border-width: 4px;
+      border-color: red;
+      padding: 0 ;
+    }
+
+    .child {
+      border-style: solid;
+      border-width: inherit;
+      border-color: yellow;
+      margin-left: 20px;
+      padding: inherit;
+    }
+
+    .children {
+      border-style: solid;
+      border-width: inherit;
+      border-color: green;
+      margin-left: 40px;
+      padding: inherit;
+    } 
+    </style>
+</head>
+<body>
+    <div class="parent">
+        継承テスト1
+        <div class="child">
+            継承テスト2
+                <div class="children">
+                    継承テスト3
+                </div>
+        </div>
+    </div>
+</body>
+</html>

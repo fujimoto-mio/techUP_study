@@ -1,0 +1,24 @@
+<script>
+    const menber = ["山田さん","佐藤さん","内田さん"]; 
+
+    console.log('最初に配列の値を表示します。');
+
+    for( let i=0; i < 3; i++){
+        console.log(menber[i]);
+    }
+
+    while(menber.length > 0){
+        const name = menber.shift();
+        console.log('配列の値を1つ消します。');
+        console.log(name + 'を消しました。');
+
+        if(menber.length !== 0){
+            console.log('残りを表示します');
+            for(let j = 0; j < menber.length; j++){
+                console.log(menber[j]);
+            }
+        }else{
+            console.log('データがなくなりました。')
+        }
+    }
+</script>
