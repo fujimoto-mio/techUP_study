@@ -4,6 +4,7 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
+        <input type="hidden" name="redirect" value="{{ request('redirect') }}">
         <div class="text-center">
             <h2 class="text-2xl font-bold text-orange-400">
                 ゆさんぽ

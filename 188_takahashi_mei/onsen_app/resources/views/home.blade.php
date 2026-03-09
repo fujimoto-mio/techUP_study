@@ -1,17 +1,19 @@
 <x-app-layout bg="/images/home1.jpg">
+<x-slot name="header">  
+</x-slot>
     @php
         $images = ['onsenTOP1.jpg', 'onsenTOP2.jpg', 'onsenTOP3.jpg'];
         $image = $images[array_rand($images)];
     @endphp
-    <div class="relative min-h-[80vh] flex items-center justify-center">
+    <div class="relative min-h-[90vh] flex items-center justify-center">
 
         <!-- TOP画像 -->
-        <div class="absolute inset-0 rounded-3xl
+        <div class="absolute inset-0 
                 bg-black/30 blur-2xl scale-105">
     </div>
         <img id="heroImage" src="{{ asset('images/' . $image) }}" alt="温泉"
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 rounded-3xl">
-        <div class="absolute inset-0 bg-black/10 rounded-3xl"></div>
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+        <div class="absolute inset-0 bg-black/10"></div>
 
         <!-- コンテンツ　-->
         <div class="relative max-w-2xl w-full text-center text-white px-6">

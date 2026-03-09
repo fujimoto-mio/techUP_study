@@ -31,6 +31,8 @@ class ReviewController extends Controller
             'rating' => 'required|integer|min:1|max:5',
             'comment' => 'nullable|string|max:1000',
             'images.*' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+        ] ,[
+            'rating.required' => '評価は必須です。⭐️を選んでください。',
         ]);
         // NGワードチェック
         $comment = $request->comment
@@ -42,10 +44,10 @@ class ReviewController extends Controller
             'rating' => $request->rating,
             'comment' => $comment,
         ]);
-        //dd($review); // 投稿できるか確認
+
         //画像保存
         if ($request->hasFile('images')) {
-            //dd($request->file('images')); // ここで配列が表示されるか確認
+
             foreach ($request->file('images') as $index => $image) {
                 try {
                     $path = $image->store('review_images', 'public');
@@ -54,7 +56,6 @@ class ReviewController extends Controller
                         'sort_order' => $index,
                     ]);
                 } catch (\Exception $e) {
-                    // ログに出すだけで処理を止めない
                     \Log::error('画像保存エラー: ' . $e->getMessage());
                 }
             }

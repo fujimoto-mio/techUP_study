@@ -25,4 +25,10 @@ class Review extends Model
     {
         return $this->hasMany(ReviewImage::class)->orderBy("sort_order");
     }
+    public function getPostedDateAttribute()
+{
+    return $this->created_at
+        ? $this->created_at->format('Y/m/d')
+        : '';
+}
 }

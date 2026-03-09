@@ -2,16 +2,16 @@
 <x-app-layout bg="/images/home1.jpg">
 
     <x-slot name="header">
-        <h2 class="font-semibold text-xl leading-tight">
+        <h2 class="font-semibold leading-tight">
             温泉一覧
         </h2>
     </x-slot>
 
-    <div class="bg-yellow-50/80 backdrop-blur-sm bg-cover bg-center py-10 rounded-2xl shadow-xl">
-        <div class="max-w-5xl mx-auto px-6">
+    <div class="bg-[#F0F3EA] bg-center shadow-xl py-2 bg-white/60 hadow-xl py-2 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6">
 
             <!-- 検索フォーム -->
-            <div class="bg-white rounded-2xl shadow-sm p-6 mb-8">
+            <div class="bg-white shadow-sm p-6 mb-2 border-2 border-[#C97A70] ">
                 <form method="GET" action="{{ route('onsens.index') }}" class="space-y-4">
 
                     <div class="flex flex-col md:flex-row gap-4">
@@ -62,9 +62,9 @@
             </div>
 
             <!-- 一覧 -->
-            <div class="space-y-4">
+            <div class="space-y-3">
                 @forelse ($onsens as $onsen)
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-white  shadow-lg overflow-hidden">
 
                         <div class="flex flex-col md:flex-row">
 
@@ -96,6 +96,9 @@
                                         <a href="{{ route('login') }}" class="text-gray-400 text-sm">🤍 ログインしていいね</a>
                                     @endauth
                                 </div>
+                                <p class="text-sm text-gray-600">
+                                    {{ $onsen->short_description }}
+                                </p>
 
                                 <p class="text-sm text-gray-600">
                                     住所：{{ $onsen->address }}

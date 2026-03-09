@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Review;
 use App\Models\Like;
 use App\Models\OnsenImage;
+use Illuminate\Support\Str;
 
 class Onsen extends Model
 {
@@ -39,4 +40,8 @@ class Onsen extends Model
     {
         return $this->hasMany(OnsenImage::class);
     }
+    public function getShortDescriptionAttribute()
+{
+    return Str::limit($this->description, 150, '...');
+}
 }

@@ -18,34 +18,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
-<body class="font-sans antialiased {{ isset($bg) ? 'bg-cover bg-center' : '' }}"
-      @isset($bg)
-          style="background-image: url('{{ $bg }}');
-                 background-size: cover;
-                 background-position: center;
-                 background-repeat: no-repeat;"
-      @endisset
->
+
+<body class="min-h-screen flex flex-col font-sans antialiased {{ isset($bg) ? 'bg-cover bg-center' : '' }}" @isset($bg) style="background-image: url('{{ $bg }}');
+     background-size: cover;
+     background-position: center;
+ background-repeat: no-repeat;" @endisset>
     <x-header />
-    @include('layouts.navigation')
+      {{--  @include('layouts.navigation')--}}
 
     <!-- Page Heading -->
     @isset($header)
-        <header class="bg-stone-500 text-gray-100 dark:bg-gray-800 shadow">
-            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <header class="relative bg-cover bg-center text-gray-100 "> 
+            <div class="absolute inset-0 bg-[#244D73]"></div>
+            <div class="relative
+                max-w-7xl mx-auto
+                py-2 px-5
+                text-base
+                text-[#F0F3EA]
+                drop-shadow-[0_0_2px_gray]">
                 {{ $header }}
             </div>
         </header>
     @endisset
 
     <!-- Page Content -->
-    <main class="container mx-auto px-4 py-6">
+    <main class="flex-grow container mx-auto px-3">
         {{ $slot }}
     </main>
     </div>
     <x-footer />
     <!-- スライダーJS読み込み -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
 </html>

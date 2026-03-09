@@ -31,7 +31,7 @@ class MypageController extends Controller
         $path = $request->file('icon')->store('icons', 'public');
 
         $user = auth()->user();
-        $user->icon = '/storage/' . $path;
+        $user->icon = $path;
         $user->save();
 
         return back();

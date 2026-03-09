@@ -7,18 +7,24 @@ use App\Http\Controllers\OnsenController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MypageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RankingController;
+
 
 //TOP画面
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
+ Route::get('/dashboard', function () {
     return view('dashboard');
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 //ログイン（未）
 Route::get('/onsens', [OnsenController::class, 'index'])->name('onsens.index');
 Route::get('/onsens/{onsen}', [OnsenController::class, 'show'])->name('onsens.show');
-
+//ランキング
+Route::prefix('rankings')->group(function () {
+    Route::get('/', [RankingController::class, 'index'])->name('rankings.index');
+    Route::get('/{type}', [RankingController::class, 'show'])->name('rankings.show');
+});
 //ログイン（必須）
 Route::middleware('auth')->group(function () {
     // ユーザープロフィール関連

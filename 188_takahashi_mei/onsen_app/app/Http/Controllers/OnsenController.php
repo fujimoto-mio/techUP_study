@@ -35,11 +35,11 @@ class OnsenController extends Controller
         //フリーワード検索
         if ($request->filled('keyword')) {
             $keyword = trim($request->keyword);
-    
+
             $query->where(function ($q) use ($keyword) {
                 $q->where('name', 'like', "%{$keyword}%")
-                  ->orWhere('address', 'like', "%{$keyword}%")
-                  ->orWhere('description', 'like', "%{$keyword}%");
+                    ->orWhere('address', 'like', "%{$keyword}%")
+                    ->orWhere('description', 'like', "%{$keyword}%");
             });
         }
 
@@ -48,9 +48,9 @@ class OnsenController extends Controller
 
         $prefectures = Prefecture::all();
         $tags = Tag::all();
-        return view('onsens.index', compact('onsens', 'prefectures','tags'));
+        return view('onsens.index', compact('onsens', 'prefectures', 'tags'));
     }
-    
+
     //追加
     public function store(Request $request)
     {
@@ -82,7 +82,8 @@ class OnsenController extends Controller
     //詳細
     public function show($id)
     {
-        $onsen = Onsen::with(['images','reviews.user'])
+        $onsen = Onsen::with(['images', 'reviews.user'])
+            ->withCount('reviews')
             ->withAvg('reviews', 'rating')
             ->findOrFail($id);
         return view('onsens.show', compact('onsen'));
