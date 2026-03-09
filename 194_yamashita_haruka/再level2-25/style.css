@@ -1,0 +1,877 @@
+/* 全体のリセットとコンテナ設定 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 画面の中央に寄せる */
+    position: relative;
+    /* absoluteの基準にする */
+    z-index: 2;
+    /* 写真の上に文字が来るようにする */
+    height: 850px;
+    /* headerと同じ高さにする */
+    padding-top: 130px;
+
+}
+
+
+/*ヘッダー背景画像*/
+header {
+    background-image: url(画像css/mv-bg.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 850px;
+    background-size: 100% 63%;
+    position: relative;
+    overflow: visible;
+}
+
+/*ヘッダー横並び、要素を下にさげる*/
+.header-group {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 115px;
+    width: 100%;
+    position: absolute;
+    /* headerに対して絶対配置にする */
+    top: 0;
+    right: 0;
+    z-index: 1;
+    /* 写真を下に */
+
+}
+
+/*ヘッダー写真のサイズ調整*/
+.header-photo img {
+    width: 100%;
+    /* 親要素の幅に合わせる */
+    height: auto;
+    /* 比率を維持 */
+    max-width: 300px;
+    /* 最大幅を指定 */
+    padding-right: 12px;
+}
+
+/*ヘッダーキャッチフレーズ・ロゴ*/
+.header-catchphrase-word1 {
+    width: 400px;
+    position: absolute;
+    top: 35px;
+    left: -30px;
+}
+
+.header-catchphrase-word1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+
+}
+
+/*ヘッダーキャッチフレーズ・キラキラニットスカート*/
+.header-catchphrase-word2 {
+    width: 550px;
+    position: absolute;
+    top: 250px;
+    left: -100px;
+}
+
+.header-catchphrase-word2 img {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+
+}
+
+/*ヘッダーキャッチフレーズ・大人かわいいハート*/
+.header-catchphrase-word3 {
+    width: 400px;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+
+}
+
+.header-catchphrase-word3 img {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+
+}
+
+/*ヘッダーキャッチフレーズ・vol.1*/
+.header-catchphrase-word4 {
+    width: 150px;
+    position: absolute;
+    top: 545px;
+    left: 320px;
+
+}
+
+.header-catchphrase-word4 img {
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+
+}
+
+/*ヘッダーキャッチフレーズ・Scroll*/
+.header-catchphrase-word5 {
+    width: 20px;
+    position: absolute;
+    top: 500px;
+    right: 30px;
+
+}
+
+.header-catchphrase-word5 img {
+    width: 100%;
+    height: 100%;
+    max-width: 20px;
+}
+
+/*Scrollの前に縦線、疑似要素使用*/
+.header-catchphrase-word5::before {
+    content: "";
+    /*疑似要素の中身を指定*/
+    position: absolute;
+    /*絶対位置指定*/
+    right: 150%;
+    /*横位置の指定*/
+    top: 0;
+    /*縦位置の指定*/
+    background: #000000;
+    /*線の色指定*/
+    width: 1px;
+    /*線の幅指定*/
+    height: 250%;
+    /*線の高さ指定*/
+}
+
+
+
+/*キャッチフレーズの位置調整*/
+.header-catchphrase {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+/*ここからmain*/
+
+
+section {
+    margin-top: 100px;
+}
+
+.main-item {
+    text-align: center;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+
+/*ニットスカートついに完成*/
+.lead-title {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.lead-title img {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+}
+
+/*Oggiメイン要素の中のロゴ*/
+.main-logo {
+    width: 200px;
+    margin: 30px auto;
+}
+
+.main-logo img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+}
+
+/*コラボレーションアイテム*/
+.main-collaboration-item {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.main-collaboration-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+}
+
+/*メイン要素のの写真*/
+.main-item-photo {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-item-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+
+/*縦線*/
+.line {
+    border-left: 1px solid black;
+    height: 80px;
+    width: 0;
+    margin: 50px auto;
+}
+
+
+/*スカートの価格*/
+
+/* テーブル全体の基本設定 */
+.product-table {
+    border-collapse: collapse;
+    font-family: "Times New Roman", serif;
+    color: #333;
+    margin: 0 0 0 auto;
+    position: relative;
+    right: 55px;
+}
+
+.product-name {
+    font-size: 22px;
+    font-weight: normal;
+    padding-right: 40px;
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+/* 四角い枠のサイズ調整 */
+.size-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #333;
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+.price {
+    padding: 8px 20px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.price span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.detail-btn {
+    display: inline-block;
+    background-color: #a88880;
+    color: white;
+    text-decoration: none;
+    padding: 6px 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/*ポイント123*/
+
+/*ポイント1*/
+.pointo1 {
+    position: absolute;
+    top: 161px;
+    left: 122px;
+    width: 200px;
+}
+
+.pointo1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+}
+
+/*ポイント2*/
+
+.pointo2 {
+    position: absolute;
+    top: 267px;
+    left: 686px;
+    width: 282px;
+}
+
+.pointo2 img {
+    width: 100%;
+    height: 100%;
+    max-width: 282px;
+}
+
+/*ポイント3*/
+
+.pointo3 {
+    position: absolute;
+    top: 403px;
+    left: 551px;
+    width: 282px;
+}
+
+.pointo3 img {
+    width: 100%;
+    height: 100%;
+    max-width: 282px;
+}
+
+
+
+/* 横並び*/
+.black-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 80px;
+    margin-top: 250px;
+
+}
+
+/*黒色のコーディネート*/
+.black-item-photo1 {
+    width: 900px;
+}
+
+.black-item-photo1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+}
+
+
+/*ブラック見出し*/
+.line-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 110px 0 0 180px;
+}
+
+
+.text {
+    font-family: serif;
+    font-size: 80px;
+    letter-spacing: 0.2em;
+}
+
+.black-line {
+    width: 260px;
+    height: 3px;
+    /* 線の太さ */
+    background-color: gray;
+    margin: 60px auto;
+
+}
+
+/*ブラック説明文*/
+.black-explanation {
+    position: absolute;
+    bottom: 160px;
+    left: 250px;
+    margin: 100px auto;
+
+}
+
+.black-box {
+    position: relative;
+}
+
+
+.head-p1,
+.head-p3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+}
+
+.head-p2 {
+    font-size: 24px;
+    background-color: black;
+    color: #ffffff;
+    padding: 5px;
+    width: fit-content;
+    /*背景色を文字の幅に合わせる*/
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+
+
+}
+
+.black-checkpoint {
+    margin-top: 50px;
+
+}
+
+.black-checkpoint p {
+    font-size: calc(16 / 1280 * 100vw);
+    width: calc(360 / 1280 * 100vw);
+    text-align: justify;
+    line-height: 2;
+    display: block;
+    letter-spacing: 0;
+    font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "MS P明朝", "MS Mincho", serif;
+    font-weight: 450;
+}
+
+
+/*ブラック、プライス表*/
+.price-section {
+    width: 100%;
+    max-width: 400px;
+    font-family: "serif";
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.price-table td {
+    vertical-align: middle;
+}
+
+/* 商品名：左寄せ */
+.item-name {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+/* 価格：右寄せ */
+.item-price {
+    text-align: right;
+    font-size: 20px;
+}
+
+.item-price span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* 黒ボタン*/
+.item-button {
+    text-align: right;
+    width: 100px;
+}
+
+.item-button a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 15px;
+    letter-spacing: 0.1em;
+}
+
+/* 下のセクション（アコーディオン部分） */
+.size-accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.plus-icon {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.price-photo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 50px;
+    position: absolute;
+    top: -200px;
+    left: 70px;
+}
+
+.black-item-photo2 {
+    width: 500px;
+
+}
+
+.black-item-photo2 img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+}
+
+.black-container {
+    position: relative;
+    height: 700px;
+}
+
+/*白色のコーディネート*/
+
+/* 横並び*/
+.white-item {
+    display: flex;
+    align-items: flex-start;
+    font-size: 80px;
+    justify-content: space-between;
+    position: relative;
+
+
+}
+
+/*白色のコーディネート*/
+.white-item-photo1 {
+    width: 710px;
+    position: absolute;
+    left: 90px
+}
+
+.white-item-photo1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 710px;
+    position: relative;/*a href="#"で対応するように先頭に*/
+    z-index: 100;
+
+}
+
+
+/*ホワイト見出し*/
+.white-line-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 110px 0 0 180px;
+    position: absolute;
+    left: 620px;
+}
+
+
+.white-text {
+    font-family: serif;
+    font-size: 80px;
+    letter-spacing: 0.2em;
+
+}
+
+.white-line {
+    width: 200px;
+    height: 3px;
+    background-color: #CFB58A;
+    margin: 60px auto;
+
+}
+
+/*ホワイト説明文*/
+.white-explanation {
+    position: absolute;
+    top: 210px;
+    left: 890px;
+    margin: 100px auto;
+
+}
+
+.white-box {
+    position: relative;
+    z-index: 1;
+    height: 960px;
+}
+
+
+.head-p4,
+.head-p6 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+}
+
+.head-p5 {
+    font-size: 24px;
+    background-color: #CFB58A;
+    color: #ffffff;
+    padding: 5px;
+    width: fit-content;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+
+
+}
+
+.white-checkpoint {
+    margin: 50px 0;
+
+}
+
+.white-checkpoint p {
+    font-size: calc(16 / 1280 * 100vw);
+    width: calc(360 / 1280 * 100vw);
+    text-align: justify;
+    line-height: 2;
+    display: block;
+    letter-spacing: 0;
+    font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "MS P明朝", "MS Mincho", serif;
+    font-weight: 450;
+}
+
+/*ベージュボタン*/
+
+.item-button2 {
+    text-align: right;
+    width: 100px;
+}
+
+.item-button2 a {
+    display: inline-block;
+    background-color: #CFB58A;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 15px;
+    letter-spacing: 0.1em;
+}
+
+
+/*モカ*/
+
+/* 横並び*/
+.moca-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 80px;
+    margin-top: 250px;
+
+}
+
+/*モカのコーディネート*/
+.moca-item-photo1 {
+    width: 710px;
+}
+
+.moca-item-photo1 img {
+    width: 100%;
+    height: 100%;
+    max-width: 710px;
+}
+
+
+/*モカ見出し*/
+.moca-line-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 110px 0 0 180px;
+}
+
+
+.moca-text {
+    font-family: serif;
+    font-size: 80px;
+    letter-spacing: 0.2em;
+}
+
+.moca-line {
+    width: 100px;
+    height: 3px;
+    background-color: #A68079;
+    margin: 60px auto;
+
+}
+
+/*モカ  説明文*/
+.moca-explanation {
+    position: absolute;
+    left: 250px;
+    top: -850px;
+    margin: 100px auto;
+
+}
+
+.moca-box {
+    position: relative;
+    height: 60px;
+
+}
+
+
+.head-p7,
+.head-p9 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+}
+
+.head-p8 {
+    font-size: 24px;
+    background-color: #A68079;
+    color: #ffffff;
+    padding: 5px;
+    width: fit-content;
+    margin: 10px 0;
+    letter-spacing: 0.1em;
+
+
+}
+
+.moca-checkpoint {
+    margin: 60px 0;
+
+}
+
+.moca-checkpoint p {
+    font-size: calc(16 / 1280 * 100vw);
+    width: calc(360 / 1280 * 100vw);
+    text-align: justify;
+    line-height: 2;
+    display: block;
+    letter-spacing: 0;
+    font-family: "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "MS P明朝", "MS Mincho", serif;
+    font-weight: 450;
+}
+
+/*モカボタン*/
+
+.item-button3 {
+    text-align: right;
+    width: 100px;
+}
+
+.item-button3 a {
+    display: inline-block;
+    background-color: #A68079;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 15px;
+    letter-spacing: 0.1em;
+}
+
+
+/*ARCHIVE*/
+
+.archive-text {
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 0.1em;
+    font-family: "Audrey-Normal", serif;
+    margin-bottom: 20px;
+}
+
+.archive-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/*ARCHIVEの写真サイズ*/
+.archive-photo {
+    width: 350px;
+    text-align: center;
+}
+
+.archive-photo img {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+}
+
+.archive-photo p {
+    margin-top: 0;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-family: "Audrey-Normal", serif;
+    font-weight: bold;
+
+}
+
+/*カーソル*/
+.archive-section {
+    height: 450px;
+}
+
+.archive-photo img:hover {
+    opacity: 0.7;
+}
+
+/*footer*/
+.staff {
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+.staff p {
+    margin: 9px 0;
+}
+
+/*オンラインストア*/
+.online-store {
+    margin: 0 auto;
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.online-store img {
+    border: solid 1px black;
+}
+
+.insta {
+    margin: 0 auto;
+    width: 700px;
+
+}
+
+.insta img {
+    border: solid 1px black;
+}
+
+
+
+.insta-logo {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+.logo {
+     margin-top: 90px;
+     width: 200px;
+     margin: 0 auto;
+}
+
+.footer-container p {
+    text-align: center;
+    font-size: 11px;
+    margin: 30px 0;
+}
