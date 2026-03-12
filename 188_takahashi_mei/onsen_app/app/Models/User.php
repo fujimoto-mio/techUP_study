@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Review;
 use App\Models\Like;
 
@@ -59,5 +60,13 @@ class User extends Authenticatable
     public function likedOnsens()
     {
         return $this->belongsToMany(Onsen::class, 'likes');
+    }
+    public function getIconUrlAttribute()
+    {
+        if ($this->icon && Storage::disk('public')->exists($this->icon)) {
+            return asset('storage/' . $this->icon);
+        }
+
+        return asset('images/default-icon.png');
     }
 }

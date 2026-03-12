@@ -21,7 +21,8 @@ class OnsenController extends Controller
         $query = Onsen::with('tags')
             ->withAvg('reviews', 'rating')
             ->withCount('likes');
-        // 都道府県で絞り込み
+
+        // 都道府県検索
         if ($request->filled('prefecture_id')) {
             $query->where('prefecture_id', $request->prefecture_id);
         }
@@ -31,13 +32,25 @@ class OnsenController extends Controller
                 $q->whereIn('tags.id', $request->tags);
             });
         }
+        //フリーワード検索
+        if ($request->filled('keyword')) {
+            $keyword = trim($request->keyword);
 
+            $query->where(function ($q) use ($keyword) {
+                $q->where('name', 'like', "%{$keyword}%")
+                    ->orWhere('address', 'like', "%{$keyword}%")
+                    ->orWhere('description', 'like', "%{$keyword}%");
+            });
+        }
+
+        $query->latest();
         $onsens = $query->paginate(10)->withQueryString();
+
         $prefectures = Prefecture::all();
         $tags = Tag::all();
-        return view('onsens.index', compact('onsens', 'prefectures','tags'));
+        return view('onsens.index', compact('onsens', 'prefectures', 'tags'));
     }
-    
+
     //追加
     public function store(Request $request)
     {
@@ -69,8 +82,15 @@ class OnsenController extends Controller
     //詳細
     public function show($id)
     {
-        $onsen = Onsen::with(['reviews.user'])->findOrFail($id);
-        return view('onsens.show', compact('onsen'));
+        $onsen = Onsen::with(['images', 'reviews.user'])
+            ->withCount('reviews')
+            ->withAvg('reviews', 'rating')
+            ->findOrFail($id);
+        $reviews = $onsen->reviews()
+            ->with(['user', 'images'])
+            ->latest()
+            ->paginate(6);
+        return view('onsens.show', compact('onsen','reviews'));
     }
     //編集
     public function update(Request $request, $id)
