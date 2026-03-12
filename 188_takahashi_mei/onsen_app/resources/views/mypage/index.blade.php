@@ -1,4 +1,4 @@
-<x-app-layout :bg="asset('images/home.jpg')">
+<x-app-layout bg="#FFF7ED">
     <x-slot name="header">
         <h2 class="font-semibold text-xl leading-tight">
             マイページ
@@ -63,10 +63,11 @@
 
         <!-- 投稿レビュー -->
         <section class="space-y-3">
-            <h2 class="text-xl font-semibold border-b pb-3">投稿レビュー</h2>
-
+        <div class="flex items-center gap-3 inline-block bg-[#E6FBD0] border-l-4 border-[#2F4F2F] px-4 py-2 text-lg font-semibold mb-6">
+            <h2 class="text-xl font-semibold">投稿レビュー</h2>
+        </div>
             @forelse($reviews as $review)
-                <div class="bg-stone-100 shadow-sm p-3">
+                <div class="bg-white  shadow-lg p-3">
 
                     <!-- 温泉名 -->
                     <div class="flex justify-between items-start">
@@ -166,6 +167,41 @@
                                 <!-- コメント -->
                                 <textarea name="comment"
                                     class="w-full border rounded-lg p-3">{{ $review->comment }}</textarea>
+                                <!-- 画像 -->
+                                @if($review->images->count())
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        @foreach($review->images as $img)
+                                            <div class="relative w-20 h-20 border rounded-lg overflow-hidden group">
+                                                <img src="{{ asset($img->image_path) }}"
+                                                    class="w-full h-full object-cover transition duration-300 ease-in-out"
+                                                    id="img-{{ $img->id }}">
+
+                                                <label
+                                                    class="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center cursor-pointer"
+                                                    title="削除">
+                                                    <input type="checkbox" name="delete_images[]" value="{{ $img->id }}"
+                                                        class="hidden" onchange="toggleDelete({{ $img->id }}, this)">
+                                                    ✕
+                                                </label>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                @endif
+
+                                <!-- 新規画像追加 -->
+                                <div class="flex items-center gap-3">
+
+                                    <input type="file" id="images" name="images[]" multiple accept="image/*" class="hidden">
+
+                                    <label for="images" class="cursor-pointer text-gray-600 hover:text-orange-500">
+                                        <x-icon.photo class="w-8 h-8" />
+                                    </label>
+
+                                    <span class="text-sm text-gray-500">
+                                        写真を追加
+                                    </span>
+
+                                </div>
 
                                 <div class="flex justify-end gap-3 pt-2">
                                     <button type="button" onclick="closeEditModal({{ $review->id }})" class="text-gray-500">
@@ -193,7 +229,9 @@
 
         <!-- いいねした温泉 -->
         <section class="space-y-6">
-            <h2 class="text-xl font-semibold border-b pb-2">いいねした温泉</h2>
+        <div class="flex items-center gap-3 inline-block bg-[#E6FBD0] border-l-4 border-[#2F4F2F] px-4 py-2 text-lg font-semibold mb-6">
+            <h2 class="text-xl font-semibold">いいねした温泉</h2>
+            </div>
 
             <div class="grid sm:grid-cols-4 gap-2">
                 @forelse($likes as $onsen)
@@ -215,6 +253,7 @@
 
 
     <script>
+        //編集モーダル
         function openEditModal(id) {
             const modal = document.getElementById('modal-' + id);
             modal.classList.remove('hidden');
@@ -226,7 +265,7 @@
             modal.classList.add('hidden');
             modal.classList.remove('flex');
         }
-
+        //星評価
         function setRating(reviewId, value) {
             document.getElementById('rating-input-' + reviewId).value = value;
 
@@ -239,6 +278,17 @@
                     star.classList.add('text-gray-300');
                     star.classList.remove('text-yellow-400');
                 }
+            }
+        }
+        //編集画像選択
+        function toggleDelete(id, checkbox) {
+            const img = document.getElementById(`img-${id}`);
+            if (checkbox.checked) {
+                img.classList.add('brightness-50');
+                img.classList.add('opacity-70');
+            } else {
+                img.classList.remove('brightness-50');
+                img.classList.remove('opacity-70');
             }
         }
     </script>

@@ -1,4 +1,4 @@
-<x-app-layout bg="/images/washibg.jpg">
+<x-app-layout bg="images/red.jpg">
     <x-slot name="header">
         <h1 class="font-bold">
             温泉ランキング
@@ -19,28 +19,28 @@
     </div>
 
     <div class="grid gap-4">
-
+        @php
+            $rankingImages = [
+                'overall' => 'images/onsenTOP1.jpg',
+                'review_count' => 'images/onsenTOP2.jpg',
+            ];
+        @endphp
         @foreach($rankingTypes as $key => $name)
 
             <a href="{{ route('rankings.show', $key) }}"
-                class="block bg-white shadow-md p-5 hover:shadow-lg hover:bg-orange-50 transition">
+                class="group block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition transform hover:scale-[1.02] relative h-40">
+                <!-- 背景画像 -->
+                <img src="{{ asset($rankingImages[$key]) }}" alt="{{ $name }}"
+                    class="absolute inset-0 w-full h-full object-cover">
 
-                <div class="flex justify-between items-center">
-
-                    <span class="text-lg font-semibold text-gray-800">
-                        {{ $name }}
-                    </span>
-
-                    <span class="text-sm text-gray-400">
-                        →
-                    </span>
-
+                <!-- 暗くオーバーレイ -->
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition"></div>
+                <div class="relative flex justify-between items-center p-5 text-white h-full">
+                    <span class="text-lg font-semibold">{{ $name }}</span>
+                    <span class="text-sm">→</span>
                 </div>
-
             </a>
-
         @endforeach
-
     </div>
 
 

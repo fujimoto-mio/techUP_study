@@ -86,7 +86,11 @@ class OnsenController extends Controller
             ->withCount('reviews')
             ->withAvg('reviews', 'rating')
             ->findOrFail($id);
-        return view('onsens.show', compact('onsen'));
+        $reviews = $onsen->reviews()
+            ->with(['user', 'images'])
+            ->latest()
+            ->paginate(6);
+        return view('onsens.show', compact('onsen','reviews'));
     }
     //編集
     public function update(Request $request, $id)

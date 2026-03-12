@@ -1,6 +1,5 @@
 
-<x-app-layout bg="/images/home1.jpg">
-
+<x-app-layout bg="images/washibg.jpg">
     <x-slot name="header">
         <h2 class="font-semibold leading-tight">
             温泉一覧
@@ -11,7 +10,7 @@
         <div class="max-w-6xl mx-auto px-6">
 
             <!-- 検索フォーム -->
-            <div class="bg-white shadow-sm p-6 mb-2 border-2 border-[#C97A70] ">
+            <div class="bg-white shadow-sm p-6 mb-2 border-2 border-[#F59E0B] ">
                 <form method="GET" action="{{ route('onsens.index') }}" class="space-y-4">
 
                     <div class="flex flex-col md:flex-row gap-4">
@@ -126,7 +125,7 @@
                                 @if ($onsen->tags->isNotEmpty())
                                     <div class="flex flex-wrap gap-2 pt-2">
                                         @foreach ($onsen->tags as $tag)
-                                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full">
+                                            <span class="text-xs bg-[#CFF7AA] text-[#2F4F2F] px-2 py-1 rounded-full">
                                                 {{ $tag->name }}
                                             </span>
                                         @endforeach

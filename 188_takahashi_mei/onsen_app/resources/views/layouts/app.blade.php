@@ -19,23 +19,28 @@
 </head>
 
 
-<body class="min-h-screen flex flex-col font-sans antialiased {{ isset($bg) ? 'bg-cover bg-center' : '' }}" @isset($bg) style="background-image: url('{{ $bg }}');
-     background-size: cover;
-     background-position: center;
- background-repeat: no-repeat;" @endisset>
+@props(['bg' => null])
+
+<body
+    class="min-h-screen flex flex-col font-sans antialiased text-[#374151]{{ isset($bg) && str_starts_with($bg, 'images') ? 'bg-cover bg-center' : '' }}"
+    @isset($bg) @if(str_starts_with($bg, 'images')) style="
+        background-image: url('{{ asset($bg) }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    " @else style="background-color: {{ $bg }};" @endif @endisset>
     <x-header />
-      {{--  @include('layouts.navigation')--}}
+    {{-- @include('layouts.navigation')--}}
 
     <!-- Page Heading -->
     @isset($header)
-        <header class="relative bg-cover bg-center text-gray-100 "> 
-            <div class="absolute inset-0 bg-[#244D73]"></div>
+        <header class="relative bg-cover bg-center text-gray-100 ">
+            <div class="absolute inset-0 bg-[#FED7AA]"></div>
             <div class="relative
-                max-w-7xl mx-auto
-                py-2 px-5
-                text-base
-                text-[#F0F3EA]
-                drop-shadow-[0_0_2px_gray]">
+                        max-w-7xl mx-auto
+                        py-2 px-5
+                        text-base
+                        text-[#374151]">
                 {{ $header }}
             </div>
         </header>

@@ -1,4 +1,4 @@
-<x-app-layout bg="/images/home1.jpg">
+<x-app-layout bg="images/washibg.jpg">
     <!-- 投稿完了メッセージ -->
     @if(session('success'))
         <div x-data="{ open: true }" x-show="open"
@@ -42,7 +42,7 @@
             </h2>
         </div>
     </x-slot>
-    <div class="bg-[#F0F3EA] bg-center bg-white/70 shadow-xl py-2 backdrop-blur-sm shadow-xl py-2">
+    <div class="bg-[#F0F3EA] bg-center bg-white/60 shadow-xl py-2 backdrop-blur-sm shadow-xl py-2">
         <div class="max-w-6xl mx-auto px-6">
             <div class="max-w-5xl mx-auto py-10 space-y-10">
 
@@ -116,14 +116,15 @@
 
                 <!-- レビュー一覧 -->
                 <div class="space-y-3">
-                    <div class="flex items-center gap-3">
+                    <div
+                        class="flex items-center gap-3 inline-block bg-[#E6FBD0] border-l-4 border-[#2F4F2F] px-4 py-2 text-lg font-semibold mb-6">
                         <h3 class="text-xl font-semibold">みんなのレビュー</h3>
                         <p class="text-sm text-gray-500">
                             (全{{ $onsen->reviews_count }}件)
                         </p>
                     </div>
-                    @forelse ($onsen->reviews as $review)
-                        <div class="bg-white shadow-sm p-5 space-y-2">
+                    @forelse ($reviews as $review)
+                        <div class="bg-white  shadow-lg p-5 space-y-2">
 
                             @php $rating = $review->rating; @endphp
 
@@ -160,15 +161,30 @@
                                 </p>
                             </div>
                         </div>
+
                     @empty
                         <p class="text-gray-500">まだレビューがありません</p>
                     @endforelse
                 </div>
+                <div class="flex justify-center gap-4 mt-6">
 
+                    @if ($reviews->onFirstPage() === false)
+                        <a href="{{ $reviews->previousPageUrl() }}" class="px-4 py-2 bg-[#E6FBD0] rounded hover:bg-[#D9F5BE]">
+                            ← 前へ
+                        </a>
+                    @endif
+
+                    @if ($reviews->hasMorePages())
+                        <a href="{{ $reviews->nextPageUrl() }}" class="px-4 py-2 bg-[#E6FBD0] rounded hover:bg-[#D9F5BE]">
+                            次へ →
+                        </a>
+                    @endif
+
+                </div>
                 <!-- レビュー投稿 -->
                 @auth
-                    <div class="bg-red-50/50 backdrop-blur-sm border-2 border-stone-500 shadow-sm p-4">
-                        <h3 class="text-lg font-semibold">レビュー投稿</h3>
+                    <div class="bg-red-50/50 backdrop-blur-sm border-2 border-[#F59E0B] shadow-sm p-4">
+                        <h3 class="text-lg text-[#F59E0B] font-semibold">レビュー投稿</h3>
 
                         <form method="POST" action="{{ route('reviews.store', $onsen->id) }}" enctype="multipart/form-data"
                             class="space-y-2">
@@ -195,8 +211,8 @@
                                     <!-- コメント入力 -->
                                     <textarea name="comment"
                                         class=" w-full border border-gray-300 rounded-lg p-2
-                                                        focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400">
-                                                        </textarea>
+                                                                focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400">
+                                                                </textarea>
                                     <!-- 画像アップロード -->
                                     <div class="flex items-center gap-3">
 
