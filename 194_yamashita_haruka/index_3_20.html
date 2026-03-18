@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>J-17. Canvas APIを利用しよう！(1)</title>
+</head>
+<style>
+</style>
+
+
+<body>
+  <!-- <canvas>の要素を取得するために記載します。-->
+  <canvas>canvas not suported!(canvasが使えるかを示した記載)</canvas>
+  <script type="text/javascript">
+    'use strict';
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // 座標を計算（j=1, i=0 のとき）
+    let x = 75;      // 25 + 1 * 50
+    let y = 25;      // 25 + 0 * 50
+    let radius = 20;
+
+    // 角度の計算
+    let startAngle = 0;
+    let endAngle = Math.PI * 1.5; // 270度の位置（Math.PI + Math.PI * 1 / 2）Math.PI が180度。Math.PI * 0.5 = 90度Math.PI * 1.0 = 180度Math.PI * 1.5 = 270度
+
+    ctx.beginPath();
+    ctx.arc(x, y, radius, startAngle, endAngle, false);
+    ctx.stroke();
+
+  </script>
+
+
+</body>
+
+</html>
