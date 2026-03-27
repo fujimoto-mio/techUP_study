@@ -37,8 +37,21 @@
                     検索
                 </button>
             </div>
+            <!-- フリーワード検索 -->
+            <input  type="text"
+                    name="keyword"
+                    value="{{ request('keyword') }}"
+                    placeholder="温泉名・住所・説明で検索"
+                    class="border rounded px-4 py-2 w-64"
+            >
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                検索
+            </button>
+            <a href="{{ route('onsens.index') }}" class="text-sm underline text-gray-500">
+                条件クリア
+            </a>
         </form>
-        
+
         {{-- 一覧 --}}
         @forelse ($onsens as $onsen)
             <div class="bg-white p-4 rounded shadow mb-4">
@@ -49,16 +62,19 @@
                     </a>
                 </h3>
                 @auth
-                <form action="{{ route('onsens.like', $onsen) }}" method="POST">
-                    @csrf
-                    <button class="text-red-500">
+                <button 
+                    type="button"
+                    class="like-btn text-red-500 text-2xl"
+                    data-onsen-id="{{ $onsen->id }}"
+                >
+                    <span class="heart">
                         {{ auth()->user()?->likedOnsens->contains($onsen->id) ? '❤️' : '🤍' }}
-                    </button>
-                </form>
+                    </span>
+                </button>
                 @else
-                    <a href="{{ route('login') }}" class="text-gray-400">
-                        🤍 ログインしていいね
-                    </a>
+                <a href="{{ route('login') }}" class="text-gray-400">
+                🤍 ログインしていいね
+                </a>
                 @endauth
 
                 @if($onsen->image_url)
@@ -68,10 +84,26 @@
                 <p class="text-sm text-gray-600 mt-1">
                     住所：{{ $onsen->address }}
                 </p>
+                <!-- 星評価表示 -->
+                @php
+                    $rating = round($onsen->reviews_avg_rating ?? 0, 1);
+                @endphp
 
-                <p class="text-sm text-gray-600">
-                    評価：{{ number_format($onsen->reviews_avg_rating ?? 0, 1) }}
-                </p>
+                <div class="flex items-center gap-1">
+                    @for ($i = 1; $i <= 5; $i++)
+                        @if ($rating >= $i)
+                            <span class="text-yellow-400">★</span>
+                        @elseif ($rating >= $i - 0.5)
+                            <span class="text-yellow-400">☆</span>
+                        @else
+                            <span class="text-gray-300">☆</span>
+                        @endif
+                    @endfor
+                    <span class="text-sm text-gray-600 ml-1">
+                         {{ number_format($rating, 1) }}
+                    </span>
+                </div>
+
                 {{-- タグ --}}
                 @if ($onsen->tags->isNotEmpty())
                     <div class="mt-2 flex flex-wrap gap-2">
@@ -90,4 +122,32 @@
              {{ $onsens->links() }}
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.like-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const onsenId = this.dataset.onsenId;
+
+                    fetch(`/onsens/${onsenId}/like`, {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Accept': 'application/json',
+                        },
+                    })
+                        .then(res => {
+                            if (res.status === 401) {
+                                alert('ログインしてください');
+                                return;
+                            }
+                            return res.json();
+                        })
+                        .then(data => {
+                            if (!data) return;
+
+                            this.querySelector('.heart').textContent = data.liked ? '❤️' : '🤍';
+                        });
+                });
+            });
+        </script>
 </x-app-layout>

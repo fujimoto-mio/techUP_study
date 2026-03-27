@@ -12,7 +12,7 @@ class MypageController extends Controller
         $user = auth()->user();
 
         $reviews = $user->reviews()
-            ->with('onsen')
+            ->with(['onsen','images'])
             ->latest()
             ->paginate(5, ['*'], 'reviews_page');
 
