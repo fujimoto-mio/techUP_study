@@ -1,0 +1,80 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C-14課題</title>
+</head>
+<style>
+  .wrapper_1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  :root {
+    --my-cool-text: white;
+  }
+
+  .box1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background: #00f;
+  }
+
+  .box2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background: #0f0;
+    color: var(--my-cool-text);
+  }
+  .box3 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    background: #f00;
+    color: var(--my-cool-text);
+  }
+
+  .box4 {     
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background: #0ff; }
+
+  .box5 {     
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background: #fff; }
+
+  .box6 {    
+    grid-column-start: 5;
+    grid-column-end: 7;
+    background: #ff0; }
+
+  .box7 {     
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background: #800080; }
+
+  .box8 {     
+    grid-column-start: 4;
+    grid-column-end: 7;
+    background: #f0f; }
+
+  .box9 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background: #800000;
+  }
+</style>
+<body>
+<div class="wrapper_1">
+  <div class="box1">herder</div>
+  <div class="box2">content-1</div>
+  <div class="box3">content-2</div>
+  <div class="box4">content-3-1</div>
+  <div class="box5">content-3-2</div>
+  <div class="box6">content-3-3</div>
+  <div class="box7">content-4-1</div>
+  <div class="box8">content-4-2</div>
+  <div class="box9">fooder</div>
+</div>
+</body>
+</html>
