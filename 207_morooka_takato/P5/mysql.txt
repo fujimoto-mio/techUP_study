@@ -1,0 +1,11 @@
++-----------+---------------+-------------------------------------------+
+| Host      | User          | authentication_string                     |
++-----------+---------------+-------------------------------------------+
+| localhost | root          | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| localhost | mysql.session | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| localhost | mysql.sys     | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| localhost | mamp          | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| 127.0.0.1 | root          | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| ::1       | root          | *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |
+| localhost | testuser      | *1BF3116A5372A85B80F3769F62A5162B482C00EE |
++-----------+---------------+-------------------------------------------+

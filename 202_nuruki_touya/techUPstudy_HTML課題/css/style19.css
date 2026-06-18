@@ -1,0 +1,23 @@
+header{
+    height: 50px;
+    text-align: center;
+    background-color: pink;
+}
+
+.haji{
+    text-align: center;
+    background-color: green;
+}
+
+.contentA{
+    background-color: #ffff;
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 400px;
+}
+
+footer{
+    background-color: yellow;
+    text-align: center;
+    height: 80px;
+}

@@ -1,0 +1,38 @@
+
+.background {
+    position:  relative;       
+    background-color: pink;    
+    height: 240px;             
+}
+
+ .blue_background {
+    z-index: 10;
+    position:  absolute;        
+    background-color: aqua;    
+    color:  #ffff;              
+    padding: 42px;            
+    width:  300px;             
+    height: 54px;              
+    text-align:  center;                  
+    top:  0;                
+    bottom:  0;            
+    left:  0;               
+    right:  0;                
+    margin:  auto;              
+}
+
+.logo {
+    z-index: 20;
+    position:  absolute;       
+    background-color: violet;   
+    padding: 28px;         
+    width:  240px;         
+    height: 42px;             
+    text-align:  center;        
+    font-size: 30px;  
+    top:  0;                
+    bottom:  0;            
+    left:  0;               
+    right:  0;        
+    margin: auto;        
+}

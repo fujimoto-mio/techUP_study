@@ -1,0 +1,19 @@
+.images{
+background: url(https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg) no-repeat 0 0;
+background-size: 100%;
+position: relative;
+margin: auto;
+text-align: center;
+width: 600px;
+height: 360px;
+}
+      
+.images-inside{
+position: absolute;
+}
+  
+.images-img{
+width: 150px;
+height: auto;
+}
+    

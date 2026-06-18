@@ -1,0 +1,60 @@
+index.php :
+ Patient.phpのpatientクラスを利用した動作を確認する
+
+Ptient.php :
+ Person.phpファイルにあるpersonクラスをpatientクラスに継承、さらに内容を拡張したもの。Personクラスの機能に加えて、身長、体重、標準体重を計算する機能が追加されている。
+
+Prson.php : 
+ このファイルはファイル名の通り"人"の情報（名前、歳、性別）が入ったクラス（Person）が定義されており、それらに紐づけられて動作するメソッドが存在している。
+
+index.php
+・「require_once 'Patient.php';」でPatient.phpのファイルを読み込む。（Patientクラスを利用したい為）
+・<!DOCTYPE html>ドクタイプ宣言でHTML のバージョンを宣言する。
+・<html lang="ja">
+	<meta charset="utf-8">で日本語対応と指定
+・<title>techUP　オブジェクト指向　課題</title>でタブに表示するタイトルを記入
+・$patient = new Patient('塗木 統耶', 23, 'm', 1.75, 70);でインスタンスを生成。情報を入力する。
+・print($patient -> selfIntroduction());でPersonクラス時に定義した自己紹介文を出力。
+
+・print('<br>身長：' . $patient -> getHeight() . 'm');
+　print('<br>体重：' . $patient -> getWeight() . 'kg');
+　print('<br><br>');で、身長と体重を出力
+・print('標準体重は' . $patient -> calculateStandardWeight() . 'kgです。');
+　?>で標準体重を出力・
+
+Patient.php
+
+・require_once 'Person.php';で、Person.phpを読み込む。
+・class Patient extends Person{}で子クラスPatientに親クラスPersonクラスを継承（省略されて効率的！）
+・//↓ここでプロパティを定義し、初期値を設定↓
+    //コンストラクタ==========
+    public function __construct($name, $age, $gender, $height, $weight) {
+    ・Person.phpファイルの中のPersonクラスのコンストラクタを呼び出しつつ、
+        parent::__construct($name, $age, $gender);
+    ・ここでPatientクラスで新たに定義されたプロパティの値を初期化
+        $this->height = $height;
+        $this->weight = $weight;
+    }
+・
+
+Person.php
+
+・private $name = '';//名前
+	private $age = 0;//歳
+	private $gender = '';//性別
+public function __construct($name, $age, $gender){
+		$this -> name = $name;
+		$this -> age = $age;
+		$this -> gender = $gender;
+		//ここでnameの値を$name、ageの値を$age、genderの値を$genderと代入していく（初期化）
+	}
+ ・public function selfIntroduction(){}で自己紹介文を設定
+
+・if($this -> gender == 'm'){
+			$gendata = '男性';
+		}else if($this -> gender == 'f'){
+			$gendata = '女性';
+		}else{
+			$gendata = '[性別は不明]';
+でgenderの値がmだったら男性、もしfなら女性、どちらにも当てはまらないなら「性別は不明」
+と定義する。
