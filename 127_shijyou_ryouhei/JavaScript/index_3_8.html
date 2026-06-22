@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScriptBasic</title>
+</head>
+<body>
+  <script>
+   let num = 5;
+   
+   alert(num + "を関数で確認します");
+
+   function checkFour(value) {
+    if (value >= 4) {
+        console.log("値は4以上です。");
+    } else {
+        console.log("値は4未満です。");
+    }
+    }
+
+   function checkTen(value) {
+    if (value >= 10) {
+        console.log("値は10以上です。");
+    } else {
+        console.log("値は10未満です。");
+    }
+    }
+
+   checkFour(num);
+   checkTen(num);
+  </script>
+</body>
+</html>
