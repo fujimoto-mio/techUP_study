@@ -1,93 +1,178 @@
-<x-app-layout>
+
+<x-app-layout bg="/images/home1.jpg">
+
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl leading-tight">
             温泉一覧
         </h2>
     </x-slot>
 
-    <div class="max-w-4xl mx-auto py-6">
+    <div class="bg-yellow-50/80 backdrop-blur-sm bg-cover bg-center py-10 rounded-2xl shadow-xl">
+        <div class="max-w-5xl mx-auto px-6">
 
-         {{-- 検索フォーム --}}
-        <form method="GET" action="{{ route('onsens.index') }}" class="mb-6">
-            <div class="flex items-center gap-4">
-                <select name="prefecture_id" class="border rounded px-3 py-2">
-                    <option value="">すべての都道府県</option>
-                    @foreach ($prefectures as $prefecture)
-                        <option value="{{ $prefecture->id }}"
-                            {{ request('prefecture_id') == $prefecture->id ? 'selected' : '' }}>
-                            {{ $prefecture->name }}
-                        </option>
-                    @endforeach
-                </select>
-                {{-- タグ検索 --}}
-                <div class="flex gap-2 flex-wrap">
-                    @foreach ($tags as $tag)
-                        <label class="text-sm">
-                             <input type="checkbox"
-                                    name="tags[]"
-                                    value="{{ $tag->id }}"
-                                    {{ collect(request('tags'))->contains($tag->id) ? 'checked' : '' }}>
-                            {{ $tag->name }}
-                        </label>
-                    @endforeach
-                </div>
+            <!-- 検索フォーム -->
+            <div class="bg-white rounded-2xl shadow-sm p-6 mb-8">
+                <form method="GET" action="{{ route('onsens.index') }}" class="space-y-4">
 
-                <button type="submit"
-                        class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                    検索
-                </button>
-            </div>
-        </form>
-        
-        {{-- 一覧 --}}
-        @forelse ($onsens as $onsen)
-            <div class="bg-white p-4 rounded shadow mb-4">
-                <h3 class="text-lg font-semibold">
-                    <a href="{{ route('onsens.show', $onsen->id) }}"
-                       class="text-blue-600 hover:underline">
-                        {{ $onsen->name }}
-                    </a>
-                </h3>
-                @auth
-                <form action="{{ route('onsens.like', $onsen) }}" method="POST">
-                    @csrf
-                    <button class="text-red-500">
-                        {{ auth()->user()?->likedOnsens->contains($onsen->id) ? '❤️' : '🤍' }}
-                    </button>
-                </form>
-                @else
-                    <a href="{{ route('login') }}" class="text-gray-400">
-                        🤍 ログインしていいね
-                    </a>
-                @endauth
+                    <div class="flex flex-col md:flex-row gap-4">
 
-                @if($onsen->image_url)
-                     <img src="{{ $onsen->image_url }}" 
-                     class="w-full max-h-40 object-contain rounded-lg mb-2">
-                @endif
-                <p class="text-sm text-gray-600 mt-1">
-                    住所：{{ $onsen->address }}
-                </p>
+                        <!-- 都道府県 -->
+                        <select name="prefecture_id"
+                                class="border rounded-xl px-4 py-2 focus:ring-2 focus:ring-amber-400 focus:outline-none">
+                            <option value="">すべての都道府県</option>
+                            @foreach ($prefectures as $prefecture)
+                                <option value="{{ $prefecture->id }}"
+                                    {{ request('prefecture_id') == $prefecture->id ? 'selected' : '' }}>
+                                    {{ $prefecture->name }}
+                                </option>
+                            @endforeach
+                        </select>
 
-                <p class="text-sm text-gray-600">
-                    評価：{{ number_format($onsen->reviews_avg_rating ?? 0, 1) }}
-                </p>
-                {{-- タグ --}}
-                @if ($onsen->tags->isNotEmpty())
-                    <div class="mt-2 flex flex-wrap gap-2">
-                        @foreach ($onsen->tags as $tag)
-                        <span class="text-xs text-red-700 bg-red-100 px-2 py-1 rounded">
-                             {{ $tag->name }}
-                        </span>
+                        <!-- フリーワード -->
+                        <input type="text"
+                               name="keyword"
+                               value="{{ request('keyword') }}"
+                               placeholder="温泉名・住所・説明で検索"
+                               class="flex-1 border rounded-xl px-4 py-2 focus:ring-2 focus:ring-amber-400 focus:outline-none">
+
+                        <button class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-xl transition">
+                            検索
+                        </button>
+
+                        <a href="{{ route('onsens.index') }}" class="text-sm underline text-gray-500 self-center">
+                            条件クリア
+                        </a>
+                    </div>
+
+                    <!-- タグ検索 -->
+                    <div class="flex flex-wrap gap-2">
+                        @foreach ($tags as $tag)
+                            <label class="flex items-center gap-1 bg-slate-100 px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-slate-200">
+                                <input type="checkbox"
+                                       name="tags[]"
+                                       value="{{ $tag->id }}"
+                                       class="accent-amber-500"
+                                       {{ collect(request('tags'))->contains($tag->id) ? 'checked' : '' }}>
+                                {{ $tag->name }}
+                            </label>
                         @endforeach
                     </div>
-                @endif
+
+                </form>
             </div>
-        @empty
-            <p class="text-gray-600">該当する温泉がありません。</p>
-        @endforelse
-        <div class="mt-6">
-             {{ $onsens->links() }}
+
+            <!-- 一覧 -->
+            <div class="space-y-4">
+                @forelse ($onsens as $onsen)
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+
+                        <div class="flex flex-col md:flex-row">
+
+                            <!-- 画像 -->
+                            @if($onsen->images->first())
+                                <div class="md:w-1/3 p-3">
+                                    <img src="{{ $onsen->images->first()->image_path }}"
+                                        class="w-full h-full object-cover md:h-full">
+                                </div>
+                            @endif
+
+                            <!--テキスト情報 -->
+                            <div class="p-5 space-y-2 md:w-2/3">
+
+                                <div class="flex items-start justify-between">
+                                    <h3 class="text-lg font-semibold">
+                                        <a href="{{ route('onsens.show', $onsen->id) }}" class="hover:underline">
+                                            {{ $onsen->name }}
+                                        </a>
+                                    </h3>
+
+                                    @auth
+                                        <button type="button" class="like-btn text-2xl" data-onsen-id="{{ $onsen->id }}">
+                                            <span class="heart">
+                                                {{ auth()->user()?->likedOnsens->contains($onsen->id) ? '❤️' : '🤍' }}
+                                            </span>
+                                        </button>
+                                    @else
+                                        <a href="{{ route('login') }}" class="text-gray-400 text-sm">🤍 ログインしていいね</a>
+                                    @endauth
+                                </div>
+
+                                <p class="text-sm text-gray-600">
+                                    住所：{{ $onsen->address }}
+                                </p>
+
+                                <!-- 星評価 -->
+                                @php $rating = round($onsen->reviews_avg_rating ?? 0, 1); @endphp
+
+                                <div class="flex items-center gap-1">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        @if ($rating >= $i)
+                                            <span class="text-amber-400">★</span>
+                                        @elseif ($rating >= $i - 0.5)
+                                            <span class="text-amber-400">☆</span>
+                                        @else
+                                            <span class="text-gray-300">☆</span>
+                                        @endif
+                                    @endfor
+                                    <span class="text-sm text-gray-600 ml-1">
+                                        {{ number_format($rating, 1) }}
+                                    </span>
+                                </div>
+
+                                <!-- タグ -->
+                                @if ($onsen->tags->isNotEmpty())
+                                    <div class="flex flex-wrap gap-2 pt-2">
+                                        @foreach ($onsen->tags as $tag)
+                                            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full">
+                                                {{ $tag->name }}
+                                            </span>
+                                        @endforeach
+                                    </div>
+                                @endif
+
+                            </div>
+
+                        </div>
+                    </div>
+                @empty
+                    <p class="text-gray-600">該当する温泉がありません。</p>
+                @endforelse
+            </div>
+
+            <!-- ページネーション -->
+            <div class="mt-10">
+                {{ $onsens->links() }}
+            </div>
+
         </div>
     </div>
+
+    <!-- いいねAjax -->
+    <script>
+        document.querySelectorAll('.like-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const onsenId = this.dataset.onsenId;
+
+                fetch(`/onsens/${onsenId}/like`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Accept': 'application/json',
+                    },
+                })
+                .then(res => {
+                    if (res.status === 401) {
+                        alert('ログインしてください');
+                        return;
+                    }
+                    return res.json();
+                })
+                .then(data => {
+                    if (!data) return;
+                    this.querySelector('.heart').textContent = data.liked ? '❤️' : '🤍';
+                });
+            });
+        });
+    </script>
+
 </x-app-layout>
