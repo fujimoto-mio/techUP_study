@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Review;
 use App\Models\Like;
+use App\Models\OnsenImage;
+
 class Onsen extends Model
 {
     use HasFactory;
@@ -28,5 +30,9 @@ class Onsen extends Model
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+    public function images()
+    {
+        return $this->hasMany(OnsenImage::class);
     }
 }
