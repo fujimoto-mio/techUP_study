@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> J-18. Canvas APIを利用しよう！(2)</title>
+</head>
+<body>
+  <h2>Canvasでアニメーションを描く</h2>
+  <p>図形を表示するには、canvasタグをサポートしたブラウザが必要です。</p>
+  <canvas id="myCanvas"></canvas>
+
+  <script type="text/javascript">
+    'use strict';
+    // Canvas要素とコンテキストを取得
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext("2d");
+
+    // Canvasのサイズを設定
+    const canvasWidth = 600; // ヒント①
+    const canvasHeight = 400; // ヒント②
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    const image = new Image();
+    image.src = "https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png";
+
+    // アニメーションに必要な変数を定義
+    const centerX = canvasWidth / 2; // 中心X（①の半分）
+    const centerY = canvasHeight / 2; // 中心Y（②の半分）
+    const radius = 100; // 半径を定義
+    let angle = 0; // 角度の定義-③（letにする）
+
+    image.onload = function () {
+      // アニメーションを開始する関数
+      function animate() {
+        // 1. Canvasをクリア
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+        // 画像を円の周りに描画
+        let x = centerX + Math.cos(angle) * radius;
+        let y = centerY + Math.sin(angle) * radius;
+
+        const gostSize = 50; // 幽霊の描画サイズ
+        ctx.drawImage(image, x - gostSize / 2, y - gostSize / 2, gostSize, gostSize);
+
+        // 3. 画像を回転させるために角度を更新（プラスにすると右回り）
+        angle += 0.02; // この数値を大きくすると速くなる
+
+        // 4. アニメーションを続ける
+        requestAnimationFrame(animate);
+      }
+
+      // 初回のアニメーション実行
+      animate();
+    };
+
+
+
+  </script>
+
+</body>
+
+</html>
