@@ -6,18 +6,25 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OnsenController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RankingController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/dashboard', function () {
+//TOP画面
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+ Route::get('/dashboard', function () {
     return view('dashboard');
+
 })->middleware(['auth', 'verified'])->name('dashboard');
 //ログイン（未）
 Route::get('/onsens', [OnsenController::class, 'index'])->name('onsens.index');
 Route::get('/onsens/{onsen}', [OnsenController::class, 'show'])->name('onsens.show');
-
+//ランキング
+Route::prefix('rankings')->group(function () {
+    Route::get('/', [RankingController::class, 'index'])->name('rankings.index');
+    Route::get('/{type}', [RankingController::class, 'show'])->name('rankings.show');
+});
 //ログイン（必須）
 Route::middleware('auth')->group(function () {
     // ユーザープロフィール関連
@@ -38,5 +45,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/mypage/icon', [MypageController::class, 'updateIcon'])->name('mypage.icon');
 
 });
+//管理者用画面
+Route::middleware(['auth','admin'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::resource('onsens', \App\Http\Controllers\Admin\OnsenController::class);
+    });
 
 require __DIR__ . '/auth.php';
