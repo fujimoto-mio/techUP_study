@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScript 関数</title>
+</head>
+<body>
+  <p>JavaScript演習</p>
+
+  <script>
+    'use strict';
+
+    var num = 5;
+
+    alert("XXを関数で確認します");
+ 
+    function Four(num){
+      if (num >= 4) {
+        console.log("値は4以上です。");
+      } else {
+        console.log("値は4未満です。");
+      }
+    }
+ 
+    function Ten(num){
+      if (num >= 10) {
+        console.log("値は10以上です。");
+      } else {
+        console.log("値は10未満です。");
+      }
+
+    }
+
+    Four(num);
+    Ten(num);
+
+  </script>
+</body>
+</html>
