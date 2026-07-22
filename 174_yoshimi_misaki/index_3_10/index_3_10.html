@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScript 配列２</title>
+</head>
+<body>
+  <p>JavaScript演習</p>
+
+  <script>
+    'use strict';
+
+    const name = ["山田さん","佐藤さん","内田さん"];
+    console.log('最初に配列の値を表示します。');
+
+    for(let i = 0; i < name.length; i++){
+      console.log(name[i]);
+    }
+
+    while (name.length > 0){
+      const del = name.shift();
+
+      console.log('配列の値を１つ消します。');
+      console.log(del + 'を消しました。');
+
+      if (name.length !== 0){
+
+        console.log('残りを表示します。');
+        for(let i = 0; i < name.length; i++){
+          console.log(name[i]);
+        }
+      }else{
+        console.log("データがなくなりました。");
+      }
+    }
+
+
+  </script>
+</body>
+</html>
