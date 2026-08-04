@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ファイル送信フォーム</title>
+</head>
+<body>
+
+    <form action="https://example.com/" method="post" enctype="multipart/form-data">
+
+        <p>
+            <label for="mail">メール</label>
+            ：
+            <input type="email" id="mail" name="mail">
+        </p>
+
+        <p>
+            <label for="send_file">送信ファイル：</label><br>
+            <input type="file" id="send_file" name="send_file">
+        </p>
+
+        <p>
+            <input type="submit" value="送信">
+        </p>
+
+    </form>
+
+</body>
+</html>
