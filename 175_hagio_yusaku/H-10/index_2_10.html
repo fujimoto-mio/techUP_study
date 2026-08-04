@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>プロフィール作成</title>
+</head>
+
+<body>
+
+<h1>プロフィール作成</h1>
+
+<form action="https://example.com/" method="post">
+
+<table border="1" cellpadding="5">
+
+    <tr>
+        <th>名前（全角）</th>
+        <td>
+            <input type="text" name="name">
+        </td>
+    </tr>
+
+    <tr>
+        <th>カナ（半角）</th>
+        <td>
+            <input
+            type="text"
+            name="kana"
+            pattern="[ｦ-ﾟ ]+"
+            title="半角カタカナで入力してください">
+        </td>
+    </tr>
+
+    <tr>
+        <th>年齢</th>
+        <td>
+            <input type="number" name="age" min="1" max="100">
+        </td>
+    </tr>
+
+    <tr>
+        <th>自己紹介</th>
+        <td>
+            <textarea name="profile" maxlength="100" rows="5" cols="40"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <th>出身地</th>
+        <td>
+            <select name="prefecture">
+                <option>北海道</option>
+                <option>青森県</option>
+                <option>岩手県</option>
+                <option>宮城県</option>
+                <option>秋田県</option>
+                <option>山形県</option>
+                <option>福島県</option>
+                <option>茨城県</option>
+                <option>栃木県</option>
+                <option>群馬県</option>
+                <option>埼玉県</option>
+                <option>千葉県</option>
+                <option>東京都</option>
+                <option>神奈川県</option>
+                <option>新潟県</option>
+                <option>富山県</option>
+                <option>石川県</option>
+                <option>福井県</option>
+                <option>山梨県</option>
+                <option>長野県</option>
+                <option>岐阜県</option>
+                <option>静岡県</option>
+                <option>愛知県</option>
+                <option>三重県</option>
+                <option>滋賀県</option>
+                <option>京都府</option>
+                <option>大阪府</option>
+                <option>兵庫県</option>
+                <option>奈良県</option>
+                <option>和歌山県</option>
+                <option>鳥取県</option>
+                <option>島根県</option>
+                <option>岡山県</option>
+                <option>広島県</option>
+                <option>山口県</option>
+                <option>徳島県</option>
+                <option>香川県</option>
+                <option>愛媛県</option>
+                <option>高知県</option>
+                <option>福岡県</option>
+                <option>佐賀県</option>
+                <option>長崎県</option>
+                <option>熊本県</option>
+                <option>大分県</option>
+                <option>宮崎県</option>
+                <option>鹿児島県</option>
+                <option>沖縄県</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <th>性別</th>
+        <td>
+            <input type="radio" name="gender" value="男" checked>男
+            <input type="radio" name="gender" value="女">女
+        </td>
+    </tr>
+
+    <tr>
+        <th>趣味</th>
+        <td>
+            <input type="checkbox" name="hobby" value="映画">映画
+            <input type="checkbox" name="hobby" value="運動">運動
+            <input type="checkbox" name="hobby" value="ゲーム">ゲーム
+            <input type="checkbox" name="hobby" value="カラオケ">カラオケ
+            <input type="checkbox" name="hobby" value="ボウリング">ボウリング
+        </td>
+    </tr>
+
+    <tr>
+        <th>生年月日</th>
+        <td>
+            <input
+                type="date"
+                name="birthday"
+                min="1980-01-01"
+                max="2021-01-01">
+        </td>
+    </tr>
+
+    <tr>
+        <th>パスワード</th>
+        <td>
+            <input type="password" name="password" maxlength="5">
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="確定">
+        </td>
+    </tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
