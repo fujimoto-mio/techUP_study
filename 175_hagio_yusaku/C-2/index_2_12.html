@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>スタイルの継承</title>
+    <style>
+
+        .parent {
+            border: solid 5px red;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .child1 {
+            border: solid 5px yellow;
+            margin: 0px 0px 0px 20px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .child2 {
+            border: inherit;
+            border-color: green;
+            margin: 0px 0px 0px 20px;
+            padding: 0px 0px 0px 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="parent">
+    継承テスト1
+
+    <div class="child1">
+        継承テスト2
+
+        <div class="child2">
+            継承テスト3
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
