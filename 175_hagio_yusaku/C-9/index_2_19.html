@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexboxレイアウト</title>
+
+    <style>
+
+        /* 全体 */
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ヘッダー */
+        header {
+            height: 50px;
+            background-color: #fbc02d;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* コンテンツ全体 */
+        .content {
+            height: 400px;
+            display: flex;
+        }
+
+        /* 左サイド */
+        .side-left {
+            width: 16px;
+            background-color: lightgreen;
+        }
+
+        /* 真ん中のコンテンツ */
+        main {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* 右サイド */
+        .side-right {
+            width: 16px;
+            background-color: lightgreen;
+        }
+
+        /* フッター */
+        footer {
+            height: 80px;
+            background-color: #756ee8;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            header
+        </header>
+
+        <div class="content">
+
+            <div class="side-left"></div>
+
+            <main>
+                contentA
+            </main>
+
+            <div class="side-right"></div>
+
+        </div>
+
+        <footer>
+            footer
+        </footer>
+
+    </div>
+
+</body>
+</html>
