@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript フォーム</title>
+</head>
+<body>
+
+    <form name="myform">
+        <input type="text" name="mytext" value="0">
+        <button type="button" id="btn">ボタン</button>
+    </form>
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            var count = parseInt(document.myform.mytext.value);
+            count = count + 1;
+            document.myform.mytext.value = count;
+        });
+    </script>
+
+</body>
+</html>
