@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvasアニメーション</title>
+</head>
+<body>
+
+    <h1>Canvasでアニメーションを描く</h1>
+
+    <canvas id="canvas" width="300" height="600"></canvas>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var image = new Image();
+        image.src = 'mokuro-.png';
+
+        image.onload = function() {
+            var centerX = canvas.width / 2;
+            var centerY = canvas.height / 2;
+            var radius = 100;
+            var angle = 0;
+
+            function animate() {
+                var x = centerX + Math.cos(angle) * radius;
+                var y = centerY + Math.sin(angle) * radius;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                ctx.drawImage(
+                 image,
+                 x - 25,
+                 y - 25,
+                 50,
+                 50
+                 );
+
+                 angle += 0.05;
+
+                 requestAnimationFrame(animate);
+            }
+
+            animate();
+        };
+</script>
+
+</body>
+</html>
