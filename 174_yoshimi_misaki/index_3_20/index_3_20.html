@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>CANVAS　API 利用</title>
+</head>
+<body>
+  <p>JavaScript演習</p>
+
+  <canvas id = "canvas"></canvas>
+  <script>
+    'use strict';
+
+    var canvas = document.querySelector('#canvas');
+    var ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.arc(100,100,50,Math.PI / 20,Math.PI * 6/4);
+    ctx.stroke();
+    
+  </script>
+</body>
+</html>
