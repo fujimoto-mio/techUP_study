@@ -1,0 +1,1305 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   TOP全体
+========================= */
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 580px;
+    padding-top: 30px;
+}
+
+
+/* =========================
+   左側
+========================= */
+
+.top-left {
+    position: relative;
+    width: 37%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+
+/* =========================
+   ロゴ
+========================= */
+
+.top-logo {
+    width: 113%;
+    height: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-logo img {
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* =========================
+   vol.1
+========================= */
+
+.top-vol {
+    position: absolute;
+    left: 96%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    width: 150px;
+    z-index: 2;
+    text-align: center;
+}
+
+.top-vol img {
+    width: 90%;
+    height: auto;
+}
+
+
+/* =========================
+   紫色の背景
+========================= */
+
+.top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top:40%;
+    bottom: 0;
+    width: 270.25%;
+    height: 83%;
+    background-image: url("image/mv-bg.webp");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+/* =========================
+   キラキラニットスカートの文
+========================= */
+
+.top-title {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 100%;
+    z-index: 2;
+}
+
+.top-title img {
+    width: 95%;
+    height: auto;
+}
+
+
+/* =========================
+   冬も「大人かわいい」の文
+========================= */
+
+.top-subtitle {
+    position: absolute;
+    left: 38%;
+    bottom: 2%;
+    width: 85%;
+    z-index: 2;
+}
+
+.top-subtitle img {
+    width: 80%;
+    height: auto;
+}
+
+
+/* =========================
+   モデル写真
+========================= */
+
+.top-images {
+    width: 63%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+    padding-top: 50px;
+    padding-right: 15px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.top-images img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+/* =========================
+   Scroll
+========================= */
+
+.top-scroll {
+    position: absolute;
+    left: 13.5%;
+    bottom: -18%;
+    width: 18px;
+    z-index: 2;
+
+     /* 黒い縦線 */
+    border-left: 1.5px solid #000;
+    height: 160px;
+    padding-left: 5px;
+}
+
+.top-scroll img {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   商品紹介
+========================= */
+
+.lead {
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+}
+
+.lead-title {
+    width: 440px;
+    margin: 0 auto 14px;
+}
+
+.lead-title img {
+    width: 80%;
+    height: auto;
+}
+
+.lead p {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-family: "游明朝", "Yu Mincho", serif;
+}
+
+.lead-line {
+    width: 1.3px;
+    height: 65px;
+    background-color: #555;
+    margin: 16px auto 0;
+}
+
+/* =========================
+   コラボロゴ
+========================= */
+
+.mainitem-logo {
+    width: 280px;
+    margin: 45px auto 20px;
+}
+
+.mainitem-logo img {
+    width: 63%;
+    height: auto;
+}
+
+
+/* =========================
+   Collaboration ITEM
+========================= */
+
+.mainitem-title {
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+    left: -20px;
+    z-index: 2;
+}
+
+.mainitem-title img {
+    width: 64%;
+    height: auto;  
+}
+
+/* =========================
+   スカート紹介
+========================= */
+
+.mainitem {
+    position: relative;
+    width: 90%;
+    max-width: 850px;
+    margin: -115px auto 0;
+}
+
+.mainitem-photo {
+    width: 100%;
+}
+
+.mainitem-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   POINT
+========================= */
+
+.mainitem-point {
+    position: absolute;
+    z-index: 2;
+}
+
+.mainitem-point img {
+    width: 100%;
+    height: auto;
+}
+
+.point01 {
+    left: 14%;
+    top: 27%;
+    width: 160px;
+}
+
+.point02 {
+    right: 2%;
+    top: 42%;
+    width: 250px;
+}
+
+.point03 {
+    right: 15%;
+    bottom: 20%;
+    width: 250px;
+}
+
+/* =========================
+   三枚のスカートの商品情報
+========================= */
+
+.item-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    width: calc(100% - 380px);
+    margin-top: 0px;
+    margin-left: 380px;
+}
+
+.item-name {
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    position: relative;
+    left: 60px;
+}
+
+.item-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.price-row small {
+    font-family: "Yu Mincho", serif;
+    font-size: 14px;
+}
+
+.price-row .size {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 17px;
+    border: 1px solid #555;
+    font-size: 13px;
+    margin-right: 17px;
+}
+
+.size-space {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.price-row > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.detail-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 18px;
+    margin-left: 0;
+    background-color: #b4958f;
+    color: white;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.item-name a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* =========================
+   BLACK
+========================= */
+.black-photo a {
+    display: contents;
+}
+
+.black-section {
+    display: flex;
+    width: 100%;
+    height: 730px;
+    position: relative;
+    margin-top: 170px;
+}
+
+.black-text {
+    width: 52%;
+    background-color: #ffffff;
+    padding: 20px 8% 0 15%;
+}
+
+.black-photo {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.black-photo img {
+    width: auto;
+    height: 118.5%;
+    object-fit: contain;
+    object-position: right top;
+}
+
+.black-photo2 {
+    position: absolute;
+    left: 22%;
+    top: 725px;
+    width: 680px;
+    z-index: 3;
+}
+
+.black-photo2 img {
+    display: block;
+    width: 65%;
+    height: auto;
+}
+
+.black-title {
+    width: 500px;
+    max-width: 100%;
+    margin-bottom: 170px;
+}
+
+.black-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 170px;
+
+    position: relative;
+    right: 50px;
+    top: 70px;
+}
+
+.black-heading span {
+    font-family: "Raleway", sans-serif;
+    font-size: 74px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    white-space: nowrap;
+}
+
+.black-heading-line {
+    width: 215px;
+    height: 1.5px;
+    background-color: #000;
+
+    position: relative;
+    left: 260px;
+    top: -149px;
+}
+
+.black-title img {
+    width: 95%;
+    position: relative;
+    left: 10px;
+    top: 23px;
+}
+
+.black-description {
+    width: 500px;
+    max-width: 100%;
+    margin-top: 0px;
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+
+    position: relative;
+    top: -100px;
+    left: 10px;
+}
+
+.black-top {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 28px;
+    z-index: 100;
+}
+
+.tilt-mark {
+    display: inline-block;
+    transform: rotate(30deg);
+}
+
+/* =========================
+   BLACK 金額表記
+========================= */
+
+.black-item-info {
+    position: absolute;
+    right: 7%;
+    top: 148%;
+    width: 410px;
+    z-index: 5;
+    transform: translateX(-10px);
+}
+
+.black-price-row {
+    display: flex;
+    align-items: center;
+    height: 27px;
+    font-family: "Times New Roman", serif;
+}
+
+.black-item-name {
+    width: 160px;
+    font-size: 17px;
+}
+
+.black-price {
+    font-size: 16px;
+}
+
+.black-price-row small {
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+.black-price-row > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #000;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.black-detail-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.black-item-line {
+    width: 75%;
+    height: 1px;
+    background-color: #999;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.black-size-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16px;
+    position: relative;
+    top: -8px;
+}
+
+.black-size-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.black-plus {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    position: relative;
+    left: -110px;
+    top: -3px;
+}
+
+/* =========================
+   WHITE
+========================= */
+.white-section {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-top: 730px;
+    padding-bottom: 100px;
+    overflow-x: clip;
+}
+
+.white-photo {
+    width: 52%;
+    padding-left: 6%;
+    padding-right: 6%;
+    z-index: 5;
+}
+
+.white-photo img {
+    display: block;
+    width: 117%;
+    height: auto;
+}
+
+/* =========================
+   WHITE 傍線部 タイトル
+========================= */
+.white-text {
+    width: 46%;
+    padding: 80px 8% 0 4%;
+}
+
+.white-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 15px;
+    left: 150px;
+}
+
+.white-heading span {
+    font-family: "Raleway", sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    white-space: nowrap;
+}
+
+.white-heading-line {
+    width: 50%;
+    height: 1.5px;
+    background-color: #c9a878;
+    margin-top: -30px;
+    position: relative;
+    left: -85px;
+}
+
+.white-title {
+    position: relative;
+    top: 153px;
+    left: 30px;
+}
+
+.white-title img {
+    width: 80%;
+    height: auto;
+}
+
+/* =========================
+   WHITE 文章
+========================= */
+
+.white-description {
+    width: 100%;
+    max-width: 500px;
+
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+
+    white-space: normal;
+
+    position: relative;
+    top: 130px;
+    left: 30px;
+
+    margin-top: 65px;
+}
+
+.white-text {
+    width: 46%;
+    padding: 80px 8% 0 4%;
+    position: relative;
+}
+
+/* =========================
+   WHITE 金額表記
+========================= */
+
+.white-item-info {
+    width: 100%;
+    max-width: 410px;
+
+    position: relative;
+    top: 130px;
+    left: 30px;
+
+    margin-top: 30px;
+}
+
+.white-price-row {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 28px;
+
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.white-item-name {
+    width: 160px;
+    font-size: 17px;
+}
+
+.white-price {
+    font-size: 17px;
+}
+
+.white-price-row small {
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+.white-price-row > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.white-detail-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 20px;
+    background-color: #d2b486;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+
+/* =========================
+   WHITE 線 と　サイズはこちら　と　＋
+========================= */
+.white-item-line {
+    width: 75%;
+    height: 1px;
+    background-color: #999;
+
+    margin-top: 18px;
+    margin-bottom: 20px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.white-size-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16.2px;
+
+    position: relative;
+    top: -10px;
+    left: 0;
+
+    margin-top: 0;
+}
+
+.white-size-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.white-plus {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    position: relative;
+    top: 0;
+    left: -105px;
+}
+
+/* =========================
+   MOCA
+========================= */
+
+.moca-section {
+    display: flex;
+    width: 100%;
+    height: 730px;
+    position: relative;
+    margin-top: 170px;
+    overflow-x: clip;
+}
+
+.moca-text {
+    width: 52%;
+    background-color: #ffffff;
+    padding: 20px 8% 0 15%;
+    position: relative;
+}
+
+.moca-photo {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.moca-photo a {
+    display: contents;
+}
+
+.moca-photo img {
+    width: auto;
+    height: 118.5%;
+
+    object-fit: contain;
+    object-position: right top;
+
+    position: relative;
+    right: -12.9px;
+}
+
+/* =========================
+   MOCA タイトル
+========================= */
+
+.moca-heading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 170px;
+
+    position: relative;
+    right: -50px;
+    top: 70px;
+}
+
+.moca-heading span {
+    font-family: "Raleway", sans-serif;
+    font-size: 74px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    white-space: nowrap;
+}
+
+.moca-heading-line {
+    width: 90px;
+    height: 1.5px;
+    background-color: #8f7b69;
+
+    position: relative;
+    left: -60px;
+    top: -145px;
+}
+
+.moca-title {
+    width: 285px;
+    max-width: 100%;
+    margin-bottom: 170px;
+
+    position: relative;
+    top: -45px;
+    left: 0;
+}
+
+.moca-title img {
+    width: 95%;
+
+    position: relative;
+    left: 10px;
+    top: 23px;
+}
+
+/* =========================
+   MOCA 文章
+========================= */
+
+.moca-description {
+    width: 500px;
+    max-width: none;
+    white-space: nowrap;
+
+    margin-top: 0;
+
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16.5px;
+    line-height: 2;
+    text-align: justify;
+
+    position: relative;
+    top: -150px;
+    left: 10px;
+}
+
+/* =========================
+   MOCA 金額表記
+========================= */
+
+.moca-item-info {
+    position: absolute;
+    right: 7%;
+    top: 148%;
+
+    width: 410px;
+
+    position: relative;
+    top: -140px;
+    left: 23px;
+
+    margin-top: 45px;
+
+    z-index: 5;
+
+    transform: translateX(-10px);
+}
+
+.moca-price-row {
+    display: flex;
+    align-items: center;
+    height: 27px;
+
+    font-family: "Times New Roman", serif;
+}
+
+.moca-item-name {
+    width: 160px;
+    font-size: 17px;
+}
+
+.moca-price {
+    font-size: 16px;
+}
+
+.moca-price-row small {
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 11px;
+    margin-left: 3px;
+}
+
+.moca-price-row > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #000;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.moca-detail-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 20px;
+    background-color: #ad918b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.moca-item-line {
+    width: 75%;
+    height: 1px;
+
+    background-color: #999;
+
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.moca-size-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Yu Mincho", "游明朝", serif;
+    font-size: 16px;
+
+    position: relative;
+    top: -8px;
+    left: 0;
+}
+
+.moca-size-link a {
+    color: #000;
+    text-decoration: none;
+}
+
+.moca-plus {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+
+    position: relative;
+    left: -110px;
+    top: -3px;
+}
+
+/* =========================
+   MOCA TOP
+========================= */
+
+.moca-top {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #000;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000;
+    text-decoration: none;
+
+    font-size: 28px;
+}
+
+/* =========================
+   ARCHIVE
+========================= */
+
+.archive-section {
+    width: 100%;
+    position: relative;
+
+    /* MOCAとの間隔 */
+    margin-top: 250px;
+
+    padding-bottom: 150px;
+
+    text-align: center;
+}
+
+.archive-heading {
+    margin: 0 0 20px;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 6px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.archive-banners {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.archive-item {
+    width: 300px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.archive-item a {
+    display: block;
+}
+
+.archive-item img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.archive-item p {
+    margin: 8px 0 0;
+
+    font-family: "Times New Roman", serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* =========================
+   CREDIT
+========================= */
+
+.credit-section {
+    width: 100%;
+    position: relative;
+
+    margin-top: 0px;
+    padding-bottom: 100px;
+
+    text-align: center;
+}
+
+.credit-text {
+    font-family: "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 2;
+
+    position: relative;
+    top: -90px;
+    left: 0;
+}
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    height: 350px;
+
+    position: relative;
+
+    padding-top: 80px;
+    padding-bottom: 0px;
+
+    text-align: center;
+
+    top: -200px;
+}
+
+/* =========================
+   フッターボタン
+========================= */
+
+.footer-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.footer-button {
+    display: block;
+    width: 53%;
+    max-width: 875px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    border: 1px solid #999;
+}
+
+.footer-button img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   Instagram
+========================= */
+
+.footer-instagram {
+    position: relative;
+    top: 70px;
+    left: 0;
+}
+
+.footer-instagram img {
+    width: 31px;
+    height: auto;
+}
+
+/* =========================
+   ONWARD
+========================= */
+
+.footer-logo {
+    position: relative;
+    top: 92px;
+    left: 0;
+}
+
+.footer-logo img {
+    width: 122px;
+    height: auto;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-copy {
+    margin: 150px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+
+    position: relative;
+    top: -20px;
+    left: 0;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    min-height: 60px;
+    padding: 10px 30px;
+    background-color: #fff;
+}
+
+.navbar-brand {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: #000 !important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-left: 20px;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.navbar {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-toggler {
+    border: 1px solid #000;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
