@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS変数</title>
+
+    <style>
+
+        :root{
+            --my-cool-background: #75a1e8;
+        }
+
+        .row {
+            display: grid;
+        }
+
+        /* 1行目：1カラム */
+        .row1 {
+            grid-template-columns: 1fr;
+        }
+
+        /* 2行目：2カラム */
+        .row2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* 3行目：3カラム */
+        .row3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* 4行目：2カラム */
+        .row4 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* 5行目：1カラム */
+        .row5 {
+            grid-template-columns: 1fr;
+        }
+
+        div {
+            font-size: 25px;
+        }
+
+        .header {
+            background: var(--my-cool-background);
+        }
+
+        .content1 {
+            background: var(--my-cool-background);
+        }
+
+        .content2 {
+            background: var(--my-cool-background);
+        }
+
+        .content3-1 {
+            background: var(--my-cool-background);
+        }
+
+        .content3-2 {
+            background: var(--my-cool-background);
+        }
+
+        .content3-3 {
+            background: var(--my-cool-background);
+        }
+
+        .content4-1 {
+            background: var(--my-cool-background);
+        }
+
+        .content4-2 {
+            background: var(--my-cool-background);
+        }
+
+        .footer {
+            background: var(--my-cool-background);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 1行目：1カラム -->
+    <div class="row row1">
+        <div class="header">herder</div>
+    </div>
+
+    <!-- 2行目：2カラム -->
+    <div class="row row2">
+        <div class="content1">content-1</div>
+        <div class="content2">content-2</div>
+    </div>
+
+    <!-- 3行目：3カラム -->
+    <div class="row row3">
+        <div class="content3-1">content-3-1</div>
+        <div class="content3-2">content-3-2</div>
+        <div class="content3-3">content-3-3</div>
+    </div>
+
+    <!-- 4行目：2カラム -->
+    <div class="row row4">
+        <div class="content4-1">content-4-1</div>
+        <div class="content4-2">content-4-2</div>
+    </div>
+
+    <!-- 5行目：1カラム -->
+    <div class="row row5">
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+</html>

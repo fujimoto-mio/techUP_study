@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>絶対配置と相対配置</title>
+  <style>
+    .container {
+      position: relative;
+      height: 300px;
+      background: #ffdede;
+    }
+
+    .back{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 550px;
+        height: 180px;
+        transform: translate(-50%, -50%);
+        background: #00e5ff;
+        z-index: 1;
+    }
+
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 120px;
+      transform: translate(-50%, -50%);
+      background-color: #ff00ff;
+      z-index: 10;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="back"></div>
+    <div class="logo">ロゴ表示</div>
+  </div>
+
+</body>
+</html>

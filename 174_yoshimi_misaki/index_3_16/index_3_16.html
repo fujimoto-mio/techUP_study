@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScript DOM</title>
+</head>
+<body>
+  <p>JavaScript演習</p>
+
+<ul class="list-group">
+  <li class="list-group-item">100</li>
+  <li class="list-group-item">110</li>
+  <li class="list-group-item">120</li>
+  <li class="list-group-item">130</li>
+  <li class="list-group-item">140</li>
+</ul>
+
+<button id = "change">変更</button>
+<button id = "reset">リセット</button>
+
+  <script>
+    'use strict';
+
+    var listItems = document.querySelectorAll('.list-group-item');
+    var change = document.querySelector('#change');
+    var reset = document.querySelector('#reset');
+    var resetValues = [100,110,120,130,140];
+
+    change.addEventListener('click', function(){
+
+    for (var i = 0; i < listItems.length; i++){
+        var value = parseInt(listItems[i].textContent);
+        listItems[i].textContent = value * 10;
+    }
+
+    });
+
+    reset.addEventListener('click', function(){
+
+        for (var i = 0; i < listItems.length; i++){
+            listItems[i].textContent = resetValues[i];
+        }
+    });
+
+  </script>
+</body>
+</html>

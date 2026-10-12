@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Gridレイアウト</title>
+
+    <style>
+
+        .row {
+            display: grid;
+        }
+
+        /* 1行目：1カラム */
+        .row1 {
+            grid-template-columns: 1fr;
+        }
+
+        /* 2行目：2カラム */
+        .row2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* 3行目：3カラム */
+        .row3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* 4行目：2カラム */
+        .row4 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* 5行目：1カラム */
+        .row5 {
+            grid-template-columns: 1fr;
+        }
+
+        .header {
+            background: blue;
+        }
+
+        .content1 {
+            background: lime;
+        }
+
+        .content2 {
+            background: red;
+        }
+
+        .content3-1 {
+            background: cyan;
+        }
+
+        .content3-2 {
+            background: white;
+        }
+
+        .content3-3 {
+            background: yellow;
+        }
+
+        .content4-1 {
+            background: purple;
+        }
+
+        .content4-2 {
+            background: magenta;
+        }
+
+        .footer {
+            background: #a67c4e;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="row row1">
+        <div class="header">herder</div>
+    </div>
+
+    <div class="row row2">
+        <div class="content1">content-1</div>
+        <div class="content2">content-2</div>
+    </div>
+
+    <div class="row row3">
+        <div class="content3-1">content-3-1</div>
+        <div class="content3-2">content-3-2</div>
+        <div class="content3-3">content-3-3</div>
+    </div>
+
+    <div class="row row4">
+        <div class="content4-1">content-4-1</div>
+        <div class="content4-2">content-4-2</div>
+    </div>
+
+    <div class="row row5">
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+</html>

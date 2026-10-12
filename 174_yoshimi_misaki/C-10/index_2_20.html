@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像重ねレイアウト</title>
+  <style>
+    .sample_img {
+      background-size: cover;
+      position: relative;
+      width: 300px;
+      height: 400px;
+      background: url("https://techup.tokyo/wp-content/uploads/2021/12/image2.jpg") no-repeat;
+    }
+
+    .photo {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sample_img">
+    <div class="photo">
+      <img src="https://techup.tokyo/wp-content/uploads/2021/12/image1.jpg">
+    </div>
+  </div>
+
+</body>
+</html>

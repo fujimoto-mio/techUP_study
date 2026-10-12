@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- カウントダウン本体の表示 -->
+    <div class="container">
+        <div class="countdown">
+            <h1 class="countdown-title">
+                Countdown to Christmas <br>
+                <span id="year" class="new-year"></span>
+            </h1>
+            <!-- 残り日数・時間・分・秒-->
+            <div class="time-container">
+                <p class="time"><span id="days" class="time-num"></span>days</p>
+                <p class="time"><span id="hours" class="time-num"></span>hours</p>
+                <p class="time"><span id="minutes" class="time-num"></span>minutes</p>
+                <p class="time"><span id="seconds" class="time-num"></span>seconds</p>
+            </div>
+            <!-- クリスマス当日にメッセージ -->
+            <p class="message" id="message"></p>
+        </div>
+    </div>
+    <!-- 雪アニメーション用（JSで生成） -->
+    <div class="snow-container"></div>
+    <!-- サンタが夜空を走るための要素（CSSアニメーション） -->
+    <div class="santa"></div>
+    <!-- JS読み込み -->
+    <script src="time.js"></script>
+</body>
+</html>

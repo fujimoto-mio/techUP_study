@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>J-17. Canvas APIを利用しよう!(1)</title>
+</head>
+<body>
+    <!-- <canvas>の要素を取得するために記載します。-->
+        <canvas>図形を表示するには、canvasタグをサポートしたブラウザが必要です。</canvas>
+
+<script>
+    const canvas = document.querySelector("canvas");
+    const ctx = canvas.getContext("2d");
+    // 円を描く準備
+    ctx.beginPath();
+    // 円の設定
+    const x = 100; // 中心のx座標
+    const y = 100; // 中心のy座標
+    const radius = 50; // 半径
+    // 上から始めて右上90°だけ開ける円
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, -Math.PI / 2, false);
+    ctx.stroke(); // 線を描く
+</script>
+</body>
+</html>

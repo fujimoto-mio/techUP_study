@@ -1,0 +1,167 @@
+/* すべての要素のサイズ計算をborder-boxに統一 */
+* {
+    box-sizing: border-box;
+}
+
+/* html, bodyの初期設定 */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Fascinate Inline", system-ui, -apple-system, Roboto, 'Noto Sans JP', sans-serif;
+    color: #ffffff;
+}
+
+/* 背景（コンテナ部分） */
+.container {
+    position: relative;
+    background-image: url('img/christmas.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 背景の上にフィルターを重ねる */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.3);
+}
+
+/* カウントダウンボックス（全体） */
+.countdown {
+    background: rgba(190, 190, 190, 0.05);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 8px 30px rgba(0, 5, 29, 0.8);
+}
+
+.countdown-title {
+    font-size: 30px;
+    letter-spacing: 0.7px;
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 40px #fa0000;
+    /* 文字を赤いネオンに */
+}
+
+.new-year {
+    color: #e8e06d;
+    font-size: 70px;
+}
+
+/* 残り日数などを横並びに配置 */
+.time-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.time {
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 12px;
+    border-radius: 12px;
+    min-width: 80px;
+}
+
+.time-num {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* 当日メッセージ */
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 40px #fa0000;
+}
+
+/*  雪アニメーション */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* 下の要素をクリックできるようにする */
+    z-index: 10;
+    /* 最前面に表示 */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    /* 画面の上から出現 */
+    background-color: #e0f7ff;
+    border-radius: 50%;
+    opacity: 0.6;
+    /* 少し透けさせる */
+    filter: blur(1.3px);
+    /* ぼんやりぼかす */
+    box-shadow: 0 0 6px rgba(7, 153, 232, 0.8);
+    /* やわらかい光をつける */
+    animation: fall linear infinite;
+    /* fallアニメーションを永遠に繰り返す */
+}
+
+/* 雪の降るアニメーション */
+/* アニメーションの動き方（途中経過）を指定 */
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        /* アニメーションの終点（100%地点）Y方向（上下方向）に動かす */
+    }
+}
+
+/* サンタのアニメーション */
+.santa {
+    position: fixed;
+    top: 20%;
+    /* 夜空の上のほうを通る感じ */
+    left: -150px;
+    /* 画面外の左から出発 */
+    width: 120px;
+    height: 60px;
+    background: url('img/christmas-element-santa.png') no-repeat center / contain;
+    animation: flySanta 30s linear infinite;/* ４０秒かけて横断 */
+    z-index: 11;
+    pointer-events: none;
+    filter:/* サンタ発光 */
+        drop-shadow(0 0 8px #fff)
+        drop-shadow(0 0 15px rgb(98, 211, 177))
+        drop-shadow(0 0 25px rgb(64, 139, 244));
+    opacity: 0.9;
+}
+
+/* サンタを右に飛ばす */
+@keyframes flySanta {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50vw) translateY(-50px);
+        /* 少し上下に揺れる */
+    }
+
+    100% {
+        transform: translateX(110vw) translateY(0);
+    }
+}
