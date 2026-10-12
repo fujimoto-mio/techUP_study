@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>フォーム練習</title>
+</head>
+<body>
+
+<h1>フォーム</h1>
+
+<form action="#" method="post">
+
+    <p>
+        <label for="name">氏名</label>
+        <input type="text" id="name" name="name">
+    </p>
+
+    <p>
+        <label for="password">パスワード</label>
+        <input type="password" id="password" name="password">
+    </p>
+
+    <p>
+        性別
+        <br>
+
+        <input type="radio" id="male" name="gender" value="男" checked>
+        <label for="male">男</label>
+
+        <br>
+
+        <input type="radio" id="female" name="gender" value="女">
+        <label for="female">女</label>
+    </p>
+
+    <p>
+        <label for="pref">県</label>
+
+        <select id="pref" name="pref">
+            <option>東京</option>
+            <option>大阪</option>
+            <option>福岡</option>
+            <option>北海道</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="intro">紹介</label><br>
+
+        <textarea id="intro" name="intro" rows="5" cols="30"></textarea>
+    </p>
+
+    <p>
+        <label>ボタン</label>
+        <input type="submit" value="送信">
+    </p>
+
+</form>
+
+</body>
+</html>

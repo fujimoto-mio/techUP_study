@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+}
+
+h1{
+  font-size: 40px;
+}
+
+#timer {
+  border: 3px solid #333;
+  width: 50%;
+  margin: 30px auto;
+  padding: 50px 20px;
+  font-size: 40px;
+}

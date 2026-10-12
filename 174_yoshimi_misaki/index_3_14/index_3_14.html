@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+  <title>JavaScript メソッド</title>
+</head>
+<body>
+  <p>JavaScript演習</p>
+
+  <script>
+    'use strict';
+
+    function clock(){
+
+      const now = new Date();
+
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let second = now.getSeconds();
+
+      if (hour < 10){
+        hour = '0' + hour;
+      }
+
+      if (minute < 10){
+        minute = '0' + minute;
+      }
+
+      if (second < 10){
+        second = '0' +second;
+      } 
+
+      console.log(hour + ':' + minute +':' + second);
+    }
+
+    setInterval(clock, 1000);
+
+  </script>
+</body>
+</html>

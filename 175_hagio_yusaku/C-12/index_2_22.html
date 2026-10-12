@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブWebデザイン</title>
+
+    <style>
+
+        /* 480pxまで */
+        body {
+            font-size: 15px;
+        }
+
+        /* 481px～768px */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            body {
+                font-size: 20px;
+            }
+        }
+
+        /* 769px～1024px */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            body {
+                font-size: 25px;
+            }
+        }
+
+        /* 1025px以上 */
+        @media screen and (min-width: 1025px) {
+            body {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>画面の幅によって文字サイズが変わります。</p>
+
+</body>
+</html>
