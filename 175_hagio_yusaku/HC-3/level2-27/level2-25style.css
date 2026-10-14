@@ -1303,3 +1303,604 @@ body {
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
+
+/* スマホ表示の調整 */
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .lead-title {
+        width: 100%;
+    }
+
+    .mainitem-title {
+        width: 100%;
+        left: 0;
+    }
+
+    .item-info {
+        width: 100%;
+        margin-left: 0;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .item-name {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mainitem {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .mainitem-photo,
+    .mainitem-photo picture {
+        display: block;
+        width: 100%;
+    }
+
+    .mainitem-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/* スマホ表示：トップ部分 */
+@media screen and (max-width: 767px) {
+    .top {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .top-left {
+        width: 100%;
+        height: 490px;
+        flex-shrink: 0;
+    }
+
+    .top-logo {
+        width: 100%;
+        height: 175px;
+    }
+
+    .top-logo img {
+        width: 70%;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    .top-left::after {
+        top: 175px;
+        left: 0;
+        width: 100%;
+        height: 315px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .top-title {
+        left: 5%;
+        top: 220px;
+        width: 90%;
+    }
+
+    .top-title img {
+        width: 90%;
+    }
+
+    .top-subtitle {
+        left: 5%;
+        bottom: 50px;
+        width: 75%;
+    }
+
+    .top-subtitle img {
+        width: 100%;
+    }
+
+    .top-vol {
+        left: auto;
+        right: 5%;
+        bottom: 15px;
+        width: 75px;
+        transform: none;
+    }
+
+    .top-scroll {
+        display: none;
+    }
+
+    
+    .top-images {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4px;
+        padding: 0;
+    }
+
+    .top-images img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+
+}
+
+
+/* BLACK・WHITE・MOCA スマホ表示 */
+@media screen and (max-width: 767px) {
+
+    /* 各カラーセクション */
+    .black-section,
+    .white-section,
+    .moca-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        overflow: hidden;
+    }
+
+    /* 写真 */
+    .black-photo,
+    .white-photo,
+    .moca-photo {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .black-photo img,
+    .white-photo img,
+    .moca-photo img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: static;
+    }
+
+    /* 説明文のエリア */
+    .black-text,
+    .white-text,
+    .moca-text {
+        width: 100%;
+        padding: 20px 6%;
+        box-sizing: border-box;
+    }
+
+    /* カラー名 */
+    .black-heading,
+    .white-heading,
+    .moca-heading {
+        width: 100%;
+        margin: 0 0 25px;
+        position: static;
+        right: auto;
+        top: auto;
+    }
+
+    .black-heading span,
+    .white-heading span,
+    .moca-heading span {
+        font-size: clamp(32px, 9vw, 48px);
+        letter-spacing: 3px;
+        white-space: normal;
+    }
+
+    /* 商品タイトル */
+    .black-title,
+    .white-title,
+    .moca-title {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 25px;
+        position: static;
+    }
+
+    .black-title img,
+    .white-title img,
+    .moca-title img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    /* 説明文 */
+    .black-description,
+    .white-description,
+    .moca-description {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.9;
+        text-align: left;
+        position: static;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    /* BLACK：2枚目の写真 */
+    .black-photo2 {
+        position: static;
+        width: 100%;
+        margin: 20px auto 0;
+        z-index: 1;
+    }
+
+    .black-photo2 img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+
+    /* BLACK：商品価格 */
+    .black-item-info {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 0 6%;
+        box-sizing: border-box;
+        transform: none;
+    }
+
+    .black-price-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        height: auto;
+        min-height: 30px;
+    }
+
+    .black-item-name {
+        width: 100px;
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+
+    .black-price {
+        font-size: 15px;
+    }
+
+    
+/* スマホ表示：商品価格を大きくする */
+@media screen and (max-width: 767px) {
+    .black-price,
+    .white-price,
+    .moca-price {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .black-item-name,
+    .white-item-name,
+    .moca-item-name {
+        font-size: 18px;
+    }
+}
+
+
+/* WHITE：スマホ表示の順番を調整 */
+@media screen and (max-width: 767px) {
+    .white-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /* white-textの中身を並び替えられるようにする */
+    .white-text {
+        display: contents;
+    }
+
+    /* 1. カラー名 */
+    .white-heading {
+        grid-row: 1;
+        position: static;
+        width: auto;
+        margin: 30px 6% 10px;
+    }
+
+    .white-heading span {
+        font-size: clamp(36px, 10vw, 48px);
+        letter-spacing: 3px;
+    }
+
+    .white-heading-line {
+        display: none;
+    }
+
+    /* 2. タイトル */
+    .white-title {
+        grid-row: 2;
+        position: static;
+        width: 88%;
+        margin: 0 auto 20px;
+    }
+
+    .white-title img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 3. 説明文 */
+    .white-description {
+        grid-row: 3;
+        position: static;
+        width: auto;
+        max-width: none;
+        margin: 0 6% 25px;
+        font-size: 18px;
+        line-height: 1.9;
+        overflow-wrap: normal;
+    }
+
+    .white-description br {
+        display: none;
+    }
+
+    /* 4. モデル写真 */
+    .white-photo {
+        grid-row: 4;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .white-photo img {
+        display: block;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* 5. 商品価格 */
+    .white-item-info {
+        grid-row: 5;
+        position: static;
+        width: auto;
+        max-width: none;
+        margin: 25px 6% 40px;
+        padding: 0;
+        transform: none;
+    }
+
+    .white-price-row {
+        height: auto;
+        min-height: 38px;
+    }
+
+    .white-price-row a {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .white-item-name,
+    .white-price {
+        font-size: 18px;
+    }
+}
+
+
+/* MOCA：スマホ表示の順番を調整 */
+@media screen and (max-width: 767px) {
+    .moca-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .moca-text {
+        display: contents;
+    }
+
+    /* 1. カラー名 */
+    .moca-heading {
+        grid-row: 1;
+        position: static;
+        width: auto;
+        margin: 30px 6% 10px;
+    }
+
+    .moca-heading span {
+        font-size: clamp(36px, 10vw, 48px);
+        letter-spacing: 3px;
+    }
+
+    .moca-heading-line {
+        display: none;
+    }
+
+    /* 2. タイトル */
+    .moca-title {
+        grid-row: 2;
+        position: static;
+        width: 88%;
+        margin: 0 auto 20px;
+    }
+
+    .moca-title img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 3. 説明文 */
+    .moca-description {
+        grid-row: 3;
+        display: block;
+        position: static;
+
+        width: 88%;
+        max-width: 88%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        margin: 0 auto 25px;
+        padding: 0;
+
+        font-size: 18px;
+        line-height: 1.9;
+        text-align: left;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .moca-description br {
+        display: none;
+    }
+
+    /* 4. モデル写真 */
+    .moca-photo {
+        grid-row: 4;
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .moca-photo img {
+        display: block;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* 5. 商品価格 */
+    .moca-item-info {
+        grid-row: 5;
+        position: static;
+        width: auto;
+        max-width: none;
+        margin: 25px 6% 40px;
+        padding: 0;
+        transform: none;
+    }
+
+    .moca-price-row {
+        height: auto;
+        min-height: 38px;
+    }
+
+    .moca-price-row a {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .moca-item-name,
+    .moca-price {
+        font-size: 18px;
+    }
+}
+
+
+/* POINT画像：スマホ専用 */
+@media screen and (max-width: 767px) {
+
+    .mainitem {
+        position: relative;
+        width: 94%;
+        max-width: 100%;
+        margin: 20px auto 0;
+    }
+
+    .mainitem-photo {
+        position: relative;
+        width: 100%;
+    }
+
+    .mainitem-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mainitem-point {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .mainitem-point img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* POINT 1 */
+    .point01 {
+        left: 7%;
+        top: 5%;
+        width: 45%;
+    }
+
+    /* POINT 2 */
+    .point02 {
+        right: 8%;
+        top: 55%;
+        width: 38%;
+    }
+
+    /* POINT 3 */
+    .point03 {
+        right: 40%;
+        bottom: 7%;
+        width: 50%;
+    }
+}
+
+
