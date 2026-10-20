@@ -1,0 +1,67 @@
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptBasic</title>
+</head>
+<body>
+    <p>JavaScript Basic</p>
+    <p>数値変換・いろいろな計算方法</p>
+    <p>インクリメント／デクリメント</p>
+
+    <script>
+        /* 数値変換 いろいろな計算方法 */
+
+        console.log('1' + 2);    // "12"
+        console.log('1' + '2');  // "12"
+        console.log("1" + "2");  // "12"
+        console.log(2 + '1');    // "21"
+        console.log(2 + 2 + '1'); // "41"
+        console.log(6 - '2');    // 4
+        console.log(1 + 2);      // 3
+        console.log(6 - "2");    // 4
+
+        let a, b, c;
+        a = b = c = 2 + 2;
+
+        console.log(a); // 4
+        console.log(b); // 4
+        console.log(c); // 4
+
+        let n = 2;
+        n = n + 5;
+        console.log(n); // 7
+
+        n = n * 2;
+        console.log(n, "最終結果！"); // 14
+
+        /* varを使った計算 */
+
+        var n2 = 2;
+        n2 += 5;
+        console.log(n2); // 7
+
+        n2 *= 2;
+        console.log(n2, "結果はあっていますか？"); // 14
+
+        /* インクリメント／デクリメント */
+
+        let counter = 2;
+        counter++;
+        console.log(counter); // 3
+
+        let counter2 = 2;
+        ++counter2;
+        console.log(counter2); // 3
+
+        let counter3 = 2;
+        counter3--;
+        console.log(counter3); // 1
+
+        let counter4 = 2;
+        --counter4;
+        console.log(counter4); // 1
+    </script>
+</body>
+</html>
