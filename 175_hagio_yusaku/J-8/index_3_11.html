@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptBasic</title>
+</head>
+<body>
+    <p>JavaScript Basic</p>
+
+    <script>
+        // ① input配列を用意
+        const input = ['a', 'b', 'c'];
+
+        // ② map()を使って、各要素に_setを追加
+        const output = input.map(function(value) {
+            return value + '_set';
+        });
+
+        // ③ 出力結果を表示
+        console.log(output);
+    </script>
+</body>
+</html>
