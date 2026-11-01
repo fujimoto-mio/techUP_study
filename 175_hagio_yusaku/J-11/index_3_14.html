@@ -1,0 +1,43 @@
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScriptBasic</title>
+</head>
+<body>
+    <p>JavaScript Basic</p>
+
+    <script>
+        // 現在時刻を表示する関数
+        function showTime() {
+            // 現在の日時を取得
+            const now = new Date();
+
+            // 時間・分・秒を取得
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            let second = now.getSeconds();
+
+            // 1桁の場合は先頭に0を付ける
+            if (hour < 10) {
+                hour = '0' + hour;
+            }
+
+            if (minute < 10) {
+                minute = '0' + minute;
+            }
+
+            if (second < 10) {
+                second = '0' + second;
+            }
+
+            // Consoleに表示
+            console.log(hour + ':' + minute + ':' + second);
+        }
+
+        // 1秒ごとに関数を実行
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>
