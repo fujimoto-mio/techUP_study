@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>DOM総合課題【Todoリスト】</title>
+</head>
+<body>
+    <h1>Todoアプリ</h1>
+
+    <div>
+        <label for="input-todo-box">Todoタスクの入力：</label>
+        <input id="input-todo-box" type="text">
+        <button id="add-button">追加</button>
+    </div>
+
+    <h2>現在のTodoリスト</h2>
+    <ul id="todo-list"></ul>
+
+    <script>
+        function todo() {
+            // Todoタスクを保存する配列
+            const todos = [];
+
+            // HTMLの要素を取得
+            const inputTodoBox = document.getElementById('input-todo-box');
+            const addButton = document.getElementById('add-button');
+            const todoList = document.getElementById('todo-list');
+
+            // 追加ボタンをクリックしたときの処理
+            addButton.addEventListener('click', () => {
+                const todoText = inputTodoBox.value;
+
+                // 空欄の場合は追加しない
+                if (todoText.trim() === '') {
+                    return;
+                }
+
+                // 配列にTodoを追加
+                todos.push(todoText);
+
+                // 入力欄を空にする
+                inputTodoBox.value = '';
+
+                // Todoリストを再表示
+                showTodos();
+            });
+
+            // Todoリストを表示する関数
+            function showTodos() {
+                todoList.innerHTML = '';
+
+                todos.forEach((todo, index) => {
+                    // li要素を作成
+                    const li = document.createElement('li');
+                    li.textContent = todo + ' ';
+
+                    // 削除ボタンを作成
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = '削除';
+
+                    deleteButton.addEventListener('click', () => {
+                        deleteTodo(index);
+                    });
+
+                    li.appendChild(deleteButton);
+                    todoList.appendChild(li);
+                });
+            }
+
+            // Todoを削除する関数
+            function deleteTodo(index) {
+                todos.splice(index, 1);
+                showTodos();
+            }
+        }
+
+        // 関数を実行
+        todo();
+    </script>
+</body>
+</html>
