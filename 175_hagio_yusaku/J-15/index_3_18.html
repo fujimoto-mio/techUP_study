@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カウンター</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="counter" value="0">
+        <button type="button" id="count-button">ボタン</button>
+    </form>
+
+    <script>
+        const counter = document.getElementById('counter');
+        const button = document.getElementById('count-button');
+
+        button.addEventListener('click', function() {
+            counter.value++;
+        });
+    </script>
+</body>
+</html>
