@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>円弧を描く</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="300"></canvas>
+
+    <script>
+        'use strict';
+
+        // Canvasを取得
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // 描画を開始
+        ctx.beginPath();
+
+        // 円弧を定義
+        ctx.arc(150, 150, 75, 0, 1.5 * Math.PI);
+
+        // 線を描画
+        ctx.stroke();
+    </script>
+</body>
+</html>
