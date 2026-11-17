@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvasで円運動のアニメーション</title>
+</head>
+<body>
+    <h2>Canvasでアニメーションを描く</h2>
+    <p>回るアッグジン！</p>
+
+    <canvas id="myCanvas" width="500" height="400"
+        style="border: 1px solid #ccc;"></canvas>
+
+    <script>
+        'use strict';
+
+        // Canvasの要素を取得
+        var canvas = document.getElementById('myCanvas');
+
+        // 2D描画コンテキストを取得
+        var ctx = canvas.getContext('2d');
+
+        // 画像オブジェクトを作成
+        var image = new Image();
+
+        // 画像の読み込みが完了したら実行
+        image.onload = function() {
+            // Canvasの横幅と縦幅
+            var width = canvas.width;
+            var height = canvas.height;
+
+            // 円の中心座標
+            var centerX = width / 2;
+            var centerY = height / 2;
+
+            // 円の半径
+            var radius = 120;
+
+            // 最初の角度
+            var angle = 0;
+
+            // アニメーション関数
+            function animate() {
+                // 前の描画を消す
+                ctx.clearRect(0, 0, width, height);
+
+                // 円運動する画像の座標を計算
+                var x = centerX + Math.cos(angle) * radius;
+                var y = centerY + Math.sin(angle) * radius;
+
+                // 画像を描画（幅と高さは60px）
+                ctx.drawImage(image, x - 50, y - 50, 100, 100);
+
+                // 角度を更新
+                angle += 0.025;
+
+                // 次のフレームを予約
+                requestAnimationFrame(animate);
+            }
+
+            // アニメーション開始
+            animate();
+        };
+
+        // 画像ファイルを読み込む
+        image.src = 'img_ge8tx9px.png';
+    </script>
+</body>
+</html>
