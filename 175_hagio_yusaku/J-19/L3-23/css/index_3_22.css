@@ -1,0 +1,107 @@
+
+/* ページ全体の設定 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #10172a, #263b65);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* タイマー全体の箱 */
+.timer-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 50px 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* タイトル */
+h1 {
+    margin-bottom: 35px;
+    color: #70d6ff;
+    letter-spacing: 4px;
+    font-size: 28px;
+}
+
+/* メッセージ */
+.message {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* 時間を横並びにする */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 時間・分・秒それぞれの箱 */
+.time-box {
+    min-width: 130px;
+    padding: 20px 10px;
+    background: #101a30;
+    border: 1px solid #70d6ff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(112, 214, 255, 0.2);
+}
+
+/* 数字 */
+.time-box span:first-child {
+    font-size: 48px;
+    font-weight: bold;
+    color: #70d6ff;
+    font-family: monospace;
+}
+
+/* 時・分・秒 */
+.unit {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+/* 下部メッセージ */
+.footer-message {
+    margin-top: 40px;
+    color: #70d6ff;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+/* スマートフォン向け */
+@media (max-width: 550px) {
+    .timer-container {
+        padding: 35px 15px;
+    }
+
+    .timer {
+        gap: 7px;
+    }
+
+    .time-box {
+        min-width: 0;
+        flex: 1;
+        padding: 15px 5px;
+    }
+
+    .time-box span:first-child {
+        font-size: 32px;
+    }
+
+    .unit {
+        font-size: 15px;
+        margin-left: 0;
+    }
+}
